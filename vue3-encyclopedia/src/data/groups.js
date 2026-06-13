@@ -1,5 +1,11 @@
 export const chapterGroups = [
   {
+    name: '深层逻辑',
+    icon: '⚙',
+    type: 'deep',
+    ids: ['first-principle', 'hue-definition', 'transporter-value', 'myth-resonance', 'cognition-conditions', 'weird-mechanism', 'core-danger', 'system-position', 'shelter-life', 'concept-pollution', 'personality-necessity', 'ending-philosophy', 'three-mirrors-redefined', 'hard-rules'],
+  },
+  {
     name: '世界根基',
     icon: '◈',
     range: [1, 5],

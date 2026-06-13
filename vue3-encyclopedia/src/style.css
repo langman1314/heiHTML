@@ -15,6 +15,7 @@ body{background:#08080e;color:#d4d0c4;font-family:"Microsoft YaHei","PingFang SC
 .section-title{font-size:clamp(28px,4vw,42px);font-weight:400;color:#f0e6c8;margin-bottom:26px;letter-spacing:4px}
 .num{color:#d7b56d;font-weight:600;margin-right:12px}
 .section-desc{color:#a09a8e;font-size:16px;max-width:940px;margin-bottom:34px}
+.summary-line{color:#b8aa8a;font-size:15px;padding:14px 20px;background:rgba(215,181,109,.05);border-radius:10px;border-left:3px solid #a8874f;margin-bottom:30px}
 .quote{border-left:3px solid #a8874f;padding:16px 24px;background:linear-gradient(90deg,rgba(215,181,109,.05),transparent);color:#e6d7aa;margin:28px 0;font-style:italic;border-radius:0 8px 8px 0;font-size:15px}
 .quote-center{text-align:center;border-top:1px solid #a8874f;border-bottom:1px solid #a8874f;background:rgba(215,181,109,.04);padding:24px 32px;font-size:16px;color:#e6d7aa;font-style:italic}
 .keyword{color:#d7b56d;font-weight:600}

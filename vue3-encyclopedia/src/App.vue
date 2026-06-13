@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { sections } from './data/sections.js'
 import { chapterGroups } from './data/groups.js'
+import { deepLogic } from './data/deep-logic.js'
 import ProgressBar from './components/ProgressBar.vue'
 import HeroBanner from './components/HeroBanner.vue'
 
@@ -11,8 +12,10 @@ const showOverview = ref(true)
 
 const sectionMap = {}
 sections.forEach(s => { sectionMap[s.id] = s })
+deepLogic.forEach(s => { sectionMap[s.id] = s })
 
 const currentGroup = computed(() => chapterGroups[activeGroupIndex.value])
+const currentSection = computed(() => activeSectionId.value ? sectionMap[activeSectionId.value] : null)
 
 function selectSection(id) {
   activeSectionId.value = id
@@ -90,7 +93,7 @@ function scrollToTop() {
         >
           <span class="chapter-num">{{ sectionMap[id]?.num }}</span>
           <h3 class="chapter-title">{{ sectionMap[id]?.title }}</h3>
-          <p class="chapter-desc">{{ sectionMap[id]?.desc || '...' }}</p>
+          <p class="chapter-desc">{{ sectionMap[id]?.summary || sectionMap[id]?.desc || '...' }}</p>
         </div>
       </div>
       <!-- 组切换导航 -->
@@ -108,18 +111,19 @@ function scrollToTop() {
     </div>
 
     <!-- 章节详情模式 -->
-    <div v-else-if="activeSectionId && sectionMap[activeSectionId]" class="wrapper">
+    <div v-else-if="currentSection" class="wrapper">
       <div class="detail-nav">
         <button class="back-btn" @click="goBackToGroup">← 返回 {{ currentGroup.name }}</button>
         <button class="top-btn" @click="scrollToTop">↑ 顶部</button>
       </div>
       <section class="section-detail">
-        <p class="section-label">{{ sectionMap[activeSectionId].label }}</p>
+        <p class="section-label">{{ currentSection.sub || currentSection.label || '' }}</p>
         <h2 class="section-title">
-          <span class="num">{{ sectionMap[activeSectionId].num }}</span>{{ sectionMap[activeSectionId].title }}
+          <span class="num">{{ currentSection.num }}</span>{{ currentSection.title }}
         </h2>
-        <p v-if="sectionMap[activeSectionId].desc" class="section-desc" v-html="sectionMap[activeSectionId].desc"></p>
-        <div v-html="sectionMap[activeSectionId].content"></div>
+        <p v-if="currentSection.summary" class="section-desc summary-line" v-html="currentSection.summary"></p>
+        <p v-if="currentSection.desc" class="section-desc" v-html="currentSection.desc"></p>
+        <div v-html="currentSection.content"></div>
       </section>
       <!-- 同组翻页 -->
       <div class="detail-pager">
