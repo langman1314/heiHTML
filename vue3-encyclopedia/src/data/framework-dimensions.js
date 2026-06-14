@@ -34,10 +34,13 @@ const entries = [
 
       <h3>临产前后对故事张力的意义</h3>
       <div class="grid-2">
-        <div class="card"><div class="card-body"><strong>临产前：</strong>所有阵营争夺资源、庇护所、系统权限、排行榜、候选人格、神胎碎片影响力、方舟可能性。核心问题：谁会成为神胎学习世界的模板？</div></div>
-        <div class="card"><div class="card-body"><strong>临产时：</strong>终局不是打败神胎，而是阻止单一碎片以最坏方式成为主导。主角面临选择：成为主导人格、留域谈判、方舟出走、破胎终止、让神胎无主诞生。</div></div>
+        <div class=”card”><div class=”card-body”><strong>临产前：</strong>所有阵营争夺资源、庇护所、系统权限、排行榜、候选人格、神胎碎片影响力、方舟可能性。核心问题：谁会成为神胎学习世界的模板？</div></div>
+        <div class=”card”><div class=”card-body”><strong>临产时：</strong>终局不是打败神胎，而是阻止单一碎片以最坏方式成为主导。主角面临选择：成为主导人格、留域谈判、方舟出走、破胎终止、让神胎无主诞生。</div></div>
       </div>
-      <div class="quote">这个世界要出生了。问题不是它会不会出生，而是它出生时，会把谁当成“自己”。</div>
+      <div class=”quote”>这个世界要出生了。问题不是它会不会出生，而是它出生时，会把谁当成”自己”。</div>
+
+      <h3>临产为何发生在此刻</h3>
+      <div class=”card”><div class=”card-body”>见 deep-logic 第16条”情绪通胀律”。神胎临产需吃到”完整文明边界模型”的临产阈值，前几轮外来者太少喂不熟。这一轮一次性涌入百万级玩家，史无前例的情绪与边界输入第一次越过临产线——是玩家的到来催熟了这一轮临产。穿越者既是食物、是人格模板，也是催产素。临产不可逆，且因情绪通胀的正反馈而持续加速。</div></div>
     `,
   },
 
@@ -138,14 +141,14 @@ const entries = [
       <h3>方舟必须完成的四项剥离</h3>
       <div class="grid-2">
         <div class="card"><h3 class="card-title">① 物质剥离</h3><div class="card-body">带走人、种子、水、晦晶、土壤、晦植、晦兽、床、箱、门、骨灯、生态循环。这些都是从神胎体内长出的东西。带走它们等于从神胎身体上剥离器官。神胎会反应。</div></div>
-        <div class="card"><h3 class="card-title">② 边界剥离</h3><div class="card-body">让无光域承认：这些人、这些床、这些名字、这些梦不再完全属于你。如果边界剥离失败，方舟即使物理离开也会被归路、梦、名字、门重新拉回。</div></div>
+        <div class="card"><h3 class="card-title">② 边界剥离</h3><div class="card-body">让无光域承认：这些人、这些床、这些名字、这些梦不再完全属于你。机制见 deep-logic 第15条"边界剥离律"：少数登舟者无法靠人数改写这一最高级边界，只能靠贯穿胎动期的集体断亲仪式，以极端情绪×长期时间烧穿认知阈值。代价不可逆：剥离成功者再也无法在情感上回到母体，这正是外渊"离域症"的根源。剥离失败，方舟即使物理离开也会被归路、梦、名字、门重新拉回。</div></div>
         <div class="card"><h3 class="card-title">③ 系统剥离</h3><div class="card-body">决定保留系统残片、切断系统还是改写系统为方舟管理工具。完全切断可能导致玩家失去部分能力，完全保留可能让神胎继续追踪。必须从"筛选器"改造成"有限工具"。</div></div>
         <div class="card" style="grid-column:1/-1"><h3 class="card-title">④ 神胎碎片剥离</h3><div class="card-body">方舟路线天然吸引方舟碎片。必须让方舟碎片失去单独定义文明的权力。方舟可以保留无光域技术，但不能让无光域逻辑成为唯一宪法。</div></div>
       </div>
 
       <h3>方舟启动图景</h3>
       <div class="grid-2">
-        <div class="card"><div class="card-body">方舟不像火箭升空，而是像一座活化庇护所从胎壁上撕开。启动时：主门不再通向灰醒层 · 所有床位同时确认归属 · 名册最终誊写 · 死者梦封入梦舱 · 骨灯转为航灯 · 庇护所地基从土壤中拔出 · 黑潮反向涌来试图回收剥离物 · 系统提示与隐藏文字同时出现 · 神胎发出第一次"我不允许"。这不是飞行，而是分娩逆行。</div></div>
+        <div class="card"><div class="card-body">方舟不像火箭升空，而是像一座活化庇护所从胎壁上撕开。启航的每一步都不是技术操作，而是断亲仪式的最后引爆：<strong>主门不再通向灰醒层</strong>——切断与世界的空间联系；<strong>所有床位同时确认归属</strong>——斩断与旧睡眠的连续，每一张床最后一次被主人躺过；<strong>名册最终誊写</strong>——把名字从无光域名册划到方舟名册，每一个被抄上的名字都是一次从母体撕下的痛；<strong>死者梦封入梦舱</strong>——与留在故土的逝者做最终告别，最后一次在梦里听见他们的声音；<strong>骨灯转为航灯</strong>、庇护所地基从土壤中拔出、黑潮反向涌来试图回收剥离物、系统提示与隐藏文字同时出现、神胎发出第一次"我不允许"。这不是飞行，而是分娩逆行。当神胎喊出"我不允许"，它面对的不是一群逃兵，而是一群正把自己从它身上割下来的孩子。</div></div>
       </div>
     `,
   },
@@ -176,6 +179,7 @@ const entries = [
         <div class="truth-layer"><span class="truth-label">第五卷：第301—365天</span><div class="truth-text">胎动期，神胎临产不可逆，终局路线分裂。</div></div>
         <div class="truth-layer"><span class="truth-label">终局卷：一年后至临产日</span><div class="truth-text">成神、留域、出走、破胎、崩坏——五条路线最终抉择。</div></div>
       </div>
+      <div class="card" style="margin-top:12px;"><div class="card-body"><strong>注：</strong>这一年不是匀速的。受情绪通胀律（deep-logic第16条）驱动，玩家死亡与冲突越多、黑潮越频繁剧烈、临产越快——时间表后段（第四卷起）节奏应明显加速，胎动期可能比"历法预期"提前到来。土著历法失准本身就是临产逼近的征兆之一。这给主角施加真实的时间压力：拖延、内斗、犹豫都在喂快神胎。</div></div>
 
       <h3>玩家与晦民的终局比例</h3>
       <div class="grid-2">
