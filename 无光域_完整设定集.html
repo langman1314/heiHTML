@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>无光域 · 黑暗世界设定与庇护所升级体系</title>
+  <style>
+    /* ===== 基础重置 & 字体 ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #08080e;
+      color: #d4d0c4;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* ===== 粒子背景 ===== */
+    #particles-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    /* ===== 主容器 ===== */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ===== 滚动进度条 ===== */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #d7b56d, #a8874f, #6a4c2a);
+      z-index: 999;
+      transition: width 0.15s ease;
+      box-shadow: 0 0 12px rgba(215, 181, 109, 0.5);
+    }
+
+    /* ===== 导航侧栏 ===== */
+    .nav-sidebar {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #2f2c36;
+      border: 1px solid #4a4555;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-dot:hover,
+    .nav-dot.active {
+      background: #d7b56d;
+      border-color: #d7b56d;
+      box-shadow: 0 0 12px rgba(215, 181, 109, 0.5);
+      transform: scale(1.3);
+    }
+
+    .nav-dot .tooltip {
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1b1b24;
+      color: #d7b56d;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      border: 1px solid #2f2c36;
+    }
+
+    .nav-dot:hover .tooltip {
+      opacity: 1;
+    }
+
+    /* ===== Hero 区域 ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(215, 181, 109, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 300;
+      letter-spacing: 12px;
+      color: #f0e6c8;
+      text-shadow: 0 0 60px rgba(215, 181, 109, 0.2);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .hero-title .accent {
+      color: #d7b56d;
+      font-weight: 600;
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 22px);
+      color: #9c988e;
+      margin-top: 16px;
+      letter-spacing: 6px;
+      animation: fadeInUp 1.2s ease 0.3s both;
+    }
+
+    .hero-quote {
+      margin-top: 48px;
+      max-width: 700px;
+      font-style: italic;
+      color: #b8aa8a;
+      font-size: 18px;
+      line-height: 1.9;
+      border-left: 3px solid #a8874f;
+      padding-left: 24px;
+      text-align: left;
+      animation: fadeInUp 1.2s ease 0.6s both;
+    }
+
+    .hero-scroll {
+      margin-top: 60px;
+      color: #6a5e4a;
+      font-size: 14px;
+      letter-spacing: 4px;
+      animation: pulse 2s infinite;
+    }
+
+    /* ===== 章节通用 ===== */
+    .section {
+      margin-top: 80px;
+      padding: 40px 0;
+      position: relative;
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: #6a5e4a;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 400;
+      color: #f0e6c8;
+      margin-bottom: 32px;
+      letter-spacing: 4px;
+    }
+
+    .section-title .num {
+      color: #d7b56d;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+
+    .section-desc {
+      color: #a09a8e;
+      font-size: 16px;
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+
+    /* ===== 分隔装饰 ===== */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, #d7b56d, transparent);
+      margin: 12px 0 24px;
+    }
+
+    .divider-center {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d7b56d, transparent);
+      margin: 12px auto 24px;
+    }
+
+    /* ===== 引用块 ===== */
+    .quote {
+      border-left: 3px solid #a8874f;
+      padding: 16px 24px;
+      background: linear-gradient(90deg, rgba(215, 181, 109, 0.05), transparent);
+      color: #e6d7aa;
+      margin: 28px 0;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .quote-center {
+      text-align: center;
+      border-left: none;
+      border-top: 1px solid #a8874f;
+      border-bottom: 1px solid #a8874f;
+      background: rgba(215, 181, 109, 0.04);
+      padding: 24px 32px;
+      border-radius: 0;
+      font-size: 16px;
+    }
+
+    .keyword {
+      color: #d7b56d;
+      font-weight: 600;
+    }
+
+    .keyword-danger {
+      color: #c47a6a;
+      font-weight: 600;
+    }
+
+    .keyword-rare {
+      color: #8ab4c4;
+      font-weight: 600;
+    }
+
+    /* ===== 卡片通用 ===== */
+    .card {
+      background: linear-gradient(145deg, #14141e, #1a1a26);
+      border: 1px solid #282536;
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d7b56d, transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .card:hover {
+      border-color: #3d3850;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-title {
+      font-size: 20px;
+      color: #f0e6c8;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+
+    .card-title .icon {
+      margin-right: 10px;
+    }
+
+    .card-sub {
+      color: #d7b56d;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .card-body {
+      color: #bcb6a8;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .card-body ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .card-body li {
+      margin-bottom: 6px;
+    }
+
+    .card-note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(100, 80, 50, 0.12);
+      border-radius: 8px;
+      color: #a09888;
+      font-size: 14px;
+      border-left: 2px solid #6a5e4a;
+    }
+
+    /* ===== 网格布局 ===== */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    /* ===== 等级时间线 ===== */
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #282536, #d7b56d, #282536);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 28px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #1a1a26;
+      border: 2px solid #d7b56d;
+      box-shadow: 0 0 20px rgba(215, 181, 109, 0.2);
+    }
+
+    .timeline-item.level-1::before { border-color: #6a5e4a; }
+    .timeline-item.level-2::before { border-color: #8a7a5a; }
+    .timeline-item.level-3::before { border-color: #b89a5a; }
+    .timeline-item.level-4::before { border-color: #d7b56d; box-shadow: 0 0 20px rgba(215, 181, 109, 0.4); }
+    .timeline-item.level-5::before { border-color: #e8c87a; box-shadow: 0 0 30px rgba(232, 200, 122, 0.5); }
+
+    .timeline-item .card {
+      margin-bottom: 0;
+    }
+
+    /* ===== 资源标签 ===== */
+    .resource-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 2px;
+    }
+
+    .tag-food { background: rgba(180, 140, 80, 0.2); color: #c8a86a; border: 1px solid rgba(180, 140, 80, 0.3); }
+    .tag-water { background: rgba(80, 160, 200, 0.15); color: #7ab8d0; border: 1px solid rgba(80, 160, 200, 0.25); }
+    .tag-build { background: rgba(140, 120, 100, 0.2); color: #b0a090; border: 1px solid rgba(140, 120, 100, 0.3); }
+    .tag-energy { background: rgba(215, 181, 109, 0.15); color: #d7b56d; border: 1px solid rgba(215, 181, 109, 0.25); }
+    .tag-mental { background: rgba(160, 100, 180, 0.15); color: #b88ac8; border: 1px solid rgba(160, 100, 180, 0.25); }
+    .tag-rule { background: rgba(200, 80, 80, 0.15); color: #d48a7a; border: 1px solid rgba(200, 80, 80, 0.25); }
+
+    /* ===== 循环流程图 ===== */
+    .flow-chart {
+      background: linear-gradient(145deg, #0d0d16, #12121e);
+      border: 1px solid #282536;
+      border-radius: 20px;
+      padding: 40px 32px;
+      overflow-x: auto;
+    }
+
+    .flow-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 4px 0;
+    }
+
+    .flow-node {
+      background: #1a1a2a;
+      border: 1px solid #333045;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 14px;
+      color: #bcb6a8;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+    }
+
+    .flow-node:hover {
+      border-color: #d7b56d;
+      background: rgba(215, 181, 109, 0.08);
+      transform: scale(1.05);
+    }
+
+    .flow-node.highlight {
+      border-color: #d7b56d;
+      color: #f0e6c8;
+      background: rgba(215, 181, 109, 0.1);
+    }
+
+    .flow-arrow {
+      color: #4a4555;
+      font-size: 18px;
+      padding: 0 4px;
+    }
+
+    .flow-group {
+      background: rgba(215, 181, 109, 0.04);
+      border: 1px dashed #3d3850;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* ===== 真相分层 ===== */
+    .truth-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .truth-layer {
+      padding: 18px 24px;
+      border-left: 3px solid;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .truth-layer:hover {
+      padding-left: 32px;
+      background: rgba(215, 181, 109, 0.03);
+    }
+
+    .truth-layer:nth-child(1) { border-color: #6a5e4a; }
+    .truth-layer:nth-child(2) { border-color: #8a7a5a; }
+    .truth-layer:nth-child(3) { border-color: #a89060; }
+    .truth-layer:nth-child(4) { border-color: #c8a86a; }
+    .truth-layer:nth-child(5) { border-color: #d7b56d; }
+    .truth-layer:nth-child(6) { border-color: #e8c87a; }
+
+    .truth-layer .label {
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #6a5e4a;
+    }
+
+    .truth-layer .text {
+      font-size: 15px;
+      color: #d4d0c4;
+      margin-top: 4px;
+    }
+
+    /* ===== 三十天节奏 ===== */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .phase-card {
+      position: relative;
+    }
+
+    .phase-card .phase-day {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #6a5e4a;
+      margin-bottom: 6px;
+    }
+
+    .phase-card .phase-goal {
+      color: #d7b56d;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    /* ===== 核心矛盾 ===== */
+    .conflict-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .conflict-card {
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    .conflict-card .vs {
+      font-size: 28px;
+      color: #d7b56d;
+      font-weight: 700;
+      letter-spacing: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* ===== 结尾横幅 ===== */
+    .banner {
+      margin-top: 80px;
+      padding: 60px 40px;
+      text-align: center;
+      background: radial-gradient(ellipse at center, rgba(215, 181, 109, 0.04) 0%, transparent 70%);
+      border-top: 1px solid #282536;
+      border-bottom: 1px solid #282536;
+    }
+
+    .banner p {
+      font-size: 20px;
+      color: #b8aa8a;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    /* ===== 动画 ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(215, 181, 109, 0.1); }
+      50% { box-shadow: 0 0 40px rgba(215, 181, 109, 0.25); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 768px) {
+      .wrapper { padding: 0 16px 60px; }
+      .nav-sidebar { display: none; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .flow-chart { padding: 24px 16px; }
+      .flow-node { font-size: 13px; padding: 6px 12px; }
+      .timeline { padding-left: 30px; }
+      .hero-quote { font-size: 16px; padding-left: 16px; }
+      .banner { padding: 40px 24px; }
+      .banner p { font-size: 17px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { letter-spacing: 6px; }
+      .section-title { letter-spacing: 2px; }
+      .card { padding: 20px; }
+    }
+
+    /* ===== 选择样式 ===== */
+    ::selection {
+      background: rgba(215, 181, 109, 0.25);
+      color: #f0e6c8;
+    }
+
+    /* ===== 滚动条 ===== */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #08080e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2f2c36;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4a4555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 滚动进度条 -->
+  <div id="progress-bar"></div>
+
+  <!-- 粒子画布 -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- 导航侧栏 -->
+  <nav class="nav-sidebar" id="nav-sidebar"></nav>
+
+  <!-- ===== 主体内容 ===== -->
+  <div class="wrapper">
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="hero">
+      <h1 class="hero-title">无<span class="accent">光</span>域</h1>
+      <p class="hero-sub">寂光空洞 · 黑渊界 · 神胎求生</p>
+      <div class="hero-quote">
+        黑暗不是环境，黑暗是一套正在消化生命的生态系统。<br />
+        世界不是容器，世界是子宫。
+      </div>
+      <p class="hero-scroll">— 向下探索 —</p>
+    </header>
+
+    <!-- ===== 一、世界本质 ===== -->
+    <section class="section fade-in" id="world-essence">
+      <p class="section-label">壹</p>
+      <h2 class="section-title"><span class="num">01</span>世界本质</h2>
+      <p class="section-desc">这是一个没有恒星光亮的宇宙空洞。维持世界生态的是一种活性能量——<span class="keyword">晦能</span>，它是一枚正在成形的神胎。</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">无光空洞</h3>
+          <div class="card-body">
+            没有恒星、没有昼夜、没有自然光源。整个世界漂浮在宇宙裂隙中，是一个巨大的空洞世界。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">晦能生态</h3>
+          <div class="card-body">
+            晦能支撑生命诞生与繁衍，同时也从生命的活动、死亡、恐惧、信仰中反向汲取力量——它是一个活着的能量循环系统。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">神胎成形</h3>
+          <div class="card-body">
+            晦能本身是一种未完全诞生的生命体。穿越者的到来，是神胎诞生前最后一次进食与人格筛选。
+          </div>
+        </div>
+      </div>
+
+      <div class="quote">
+        全民穿越者的到来不是救世或意外，而是这个世界循环即将崩溃前的最后一次补充。他们既是燃料，也是变量，更可能是某个即将诞生的神性生命所筛选的"主导人格"。
+      </div>
+    </section>
+
+    <!-- ===== 二、晦能规则 ===== -->
+    <section class="section fade-in" id="hue-rules">
+      <p class="section-label">贰</p>
+      <h2 class="section-title"><span class="num">02</span>晦能基础规则</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">① 不凭空创造</h3>
+          <div class="card-body">
+            晦能不能无中生有。它通过重组生命、诱发变异、压榨死亡、回收精神与情绪来维持循环。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">② 偏爱极端波动</h3>
+          <div class="card-body">
+            恐惧、饥饿、绝望、狂喜、信仰、杀戮、背叛、牺牲——极端状态才是高能回流。因此这个世界会不断制造灾难和压迫。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">③ 回应认知</h3>
+          <div class="card-body">
+            命名、认知、仪式、传闻都可能影响现实。被称为"安全屋"的地方会逐渐稳定，被命名的怪物会获得更清晰的形态。<br />
+            <span class="keyword">知道一件事，本身就是与它建立联系。</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">④ 不会灭绝一切</h3>
+          <div class="card-body">
+            它需要生命持续反哺，所以它会筛选、压迫、诱变、收割，但不会一开始就灭绝全部生命。
+          </div>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3 class="card-title">⑤ 晦能正在失控</h3>
+          <div class="card-body">
+            原本土著生命与晦能勉强达成自产自销。但如今神胎即将诞生，消耗暴增，多个晦能意识碎片可能正在争夺主导权，循环即将崩溃。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 三、生命体系 ===== -->
+    <section class="section fade-in" id="life-system">
+      <p class="section-label">叁</p>
+      <h2 class="section-title"><span class="num">03</span>生命体系</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">🌱 晦植</h3>
+          <div class="card-sub">吸收晦能、腐殖质与精神残留</div>
+          <div class="card-body">
+            <ul>
+              <li><span class="keyword">眠菇</span>：靠梦境残渣生长，食用后可能梦见陌生人的记忆。</li>
+              <li><span class="keyword">骨麦</span>：根系缠绕白骨，能充饥，但会让人听见骨头说话。</li>
+              <li><span class="keyword">噬影藤</span>：吸收生物轮廓中的晦能，使靠近者存在感降低。</li>
+              <li><span class="keyword">无声花</span>：盛开时吞掉附近所有声音。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🐾 晦兽</h3>
+          <div class="card-sub">依靠晦能、震动、情绪感知世界</div>
+          <div class="card-body">
+            <ul>
+              <li><span class="keyword">听骨犬</span>：追踪骨骼震动。</li>
+              <li><span class="keyword">灯腹虫</span>：腹部释放诱饵，让人误以为那里安全。</li>
+              <li><span class="keyword">缝面鹿</span>：没有五官，却能模仿死者声音。</li>
+              <li><span class="keyword">壳眠牛</span>：可驯化，产黑乳，但会吸走梦境。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">👁 晦民</h3>
+          <div class="card-sub">土著智慧生命，拥有文明与信仰</div>
+          <div class="card-body">
+            他们并非人类，却拥有文明、信仰和遗迹。他们知道世界在吞噬生命，但未必反抗——他们早已把这视为自然循环。
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">⚠️ 晦诡</h3>
+          <div class="card-sub">规则异常类存在</div>
+          <div class="card-body">
+            不一定强大，但极度危险——不能被数清的羊群、只在被谈论后出现的敲门者、继承死者最后一句话的影子、只能在安全屋内出现的陌生室友、被命名后才开始杀人的无名怪。
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">🌌 外来者</h3>
+          <div class="card-sub">即全民穿越者</div>
+          <div class="card-body">
+            他们来自正常宇宙，身上带有无光域缺少的东西：恒星记忆、完整灵魂结构、强烈文明惯性，以及"光"的概念认知。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 四、穿越者与系统 ===== -->
+    <section class="section fade-in" id="system">
+      <p class="section-label">肆</p>
+      <h2 class="section-title"><span class="num">04</span>穿越者 · 晦视 · 系统</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">晦视权限</h3>
+          <div class="card-body">
+            <p>穿越者并非靠眼睛适应黑暗，而是被系统接入了一种名为<span class="keyword">晦视</span>的感知机制：</p>
+            <ul>
+              <li>看见物体的晦能轮廓</li>
+              <li>生命活动呈现为模糊热度</li>
+              <li>污染区域出现波纹或压迫感</li>
+              <li>资源点以系统标记呈现</li>
+              <li>庇护所范围形成稳定边界</li>
+            </ul>
+          </div>
+          <div class="card-note">
+            晦视缺陷：无法看见颜色、距离越远越模糊、情绪失控时看见幻象、污染过高时把怪物看成人——某些存在不是看不见，而是系统不允许看见。
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">系统三层面纱</h3>
+          <div class="card-body">
+            <p style="margin-bottom: 12px;">系统表面是求生辅助，实际是晦能世界的接入协议与筛选器：</p>
+            <ul>
+              <li><span class="keyword">第一层 · 新手保护</span>：初始庇护所、基础晦视、频道系统、建造面板、灾变预告。</li>
+              <li><span class="keyword">第二层 · 筛选机制</span>：根据行为觉醒天赋——种田、战斗、交易、契约、污染适应等。</li>
+              <li><span class="keyword">第三层 · 神胎链接</span>：系统真正目的，是筛选谁最适合成为晦能神胎的主导人格。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 20px;">
+        <h3 class="card-title">主角的特殊性：裂视</h3>
+        <div class="card-body">
+          主角因为穿越瞬间曾看见过"造主"，他的晦视存在裂缝——他偶尔能看到系统过滤之外的真实。这种能力称为<span class="keyword">裂视</span>。他的特殊不在数值，而在于他获得了<span class="keyword">规则注释</span>能力：能看见物品和怪物的未完成定义，发现规则漏洞，甚至影响低级概念的命名。
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 五、庇护所体系 ===== -->
+    <section class="section fade-in" id="shelter">
+      <p class="section-label">伍</p>
+      <h2 class="section-title"><span class="num">05</span>庇护所体系</h2>
+      <p class="section-desc">庇护所不是普通房屋，而是玩家插入黑暗世界的一枚文明钉子。它是安全屋、生产基地，也是抵抗黑暗同化的文明锚点。</p>
+
+      <div class="quote-center">
+        庇护所是玩家插进黑暗生态中的一颗文明钉子，但钉得越深，越可能长出血肉。
+      </div>
+
+      <!-- 核心数值 -->
+      <h3 style="color: #d7b56d; margin: 40px 0 20px; letter-spacing: 2px; font-weight: 400;">核心数值</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">稳定度</h3>
+          <div class="card-body">
+            抵抗污染、异常和规则入侵的能力。影响怪物破门、晦诡入侵、黑潮安全、睡眠质量和作物变异。
+          </div>
+          <div class="card-note">稳定度过低时，墙壁可能出现呼吸声，门外会有人模仿熟人敲门。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">面积</h3>
+          <div class="card-body">
+            可使用空间。决定可放置模块数量、储物上限、容纳其他玩家、建立内部生态循环的能力。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">生态槽</h3>
+          <div class="card-body">
+            种田核心。可安装菌床、灰土田、腐殖池、水凝器、晦兽栏、骨粉磨、晦晶炉、低语井等模块。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">防御值</h3>
+          <div class="card-body">
+            面对实体威胁的能力——门的强度、墙体韧性、陷阱数量、驯兽守卫、边界符标、警戒装置。
+          </div>
+          <div class="card-note">防御值不足时，黑潮中可能出现"门缝事件"。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">活化度</h3>
+          <div class="card-body">
+            被晦能同化的程度。低活化安全可控但效率低；高活化可自我修复、吞噬尸体、移动、融合——但庇护所可能开始产生"自己的想法"。
+          </div>
+          <div class="card-note">其他人害怕庇护所变成怪物，主角却想把怪物训练成家。</div>
+        </div>
+      </div>
+
+      <!-- 升级等级 -->
+      <h3 style="color: #d7b56d; margin: 48px 0 20px; letter-spacing: 2px; font-weight: 400;">庇护所等级</h3>
+      <div class="timeline">
+        <div class="timeline-item level-1">
+          <div class="card">
+            <h3 class="card-title">1级 · 孤门小屋</h3>
+            <div class="card-sub">初始安全点</div>
+            <div class="card-body">
+              <p><span class="keyword">配置：</span>无光门、破床、木箱、灰土块、无光灯、简易合成台。</p>
+              <p><span class="keyword">功能：</span>基础休息、少量储物、初级合成、最低限度黑潮保护。</p>
+              <p><span class="keyword">升级条件：</span>晦晶碎片×10、灰木×20、腐殖土×5、可食用晦植种子×1。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item level-2">
+          <div class="card">
+            <h3 class="card-title">2级 · 灰土栖屋</h3>
+            <div class="card-sub">解锁基础种田</div>
+            <div class="card-body">
+              <p><span class="keyword">新增：</span>灰土田×2、简易水凝器、门栓强化、晦能感知边界。</p>
+              <p><span class="keyword">解锁：</span>基础种植、水分收集、低级怪物预警。</p>
+              <p><span class="keyword">升级条件：</span>晦晶碎片×30、灰木×50、骨粉×20、凝水石×3、初级作物成熟3次。</p>
+            </div>
+            <div class="card-note">第一次作物成熟后，土里可能长出一根不是玩家种下的手指。</div>
+          </div>
+        </div>
+
+        <div class="timeline-item level-3">
+          <div class="card">
+            <h3 class="card-title">3级 · 菌火农舍</h3>
+            <div class="card-sub">建立内部循环</div>
+            <div class="card-body">
+              <p><span class="keyword">新增：</span>眠菇菌床、腐殖池、晦晶炉、初级陷阱位、第二储物箱、净化角落。</p>
+              <p><span class="keyword">解锁：</span>菌类种植、尸体处理、晦晶供能、简单防御、污染物降级。</p>
+              <p><span class="keyword">升级条件：</span>完整晦晶×5、腐殖土×50、眠菇孢子×10、听骨犬牙×2、净化水×10、成功抵御一次小黑潮。</p>
+            </div>
+            <div class="card-note">腐殖池可以处理怪物尸体，但偶尔会浮出人类记忆碎片。</div>
+          </div>
+        </div>
+
+        <div class="timeline-item level-4">
+          <div class="card">
+            <h3 class="card-title">4级 · 骨墙庄园</h3>
+            <div class="card-sub">从房屋转向领地</div>
+            <div class="card-body">
+              <p><span class="keyword">新增：</span>骨墙、晦兽栏、低语井、交易壁龛、小型工坊。</p>
+              <p><span class="keyword">解锁：</span>驯养低级晦兽、对外交易、领地防御、收容玩家、制作工具和药剂。</p>
+              <p><span class="keyword">升级条件：</span>晦晶核心×1、骨墙材料×100、可驯化晦兽×1、低语井图纸×1、区域声望前10%、处理一次庇护所异常事件。</p>
+            </div>
+            <div class="card-note">交易壁龛会连接土著游商，也可能连接"不是商人"的东西。</div>
+          </div>
+        </div>
+
+        <div class="timeline-item level-5">
+          <div class="card">
+            <h3 class="card-title">5级 · 活化领地</h3>
+            <div class="card-sub">庇护所拥有自我意识雏形</div>
+            <div class="card-body">
+              <p><span class="keyword">新增：</span>活门、可移动地基、自修复墙体、多生态槽融合、规则符标、庇护所人格雏形。</p>
+              <p><span class="keyword">解锁：</span>庇护所迁移、多人聚落雏形、规则防御、资源循环自动化、诡异收容、庇护所吞并。</p>
+              <p><span class="keyword">升级条件：</span>晦晶核心×3、规则碎片×1、大黑潮幸存证明、三类生态循环稳定运行、活化度30%以上、<span class="keyword">必须给庇护所命名</span>。</p>
+            </div>
+            <div class="card-note">命名之后，庇护所第一次真正"回应"主人。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote" style="margin-top: 20px;">
+        孤门小屋 → 灰土栖屋 → 菌火农舍 → 骨墙庄园 → 活化领地 → 方舟胚胎
+      </div>
+    </section>
+
+    <!-- ===== 六、资源体系 ===== -->
+    <section class="section fade-in" id="resources">
+      <p class="section-label">陆</p>
+      <h2 class="section-title"><span class="num">06</span>前期资源体系</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">🍞 食物资源</h3>
+          <div class="card-body">
+            <p><span class="resource-tag tag-food">灰苔</span> 基础食物，味道像发霉纸浆，吃多会轻微幻听。</p>
+            <p><span class="resource-tag tag-food">骨麦</span> 稳定主粮，需要骨粉肥料，轻微精神污染。</p>
+            <p><span class="resource-tag tag-food">眠菇</span> 半食物半药材，过量食用会梦见死者记忆。</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">💧 水资源</h3>
+          <div class="card-body">
+            <p><span class="resource-tag tag-water">凝水石</span> 从黑暗湿壁采集，每日产量有限。</p>
+            <p><span class="resource-tag tag-water">黑露</span> 黑潮后出现，含有晦能，未净化会提高污染。</p>
+            <p><span class="resource-tag tag-water">净化水</span> 前期重要物资，用于饮用、升级、医疗和精神稳定。</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🪵 建材</h3>
+          <div class="card-body">
+            <p><span class="resource-tag tag-build">灰木</span> 黑暗森林常见建材，木纹像闭合的眼睛。</p>
+            <p><span class="resource-tag tag-build">骨材</span> 来源于怪物尸体，硬度高，易导晦能。</p>
+            <p><span class="resource-tag tag-build">腐殖土</span> 种植核心，来自腐烂植物和怪物尸体。</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">⚡ 能源</h3>
+          <div class="card-body">
+            <p><span class="resource-tag tag-energy">晦晶碎片</span> 基础能源，用于升级、合成、驱动无光灯。</p>
+            <p><span class="resource-tag tag-energy">完整晦晶</span> 中级能源，用于3级以上升级。</p>
+            <p><span class="resource-tag tag-energy">晦晶核心</span> 高级能源，来自精英晦兽、遗迹与大黑潮。</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🧠 精神资源</h3>
+          <div class="card-body">
+            <p><span class="resource-tag tag-mental">梦渣</span> 睡眠沉淀，可培养眠菇、制作精神药剂。</p>
+            <p><span class="resource-tag tag-mental">恐惧残响</span> 恐惧余波，可强化陷阱、制作诡异诱饵。</p>
+            <p><span class="resource-tag tag-mental">记忆碎片</span> 高价值资源，解锁真相、提升裂视。</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">📜 规则资源</h3>
+          <div class="card-body">
+            <p><span class="resource-tag tag-rule">规则尘</span> 微弱规则残留，制作边界符标、稳定安全屋。</p>
+            <p><span class="resource-tag tag-rule">规则碎片</span> 中后期核心，用于5级升级、规则防御、概念改写。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 七、资源循环 ===== -->
+    <section class="section fade-in" id="cycle">
+      <p class="section-label">柒</p>
+      <h2 class="section-title"><span class="num">07</span>前期资源循环</h2>
+
+      <div class="flow-chart">
+        <div class="flow-row">
+          <span class="flow-node highlight">探索外界</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-group">
+            <span class="flow-node">采集灰木</span>
+            <span class="flow-node">凝水石</span>
+            <span class="flow-node">灰苔</span>
+            <span class="flow-node">晦晶碎片</span>
+          </span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-node highlight">升级庇护所 + 制作工具</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-group">
+            <span class="flow-node">建立灰土田</span>
+            <span class="flow-node">水凝器</span>
+          </span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-group">
+            <span class="flow-node highlight">种植骨麦 / 灰苔 / 眠菇</span>
+          </span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-node highlight">获得食物与精神恢复</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-node">探索更远区域 / 猎杀晦兽</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-group">
+            <span class="flow-node">尸体 / 骨材</span>
+            <span class="flow-node">晦晶 / 孢子</span>
+          </span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-node highlight">腐殖池处理</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-group">
+            <span class="flow-node">腐殖土</span>
+            <span class="flow-node">骨粉</span>
+            <span class="flow-node">梦渣</span>
+            <span class="flow-node">记忆碎片</span>
+          </span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-node highlight">强化种植 / 防御 / 规则研究</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-node highlight">抵御黑潮</span>
+          <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row">
+          <span class="flow-group">
+            <span class="flow-node">黑露</span>
+            <span class="flow-node">规则尘</span>
+            <span class="flow-node">稀有资源</span>
+          </span>
+          <span class="flow-arrow">↻ 循环升级</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 八、前三十天节奏 ===== -->
+    <section class="section fade-in" id="early-days">
+      <p class="section-label">捌</p>
+      <h2 class="section-title"><span class="num">08</span>前三十天生存节奏</h2>
+
+      <div class="phase-grid">
+        <div class="phase-card card">
+          <p class="phase-day">第 1 – 3 天</p>
+          <p class="phase-goal">活下去</p>
+          <div class="card-body">
+            <p>核心资源：灰苔、凝水石、灰木、晦晶碎片</p>
+            <ul>
+              <li>主角醒来，身边只有无光门。</li>
+              <li>第一次开门，外面只有晦视轮廓。</li>
+              <li>区域频道里有人求救、交易、发疯。</li>
+              <li>门外响起熟悉声音——主角开始记录声音变化。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase-card card">
+          <p class="phase-day">第 4 – 7 天</p>
+          <p class="phase-goal">第一次种植</p>
+          <div class="card-body">
+            <p>核心目标：升级到2级，建立灰土田，准备小黑潮</p>
+            <ul>
+              <li>发现尸体和腐烂植物都能转化为腐殖土。</li>
+              <li>第一次种下骨麦。</li>
+              <li>裂视显示土壤中有东西在学习人的形状。</li>
+              <li>小黑潮后获得黑露、变异骨麦、规则尘。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase-card card">
+          <p class="phase-day">第 8 – 14 天</p>
+          <p class="phase-goal">建立循环</p>
+          <div class="card-body">
+            <p>核心目标：升级到3级，建立菌床和腐殖池</p>
+            <ul>
+              <li>怪物尸体进入腐殖池。</li>
+              <li>腐殖池浮出记忆片段——土著旧文明的一角。</li>
+              <li>区域玩家分化为交易者、掠夺者和抱团者。</li>
+              <li>基础循环形成：尸体→腐殖土→作物→食物→探索。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase-card card">
+          <p class="phase-day">第 15 – 21 天</p>
+          <p class="phase-goal">对外扩张</p>
+          <div class="card-body">
+            <p>核心目标：建立防御，接触玩家与土著，获得4级线索</p>
+            <ul>
+              <li>发现废弃安全屋——床上还保持睡过的凹陷。</li>
+              <li>第一次遇见土著游商。游商称玩家为"新一轮灯种"。</li>
+              <li>第二次小黑潮出现规则异常，完成第一次规则防御。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="phase-card card" style="grid-column: 1 / -1;">
+          <p class="phase-day">第 22 – 30 天</p>
+          <p class="phase-goal">大黑潮前夜</p>
+          <div class="card-body">
+            <p>核心目标：准备抵御第一次大黑潮，尝试升级4级</p>
+            <ul>
+              <li>区域排行榜开放，排名本身成为某种标记。</li>
+              <li>玩家势力开始争夺关键资源点。</li>
+              <li>第一次土著遗迹浮现——"不要相信门。门是祂们伸进来的手指。"</li>
+              <li>大黑潮后，系统开放"领地雏形"功能。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 九、灾变机制 ===== -->
+    <section class="section fade-in" id="cataclysm">
+      <p class="section-label">玖</p>
+      <h2 class="section-title"><span class="num">09</span>灾变机制 · 黑潮</h2>
+      <p class="section-desc">黑潮不是天气，而是晦能世界的一次呼吸。</p>
+
+      <div class="grid-2">
+        <div class="card" style="border-left: 3px solid #6a5e4a;">
+          <h3 class="card-title">🌑 小黑潮 · 每七天一次</h3>
+          <div class="card-body">
+            <ul>
+              <li>怪物活动增强</li>
+              <li>庇护所外感知距离下降</li>
+              <li>作物异变概率提升</li>
+              <li>死亡玩家尸体可能回门</li>
+              <li>聊天频道出现已死者发言</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="border-left: 3px solid #a8874f;">
+          <h3 class="card-title">🌑 大黑潮 · 每三十天一次</h3>
+          <div class="card-body">
+            <ul>
+              <li>区域地形重组</li>
+              <li>安全屋之间距离改变</li>
+              <li>土著遗迹浮现</li>
+              <li>玩家阵营被迫接触</li>
+              <li>系统开放新功能</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 20px;">
+        <div class="card-body" style="text-align: center;">
+          黑潮后也是机遇：晦晶、变异种子、遗迹入口、土著商人、幼兽、规则碎片。
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 十、主角 ===== -->
+    <section class="section fade-in" id="protagonist">
+      <p class="section-label">拾</p>
+      <h2 class="section-title"><span class="num">10</span>主角 · 与世界的关系</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">穿越者中的异类</h3>
+          <div class="card-body">
+            <p>主角穿越前只是一个碌碌无为的普通人。但在穿越瞬间，他看见了不可名状之一——"造主"。</p>
+            <p>那一眼击碎了他的世界观，也拔高了他的审美。他第一次真正想活——不是为了安全，而是为了接近、理解，甚至成为那样的存在。</p>
+          </div>
+          <div class="card-note">他不是怕疯，他是怕自己疯得不够漂亮。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">两大精神锚点</h3>
+          <div class="card-body">
+            <p><span class="keyword">记忆锚：</span>他曾见过真正美丽、震撼、不可名状的存在。那记忆是他不被无光域同化的底线。</p>
+            <p><span class="keyword">自我观察锚：</span>他始终观察自己，确保自己不是被疯狂吞噬，而是在主动雕刻疯狂。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top: 20px;">
+        <div class="card">
+          <h3 class="card-title">🔧 工具</h3>
+          <div class="card-body">它能保护我，所以有用。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🧪 实验体</h3>
+          <div class="card-body">它在变异，我想看看边界在哪里。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🤝 合作者</h3>
+          <div class="card-body">它开始回应我的命令。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🏠 家</h3>
+          <div class="card-body">它想留住我，而我没有第一时间拆了它。</div>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3 class="card-title">🚢 文明方舟</h3>
+          <div class="card-body">既然世界是子宫，那我就把这间屋子养成一艘船。</div>
+        </div>
+      </div>
+
+      <!-- 特殊路线 -->
+      <div class="quote" style="margin-top: 28px;">
+        普通玩家：搜集资源 → 升级房屋 → 抵御黑潮 → 扩大生产。<br />
+        主角：搜集资源 → 观察规则 → 驯化异常 → 建立循环 → 反向利用世界。
+      </div>
+
+      <div class="grid-4" style="margin-top: 20px;">
+        <div class="card" style="text-align: center; padding: 20px 16px;">
+          <div class="card-title" style="font-size: 16px;">🔄 别人恐惧</div>
+          <div class="card-body" style="font-size: 14px;">主角记录声音变化——它正在学习。</div>
+        </div>
+        <div class="card" style="text-align: center; padding: 20px 16px;">
+          <div class="card-title" style="font-size: 16px;">🔄 别人烧尸体</div>
+          <div class="card-body" style="font-size: 14px;">主角堆肥——怪物也是肥料上门。</div>
+        </div>
+        <div class="card" style="text-align: center; padding: 20px 16px;">
+          <div class="card-title" style="font-size: 16px;">🔄 别人求净化</div>
+          <div class="card-body" style="font-size: 14px;">主角保留污染——分级管理。</div>
+        </div>
+        <div class="card" style="text-align: center; padding: 20px 16px;">
+          <div class="card-title" style="font-size: 16px;">🔄 别人躲黑潮</div>
+          <div class="card-body" style="font-size: 14px;">主角捡潮后资源——最危险也最肥沃。</div>
+        </div>
+        <div class="card" style="text-align: center; padding: 20px 16px; grid-column: 1 / -1;">
+          <div class="card-title" style="font-size: 16px;">🔄 别人建房</div>
+          <div class="card-body" style="font-size: 14px;">主角养房——喂它骨头、孢子、规则尘。读者期待它长成什么怪物。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 十一、真相与矛盾 ===== -->
+    <section class="section fade-in" id="truth">
+      <p class="section-label">拾壹</p>
+      <h2 class="section-title"><span class="num">11</span>世界真相 · 核心矛盾</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">世界真相分层</h3>
+          <div class="card-body">
+            <div class="truth-stack">
+              <div class="truth-layer"><span class="label">第一层 · 求生</span><div class="text">玩家以为只是一场求生游戏。</div></div>
+              <div class="truth-layer"><span class="label">第二层 · 生态</span><div class="text">怪物、植物、庇护所都参与晦能循环。</div></div>
+              <div class="truth-layer"><span class="label">第三层 · 历史</span><div class="text">土著文明曾经历过类似的外来者降临。</div></div>
+              <div class="truth-layer"><span class="label">第四层 · 系统</span><div class="text">系统不是救世工具，而是筛选器。</div></div>
+              <div class="truth-layer"><span class="label">第五层 · 神胎</span><div class="text">整个无光域是一枚即将孵化的神胎。</div></div>
+              <div class="truth-layer"><span class="label">第六层 · 造主</span><div class="text">无数生命的挣扎、文明的兴亡，对祂而言只是一次不起眼的玩笑。</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">三大核心矛盾</h3>
+          <div class="card-body">
+            <div class="conflict-grid" style="margin-top: 0;">
+              <div class="conflict-card" style="background: none; border: none; padding: 16px 0;">
+                <div class="vs">生存 ⇄ 被饲养</div>
+                <p>玩家越努力活下去，越可能成为更优质的能量产出单位。</p>
+              </div>
+              <div class="conflict-card" style="background: none; border: none; padding: 16px 0;">
+                <div class="vs">建设 ⇄ 同化</div>
+                <p>庇护所越强大，越接近晦能生态，也越不像人类文明。</p>
+              </div>
+              <div class="conflict-card" style="background: none; border: none; padding: 16px 0;">
+                <div class="vs">成神 ⇄ 出走</div>
+                <p>主角最终放弃成神，带领幸存者寻找新家园——星辰大海何尝不是另一种精彩。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 十二、第一卷 ===== -->
+    <section class="section fade-in" id="volume1">
+      <p class="section-label">拾贰</p>
+      <h2 class="section-title"><span class="num">12</span>第一卷 · 孤门之始</h2>
+      <p class="section-desc">从孤门小屋到第一次大黑潮——在前三十天内建立基础生态循环，并发现庇护所、系统与无光域之间的真相。</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">可选卷名</h3>
+          <div class="card-body">
+            <ul>
+              <li>《孤门》</li>
+              <li>《无光门后》</li>
+              <li>《第一场黑潮》</li>
+              <li>《安全屋会呼吸》</li>
+              <li>《把怪物种进土里》</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">结尾钩子</h3>
+          <div class="card-body">
+            <div class="quote" style="margin: 0; font-size: 15px; background: none; padding: 0 0 0 16px;">
+              【第一次区域融合完成。】<br />
+              【领地功能开放。】<br />
+              【请各位灯种，开始互相靠近。】<br /><br />
+              主角通过裂视看到公告背后的第二行字：<br />
+              <span style="color: #c47a6a;">【请各位候选人格，开始互相吞食。】</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 结尾横幅 ===== -->
+    <div class="banner fade-in">
+      <p>
+        无光域是一片没有恒星的宇宙空洞，由一种名为"晦能"的活性生命维持生态。<br />
+        土著、怪物、植物、庇护所与穿越者都被纳入晦能反哺体系。<br />
+        而这场全民穿越的本质，是神胎诞生前最后一次进食与人格筛选。
+      </p>
+      <p style="margin-top: 28px; color: #6a5e4a; font-style: normal; font-size: 14px; letter-spacing: 4px;">
+        文明方舟 · 待续
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // ===== 粒子背景 =====
+    (function initParticles() {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let mouseX = 0, mouseY = 0;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2 + 0.5;
+          this.speedX = (Math.random() - 0.5) * 0.3;
+          this.speedY = (Math.random() - 0.5) * 0.3;
+          this.opacity = Math.random() * 0.4 + 0.1;
+          this.hue = Math.random() * 30 + 30; // golden range
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+
+          // mouse interaction
+          const dx = this.x - mouseX;
+          const dy = this.y - mouseY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            const force = (120 - dist) / 120;
+            this.x += dx * force * 0.002;
+            this.y += dy * force * 0.002;
+          }
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(${this.hue}, 50%, 70%, ${this.opacity})`;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < 120; i++) {
+        particles.push(new Particle());
+      }
+
+      function connectParticles() {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(215, 181, 109, ${0.06 * (1 - dist / 150)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => { p.update(); p.draw(); });
+        connectParticles();
+        requestAnimationFrame(animate);
+      }
+
+      document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      animate();
+    })();
+
+    // ===== 滚动进度条 =====
+    (function initProgress() {
+      const bar = document.getElementById('progress-bar');
+      window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const pct = (scrollTop / scrollHeight) * 100;
+        bar.style.width = pct + '%';
+      });
+    })();
+
+    // ===== 导航侧栏（自动生成） =====
+    (function initNav() {
+      const nav = document.getElementById('nav-sidebar');
+      const sections = document.querySelectorAll('.section');
+      const sectionNames = [
+        '世界本质', '晦能规则', '生命体系', '系统', '庇护所',
+        '资源体系', '资源循环', '生存节奏', '灾变', '主角',
+        '真相', '第一卷'
+      ];
+      const sectionIds = [
+        'world-essence', 'hue-rules', 'life-system', 'system', 'shelter',
+        'resources', 'cycle', 'early-days', 'cataclysm', 'protagonist',
+        'truth', 'volume1'
+      ];
+
+      sectionIds.forEach((id, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'nav-dot';
+        dot.dataset.target = id;
+        const tip = document.createElement('span');
+        tip.className = 'tooltip';
+        tip.textContent = sectionNames[i];
+        dot.appendChild(tip);
+        dot.addEventListener('click', () => {
+          document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        });
+        nav.appendChild(dot);
+      });
+
+      // highlight active
+      const dots = nav.querySelectorAll('.nav-dot');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            dots.forEach(d => d.classList.remove('active'));
+            const matched = nav.querySelector(`[data-target="${entry.target.id}"]`);
+            if (matched) matched.classList.add('active');
+          }
+        });
+      }, { threshold: 0.3 });
+
+      sections.forEach(s => observer.observe(s));
+      // Also observe hero
+      const hero = document.getElementById('hero');
+      if (hero) observer.observe(hero);
+    })();
+
+    // ===== 滚动渐入动画 =====
+    (function initFadeIn() {
+      const els = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(el => observer.observe(el));
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>无光域 · 语言、仪式与归属交易</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #08080e;
+      color: #d4d0c4;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #d7b56d, #a8874f, #6a4c2a);
+      z-index: 999;
+      box-shadow: 0 0 12px rgba(215,181,109,0.5);
+    }
+
+    .wrapper {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+    }
+
+    .nav-sidebar {
+      position: fixed;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #2f2c36;
+      border: 1px solid #4a4555;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-dot:hover,
+    .nav-dot.active {
+      background: #d7b56d;
+      border-color: #d7b56d;
+      transform: scale(1.25);
+      box-shadow: 0 0 12px rgba(215,181,109,0.5);
+    }
+
+    .tooltip {
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1b1b24;
+      color: #d7b56d;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      border: 1px solid #2f2c36;
+    }
+
+    .nav-dot:hover .tooltip { opacity: 1; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(215,181,109,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 7vw, 70px);
+      color: #f0e6c8;
+      font-weight: 300;
+      letter-spacing: 10px;
+      text-shadow: 0 0 60px rgba(215,181,109,0.2);
+    }
+
+    .accent {
+      color: #d7b56d;
+      font-weight: 600;
+    }
+
+    .hero-sub {
+      margin-top: 18px;
+      color: #9c988e;
+      font-size: clamp(15px, 2vw, 21px);
+      letter-spacing: 5px;
+    }
+
+    .hero-quote {
+      margin-top: 46px;
+      max-width: 820px;
+      text-align: left;
+      color: #b8aa8a;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.95;
+      border-left: 3px solid #a8874f;
+      padding: 10px 0 10px 24px;
+      background: linear-gradient(90deg, rgba(215,181,109,0.05), transparent);
+    }
+
+    .hero-scroll {
+      margin-top: 58px;
+      color: #6a5e4a;
+      font-size: 14px;
+      letter-spacing: 4px;
+      animation: pulse 2s infinite;
+    }
+
+    .section {
+      margin-top: 84px;
+      padding: 36px 0;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: #6a5e4a;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      color: #f0e6c8;
+      margin-bottom: 26px;
+      letter-spacing: 4px;
+    }
+
+    .num {
+      color: #d7b56d;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+
+    .section-desc {
+      color: #a09a8e;
+      font-size: 16px;
+      max-width: 920px;
+      margin-bottom: 34px;
+    }
+
+    .keyword {
+      color: #d7b56d;
+      font-weight: 600;
+    }
+
+    .danger {
+      color: #c47a6a;
+      font-weight: 600;
+    }
+
+    .rare {
+      color: #8ab4c4;
+      font-weight: 600;
+    }
+
+    .quote {
+      border-left: 3px solid #a8874f;
+      padding: 16px 24px;
+      background: linear-gradient(90deg, rgba(215,181,109,0.05), transparent);
+      color: #e6d7aa;
+      margin: 28px 0;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .quote-center {
+      text-align: center;
+      border-top: 1px solid #a8874f;
+      border-bottom: 1px solid #a8874f;
+      background: rgba(215,181,109,0.04);
+      padding: 24px 32px;
+      font-size: 16px;
+      color: #e6d7aa;
+      font-style: italic;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+    .card {
+      background: linear-gradient(145deg, #14141e, #1a1a26);
+      border: 1px solid #282536;
+      border-radius: 16px;
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+
+    .card:hover {
+      border-color: #3d3850;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d7b56d, transparent);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-size: 20px;
+      color: #f0e6c8;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .card-sub {
+      color: #d7b56d;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .card-body {
+      color: #bcb6a8;
+      font-size: 15px;
+    }
+
+    .card-body ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .card-body li {
+      margin-bottom: 6px;
+    }
+
+    .card-note {
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: rgba(100,80,50,0.12);
+      border-radius: 8px;
+      color: #a09888;
+      font-size: 14px;
+      border-left: 2px solid #6a5e4a;
+    }
+
+    .entry {
+      background: #11111a;
+      border-left: 3px solid #d7b56d;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin-top: 16px;
+    }
+
+    .entry-title {
+      color: #f0e6c8;
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .entry p {
+      color: #beb7aa;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .label {
+      color: #d7b56d;
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin: 2px 4px 2px 0;
+      background: rgba(215,181,109,0.12);
+      color: #d7b56d;
+      border: 1px solid rgba(215,181,109,0.25);
+    }
+
+    .banner {
+      margin-top: 86px;
+      padding: 60px 36px;
+      text-align: center;
+      background: radial-gradient(ellipse at center, rgba(215,181,109,0.04) 0%, transparent 70%);
+      border-top: 1px solid #282536;
+      border-bottom: 1px solid #282536;
+    }
+
+    .banner p {
+      font-size: 20px;
+      color: #b8aa8a;
+      font-style: italic;
+      max-width: 860px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .wrapper { padding: 0 16px 60px; }
+      .nav-sidebar { display: none; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .hero-quote { font-size: 16px; padding-left: 16px; }
+    }
+
+    ::selection {
+      background: rgba(215,181,109,0.25);
+      color: #f0e6c8;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08080e; }
+    ::-webkit-scrollbar-thumb { background: #2f2c36; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4a4555; }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <nav class="nav-sidebar" id="nav-sidebar"></nav>
+
+  <div class="wrapper">
+    <header class="hero" id="hero">
+      <h1 class="hero-title">语<span class="accent">言</span>与仪式</h1>
+      <p class="hero-sub">骨刻语 · 喉振语 · 灯纹语 · 梦纹语 · 归属交易</p>
+      <div class="hero-quote">
+        在无光域，说话是投喂，文字是钉子，仪式是现实校准手术。<br />
+        交易不是交换物资，而是把自己与世界的连接拆下一部分，转交给别人。<br />
+        最危险的不是沉默，而是一个问题问得太像门。
+      </div>
+      <p class="hero-scroll">— 向下阅读 —</p>
+    </header>
+
+    <section class="section fade-in" id="principle">
+      <p class="section-label">壹</p>
+      <h2 class="section-title"><span class="num">01</span>核心原则 · 语言不是表达，是投喂</h2>
+      <p class="section-desc">
+        在无光域，语言从来不是单纯沟通工具。语言会给未知喂形状，会替世界补定义，也会让某些东西获得回应资格。
+        因此土著并非天生沉默，而是知道每一句话都可能让黑暗多长出一个可被理解、可被进入、可被模仿的开口。
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">语言会给未知喂形状</h3>
+          <div class="card-body">
+            未定型异常在被描述前可能只是“门外的声音”。一旦被反复描述为母亲、哭声、寒冷、熟人，它就会逐渐获得相应的声线、情绪、称呼与来访规律。
+          </div>
+          <div class="card-note">古老戒律：不要替黑暗想象脸。</div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">语言会替世界补定义</h3>
+          <div class="card-body">
+            你说“那是脚步声”，它就可能开始拥有脚。你说“这里少了一个人”，世界就可能尝试补出那个“少掉的人”。
+          </div>
+          <div class="card-note">多说一句，世界就多一个理由长歪。</div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">被听见就是被接入</h3>
+          <div class="card-body">
+            很多异常不需要理解语言，只需要你发出可被回应的结构。疑问句、呼名句、归来句、计数句，都是危险入口。
+          </div>
+          <div class="card-note">问门句不是寻找答案，它本身就是给异常留下的门。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">高危问门句</h3>
+      <div class="grid-2">
+        <div class="entry">
+          <div class="entry-title">身份问句</div>
+          <p><span class="label">禁句：</span>你是谁？</p>
+          <p><span class="label">风险：</span>给未知对象申请身份的机会。</p>
+          <p><span class="label">替代：</span>你不在名册内。</p>
+        </div>
+        <div class="entry">
+          <div class="entry-title">归来问句</div>
+          <p><span class="label">禁句：</span>你回来了吗？</p>
+          <p><span class="label">风险：</span>允许死者、失踪者、旧梦和门外模仿声争取“归来”资格。</p>
+          <p><span class="label">替代：</span>门内未登记归者。</p>
+        </div>
+        <div class="entry">
+          <div class="entry-title">计量问句</div>
+          <p><span class="label">禁句：</span>还有谁没到？</p>
+          <p><span class="label">风险：</span>给计量异常一个补人入口。</p>
+          <p><span class="label">替代：</span>已到者止于此数。</p>
+        </div>
+        <div class="entry">
+          <div class="entry-title">共证问句</div>
+          <p><span class="label">禁句：</span>你听见了吗？</p>
+          <p><span class="label">风险：</span>把个人错觉扩展成群体事实。</p>
+          <p><span class="label">替代：</span>暂不共证。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="bone-script">
+      <p class="section-label">贰</p>
+      <h2 class="section-title"><span class="num">02</span>骨刻语 · 不是文字，是钉子</h2>
+      <p class="section-desc">
+        骨刻语不是用来记录信息的文字，而是用来把现实钉住的技术。它固定归属、限制解释、阻止后来者补写。
+        刻错一笔，错误也会被世界承认。
+      </p>
+
+      <div class="quote">
+        石头太冷，不记得人。木头太活，容易继续长。骨头刚好死过，适合替活人记住规矩。
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">固定归属</h3>
+          <div class="card-body">
+            骨刻语常用于门框、床脚、箱底、井口、墓骨和封门板。它不是描述某物属于谁，而是让世界承认这种归属。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">限制解释</h3>
+          <div class="card-body">
+            正式骨刻语极少解释原因。越解释，异常越容易借助因果长出形状。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">错刻成真</h3>
+          <div class="card-body">
+            “此床记一人”若误刻成“此床记人”，床就可能开始记住所有睡过的人。
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">骨刻语禁忌</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">不刻完整因果</h3>
+          <div class="card-body">
+            不写“因为门外有怪物，所以不能开门”。只写“门外不认”。完整因果会让怪物获得稳定身份。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">不刻具体异常名</h3>
+          <div class="card-body">
+            不写“防敲门者”。只写“声不作证”。反复刻写异常名称，会使异常更稳定。
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">不刻疑问句</h3>
+          <div class="card-body">
+            骨刻语中没有真正的问句。问句会让骨板、门框和墙面本身开始等待答案。
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">骨刻语文本图鉴</h3>
+
+      <div class="entry">
+        <div class="entry-title">门框封文</div>
+        <p><span class="label">载体：</span>门框、门槛、门绳骨扣。</p>
+        <p><span class="label">原文：</span>内已定。外不辩。声不证。手不伸。</p>
+        <p><span class="label">用途：</span>防敲门者、防门缝笑声、防门外熟人模仿。</p>
+        <p><span class="label">风险说明：</span>若刻在错误门上，可能使本该属于屋内的人被拒之门外。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">空床封文</div>
+        <p><span class="label">载体：</span>床脚、床签、封床钉。</p>
+        <p><span class="label">原文：</span>床空。不等。不梦。不温。</p>
+        <p><span class="label">用途：</span>封未归床位，防替睡者、陌生室友、存档床单。</p>
+        <p><span class="label">风险说明：</span>“床空”必须紧跟“不等”，否则空床会开始等人。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">旧箱封文</div>
+        <p><span class="label">载体：</span>旧箱底部、归箱牌、仓储骨板。</p>
+        <p><span class="label">原文：</span>箱空。旧物不归。旧主不取。空者不住。</p>
+        <p><span class="label">用途：</span>防空箱占用者、防回箱名签。</p>
+        <p><span class="label">风险说明：</span>最后一句防止“空”被解释成可居住空间。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">婴儿半名骨牌</div>
+        <p><span class="label">载体：</span>婴儿第一块骨牌。</p>
+        <p><span class="label">原文：</span>未全。暂呼。不入榜。不入债。不许梦中取。</p>
+        <p><span class="label">用途：</span>保护半名期儿童，避免被系统、食名者或梦中异常提前命名。</p>
+        <p><span class="label">风险说明：</span>若骨牌变重，说明已有东西试图提前认领此名。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">死者封名骨</div>
+        <p><span class="label">载体：</span>墓骨、失名布压骨、封床骨钉。</p>
+        <p><span class="label">原文：</span>名眠。声止。骨去。梦不补。</p>
+        <p><span class="label">用途：</span>处理异常死亡者、梦葬失败者、被食名污染者。</p>
+        <p><span class="label">风险说明：</span>若死者最后的梦被补全，可能生成一个自认为仍活着的梦中人格。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="throat-language">
+      <p class="section-label">叁</p>
+      <h2 class="section-title"><span class="num">03</span>喉振语 · 让骨头承认</h2>
+      <p class="section-desc">
+        晦民许多种族没有完整口腔结构。他们说话依靠喉骨震动、胸腔共鸣、舌骨敲击与面骨传声。
+        喉振语不是发音，而是让身体内部的骨头参与确认。
+      </p>
+
+      <div class="quote">
+        喉振语说出口的内容，比普通声音更容易被世界承认。
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">骨不同意</h3>
+          <div class="card-body">
+            当晦民说出与自身归属冲突的话时，喉骨会卡顿，胸腔会漏音，背脊会出现第二道回声。食名裔尤其擅长听出这种“不一致”。
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">空音</h3>
+          <div class="card-body">
+            空音不是沉默，而是有意留下的无声位置。它用于不命名高危对象、不补全死者话语、不承认多出来的人。
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">喉振禁句</h3>
+          <div class="card-body">
+            “你是谁”“你回来了吗”“还有谁没到”“那是谁的床”“你听见了吗”都属于高危问门句。
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">声型图鉴</h3>
+
+      <div class="grid-4">
+        <div class="card">
+          <h3 class="card-title">低振</h3>
+          <div class="card-body">稳定、安抚、家内确认、睡眠前归位。常用于孩子认床和壳眠牛安抚。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">短振</h3>
+          <div class="card-body">警告、停止、不回应、立刻归位。常用于守夜、门外声音和计量异常。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">断振</h3>
+          <div class="card-body">拒绝承认、切断传播、不补全信息。用于半句人、多余祷文和未确认身份者。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">空振</h3>
+          <div class="card-body">留白、不命名、暂不承认。用于失名者、异常物、未归床位与高危遗物。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">喉振语替代句</h3>
+
+      <div class="grid-2">
+        <div class="entry">
+          <div class="entry-title">拒门短句</div>
+          <p><span class="label">禁句：</span>你是谁？</p>
+          <p><span class="label">替代结构：</span>你不在名册内。</p>
+          <p><span class="label">用途：</span>拒绝门外声音获得身份申请权。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">禁数短句</div>
+          <p><span class="label">禁句：</span>还有谁没到？</p>
+          <p><span class="label">替代结构：</span>已到者止于此数。</p>
+          <p><span class="label">用途：</span>防数不清的羊、无主碗、第三串脚印。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">封床短句</div>
+          <p><span class="label">禁句：</span>那是谁的床？</p>
+          <p><span class="label">替代结构：</span>此床暂不认名。</p>
+          <p><span class="label">用途：</span>防未归床位与陌生室友。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">断证短句</div>
+          <p><span class="label">禁句：</span>你听见了吗？</p>
+          <p><span class="label">替代结构：</span>暂不共证。</p>
+          <p><span class="label">用途：</span>防止个人听觉异常扩展成群体事实。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="lamp-language">
+      <p class="section-label">肆</p>
+      <h2 class="section-title"><span class="num">04</span>灯纹语 · 会被模仿的光</h2>
+      <p class="section-desc">
+        灯纹语利用骨灯明暗、遮光、灯距、灯色和摇晃节奏传递信息。它诞生于对声音的恐惧，但光也并不安全。
+        伪灯花、灯腹虫、旧灯影和门脉层错误信号都可能模仿灯纹。
+      </p>
+
+      <div class="quote">
+        灯只传状态，不传名字。任何用灯纹表达具体身份的信号，都视作污染。
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">明</h3>
+          <div class="card-body">灯光增强一次。表示注意、这里、有物、可见。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">暗</h3>
+          <div class="card-body">灯光遮蔽一次。表示停止、隐蔽、不可见、危险。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">摇</h3>
+          <div class="card-body">灯体左右摆动。表示移动、路线、方向、跟随。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">伏</h3>
+          <div class="card-body">灯光向下压低。表示静默、蹲伏、不说话、降低存在感。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">断</h3>
+          <div class="card-body">灯光突然熄灭再恢复。表示中断、不承认、失联、可能异常。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">双灯 / 三灯</h3>
+          <div class="card-body">双灯常代表商队或见证；三灯常代表警戒、死者或异常。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">诡异灯纹图鉴</h3>
+
+      <div class="entry">
+        <div class="entry-title">假安全灯</div>
+        <p><span class="label">灯纹：</span>一明一明一明，持续稳定。</p>
+        <p><span class="label">表层含义：</span>安全。</p>
+        <p><span class="label">真实判断：</span>高危。真正的土著不会用稳定长明表示绝对安全。</p>
+        <p><span class="label">可能来源：</span>灯腹虫、伪灯花、旧灯影、死亡玩家庇护所残光。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">人数异常灯</div>
+        <p><span class="label">灯纹：</span>双灯平行，第三灯迟一拍出现。</p>
+        <p><span class="label">含义：</span>队伍人数不稳定，有东西正在尝试被算进去。</p>
+        <p><span class="label">处理：</span>不清点全员姓名，只确认已登记者，禁止问“多出来的是谁”。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">死者随队灯</div>
+        <p><span class="label">灯纹：</span>三灯成列，中灯不投影。</p>
+        <p><span class="label">含义：</span>队伍中有死者残响或未确认归属者。</p>
+        <p><span class="label">处理：</span>不呼名、不递火、不共食、不让其靠近床区。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">交易污染灯</div>
+        <p><span class="label">灯纹：</span>二明一暗后，灯焰向内收缩。</p>
+        <p><span class="label">含义：</span>交易物本身带有归属污染。</p>
+        <p><span class="label">常见于：</span>旧床具、旧门牌、遗物箱、未注销货票、梦囊。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">真商队三段灯</div>
+        <p><span class="label">灯纹结构：</span>状态 / 限制 / 代价。</p>
+        <p><span class="label">示例：</span>双灯平行 / 二明一伏 / 一断。</p>
+        <p><span class="label">翻译：</span>可交易 / 保持安静 / 交易后不要回头。</p>
+        <p><span class="label">风险说明：</span>若只有“可交易”而无“限制”和“代价”，通常是假商队。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="dream-well">
+      <p class="section-label">伍</p>
+      <h2 class="section-title"><span class="num">05</span>梦纹语与井纹语</h2>
+      <p class="section-desc">
+        梦纹语不是保存梦，而是圈养梦的残骸。井纹语不是标记水源，而是判断世界的喉咙是否正在说话。
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">梦纹语</h3>
+          <div class="card-body">
+            梦纹语由菌盖纹路、梦囊褶皱、睡眠节律、壳面划痕和梦渣沉积层构成。它不记录梦的完整内容，只记录梦的边界、入口、出口、主人、是否会继续，以及是否有东西在梦里醒着。
+          </div>
+          <div class="card-note">梦如果被完整说出，就会开始寻找醒来的办法。</div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">井纹语</h3>
+          <div class="card-body">
+            井纹语用于标记井是否仍然只是井、井下是否会回应、回应是否可信、水是否携带梦、井是否试图认识取水者。
+          </div>
+          <div class="card-note">不是所有井都该给水。有些井只是在练习说话。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">梦的危险分类</h3>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">可食梦</h3>
+          <div class="card-body">低级梦渣，适合眠菇培养，风险较低。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">可存梦</h3>
+          <div class="card-body">结构稳定，可放入梦囊保存，风险中等。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">可借梦</h3>
+          <div class="card-body">可作为交易代价，但必须约定归还，风险中高。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">可葬梦</h3>
+          <div class="card-body">死者最后稳定梦，可用于梦葬，风险高。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">不可醒梦</h3>
+          <div class="card-body">梦中有东西已经意识到自己是梦，极高危。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">反梦</h3>
+          <div class="card-body">梦境开始梦见现实，禁忌级。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">梦纹文本图鉴</h3>
+
+      <div class="entry">
+        <div class="entry-title">梦葬封纹</div>
+        <p><span class="label">原文：</span>此梦折叠。不醒。不补。不开门。</p>
+        <p><span class="label">用途：</span>死者梦葬，防止梦中死者回归。</p>
+        <p><span class="label">风险说明：</span>若梦中出现门，必须断梦，否则死者可能沿梦里的门返回现实边界。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">借梦契纹</div>
+        <p><span class="label">原文：</span>梦借一眠。醒后还壳。梦中所得，不带名出。</p>
+        <p><span class="label">用途：</span>梦交易、梦债、壳眠裔借梦税。</p>
+        <p><span class="label">风险说明：</span>“还壳”不是还给人，而是还给保存梦的壳眠结构。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">不可醒梦标记</div>
+        <p><span class="label">原文：</span>梦中有醒者。不入。不听。不救。</p>
+        <p><span class="label">用途：</span>封存高危梦囊和梦腐层污染源。</p>
+        <p><span class="label">风险说明：</span>救援行为可能被梦解释为“现实承认梦中醒者”。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">反梦警告纹</div>
+        <p><span class="label">原文：</span>此梦已梦见你。远离。</p>
+        <p><span class="label">用途：</span>反梦梦囊、梦腐层禁区。</p>
+        <p><span class="label">风险说明：</span>反梦不是你在做梦，而是梦正在把你纳入它的内容。</p>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">井纹高危标记</h3>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">反环</h3>
+          <div class="card-body">井下有回应，不可信。井会用你熟悉的声音回答问题。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">空环</h3>
+          <div class="card-body">此井不认上方。放下去的桶可能从另一个地方回来，或带回不是水的东西。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">咽环</h3>
+          <div class="card-body">井正在吞咽。不要取水，这时井不是给东西，而是在收东西。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">生环</h3>
+          <div class="card-body">井下有未登记生命，可能是晦兽、死者残响、失名者，或井自己长出的器官。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">回名环</h3>
+          <div class="card-body">此井会归还被呼唤的名字。喊下去的名字，会被井用另一个人的声音还给你。</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">喉井封文</div>
+        <p><span class="label">原文：</span>此井不渴。此井在说话。封其口。</p>
+        <p><span class="label">用途：</span>封禁喉井。</p>
+        <p><span class="label">风险说明：</span>喉井不是水源，而是无光域深处向上的喉咙。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">失踪者井文</div>
+        <p><span class="label">原文：</span>入井者不归门。若声归，非人归。</p>
+        <p><span class="label">用途：</span>有人坠井后使用，防止井下声音被视作幸存者证明。</p>
+        <p><span class="label">风险说明：</span>人入井，声出井，人和声不可同判。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="rituals">
+      <p class="section-label">陆</p>
+      <h2 class="section-title"><span class="num">06</span>仪式图鉴 · 现实校准手术</h2>
+      <p class="section-desc">
+        无光域的仪式不是信仰表演，而是对现实进行校准的手术。仪式的目的不是祈求，而是告诉世界：这件事到此为止，不要继续解释。
+      </p>
+
+      <div class="quote-center">
+        仪式失败不会无效。<br />
+        它会反向成形，长成畸形规则。
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">认门礼</div>
+        <p><span class="label">分类：</span>儿童 / 门界 / 半名保护仪式</p>
+        <p><span class="label">真正目的：</span>不是让孩子认识家门，而是让家门先于门外之物认识孩子。</p>
+        <p><span class="label">必需材料：</span>门槛苔粉、半名骨牌、家中旧火灰、守床草幼苗、未用过的归位碗。</p>
+        <p><span class="label">仪式核心：</span>孩子不能被问“你是谁”，只能被告知“你暂归此门”。</p>
+        <p><span class="label">失败征兆：</span>门槛苔朝外生长，半名骨牌变重，孩子梦中听见门外有人叫全名。</p>
+        <p><span class="label">失败后果：</span>孩子可能产生门外亲近感，更易被敲门者、借名童、晚归影影响。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">守床草仪式</div>
+        <p><span class="label">分类：</span>睡眠边界仪式</p>
+        <p><span class="label">真正目的：</span>防止床把“空”理解为“等待”。</p>
+        <p><span class="label">必需材料：</span>守床草、床签、封床钉备用、一滴清水、一粒骨盐。</p>
+        <p><span class="label">仪式核心：</span>必须明确此床当前记谁、此床不记谁、此床空时不等待、此床旧梦不续。</p>
+        <p><span class="label">失败征兆：</span>守床草向床下倾斜，床面无故变温，枕头出现非本人头痕，系统睡眠记录多出半段。</p>
+        <p><span class="label">失败后果：</span>替睡者、陌生室友、存档床单更容易出现。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">归箱礼</div>
+        <p><span class="label">分类：</span>仓储秩序仪式</p>
+        <p><span class="label">真正目的：</span>不是整理物资，而是告诉箱子：你只能装物，不准装空出来的位置。</p>
+        <p><span class="label">必需材料：</span>归箱牌、骨板账册、归箱草、烧毁旧标签的灰、箱契师见证。</p>
+        <p><span class="label">仪式核心：</span>空箱必须标注“空而无主”。不能只写“空”。</p>
+        <p><span class="label">失败征兆：</span>箱内格数被占但不可见，箱子自动分类，旧标签回归，归箱草枯萎。</p>
+        <p><span class="label">失败后果：</span>空箱占用者、回箱名签、箱腹蜥聚集。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">骨播葬</div>
+        <p><span class="label">分类：</span>葬俗 / 农业循环仪式</p>
+        <p><span class="label">真正目的：</span>安全地将死者纳入农业循环。让骨成为麦，但不让麦想起自己曾是人。</p>
+        <p><span class="label">必需材料：</span>死者骨粉、骨麦种、失名布、门槛苔粉、沉默骨板。</p>
+        <p><span class="label">仪式核心：</span>死者真名必须暂封。第一季骨麦不可出售，不可宴客，不可带出家门。</p>
+        <p><span class="label">失败征兆：</span>骨麦长得过于整齐，麦穗朝向死者旧床，收割时听见死者口癖。</p>
+        <p><span class="label">失败后果：</span>回声骨麦、哭麦、认床麦。严重时麦田会在夜里低声数家里还剩几个人。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">梦葬</div>
+        <p><span class="label">分类：</span>葬俗 / 梦境封存仪式</p>
+        <p><span class="label">真正目的：</span>不是保存死者，而是防止死者最后的梦继续生长。</p>
+        <p><span class="label">必需材料：</span>梦囊、井眠藻液、眠菇菌丝、壳眠牛黑乳、断梦纹。</p>
+        <p><span class="label">仪式核心：</span>梦不能被完整复述。亲属不能问“他梦见了什么”，只能问“梦是否已折”。</p>
+        <p><span class="label">失败征兆：</span>梦囊内出现敲门声，亲属梦见死者醒来，梦纹自行延长，死者旧床长出返床菇。</p>
+        <p><span class="label">失败后果：</span>死者梦可能获得自我延续能力，形成旧梦影或梦中归来者。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">缄封葬</div>
+        <p><span class="label">分类：</span>高危葬俗 / 身份隔离仪式</p>
+        <p><span class="label">适用对象：</span>被食名污染者、门外归来者、梦中死亡者、替睡者影响者、死后仍在频道发言者。</p>
+        <p><span class="label">真正目的：</span>当无法确认死者是否仍是本人时，不给其任何返回路径。</p>
+        <p><span class="label">仪式核心：</span>不确认身份，不否认身份，只封存归属。</p>
+        <p><span class="label">标准封文：</span>名暂眠。床暂封。声不归。物不分。</p>
+        <p><span class="label">失败后果：</span>身份回流，可能出现一个“大家逐渐觉得应该存在”的归来者。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="trade">
+      <p class="section-label">柒</p>
+      <h2 class="section-title"><span class="num">07</span>交易体系 · 归属转移</h2>
+      <p class="section-desc">
+        无光域交易不是“甲给乙物品”，而是归属关系转移。货物是否承认新主人、旧主人是否还能呼唤它、货物是否带有梦、声、名、床、门的残留，都是交易的一部分。
+      </p>
+
+      <div class="quote">
+        没有无代价交易。代价若未写明，就会由世界补上。
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">第一问：此物有名否？</h3>
+          <div class="card-body">无名物可能在交易后自行定型，或寻找第一个愿意称呼它的人。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">第二问：此物有旧主否？</h3>
+          <div class="card-body">旧主未断，物会回归。回归不一定是被偷，而可能是物品自己走回去。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">第三问：此物夜里会不会出声？</h3>
+          <div class="card-body">会出声的东西，不能直接带进庇护所。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">高危交易类型</h3>
+
+      <div class="grid-2">
+        <div class="entry">
+          <div class="entry-title">梦交易</div>
+          <p><span class="label">交易内容：</span>睡眠残留、梦渣、可借梦或可存梦。</p>
+          <p><span class="label">潜在后果：</span>失去某段情绪，降低噩梦抵抗力，让壳眠裔拥有进入睡眠边界的权限。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">名交易</div>
+          <p><span class="label">交易内容：</span>名字片段、称呼权、临时名音。</p>
+          <p><span class="label">潜在后果：</span>门牌识别不稳，系统昵称乱码，熟人偶尔叫错你，食名教团更易定位。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">记忆交易</div>
+          <p><span class="label">交易内容：</span>旧记忆、童年片段、未完成情绪。</p>
+          <p><span class="label">潜在后果：</span>你仍知道那件事发生过，但不再觉得它属于你。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">恐惧交易</div>
+          <p><span class="label">交易内容：</span>一次真实恐惧、恐惧残响。</p>
+          <p><span class="label">潜在后果：</span>你不再本能避开那类危险。恐惧是边界感的一部分。</p>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">诡异货币图鉴</h3>
+
+      <div class="grid-2">
+        <div class="entry">
+          <div class="entry-title">一段不会再梦见的童年</div>
+          <p><span class="label">价值：</span>高。</p>
+          <p><span class="label">收购者：</span>壳眠裔、骨灯商队、眠渊议会。</p>
+          <p><span class="label">后果：</span>你仍知道自己有童年，但梦里再也回不去。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">一个称呼</div>
+          <p><span class="label">价值：</span>中高。</p>
+          <p><span class="label">交易内容：</span>允许对方用某个亲昵称呼你一次或数次。</p>
+          <p><span class="label">后果：</span>称呼会改变关系，多次使用后，对方可能获得“亲近者”边界优势。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">一次恐惧</div>
+          <p><span class="label">价值：</span>中。</p>
+          <p><span class="label">交易内容：</span>交出你对某类事物的一次真实恐惧。</p>
+          <p><span class="label">后果：</span>你不再本能避开那类危险，被卖出的恐惧也可能被制成诱饵。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">一个未完成承诺</div>
+          <p><span class="label">价值：</span>高。</p>
+          <p><span class="label">交易内容：</span>尚未兑现、仍具有牵引力的承诺。</p>
+          <p><span class="label">后果：</span>商队可能在未来某个黑潮后，沿着这个承诺找到你。</p>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">一句从未说出口的话</div>
+          <p><span class="label">价值：</span>极高。</p>
+          <p><span class="label">收购者：</span>食名教团、骨灯商队、眠渊议会。</p>
+          <p><span class="label">后果：</span>你失去的不是话，而是那句话对应的人际可能性。某些晦诡会用那句话对别人说。</p>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">商队契约文本</h3>
+
+      <div class="entry">
+        <div class="entry-title">基础货契</div>
+        <p><span class="label">原文：</span>货有名。旧主断。新主认。夜不出声。三晦相内若返，卖者赔。</p>
+        <p><span class="label">用途：</span>普通货物交易。</p>
+        <p><span class="label">风险说明：</span>“若返”不是货物被偷回去，而是货物自己回到旧主那里。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">梦债契</div>
+        <p><span class="label">原文：</span>梦借一眠。债随睡来。醒后不还，梦自取路。</p>
+        <p><span class="label">用途：</span>梦交易、梦渣贷款、壳眠裔借梦。</p>
+        <p><span class="label">风险说明：</span>逾期后，梦会通过失眠、噩梦、眠菇异常生长等方式自行寻找回收路径。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">名音交易契</div>
+        <p><span class="label">原文：</span>借一音，不借骨。呼一次，价一次。三呼之后，音归买者。</p>
+        <p><span class="label">用途：</span>短期称呼权、代理交易、名契辅助。</p>
+        <p><span class="label">风险说明：</span>若对方用你的名音呼唤三次，而你没有赎回，这个名音就会真正偏向对方。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">后悔交易契</div>
+        <p><span class="label">原文：</span>未出口之悔，折作价。卖后不痛。不痛者自慎。</p>
+        <p><span class="label">用途：</span>高价值抽象交易。</p>
+        <p><span class="label">风险说明：</span>不再痛的人更容易做出原本会被悔意阻止的事。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">床具交易契</div>
+        <p><span class="label">原文：</span>床可卖。眠不可卖。旧温须散。旧梦须刮。</p>
+        <p><span class="label">用途：</span>旧床、床具、睡眠模块交易。</p>
+        <p><span class="label">风险说明：</span>未处理旧温和旧梦，买下的不是床，而是前任睡眠关系。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="name-contract">
+      <p class="section-label">捌</p>
+      <h2 class="section-title"><span class="num">08</span>食名名契 · 吞掉世界中的位置</h2>
+      <p class="section-desc">
+        食名教团不认为杀人有效。杀人只得到尸体。真正的胜利，是让世界承认你本来就是那个人。
+        食名不是吞掉名字，而是吞掉名字在现实中的位置。
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">门牌识别</h3>
+          <div class="card-body">名字被吞后，门可能开始承认替代者。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">床位归属</h3>
+          <div class="card-body">床可能对原主人变冷，对替代者变暖。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">系统昵称残影</h3>
+          <div class="card-body">频道、榜单、交易记录可能开始出现称呼错位。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">朋友记忆空位</h3>
+          <div class="card-body">熟人不一定忘记你，却会觉得另一个人更像你。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">排行榜边缘</h3>
+          <div class="card-body">高阶食名可能触及榜单位置，制造榜首失名。</div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">食名教团伪契</h3>
+
+      <div class="entry">
+        <div class="entry-title">伪继承契</div>
+        <p><span class="label">原文：</span>旧名疲弱。新舌代呼。门若不拒，床若不醒，名可迁。</p>
+        <p><span class="label">用途：</span>身份迁移、门牌篡夺、床位归属污染。</p>
+        <p><span class="label">风险说明：</span>如果门、床、周围人都没有及时拒绝，名字就可能迁移。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">空名契</div>
+        <p><span class="label">原文：</span>名去。位留。后来者可居。</p>
+        <p><span class="label">用途：</span>制造榜首失名、清空某人的现实位置。</p>
+        <p><span class="label">风险说明：</span>被处理者不一定死亡，而是逐渐变得“不占位置”。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">家人伪契</div>
+        <p><span class="label">原文：</span>他曾呼你。你曾应他。三应之后，亲可立。</p>
+        <p><span class="label">用途：</span>让异常通过称呼建立亲近者身份。</p>
+        <p><span class="label">风险说明：</span>如果回应某个异常称呼三次，它可能获得“亲近者”边界优势。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">梦中签名契</div>
+        <p><span class="label">原文：</span>梦里之名，醒后亦算。若你记得，便已同意。</p>
+        <p><span class="label">用途：</span>梦境盗名、睡眠污染、壳眠伪契。</p>
+        <p><span class="label">风险说明：</span>正统食名裔严禁承认此类契约，因为梦中签约者未必是本人。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="village-rules">
+      <p class="section-label">玖</p>
+      <h2 class="section-title"><span class="num">09</span>缄默村规 · 冷酷防灾文本</h2>
+      <p class="section-desc">
+        缄默村的规章不是伦理，而是防灾判决。违反村规不一定会被村民惩罚，但可能会被村子本身纠正。
+      </p>
+
+      <div class="entry">
+        <div class="entry-title">入村骨板</div>
+        <p><span class="label">原文：</span>入村先失声。门前不认亲。井边不问答。碗多不添人。床空不等主。三错者，村改其形。</p>
+        <p><span class="label">用途：</span>外来者入村规则。</p>
+        <p><span class="label">风险说明：</span>最后一句不是驱逐，而是村子会把违规者改成适合留在这里的形状。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">夜规骨板</div>
+        <p><span class="label">原文：</span>夜后不补话。夜后不数人。夜后不换床。夜后不借火。夜后不信温柔声。</p>
+        <p><span class="label">用途：</span>夜间防灾。</p>
+        <p><span class="label">风险说明：</span>温柔声是缄默村最厌恶的东西，因为许多晦诡都学会用温柔降低戒心。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">共食厅骨板</div>
+        <p><span class="label">原文：</span>碗少，忍。碗多，止。人迟，等。人无，不补。空位，不看。</p>
+        <p><span class="label">用途：</span>防无主碗、饭桌缺席者、计量型异常。</p>
+        <p><span class="label">风险说明：</span>不要盯着空位看。看久了，空位会开始像有人。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">育幼室骨板</div>
+        <p><span class="label">原文：</span>孩未全名。不应门外。不梦旧人。不照黑水。不数床下手。</p>
+        <p><span class="label">用途：</span>保护半名期儿童。</p>
+        <p><span class="label">风险说明：</span>床下手不解释，只规定不数。解释会让手长出用途。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">葬地骨板</div>
+        <p><span class="label">原文：</span>哭可低。名不可高。骨可归土。声不可归门。若门回应，全村静一晦相。</p>
+        <p><span class="label">用途：</span>葬礼防传播。</p>
+        <p><span class="label">风险说明：</span>若葬礼中门回应死者声音，全村静默一整个晦相，不是纪念，而是防扩散。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="door-and-well">
+      <p class="section-label">拾</p>
+      <h2 class="section-title"><span class="num">10</span>旧门封文与灰井判词</h2>
+      <p class="section-desc">
+        旧门守墓者认为门不是路，而是会学习归属关系的开口。灰井修会则认为声音、梦、污染和水一样，会流动、沉积、回流。
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">旧门守墓者</h3>
+          <div class="card-body">
+            门用得越多，越知道你想去哪。知道得越多，就越可能有一天送你去“更适合你”的地方，而不是你想去的地方。
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">灰井修会</h3>
+          <div class="card-body">
+            灰井修会审判水源与声音污染时，不问谁说了什么，而问声音从哪里流来、流向哪里、在哪里沉积。
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">旧门封文</h3>
+
+      <div class="entry">
+        <div class="entry-title">饱门封文</div>
+        <p><span class="label">原文：</span>此门已饱。勿再喂路。</p>
+        <p><span class="label">用途：</span>封禁吞过太多通行关系的旧门。</p>
+        <p><span class="label">风险说明：</span>“喂路”指继续让门吞食出入、归属和目的地之间的联系。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">旧门墓志</div>
+        <p><span class="label">原文：</span>它曾通向家。后来家太多。它分不清。故封。</p>
+        <p><span class="label">用途：</span>旧门灾遗迹。</p>
+        <p><span class="label">风险说明：</span>门连接过太多“家”的概念后，会无法判断谁该归向哪里。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">门灾残文</div>
+        <p><span class="label">原文：</span>门开始记人时，路就死了。</p>
+        <p><span class="label">用途：</span>门灾纪遗迹、旧门守墓者教条。</p>
+        <p><span class="label">风险说明：</span>道路不会记住行人，门会。当门开始记人，它就不再是路。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">禁开文</div>
+        <p><span class="label">原文：</span>开者自归。归处不问。问则门答。</p>
+        <p><span class="label">用途：</span>高危旧门封印外侧。</p>
+        <p><span class="label">风险说明：</span>不要问门后通向哪里。你问了，门就会根据你的问题给答案。</p>
+      </div>
+
+      <h3 style="color:#d7b56d; margin:42px 0 18px; font-weight:400; letter-spacing:2px;">灰井判词</h3>
+
+      <div class="entry">
+        <div class="entry-title">回声污染判词</div>
+        <p><span class="label">原文：</span>此声非源声。此答非人答。井有回喉。封三晦相。</p>
+        <p><span class="label">用途：</span>判定井下回应污染。</p>
+        <p><span class="label">风险说明：</span>井下答复不能证明任何人仍然存在。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">黑露净化判词</div>
+        <p><span class="label">原文：</span>此露仍记潮。不可饮。可喂土。不可喂梦。</p>
+        <p><span class="label">用途：</span>判断黑露用途。</p>
+        <p><span class="label">风险说明：</span>此类黑露可用于污染田地实验，但不能用于眠菇培养。</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-title">失踪者井判</div>
+        <p><span class="label">原文：</span>人入井。声出井。人与声不可同判。</p>
+        <p><span class="label">用途：</span>有人坠井后使用。</p>
+        <p><span class="label">风险说明：</span>井里传出的人声不能作为生还证据。</p>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="summary">
+      <p class="section-label">拾壹</p>
+      <h2 class="section-title"><span class="num">11</span>体系总结 · 归属即生命</h2>
+      <p class="section-desc">
+        无光域的语言、仪式与交易体系，本质上都围绕同一个问题展开：什么属于谁，什么不该被承认，什么必须被封存，什么不能被补全。
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">语言</h3>
+          <div class="card-body">不是交流，而是给现实写骨架。说错话，世界会替你补全。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">文字</h3>
+          <div class="card-body">不是记录，而是钉死解释。刻错字，错误会成为规则。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">灯号</h3>
+          <div class="card-body">不是安全信号，而是可被模仿的无声诱饵。真正的灯纹必须包含限制和代价。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">梦纹</h3>
+          <div class="card-body">不是保存梦，而是圈养梦的残骸。梦如果完整，就会找路醒来。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">井纹</h3>
+          <div class="card-body">不是水源标记，而是判断世界喉咙是否正在说话。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">仪式</h3>
+          <div class="card-body">不是信仰表演，而是现实校准手术。失败不会无效，而会长成畸形规则。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">交易</h3>
+          <div class="card-body">不是交换物资，而是转移归属。卖出的可能是梦、称呼、恐惧、后悔、承诺，甚至自己在某个人心里的位置。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">食名</h3>
+          <div class="card-body">不是夺名，而是夺取你在世界中的位置。最可怕的不是你死了，而是所有东西都开始觉得别人比你更像你。</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="banner fade-in">
+      <p>
+        在无光域，沉默不是礼貌，规矩不是传统，交易不是公平。<br />
+        语言会投喂未知，文字会钉死错误，仪式会把失败养成新的规则。<br />
+        一个名字、一张床、一只碗、一盏灯、一口井，都可能成为世界伸手进来的地方。
+      </p>
+      <p style="margin-top:26px; color:#6a5e4a; font-style:normal; font-size:14px; letter-spacing:4px;">
+        语言、仪式与归属交易 · 设定附录
+      </p>
+    </div>
+  </div>
+
+  <script>
+    (function initProgress() {
+      const bar = document.getElementById('progress-bar');
+      window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        bar.style.width = ((scrollTop / scrollHeight) * 100) + '%';
+      });
+    })();
+
+    (function initNav() {
+      const nav = document.getElementById('nav-sidebar');
+      const sectionNames = [
+        '核心原则',
+        '骨刻语',
+        '喉振语',
+        '灯纹语',
+        '梦纹井纹',
+        '仪式图鉴',
+        '交易体系',
+        '食名名契',
+        '缄默村规',
+        '旧门灰井',
+        '体系总结'
+      ];
+
+      const sectionIds = [
+        'principle',
+        'bone-script',
+        'throat-language',
+        'lamp-language',
+        'dream-well',
+        'rituals',
+        'trade',
+        'name-contract',
+        'village-rules',
+        'door-and-well',
+        'summary'
+      ];
+
+      sectionIds.forEach((id, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'nav-dot';
+        dot.dataset.target = id;
+
+        const tip = document.createElement('span');
+        tip.className = 'tooltip';
+        tip.textContent = sectionNames[index];
+        dot.appendChild(tip);
+
+        dot.addEventListener('click', () => {
+          document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        });
+
+        nav.appendChild(dot);
+      });
+
+      const dots = nav.querySelectorAll('.nav-dot');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            dots.forEach(dot => dot.classList.remove('active'));
+            const matched = nav.querySelector(`[data-target="${entry.target.id}"]`);
+            if (matched) matched.classList.add('active');
+          }
+        });
+      }, { threshold: 0.28 });
+
+      document.querySelectorAll('.section').forEach(section => observer.observe(section));
+    })();
+
+    (function initFadeIn() {
+      const els = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      els.forEach(el => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>

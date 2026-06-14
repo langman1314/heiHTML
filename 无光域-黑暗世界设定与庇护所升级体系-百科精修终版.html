@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>无光域 · 黑暗世界设定与庇护所升级体系 · 百科精修终版</title>
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #08080e;
+      color: #d4d0c4;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #d7b56d, #a8874f, #6a4c2a);
+      z-index: 999;
+      box-shadow: 0 0 12px rgba(215, 181, 109, 0.5);
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+    }
+
+    .nav-sidebar {
+      position: fixed;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #2f2c36;
+      border: 1px solid #4a4555;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-dot:hover,
+    .nav-dot.active {
+      background: #d7b56d;
+      border-color: #d7b56d;
+      box-shadow: 0 0 12px rgba(215, 181, 109, 0.5);
+      transform: scale(1.25);
+    }
+
+    .tooltip {
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1b1b24;
+      color: #d7b56d;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      border: 1px solid #2f2c36;
+    }
+
+    .nav-dot:hover .tooltip { opacity: 1; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(215, 181, 109, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: clamp(42px, 8vw, 82px);
+      font-weight: 300;
+      letter-spacing: 12px;
+      color: #f0e6c8;
+      text-shadow: 0 0 60px rgba(215, 181, 109, 0.2);
+    }
+
+    .accent { color: #d7b56d; font-weight: 600; }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 22px);
+      color: #9c988e;
+      margin-top: 16px;
+      letter-spacing: 6px;
+    }
+
+    .hero-quote {
+      margin-top: 48px;
+      max-width: 860px;
+      font-style: italic;
+      color: #b8aa8a;
+      font-size: 18px;
+      line-height: 1.95;
+      border-left: 3px solid #a8874f;
+      padding: 10px 0 10px 24px;
+      text-align: left;
+      background: linear-gradient(90deg, rgba(215,181,109,0.05), transparent);
+    }
+
+    .hero-scroll {
+      margin-top: 60px;
+      color: #6a5e4a;
+      font-size: 14px;
+      letter-spacing: 4px;
+      animation: pulse 2s infinite;
+    }
+
+    .section {
+      margin-top: 84px;
+      padding: 36px 0;
+      position: relative;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: #6a5e4a;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 400;
+      color: #f0e6c8;
+      margin-bottom: 26px;
+      letter-spacing: 4px;
+    }
+
+    .num {
+      color: #d7b56d;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+
+    .section-desc {
+      color: #a09a8e;
+      font-size: 16px;
+      max-width: 940px;
+      margin-bottom: 34px;
+    }
+
+    .quote {
+      border-left: 3px solid #a8874f;
+      padding: 16px 24px;
+      background: linear-gradient(90deg, rgba(215, 181, 109, 0.05), transparent);
+      color: #e6d7aa;
+      margin: 28px 0;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .quote-center {
+      text-align: center;
+      border-top: 1px solid #a8874f;
+      border-bottom: 1px solid #a8874f;
+      background: rgba(215, 181, 109, 0.04);
+      padding: 24px 32px;
+      font-size: 16px;
+      color: #e6d7aa;
+      font-style: italic;
+    }
+
+    .keyword { color: #d7b56d; font-weight: 600; }
+    .danger { color: #c47a6a; font-weight: 600; }
+    .rare { color: #8ab4c4; font-weight: 600; }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+    .card {
+      background: linear-gradient(145deg, #14141e, #1a1a26);
+      border: 1px solid #282536;
+      border-radius: 16px;
+      padding: 26px;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: #3d3850;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #d7b56d, transparent);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-size: 20px;
+      color: #f0e6c8;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .card-sub {
+      color: #d7b56d;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .card-body {
+      color: #bcb6a8;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .card-body ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    .card-body li { margin-bottom: 6px; }
+
+    .card-note {
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: rgba(100, 80, 50, 0.12);
+      border-radius: 8px;
+      color: #a09888;
+      font-size: 14px;
+      border-left: 2px solid #6a5e4a;
+    }
+
+    .entry {
+      background: #11111a;
+      border-left: 3px solid #d7b56d;
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin-top: 16px;
+    }
+
+    .entry-title {
+      color: #f0e6c8;
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .entry p {
+      color: #beb7aa;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .label { color: #d7b56d; font-weight: 600; }
+
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #282536, #d7b56d, #282536);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 28px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #1a1a26;
+      border: 2px solid #d7b56d;
+    }
+
+    .truth-stack {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .truth-layer {
+      padding: 18px 24px;
+      border-left: 3px solid;
+      transition: all .25s ease;
+    }
+
+    .truth-layer:hover {
+      padding-left: 30px;
+      background: rgba(215,181,109,0.03);
+    }
+
+    .truth-layer:nth-child(1){ border-color:#6a5e4a; }
+    .truth-layer:nth-child(2){ border-color:#8a7a5a; }
+    .truth-layer:nth-child(3){ border-color:#a89060; }
+    .truth-layer:nth-child(4){ border-color:#c8a86a; }
+    .truth-layer:nth-child(5){ border-color:#d7b56d; }
+    .truth-layer:nth-child(6){ border-color:#e8c87a; }
+    .truth-layer:nth-child(7){ border-color:#f0d592; }
+
+    .truth-label {
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #6a5e4a;
+    }
+
+    .truth-text {
+      font-size: 15px;
+      color: #d4d0c4;
+      margin-top: 4px;
+    }
+
+    .flow-chart {
+      background: linear-gradient(145deg, #0d0d16, #12121e);
+      border: 1px solid #282536;
+      border-radius: 20px;
+      padding: 34px 26px;
+      overflow-x: auto;
+    }
+
+    .flow-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 4px 0;
+    }
+
+    .flow-node {
+      background: #1a1a2a;
+      border: 1px solid #333045;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 14px;
+      color: #bcb6a8;
+      white-space: nowrap;
+    }
+
+    .flow-node.highlight {
+      border-color: #d7b56d;
+      color: #f0e6c8;
+      background: rgba(215,181,109,0.08);
+    }
+
+    .flow-arrow {
+      color: #4a4555;
+      font-size: 18px;
+      padding: 0 4px;
+    }
+
+    .flow-group {
+      background: rgba(215,181,109,0.04);
+      border: 1px dashed #3d3850;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 2px 4px 2px 0;
+    }
+
+    .tag-food { background: rgba(180,140,80,0.2); color: #c8a86a; border: 1px solid rgba(180,140,80,0.3); }
+    .tag-water { background: rgba(80,160,200,0.15); color: #7ab8d0; border: 1px solid rgba(80,160,200,0.25); }
+    .tag-build { background: rgba(140,120,100,0.2); color: #b0a090; border: 1px solid rgba(140,120,100,0.3); }
+    .tag-energy { background: rgba(215,181,109,0.15); color: #d7b56d; border: 1px solid rgba(215,181,109,0.25); }
+    .tag-mental { background: rgba(160,100,180,0.15); color: #b88ac8; border: 1px solid rgba(160,100,180,0.25); }
+    .tag-rule { background: rgba(200,80,80,0.15); color: #d48a7a; border: 1px solid rgba(200,80,80,0.25); }
+
+    .banner {
+      margin-top: 86px;
+      padding: 60px 36px;
+      text-align: center;
+      background: radial-gradient(ellipse at center, rgba(215,181,109,0.04) 0%, transparent 70%);
+      border-top: 1px solid #282536;
+      border-bottom: 1px solid #282536;
+    }
+
+    .banner p {
+      font-size: 20px;
+      color: #b8aa8a;
+      font-style: italic;
+      max-width: 860px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .wrapper { padding: 0 16px 60px; }
+      .nav-sidebar { display: none; }
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .flow-chart { padding: 22px 14px; }
+      .hero-quote { font-size: 16px; padding-left: 16px; }
+    }
+
+    ::selection {
+      background: rgba(215, 181, 109, 0.25);
+      color: #f0e6c8;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08080e; }
+    ::-webkit-scrollbar-thumb { background: #2f2c36; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #4a4555; }
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <nav class="nav-sidebar" id="nav-sidebar"></nav>
+
+  <div class="wrapper">
+    <header class="hero" id="hero">
+      <h1 class="hero-title">无<span class="accent">光</span>域</h1>
+      <p class="hero-sub">寂光空洞 · 黑渊界 · 神胎求生 · 文明方舟</p>
+      <div class="hero-quote">
+        黑暗不是环境，黑暗是一套正在消化生命的生态系统。<br />
+        世界不是容器，世界是子宫。<br />
+        庇护所不是房屋，而是一种还未决定会长成人类文明，还是长成另一只更大的怪物的器官。
+      </div>
+      <p class="hero-scroll">— 向下探索百科精修终版 —</p>
+    </header>
+
+    <section class="section fade-in" id="world-essence">
+      <p class="section-label">壹</p>
+      <h2 class="section-title"><span class="num">01</span>世界本质</h2>
+      <p class="section-desc">
+        无光域是一个没有恒星、没有自然昼夜、没有传统天空概念的宇宙空洞。维持世界生态的不是光，而是一种活性生命结构——<span class="keyword">晦能</span>。
+        晦能不是单纯能源，而是一枚尚未完全诞生、正在形成中的<span class="keyword">神胎</span>。所有生命、庇护所、怪物、梦境、恐惧、文明遗骸、系统权限与规则异常，最终都会被纳入它的孕育循环。
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">无光空洞</h3>
+          <div class="card-body">没有恒星、没有白昼、没有真正意义上的天空。世界更像一枚向内坍缩的巨大胎腔，而不是一颗完整星球。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">晦能生态</h3>
+          <div class="card-body">晦能支撑生命诞生与繁衍，也从生命活动、死亡、记忆、恐惧、信仰、命名与边界确认中反向汲取能量。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">神胎成形</h3>
+          <div class="card-body">穿越者的到来并非意外，而是神胎临近诞生前，对高质量人格与文明结构的最后一轮筛选和进食。</div>
+        </div>
+      </div>
+
+      <div class="quote">
+        全民穿越的本质不是救世，也不是随机灾难。<br />
+        这是一个即将失衡的黑暗生态，在神胎临产前，主动从正常宇宙拖入大量拥有“恒星记忆”“完整灵魂结构”“文明惯性”的生命，作为最后一餐。
+      </div>
+    </section>
+
+    <section class="section fade-in" id="hue-rules">
+      <p class="section-label">贰</p>
+      <h2 class="section-title"><span class="num">02</span>晦能基础规则</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">① 不凭空创造</h3>
+          <div class="card-body">晦能不能无中生有。它通过重组尸体、引导腐殖、诱发变异、吞食梦境、压榨情绪与回收死亡来维持生态闭环。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">② 偏爱极端波动</h3>
+          <div class="card-body">恐惧、绝望、狂喜、信仰、背叛、牺牲与成就都会形成高回流，因此无光域天然偏爱灾难与压迫环境。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">③ 回应认知</h3>
+          <div class="card-body">命名、记述、流言、仪式、反复确认都会影响现实。被称为“家”的地方会更稳，被一再提起的怪谈会长出更清晰的形态。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">④ 不会立刻灭绝</h3>
+          <div class="card-body">晦能需要生命持续反哺，因此它会筛选、压迫、收割与诱变，但不会在起始阶段灭绝全部生命。</div>
+        </div>
+        <div class="card" style="grid-column: 1 / -1;">
+          <h3 class="card-title">⑤ 晦能正在失控</h3>
+          <div class="card-body">原本土著文明与晦能之间曾勉强达成平衡，但神胎临近诞生后，消耗暴增，多个意识碎片争夺主导权，系统也因此出现裂缝与偏差。</div>
+        </div>
+      </div>
+
+      <div class="quote-center">
+        <span class="keyword">知道一件事，本身就是与它建立联系。</span><br />
+        在无光域，认知从不是旁观，而是参与。
+      </div>
+    </section>
+
+    <section class="section fade-in" id="world-structure">
+      <p class="section-label">叁</p>
+      <h2 class="section-title"><span class="num">03</span>世界结构 · 五层胎腔</h2>
+      <p class="section-desc">
+        无光域不是平面大陆，而是一个向内坍缩的多层腔体世界。越向深处，越接近晦能的原始意志；越靠表层，越像还能被称作“生活”的地方。
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="card">
+            <h3 class="card-title">第一层 · 灰醒层</h3>
+            <div class="card-sub">筛选起点 / 新手活动层</div>
+            <div class="card-body">资源贫瘠但规则相对稳定，是穿越者初始投放与庇护所起步区域。灰木林、湿壁裂谷、白骨洼地和废弃安全屋群主要分布于此。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="card">
+            <h3 class="card-title">第二层 · 骨沉层</h3>
+            <div class="card-sub">遗骸与废屋沉积层</div>
+            <div class="card-body">大量尸骨、失败庇护所、旧文明建筑与废弃庄园沉入此层。资源丰富，污染更重，适合领地发展与庇护所吞并路线。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="card">
+            <h3 class="card-title">第三层 · 梦腐层</h3>
+            <div class="card-sub">梦境 / 记忆污染层</div>
+            <div class="card-body">这里的危险不在地形，而在认知。梦渣、人格残响、旧梦、上一轮外来者的精神沉积常以地貌形式存在。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="card">
+            <h3 class="card-title">第四层 · 门脉层</h3>
+            <div class="card-sub">系统与边界神经层</div>
+            <div class="card-body">门、房间、门框、编号、系统残页与错误公告在这里构成深层神经网络，是筛选器的结构暴露区。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="card">
+            <h3 class="card-title">第五层 · 胎海层</h3>
+            <div class="card-sub">终局层 / 神胎近域</div>
+            <div class="card-body">接近神胎本体。生命、空间、人格、边界与规则在此开始融化。抵达者必须决定自己要成为神胎的一部分，还是带着文明出走。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote">
+        如果说无光域是一具身体，那么灰醒层是结痂，骨沉层是沉积，梦腐层是梦，门脉层是神经，而胎海层，就是那颗还没完全睁开的心。
+      </div>
+    </section>
+
+    <section class="section fade-in" id="time-cycle">
+      <p class="section-label">肆</p>
+      <h2 class="section-title"><span class="num">04</span>时间感 · 晦相周期</h2>
+      <p class="section-desc">
+        无光域没有昼夜，但并非没有时间感。土著不以白昼和夜晚计时，而以晦能波动的相位计时，称为<span class="keyword">晦相</span>。
+      </p>
+
+      <div class="grid-4">
+        <div class="card">
+          <h3 class="card-title">静晦</h3>
+          <div class="card-body">晦能平稳，适合采集、修缮、播种、交易与清点庇护所物资。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">涌晦</h3>
+          <div class="card-body">晦能开始聚集，污染升高，晦植生长迅速，低级异常增多，常是小黑潮前兆。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">啼晦</h3>
+          <div class="card-body">神胎活跃期，梦境质量下降，模仿声增加，精神资源产出更高，也更容易被深层结构注视。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">坠晦</h3>
+          <div class="card-body">大黑潮或区域重组前兆，路网松动，门路错位，熟悉的路径可能在此时失效。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fade-in" id="life-system">
+      <p class="section-label">伍</p>
+      <h2 class="section-title"><span class="num">05</span>生命体系总览</h2>
+      <p class="section-desc">
+        无光域的生命不以“植物 / 动物 / 人类 / 怪物”简单划分，而以其在晦能循环中的位置划分。它们各自承担腐殖、传播、边界、记忆、筛选与回收功能。
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 class="card-title">🌱 晦植</h3>
+          <div class="card-sub">依晦能、腐殖、梦渣与规则残留生长</div>
+          <div class="card-body">既是食材，也是药材、建材、边界器官与污染媒介。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🐾 晦兽</h3>
+          <div class="card-sub">生态执行者</div>
+          <div class="card-body">承担追踪、回收、诱导、搬运、侵蚀边界与清理筛选失败者的生态职责。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">👁 晦民</h3>
+          <div class="card-sub">本土智慧生命总称</div>
+          <div class="card-body">拥有聚落、语言、信仰、婚俗、职业、法律与历史，不是人类附庸，也不是单一物种。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">⚠ 晦诡</h3>
+          <div class="card-sub">未被稳定解释的规则现象</div>
+          <div class="card-body">源于误读、边界混乱、传播、系统漏洞和死者残响，真正的威胁在于它会动摇定义。</div>
+        </div>
+        <div class="card">
+          <h3 class="card-title">🌌 外来者</h3>
+          <div class="card-sub">全民穿越者</div>
+          <div class="card-body">携带恒星记忆、完整灵魂结构与文明惯性，是神胎最偏爱的高质量人格原料。</div>
+        </div>
+      </div>
+    </section>
