@@ -45,7 +45,7 @@ export const chapterGroups = [
     name: '生存体系',
     icon: '▣',
     range: [12, 16],
-    ids: ['shelter', 'resources', 'cycle', 'system', 'players', 'settlement-principles', 'settlement-hierarchy', 'settlement-graywake', 'settlement-bonesink', 'settlement-player-density'],
+    ids: ['shelter', 'resources', 'cycle', 'system', 'players', 'settlement-principles', 'settlement-hierarchy', 'settlement-graywake', 'settlement-bonesink', 'settlement-player-density', 'law-first-principle', 'law-three-evidence', 'law-six-courts', 'law-trial-process', 'law-penalties', 'law-death-confirmation', 'law-shelter-property', 'law-anomaly-defense', 'law-and-class', 'law-six-laws'],
   },
   {
     name: '系统协议',
@@ -117,7 +117,7 @@ export const chapterGroups = [
     name: '文明细节',
     icon: '⊞',
     range: [35, 43],
-    ids: ['birth', 'education', 'food-culture', 'architecture', 'law', 'economy', 'medicine', 'psychology', 'transport', 'economy-four-values', 'economy-currency', 'economy-sectors', 'economy-classes', 'economy-phenomena', 'economy-six-laws'],
+    ids: ['birth', 'education', 'food-culture', 'architecture', 'law', 'economy', 'medicine', 'psychology', 'transport', 'economy-four-values', 'economy-currency', 'economy-sectors', 'economy-classes', 'economy-phenomena', 'economy-six-laws', 'daily-family-routine', 'daily-craftsman-routine', 'daily-player-routine', 'daily-pre-blacktide', 'daily-post-blacktide', 'daily-market-sensory', 'daily-education', 'daily-medicine', 'daily-marriage-elderly', 'daily-return-of-missing', 'daily-class-differences', 'daily-ark-preview', 'daily-six-laws'],
   },
   {
     name: '终局设定',
