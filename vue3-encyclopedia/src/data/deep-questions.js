@@ -10,20 +10,37 @@
 
 export const deepQuestions = [
   {
+    id: 'dq-god-intention',
+    status: 'resolved',
+    priority: '高',
+    category: '神胎与本质',
+    title: '神胎的"意图"悖论——向性vs意图',
+    summary: '【已由用户回答】认知负压模型：神胎没有意图（intention），只有向性（tropism）。穿越者被"吸入"不是因为神胎想吃饭，而是因为高密度边界模型向低密度虚空流动，是物理压差而非主动捕食。',
+    detail: `
+      <p class="section-desc">【已由用户完整回答】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">神胎有向性（tropism）无意图（intention）。向性三要件——统一自我×认知目标模型×选择手段能力——神胎均不具备。穿越者的"被拖入"不是主动捕食，而是认知负压：穿越者携带高密度边界模型，神胎体内缺乏这些，形成压差，穿越者被"渗透"进来。</div></div>
+        <div class="truth-layer"><span class="truth-label">叙事建议</span><div class="truth-text">开场：没有为什么，只是压差，像落叶被冲进下水道。后期：神胎碎片逐渐学会"意图"——向性从被动变为主动，这才是真正的恐怖递进。</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-14',
+    notes: '与后两个回答汇聚于同一机制：神胎的心跳（黑潮）同时驱动三件事——把人吸进来、把人喂下去、把层打开又关上。',
+  },
+  {
     id: 'dq-agriculture-huetide',
-    status: 'unresolved',
+    status: 'resolved',
     priority: '高',
     category: '生态与经济',
     title: '农业与黑潮周期的矛盾',
-    summary: '骨麦生长周期（约21天）与黑潮周期（小潮每7天、大潮每30天）存在结构性冲突。庄稼如何在反复的边界松动、晦能浓度波动中存活？',
+    summary: '【已由用户回答】潮间双相代谢模型：骨麦21天生长期（不可食的结构生长） + 黑潮3-7天灌浆骨化期（可收割）。晦民依黑潮历法而非天数耕作。穿越者第一天饿死是养殖场存栏量控制。',
     detail: `
-      <p class="section-desc">核心矛盾：骨麦的生长周期约21天，而小黑潮每7天一次、大黑潮每30天一次。一个完整的生长周期要经历2-3次小黑潮。</p>
+      <p class="section-desc">【已由用户完整回答】</p>
       <div class="truth-stack">
-        <div class="truth-layer"><span class="truth-label">已知事实</span><div class="truth-text">1. 骨麦是土著主食，生长周期约21天（sections.js 第四章 · 骨麦）。<br>2. 黑潮小周期约7天，大周期约30天（sections.js 第八章）。<br>3. 黑潮期间晦能浓度飙升、边界松动、认知成形门槛降低。<br>4. 土著已存活不知多少代，必然有成熟的农业应对体系。</div></div>
-        <div class="truth-layer"><span class="truth-label">未解答的问题</span><div class="truth-text">① 骨麦在哪种黑潮阶段播种/收割？是否必须在小潮间隙的稳定窗口期操作？<br>② 大黑潮（30天）覆盖了整个生长周期，在大黑潮期间庄稼如何存活？<br>③ 是否有"避潮种"或"深土窖藏"等农业技术应对黑潮？<br>④ 黑潮是否反而对某些作物有利（利用高晦能浓度加速生长）？<br>⑤ 穿越者到来后，农业体系是否因人口暴增而承压？</div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第四章（骨麦）、第八章（黑潮周期）、第九章（资源体系）<br>deep-logic.js — 第一条（边界优先）、第二条（晦能定义）<br>consistency-check.js — 第7条（黑潮周期）、第9条（经济价值）</div></div>
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">骨麦具有"潮间双相代谢"：21天生长期（静潮期结构生长，不可食用）+ 黑潮3-7天灌浆骨化期（晦能灌浆+茎秆骨化，可收割）。"骨麦"的名字本身就编码了机制——"骨"不是比喻，是黑潮中真实完成的骨化过程。晦民依黑潮历法耕作，播种在静潮期、收割在黑潮末尾窗口。</div></div>
+        <div class="truth-layer"><span class="truth-label">深层逻辑</span><div class="truth-text">黑潮在土著社会中具有双重情绪——既怕又盼。黑潮既是死亡周期也是丰收季，这种张力比单纯"黑暗降临"深刻得多。穿越者第一天饿死是养殖场的存栏量控制机制：靠饥饿控制存栏量，死亡本身就是第一道筛选。</div></div>
+        <div class="truth-layer"><span class="truth-label">叙事资产</span><div class="truth-text">"抢收72小时"作为可复用的高张力场景模板——在黑潮末尾、膜层即将关闭、深层怪物上浮的窗口期抢收庄稼。</div></div>
       </div>
-      <div class="quote">如果骨麦的农业体系无法自洽，整个土著文明的食物基础就会被动摇。这不是细节问题，是世界观的地基问题。</div>
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',
@@ -31,19 +48,18 @@ export const deepQuestions = [
   },
   {
     id: 'dq-cross-layer-economy',
-    status: 'unresolved',
+    status: 'resolved',
     priority: '高',
     category: '经济与交通',
     title: '五层胎腔的经济与交通断层',
-    summary: '五层胎腔之间的跨层贸易如何运作？高级材料（第三层以下产出）如何到达第一层的穿越者手中？土著是否控制着层间通道？',
+    summary: '【已由用户回答】潮汐式层门模型：下行免费（神胎收缩时自动开放膜层），上行昂贵（边界守恒——深层物质想回去）。跨层通行不由任何势力控制，控制权被信息差替代。',
     detail: `
-      <p class="section-desc">无光域有五层胎腔，越深处资源越丰富但越危险。但从设定中看，穿越者主要活动在第一层（灰醒层），而高级材料/知识在更深层。</p>
+      <p class="section-desc">【已由用户完整回答】</p>
       <div class="truth-stack">
-        <div class="truth-layer"><span class="truth-label">已知事实</span><div class="truth-text">1. 五层结构：灰醒层→骨沉层→梦腐层→门脉层→胎海层（sections.js 第三章）。<br>2. 越深资源越丰富、污染越重、规则越不稳定。<br>3. 穿越者初始投放点在灰醒层。<br>4. 土著聚落各层都有分布。</div></div>
-        <div class="truth-layer"><span class="truth-label">未解答的问题</span><div class="truth-text">① 跨层交通如何实现？是否有固定的"层间通道"或"沉降节点"？<br>② 穿越者如何获得深层资源？通过贸易还是亲自下探？<br>③ 土著是否控制着层间通道并收取通行费？<br>④ 高层（浅层）聚落和低层（深层）聚落之间是否有阶层关系？<br>⑤ 系统是否参与了层间交通管理（如限制穿越者的可到达层数）？<br>⑥ 物品能否跨层交易？系统交易栏是否跨层通用？</div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第三章（五层结构）、第九章（资源体系）、第十一章（市场）<br>deep-logic.js — 第八条（系统位置）<br>consistency-check.js — 第9条（经济价值）</div></div>
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">"潮汐式层门"：层间胎膜在黑潮期间松弛/打开。下行是"免费"的——神胎收缩时自然打开膜层让人下去。上行是"昂贵的"——边界守恒定律：深层物质在物理和归属上都"想回去"，带上来的难度好比潜水减压病。</div></div>
+        <div class="truth-layer"><span class="truth-label">政治模型</span><div class="truth-text">没有任何势力"控制"层间通道。交通不是被政治力量垄断的，而是被信息差控制——谁知道膜层何时开、哪里薄、什么时候关，谁就掌握通行权。这才是无光域式的控制：不是因为某人有枪，而是因为你知道那条路。</div></div>
+        <div class="truth-layer"><span class="truth-label">叙事资产</span><div class="truth-text">"落潮探深"——类Roguelike副本框架：时间窗口（膜关闭倒计时）、深渊怪物上浮、捞货污染赌博、向导可能背叛。深层怪物"也想上去"，所以探深不仅是下行，也是迎头撞上正在上浮的东西。</div></div>
       </div>
-      <div class="quote">五层胎腔如果不存在有效的经济连接，前四层就会被割裂成四个独立世界——那穿越者为什么要冒险下深层？贸易动机和通道机制必须讲清楚。</div>
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',

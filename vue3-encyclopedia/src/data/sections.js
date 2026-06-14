@@ -103,7 +103,7 @@ export const sections = [
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">晦植明细</h3>
       <div class="grid-2">
         <div class="entry"><div class="entry-title">灰苔</div><p><span class="label">分类：</span>基础食用晦植</p><p>灰绿色薄苔，贴在潮湿墙角生长。只要有湿气与腐殖就能存活。可烘成苔饼，长期食用会轻微幻听。</p></div>
-        <div class="entry"><div class="entry-title">骨麦</div><p><span class="label">分类：</span>主粮作物</p><p>根系缠绕白骨而生，骨越完整生长越快。稳定主粮，可磨粉做长期储粮。丰收季麦田会低声讨论死者的事。</p></div>
+        <div class="entry"><div class="entry-title">骨麦</div><p><span class="label">分类：</span>主粮作物</p><p>根系缠绕白骨而生，骨越完整生长越快。具有<span class="keyword">潮间双相代谢</span>：静潮期21天进行结构生长（不可食），黑潮期3-7天进行灌浆骨化（可收割）。"骨麦"之名源于此——骨不是在比喻，而是在黑潮中真实完成的茎秆骨化。丰收集于黑潮末尾窗口，晦民依黑潮历法而非天数耕作，这是世代相传的生存智慧。</p></div>
         <div class="entry"><div class="entry-title">门纹眠菇</div><p><span class="label">分类：</span>精神晦植</p><p>菌盖上有天然门形裂纹，多生长在旧门遗迹附近。用于门类规则研究。食用后梦见"门后站位"。</p></div>
         <div class="entry"><div class="entry-title">孵梦眠菇</div><p><span class="label">分类：</span>精神晦植</p><p>菌伞像未睁开的眼皮。能把未完成梦境继续做下去，产出高纯度梦渣。梦里人物会逐渐记住你。</p></div>
         <div class="entry"><div class="entry-title">灰肺苔</div><p><span class="label">分类：</span>药性晦植</p><p>灰白薄苔贴在墙面，潮湿时会微微起伏像在呼吸。过滤孢子与腐臭，缓解轻度呼吸污染。贴满卧室后住户会梦见替房子呼吸。</p></div>
@@ -1171,6 +1171,7 @@ export const sections = [
 	  	    <div class="card"><div class="card-body">死亡不是消失，死亡是被重新分配。</div></div>
 	  	    <div class="card"><div class="card-body">梦不是虚假，梦是尚未决定是否进入现实的幼体。</div></div>
 	  	    <div class="card"><div class="card-body">黑潮不是灾难，黑潮是世界换气。</div></div>
+	  	    <div class="card"><div class="card-body">神胎的心跳（黑潮）同时驱动三件事：把人吸进来、把人喂下去、把层打开又关上。</div></div>
 	  	    <div class="card"><div class="card-body">庇护所不是房屋，庇护所是文明最小的器官。</div></div>
 	  	    <div class="card"><div class="card-body">系统不是神赐，系统是神胎还没长全的舌头。</div></div>
 	  	    <div class="card"><div class="card-body">活下去只是第一层筛选。让世界承认你，才是第二层危险。</div></div>
