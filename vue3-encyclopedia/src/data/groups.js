@@ -45,7 +45,7 @@ export const chapterGroups = [
     name: '生存体系',
     icon: '▣',
     range: [12, 16],
-    ids: ['shelter', 'resources', 'cycle', 'system', 'players'],
+    ids: ['shelter', 'resources', 'cycle', 'system', 'players', 'settlement-principles', 'settlement-hierarchy', 'settlement-graywake', 'settlement-bonesink', 'settlement-player-density'],
   },
   {
     name: '系统协议',
@@ -117,7 +117,7 @@ export const chapterGroups = [
     name: '文明细节',
     icon: '⊞',
     range: [35, 43],
-    ids: ['birth', 'education', 'food-culture', 'architecture', 'law', 'economy', 'medicine', 'psychology', 'transport'],
+    ids: ['birth', 'education', 'food-culture', 'architecture', 'law', 'economy', 'medicine', 'psychology', 'transport', 'economy-four-values', 'economy-currency', 'economy-sectors', 'economy-classes', 'economy-phenomena', 'economy-six-laws'],
   },
   {
     name: '终局设定',
