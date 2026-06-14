@@ -1157,42 +1157,7 @@ export const sections = [
 	  	
 	  `,
 	},
-	{
-	  id: 'god-fragments',
-	  label: '肆拾柒',
-	  num: '47',
-	  title: '神胎意识碎片 · 世界内部有多个未成形的"我"',
-	  desc: '神胎尚未诞生，因此没有统一人格。无光域内部存在多个意识碎片，它们通过系统、梦、黑潮、庇护所、晦诡、土著信仰表现出来。',
-	  content: `
-	  	  	  	  	  <div class="grid-3">
-	  	    <div class="card"><h3 class="card-title">饥饿碎片</h3><div class="card-body">推动收割、黑潮、尸体循环。偏爱恐惧、死亡、逃亡、牺牲。</div></div>
-	  	    <div class="card"><h3 class="card-title">母巢碎片</h3><div class="card-body">推动庇护所活化、巢穴逻辑、群体收容。偏爱家、床、幼崽、归属。</div></div>
-	  	    <div class="card"><h3 class="card-title">门脉碎片</h3><div class="card-body">推动门、路径、系统接口、空间重组。偏爱选择、进入、离开、错误通道。</div></div>
-	  	    <div class="card"><h3 class="card-title">梦腐碎片</h3><div class="card-body">推动梦境污染、旧史复苏、人格残响。偏爱记忆、后悔、未竟愿望。</div></div>
-	  	    <div class="card"><h3 class="card-title">名位碎片</h3><div class="card-body">推动食名、榜单、身份替换、命名影响。偏爱称呼、位置、承认、代替。</div></div>
-	  	    <div class="card"><h3 class="card-title">方舟碎片</h3><div class="card-body">推动文明逃逸、庇护所迁徙、循环稳定。数量稀少，常被其他碎片压制。与主角路线高度契合。</div></div>
-	  	  </div>
-	  	
-	  `,
-	},
-	{
-	  id: 'endgame',
-	  label: '肆拾捌',
-	  num: '48',
-	  title: '终局生态 · 成神、留域、出走都是生态选择',
-	  desc: '无光域终局不是单一胜利条件，而是不同归属关系的最终定型。',
-	  content: `
-	  	  	  	  	  <div class="grid-2">
-	  	    <div class="card"><h3 class="card-title">成神路线</h3><div class="card-body">候选人格成为神胎主导。无光域获得统一意志。穿越者、土著、庇护所、晦兽、晦植被重新纳入新神秩序。文明存续，但自由边界被神胎统一解释。</div></div>
-	  	    <div class="card"><h3 class="card-title">留域路线</h3><div class="card-body">玩家与土著建立稳定混合文明。无光域继续存在。黑潮减弱但不消失。庇护所成为城邦，系统退化为传统仪式与技术。</div></div>
-	  	    <div class="card"><h3 class="card-title">出走路线</h3><div class="card-body">庇护所成长为子宫方舟。文明从神胎内部剥离。大量资源、梦、名字、土著技术、玩家系统残片被装入方舟。出走不是逃离黑暗，而是带走一部分黑暗生态，前往新宇宙重新定义家园。</div></div>
-	  	    <div class="card"><h3 class="card-title">崩坏路线</h3><div class="card-body">候选人格互相吞食失败。系统崩溃。神胎无主诞生。无光域变成没有人格约束的饥饿神性结构。所有边界开始融化。</div></div>
-	  	  </div>
-	  	
-	  `,
-	},
-	{
-	  id: 'core-quotes',
+	{,
 	  label: '肆拾玖',
 	  num: '49',
 	  title: '核心世界观补充句',

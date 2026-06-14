@@ -123,7 +123,7 @@ export const chapterGroups = [
     name: '终局设定',
     icon: '★',
     range: [44, 49],
-    ids: ['blacktide-ecology', 'system-ecology', 'candidate', 'god-fragments', 'endgame'],
+    ids: ['blacktide-ecology', 'system-ecology', 'candidate', 'fragment-overview', 'fragment-hunger', 'fragment-nest', 'fragment-name', 'fragment-dream', 'fragment-door', 'fragment-ark', 'fragment-conflicts', 'fragment-candidates', 'fragment-ark-duality', 'fragment-six-laws', 'endgame-overview', 'endgame-become-god', 'endgame-symbiosis', 'endgame-ark', 'endgame-break-fetus', 'endgame-collapse', 'endgame-ark-conditions', 'endgame-scenes', 'endgame-protagonist-path', 'endgame-six-laws'],
   },
   {
     name: '影射层',
