@@ -130,4 +130,94 @@ export const deepQuestions = [
     lastChecked: '2026-06-14',
     notes: '',
   },
+  {
+    id: 'dq-reject-god-three-walls',
+    status: 'resolved',
+    priority: '高',
+    category: '主角伦理',
+    title: '拒绝成神的真正动机——三堵墙',
+    summary: '【已由用户回答】主角拒绝成神不是因为"成神邪恶"，而是因为三堵墙：认知墙（裂视识破神胎诱饵——成神不是被获得力量而是被神胎获得）、母题墙（所有神一旦诞生就不再属于自己，成神是终极牢笼）、私人墙（只有人能做到而神永远做不到的事——记住一个人的真名、记得一个人怕什么、知道一个人还没回家）。',
+    detail: `
+      <p class="section-desc">【已由用户完整回答】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">三堵墙：①认知墙——裂视让主角看见成神的底层真相：那不是飞升，而是被神胎当作"最适合统合碎片的人格"安装进系统。他不是拒绝力量，他识破了诱饵。②母题墙——所有创世神话中，神一旦诞生就不再属于自己。创世神把自己拆成天地，管理神锁进职司，人格神被信徒期待固定。成神是终极牢笼。③私人墙——这是只有"人"能做到的事：记住一个人的真名，记得一个人怕什么，知道一个人还没回家。神可以爱众生但不能爱一个人。</div></div>
+        <div class="truth-layer"><span class="truth-label">写到</span><div class="truth-text">phase5-protagonist.js — P7 已扩展添加三堵墙卡片</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-14',
+    notes: '',
+  },
+  {
+    id: 'dq-system-informed',
+    status: 'resolved',
+    priority: '中',
+    category: '系统与神胎',
+    title: '系统如何处理知情者',
+    summary: '【已由用户回答】系统无意图。知道真相不改变系统对玩家的物理处理，只改变认知。三种结局：收敛(高效适应→最合格人格粮)、溃散(认知崩塌→系统回收)、方舟(唯一第三出口——利用漏洞剥离系统)。开悟不会让你自由，只会让你更快成熟为合格候选人格。',
+    detail: `
+      <p class="section-desc">【已由用户完整回答】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">系统没有意图。知道真相不改变系统对玩家的物理处理方式。三种结局：收敛(知情者高效适应→最好的饲料)、溃散(认知崩塌→回收)、方舟(唯一第三出口，利用系统漏洞剥离系统)。开悟不是出口，开悟是候选人格加速成熟剂。</div></div>
+        <div class="truth-layer"><span class="truth-label">写到</span><div class="truth-text">sections.js — 系统条目(15) 已添加"系统如何处理知情者"子章节</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-14',
+    notes: '',
+  },
+  {
+    id: 'dq-de-registration',
+    status: 'resolved',
+    priority: '高',
+    category: '社会机制',
+    title: '脱册制——高风险职业与名册剥离',
+    summary: '【已由用户回答】高风险职业(井喉深潜者、骨沉层清道夫、黑潮前探人)出发前从聚落名册除名。代价：慢慢变成半个晦诡。灰蜕者是积累多年的老脱册者。穿越者天生不在无光域名册上=天然脱册者，可做更多冒险但也被同化得更慢。',
+    detail: `
+      <p class="section-desc">【已由用户完整回答】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">脱册制：高风险职业在出发前从聚落名册除名。脱册者存在但不被计数，活着但不被承认。代价是慢慢变成半个晦诡——名字听不见回应，床觉得他们陌生，门犹豫是否让他们通过。灰蜕者是积累了多年的老脱册者。穿越者天生不在名册=天然脱册者，因此可以做更多冒险，但也被同化得更慢。</div></div>
+        <div class="truth-layer"><span class="truth-label">写到</span><div class="truth-text">sections.js — 势力组织条目(10) 下新增"社会机制：脱册制"子章节<br>sections.js — 灰蜕人描述已扩展包含脱册制来源</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-14',
+    notes: '',
+  },
+  {
+    id: 'dq-ark-invasive-species',
+    status: 'resolved',
+    priority: '高',
+    category: '方舟与终局',
+    title: '方舟=入侵物种——外渊双叉',
+    summary: '【已由用户回答】方舟抵达外渊后面临两条路(外渊双叉)：慢性死亡(无晦能补给，生态崩溃) 或 入侵污染(在脆弱世界扎根，播种新无光域)。晦能逻辑不可清除只可被制衡。主角不是逃向天堂，而是在明知可能成为灾祸时仍按下播种键。出走者的罪不是无知而是知情。',
+    detail: `
+      <p class="section-desc">【已由用户完整回答】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">外渊双叉：叉一慢性死亡(无晦能补给，生态崩溃，离域症)，叉二入侵污染(在脆弱世界扎根，播种无光域逻辑)。晦能逻辑不可清除，只可被其他力量制衡。主角的明知负担——他不是逃向天堂，而是在明知可能成为灾祸时仍按下播种键。出走者的罪不是无知，而是知情。</div></div>
+        <div class="truth-layer"><span class="truth-label">写到</span><div class="truth-text">framework-dimensions.js — D4 外渊危险已扩展为外渊双叉模型</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-14',
+    notes: '',
+  },
+  {
+    id: 'dq-threshold-function',
+    status: 'resolved',
+    priority: '中',
+    category: '影射与基础规则',
+    title: '三层影射的统一公式——阈值函数',
+    summary: '【已由用户回答】成形=认知稳定度×共识人数×情绪强度×时间≥阈值。三层影射(现实/神话/都市怪谈)不是三种手法而是同一条公式在不同浓度下的表达。影射不是彩蛋，对世界是真的，只有当对读者也变真时才在叙事中真正发生。',
+    detail: `
+      <p class="section-desc">【已由用户完整回答】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心答案</span><div class="truth-text">认知成形阈值函数：成形 = 认知稳定度 × 共识人数 × 情绪强度 × 时间 ≥ 阈值。三层影射(现实/神话/都市怪谈)不是三种手法，而是同一公式在不同浓度下的表达。影射不是彩蛋，对世界是真的，但它只有当对读者也变真时才真的在叙事中发生。</div></div>
+        <div class="truth-layer"><span class="truth-label">写到</span><div class="truth-text">deep-logic.js — 认知改写现实的五个条件(#5) 已添加阈值函数子章节<br>sections.js — 影射总览(50) 已添加阈值函数公式与三层对应关系</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-14',
+    notes: '',
+  },
 ]

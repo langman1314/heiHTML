@@ -202,7 +202,7 @@ export const sections = [
         <div class="card"><h3 class="card-title">食名裔</h3><div class="card-body">感知名字重量与裂缝。一部分是契约见证者，一部分堕入食名教团。</div></div>
         <div class="card"><h3 class="card-title">裂瞳古裔</h3><div class="card-body">能看见更多晦能结构，也更容易失稳。古老、稀少，是主角未来可能的镜像之一。</div></div>
         <div class="card"><h3 class="card-title">井喉民</h3><div class="card-body">掌握井脉、水路与井下通讯，用水与喉振构成另一套社会网络。</div></div>
-        <div class="card"><h3 class="card-title">灰蜕人</h3><div class="card-body">经历活化却保留理智的边缘群体，知道最多关于"同化后仍能活"的事。</div></div>
+        <div class="card"><h3 class="card-title">灰蜕人</h3><div class="card-body">经历活化却保留理智的边缘群体，知道最多关于"同化后仍能活"的事。灰蜕人的源头是<span class="keyword">脱册制</span>——高风险职业出发前从聚落名册上除名，除名后存在但不被计数、活着但不被承认，久而久之积累成半个晦诡。灰蜕者是积累了多年的老脱册者。</div></div>
         <div class="card"><h3 class="card-title">灯骨匠裔</h3><div class="card-body">骨灯制作与灯纹语专家，坚信被看见的边界比被说出的边界更稳。</div></div>
         <div class="card"><h3 class="card-title">潮拾人</h3><div class="card-body">黑潮后第一批进入沉积带的拾荒者，最熟悉短效高值资源的收集时机。</div></div>
       </div>
@@ -259,6 +259,13 @@ export const sections = [
         <div class="card"><h3 class="card-title">梦掘人</h3><div class="card-body">深入梦腐层打捞旧梦、记忆碎片与历史。</div></div>
         <div class="card"><h3 class="card-title">归床人</h3><div class="card-body">管理多人居住区的床位、睡眠边界与陌生室友风险。</div></div>
         <div class="card"><h3 class="card-title">箱契师</h3><div class="card-body">专门处理储物、编号、归属与清点法则，是大聚落的秩序核心。</div></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">社会机制：脱册制</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">什么是脱册制</h3><div class="card-body">高风险职业——井喉深潜者、骨沉层清道夫、黑潮前探人——在出发前从聚落名册上除名。除名后，他们存在但不被计数、活着但不被承认、归来但不被归位。脱册者是聚落敢于进行高风险作业的前提条件：聚落需要这些人去做普通人不该做的事，但又不愿让死者的名字污染名册。于是他们被提前脱册——"你已经不在册上了，所以你的死不是聚落的损失"。</div></div>
+        <div class="card"><h3 class="card-title">脱册的代价</h3><div class="card-body">被除名者慢慢变成半个晦诡。他们存在，但不再被系统、名册、床签、门牌和边界承认。他们逐渐失去"被现实索引"的资格——名字开始听不见回应、床开始觉得他们陌生、门开始犹豫是否让他们通过。这就是灰蜕者的来源：灰蜕人是积累了多年的老脱册者，在活化边缘保留理智但早已不在任何名册上。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">穿越者与脱册</h3><div class="card-body">穿越者天生不在无光域的名册上——他们是天然的脱册者。这意味着他们可以做的冒险远多于土著：他们不需要被除名，因为他们本就不在名册里。但这也意味着他们被同化得更慢——因为名册不承认他们，边界不索引他们，床和门对他们始终半信半疑。穿越者在无光域中既是自由的（不被名册束缚），也是透明的（不被世界完全承认）。</div></div>
       </div>
     `,
   },
@@ -382,6 +389,13 @@ export const sections = [
         <div class="card"><h3 class="card-title">系统三层面纱</h3><div class="card-body"><ul><li><span class="keyword">第一层 · 新手保护</span>：庇护所、基础晦视、频道、建造面板、黑潮预告。</li><li><span class="keyword">第二层 · 行为筛选</span>：种田、战斗、交易、驯养、污染适应、规则研究等路线被分别强化。</li><li><span class="keyword">第三层 · 神胎链接</span>：系统的本质是无光域的接入协议与人格筛选器。</li></ul></div></div>
       </div>
       <div class="card" style="margin-top:20px"><h3 class="card-title">主角的特殊性：裂视</h3><div class="card-body">主角在穿越瞬间看见了"造主"，导致晦视裂开缝隙。他能偶尔绕过系统过滤，看到更底层的规则、未完成定义、错误标注与命名漏洞。他的优势不在数值，而在于<span class="keyword">规则注释</span>能力。</div><div class="card-note">他不是怕疯，他是怕自己疯得不够漂亮。</div></div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">系统如何处理知情者</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">系统没有意图</h3><div class="card-body">系统从不因为某个玩家"知道了真相"而改变策略——因为系统没有意图。知道真相不改变系统对你的物理处理方式，只改变你对它的认知。系统不惩罚知情者，也不奖励不知情者。它只是按同一套协议运行：存活引导→行为分类→竞争加压→人格筛选。你知道或不知道，这些功能都在运行。</div></div>
+        <div class="card"><h3 class="card-title">知情者的三种结局</h3><div class="card-body"><span class="keyword">① 收敛：</span>知情者高效适应系统路线，主动按筛选方向优化自己——最终成为最合格的人格饲料。不是被惩罚，是被精确收割。<br><span class="keyword">② 溃散：</span>知情者认知崩塌，无法承受真相，被系统判定为"不稳定样本"，被回收。<br><span class="keyword">③ 方舟：</span>唯一已知的第三出口。知情者利用系统但不被系统定义，最终剥离系统权限。这不是系统允许的路线，而是利用系统漏洞做到的。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">开悟不会让你自由</h3><div class="card-body">知道神胎存在不会让你免疫筛选。相反，知情者往往更快成熟为合格的候选人格——因为他们理解规则，能更高效地执行，能更准确地满足系统期待。看清养殖场的人，不一定能离开养殖场；他们只是知道自己被养，然后更配合地长肉。开悟不是出口，开悟是候选人格的加速成熟剂。</div></div>
+      </div>
     `,
   },
   {
@@ -1157,7 +1171,7 @@ export const sections = [
 	  	
 	  `,
 	},
-	{,
+	{
 	  label: '肆拾玖',
 	  num: '49',
 	  title: '核心世界观补充句',
@@ -1196,7 +1210,17 @@ export const sections = [
 	  	    <div class="card"><h3 class="card-title">都市怪谈层</h3><div class="card-body">将电梯、门铃、群聊、外卖、监控、楼梯等现代日常事物的"不可靠时刻"提取出来，重写为晦诡、仪式与系统异常。恐怖不来自古老神明，而来自最普通的东西突然不再可靠。</div></div>
 	  	  </div>
 	  	
-	  `,
+	  		  	<h3>三层影射的统一公式：阈值函数</h3>
+		  	<div class="card"><div class="card-body">
+		  	  <p style="margin-bottom:12px;color:#d7b56d;font-family:monospace;font-size:16px;">成形 = 认知稳定度 × 共识人数 × 情绪强度 × 时间 ≥ 阈值</p>
+		  	  <p>三层影射不是三种独立的写作手法，而是同一公式在不同浓度下的表达：</p>
+		  	  <ul>
+		  	    <li><span class="keyword">现实影射</span>——低阈值场景。日常焦虑本身就接近认知成形条件，所以住房、绩效、排名最容易被无光域吸收成真实规则。</li>
+		  	    <li><span class="keyword">神话影射</span>——中阈值场景。神话母题是文明级共识的沉积，需要足够多的人和足够长的时间才能重新激活。</li>
+		  	    <li><span class="keyword">都市怪谈影射</span>——动态阈值场景。都市怪谈在低共识下也能成形，因为单人的强烈恐惧可以补偿人数因子的不足。</li>
+		  	  </ul>		  	  <p style="margin-top:12px;">影射不是彩蛋，不是作者随手加的梗。它们对世界是真的——但当它们对读者也变真时（读者发现"这和现实好像"），才是影射真正在叙事中发生的时刻。</p>
+		  	</div></div>
+		  	<div class="quote-center">三层影射不是三种手法，而是同一条公式在不同浓度下的必然表达。</div>`,
 	},
 	{
 	  id: 'metaphor-shelter',

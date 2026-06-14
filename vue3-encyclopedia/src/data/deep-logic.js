@@ -85,6 +85,19 @@ export const deepLogic = [
         <div class="truth-layer"><span class="truth-label">⑤ 晦能环境浓度</span><div class="truth-text">静晦期稳定，认知难以改写现实。黑潮、梦腐层、门脉层、胎海层中，认知更容易成形。</div></div>
       </div>
       <div class="quote-center">这就限制了认知改写，不会变成 <span class="danger">万能许愿</span>。</div>
+
+      <h3>认知成形阈值函数</h3>
+      <div class="card"><div class="card-body">
+        <p style="margin-bottom:12px;color:#d7b56d;font-family:monospace;font-size:16px;">成形 = 认知稳定度 × 共识人数 × 情绪强度 × 时间 ≥ 阈值</p>
+        <p>这是以上五个条件的统一公式。每个变量都是连续值而非布尔开关，共同决定一个认知能否在无光域中实体化。</p>
+        <ul style="margin-top:12px;">
+          <li><span class="keyword">认知稳定度</span>：边界定义的清晰程度。"这是我的床" > "这大概是床" > "这里好像能躺"。</li>
+          <li><span class="keyword">共识人数</span>：相信同一认知的人数。单人效应慢，多人效应快。频道、榜单、流言放大此因子。</li>
+          <li><span class="keyword">情绪强度</span>：恐惧 > 信仰 > 爱 > 愧疚 > 习惯 > 好奇。极端情绪可大幅降低其他因子需求。</li>
+          <li><span class="keyword">时间</span>：认知维持的持续时间。长期重复碾压一次性强度。</li>
+        </ul>
+        <p style="margin-top:12px;">这一公式统一解释了：为什么土著靠沉默就能防止异常、为什么流言比真相更危险、为什么单个玩家的胡思乱想不成立但全频道的恐慌能喂出晦诡、为什么黑潮期间阈值大幅降低。</p>
+      </div></div>
     `,
   },
   {
