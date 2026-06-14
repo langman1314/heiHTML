@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import { sections } from './data/sections.js'
 import { chapterGroups } from './data/groups.js'
 import { deepLogic } from './data/deep-logic.js'
+import { phase1Expansion } from './data/phase1-expansion.js'
 import ProgressBar from './components/ProgressBar.vue'
 import HeroBanner from './components/HeroBanner.vue'
 
@@ -13,6 +14,7 @@ const showOverview = ref(true)
 const sectionMap = {}
 sections.forEach(s => { sectionMap[s.id] = s })
 deepLogic.forEach(s => { sectionMap[s.id] = s })
+phase1Expansion.forEach(s => { sectionMap[s.id] = s })
 
 const currentGroup = computed(() => chapterGroups[activeGroupIndex.value])
 const currentSection = computed(() => activeSectionId.value ? sectionMap[activeSectionId.value] : null)
