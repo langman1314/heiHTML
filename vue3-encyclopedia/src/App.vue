@@ -12,6 +12,7 @@ import { phase3Civilization } from './data/phase3-civilization.js'
 import { phase3Legacy } from './data/phase3-legacy.js'
 import { phase3Conflict } from './data/phase3-conflict.js'
 import { phase3Language } from './data/phase3-language.js'
+import { frameworkDimensions } from './data/framework-dimensions.js'
 import ProgressBar from './components/ProgressBar.vue'
 import HeroBanner from './components/HeroBanner.vue'
 
@@ -31,6 +32,7 @@ phase3Civilization.forEach(s => { sectionMap[s.id] = s })
 phase3Legacy.forEach(s => { sectionMap[s.id] = s })
 phase3Conflict.forEach(s => { sectionMap[s.id] = s })
 phase3Language.forEach(s => { sectionMap[s.id] = s })
+frameworkDimensions.forEach(s => { sectionMap[s.id] = s })
 
 const currentGroup = computed(() => chapterGroups[activeGroupIndex.value])
 const currentSection = computed(() => activeSectionId.value ? sectionMap[activeSectionId.value] : null)

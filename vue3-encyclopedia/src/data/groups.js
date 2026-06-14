@@ -84,6 +84,12 @@ export const chapterGroups = [
     ids: ['language-first-principle', 'language-dangerous-words', 'language-untranslatable', 'language-laws'],
   },
   {
+    name: '世界观维度定稿',
+    icon: '◈',
+    type: 'dimension',
+    ids: ['dimension-birth-of-god', 'dimension-native-scale', 'dimension-player-count', 'dimension-ark-destination', 'dimension-endgame-paths'],
+  },
+  {
     name: '灾变与地图',
     icon: '▲',
     range: [17, 18],
