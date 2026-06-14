@@ -90,19 +90,25 @@ export const deepQuestions = [
   },
   {
     id: 'dq-fragments-composition',
-    status: 'unresolved',
+    status: 'resolved',
     priority: '高',
     category: '神胎与终局',
     title: '神胎碎片的具体构成与冲突',
-    summary: '设定中神胎有"多个意识碎片"争夺主导权，但未定义碎片数量、各自倾向、竞争关系——这是终局逻辑的核心枢纽。',
+    summary: '【已由 世界观维度定稿 D1 完整回复】六个碎片：饥饿（吞噬型）、母巢（圈养型）、名位（秩序型）、梦腐（保存型）、门脉（筛选型）、方舟（分裂繁殖型）。每个碎片都有独立人格倾向和主导后果。',
     detail: `
-      <p class="section-desc">神胎碎片是无光域的主体意志的不同倾向，每一个碎片都在寻找有利于自己成为主导人格的材料。但碎片的具体构成完全是空白。</p>
+      <p class="section-desc">【已由 世界观维度定稿 D1 与 D5 完整回复】神胎碎片是无光域的主体意志的不同倾向，每一个碎片都在寻找有利于自己成为主导人格的材料。碎片不是系统故障，而是神胎尚未统合的人格候选。</p>
       <div class="truth-stack">
-        <div class="truth-layer"><span class="truth-label">已知碎片</span><div class="truth-text">1. 神胎有多个意识碎片争夺主导权（sections.js 第二章）。<br>2. 不同碎片在系统中有不同权重（deep-logic.js 第七条）。<br>3. 碎片会利用穿越者的行为来强化自己的倾向（consistency-check.js 第10条）。<br>4. 碎片与三条终局路线（成神/留域/出走）有关联。</div></div>
-        <div class="truth-layer"><span class="truth-label">未解答的问题</span><div class="truth-text">① 一共有多少个碎片？是否有命名和人格描述？<br>② 每个碎片的倾向是什么？（秩序/混沌/吞噬/保存/进化？）<br>③ 碎片之间的竞争关系如何？是敌对、博弈还是合作？<br>④ 穿越者的行为如何影响不同碎片的权重？<br>⑤ 碎片是否直接与穿越者对话？还是通过系统间接表达？<br>⑥ 碎片是否可以被摧毁、合并或说服？<br>⑦ 碎片与底层三影射（边界/镜子/容器）的关系是什么？</div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第二章（晦能基础规则）、第十六章（神胎与终局）<br>deep-logic.js — 第七条（核心边界器官·系统位置·神胎人格需求）、第十一条（神胎人格需求）<br>consistency-check.js — 第10条（神胎碎片利用）<br>groups.js — 终局设定组、影射层组</div></div>
+        <div class="truth-layer"><span class="truth-label">六个碎片</span><div class="truth-text">
+          ① <strong>饥饿碎片</strong>（吞噬型）— 黑潮变为主动狩猎，晦兽进化为回收器官，文明被视作饲料培养方式。神胎承认自己最大的欲望就是吃。<br>
+          ② <strong>母巢碎片</strong>（圈养型）— 黑潮减少，庇护所稳定，死亡率降低。但所有人被纳入巢穴秩序，个体边界被削弱，床门梦名由神体统一管理。<br>
+          ③ <strong>名位碎片</strong>（秩序型）— 排行榜变为神籍，名册决定命运，食名现象制度化。你不会被杀，只会被判定为不再适合坐在你的位置上。<br>
+          ④ <strong>梦腐碎片</strong>（保存型）— 死者可在梦中继续，活人可进入旧梦生活。没有人真正死去，也没有人真正继续向前活。<br>
+          ⑤ <strong>门脉碎片</strong>（筛选型）— 门路无处不在，每个人不断被送往更适合他的地方。你永远有路可走，但每一条路都在替世界判断你是什么。<br>
+          ⑥ <strong>方舟碎片</strong>（分裂繁殖型）— 神胎尝试将自身逻辑送往外部。出走可能不是逃离神胎，而是神胎学会如何把自己播种到别处。
+        </div></div>
+        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">framework-dimensions.js — D1 神胎临产本质、D5 终局路线完整对照<br>sections.js — 第二章（晦能基础规则）、第十六章（神胎与终局）<br>deep-logic.js — 第七条（核心边界器官·系统位置·神胎人格需求）、第十一条（神胎人格需求）</div></div>
       </div>
-      <div class="quote-center">一切设定终将被神胎碎片利用——<br>但如果碎片本身没有被定义，"被利用"就是一个空洞的威胁。<br>神胎碎片是无光域的"幕后黑手"，<br>幕后黑手不能只是一团模糊的影子。</div>
+      <div class="quote-center">神胎临产，不是灾难倒计时，而是世界即将获得自我。<br>问题不是它会不会出生，而是它出生时，会把谁当成"自己"。</div>
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',
