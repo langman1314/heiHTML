@@ -18,6 +18,12 @@ export const chapterGroups = [
     ids: ['cc-hue-conservation', 'cc-cognition-rules', 'cc-boundary-change', 'cc-cost', 'cc-native-handling', 'cc-system-record', 'cc-blacktide-cycle', 'cc-shelter-absorption', 'cc-economic-value', 'cc-god-fragment'],
   },
   {
+    name: '深层问题追踪',
+    icon: '❓',
+    type: 'tool',
+    ids: ['dq-agriculture-huetide', 'dq-cross-layer-economy', 'dq-previous-round-failure', 'dq-sight-growth-curve', 'dq-fragments-composition'],
+  },
+  {
     name: '世界根基',
     icon: '◈',
     range: [1, 5],
