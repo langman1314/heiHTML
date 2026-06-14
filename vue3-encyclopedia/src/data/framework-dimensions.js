@@ -66,6 +66,7 @@ const entries = [
         <div class="card"><div class="card-body">骨纺人及混居后裔 15% · 壳眠裔 8% · 缄面族 6% · 食名裔正统支 5% · 裂瞳古裔 不足1% · 井喉民 10% · 灰蜕人/灰蜕后裔 15%—25% · 灯骨匠裔 5% · 潮拾人及游民 10% · 混血混居无明确族属者 20%以上。</div></div>
       </div>
       <div class="quote">无光域文明不是人口密集型文明，而是制度密集型文明。晦民人数少到无法随意牺牲，多到足以支撑法律、信仰、政治、市场和历史。</div>
+      <div class="card"><div class="card-body"><strong>口径说明：</strong>本表为同时在场的稳定人口。玩家虽累计渗入数百万，但因弥散渗透+黑潮错峰+高淘汰（详见D3），任一时刻灰醒层的玩家在场量与土著处于可对抗量级，土著并不被人海淹没。晦民对玩家的优势从来不是人数，而是制度密度——五庭、名册、聚落律、黑潮经验，是几百万散兵游勇的渗透者短期内无法复制的。</div></div>
     `,
   },
 
@@ -93,6 +94,14 @@ const entries = [
         <div class="truth-layer"><span class="truth-label">六个月后</span><div class="truth-text">肉体存活35%—55%，独立玩家12%—28%。中期文明竞争，候选苗头显现。</div></div>
         <div class="truth-layer"><span class="truth-label">一年后</span><div class="truth-text">肉体存活25%—45%，独立玩家5%—18%。多数被势力、债务、制度吸收。</div></div>
         <div class="truth-layer"><span class="truth-label">终局前</span><div class="truth-text">肉体存活15%—35%，独立玩家2%—10%。自由且完整玩家身份者极少。</div></div>
+      </div>
+
+      <h3>修正核心二：玩家是"弥散渗透"而非"集中投放"</h3>
+      <p>"全民穿越"不是几百万人同时出现在灰醒层一个落点——那会让玩家在第一层瞬间数倍碾压土著，摧毁无光域的压迫感。真实机制接认知负压（D1）：玩家是顺着边界薄弱处、沿黑潮节律，分批、分散、弥散渗入全胎腔各层浅域的。</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">① 空间弥散</span><div class="truth-text">玩家初始落点散布于灰醒层乃至骨沉层浅域的无数孤立角落，彼此失联。开局的常态不是"玩家人海"，而是"一个人，在不认识的黑暗里，找不到任何同类"。灰醒层是系统引导玩家最终汇聚的目标层，不是统一落地点。</div></div>
+        <div class="truth-layer"><span class="truth-label">② 时间错峰</span><div class="truth-text">玩家不是一次涌入，而是每次黑潮（认知负压峰值=渗透窗口）补充一批。任一时刻的灰醒层玩家"存量"，被持续的黑潮死亡率压住，不会瞬间堆叠成百万人海。</div></div>
+        <div class="truth-layer"><span class="truth-label">③ 口径切分</span><div class="truth-text">300万–1000万是"累计渗入总量"，非"灰醒层同时在场量"。任一时刻、任一层的玩家密度，都远低于这个总数。由此，D5"大黑潮后玩家:晦民≈1:1~1:3"是全胎腔总人口口径；在灰醒层局部，土著靠制度密度（五庭、名册、聚落律）而非人口密度压制玩家。玩家始终是"人数在累积、但永远找不齐彼此、永远被制度排斥在外"的弥散外来者。</div></div>
       </div>
 
       <h3>大黑潮后的社会分流（以500万为例）</h3>

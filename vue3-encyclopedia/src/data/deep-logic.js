@@ -146,7 +146,7 @@ export const deepLogic = [
       <p class="section-desc">土著不需要系统，因为他们已经适应用仪式、骨刻、灯纹、喉振语和禁忌生活。穿越者需要系统，因为他们会把一切理解成：游戏、面板、任务、等级、交易、排名、建造、频道。</p>
       <div class="quote">神胎没有直接跟他们说"你们是人格饲料"，而是把筛选过程翻译成他们熟悉的 <span class="keyword">生存游戏界面</span>。</div>
       <div class="grid-4">
-        <div class="card"><h3 class="card-title">存活引导</h3><div class="card-body">避免穿越者第一周全灭，保证基本存活率。</div></div>
+        <div class="card"><h3 class="card-title">存活引导</h3><div class="card-body">玩家沿边界薄弱处弥散渗入（非集中投放），系统在初期降低死亡率，并以信号、任务、安全屋诱导分散的玩家逐步向灰醒层汇聚——汇聚本身就是第一道筛选：走得到的人，已经证明了适应性。</div></div>
         <div class="card"><h3 class="card-title">行为分类</h3><div class="card-body">观察玩家偏好路线，记录每个人的行为模式。</div></div>
         <div class="card"><h3 class="card-title">竞争加压</h3><div class="card-body">用排行榜提高边界冲突，刺激高质量能量产出。</div></div>
         <div class="card"><h3 class="card-title">人格筛选</h3><div class="card-body">寻找可承载神胎主导意识的人，完成最后的诞生准备。</div></div>
