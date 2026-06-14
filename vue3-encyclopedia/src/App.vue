@@ -6,6 +6,12 @@ import { deepLogic } from './data/deep-logic.js'
 import { phase1Expansion } from './data/phase1-expansion.js'
 import { consistencyCheck } from './data/consistency-check.js'
 import { deepQuestions } from './data/deep-questions.js'
+import { phase2System } from './data/phase2-system.js'
+import { phase2Skills } from './data/phase2-skills.js'
+import { phase3Civilization } from './data/phase3-civilization.js'
+import { phase3Legacy } from './data/phase3-legacy.js'
+import { phase3Conflict } from './data/phase3-conflict.js'
+import { phase3Language } from './data/phase3-language.js'
 import ProgressBar from './components/ProgressBar.vue'
 import HeroBanner from './components/HeroBanner.vue'
 
@@ -19,6 +25,12 @@ deepLogic.forEach(s => { sectionMap[s.id] = s })
 phase1Expansion.forEach(s => { sectionMap[s.id] = s })
 consistencyCheck.forEach(s => { sectionMap[s.id] = s })
 deepQuestions.forEach(s => { sectionMap[s.id] = s })
+phase2System.forEach(s => { sectionMap[s.id] = s })
+phase2Skills.forEach(s => { sectionMap[s.id] = s })
+phase3Civilization.forEach(s => { sectionMap[s.id] = s })
+phase3Legacy.forEach(s => { sectionMap[s.id] = s })
+phase3Conflict.forEach(s => { sectionMap[s.id] = s })
+phase3Language.forEach(s => { sectionMap[s.id] = s })
 
 const currentGroup = computed(() => chapterGroups[activeGroupIndex.value])
 const currentSection = computed(() => activeSectionId.value ? sectionMap[activeSectionId.value] : null)

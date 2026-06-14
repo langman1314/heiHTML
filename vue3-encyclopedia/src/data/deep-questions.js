@@ -51,19 +51,18 @@ export const deepQuestions = [
   },
   {
     id: 'dq-previous-round-failure',
-    status: 'unresolved',
+    status: 'resolved',
     priority: '中',
     category: '历史与设定',
     title: '"上一轮"的具体失败原因',
-    summary: '设定中反复提及"上一轮外来者/穿越者"失败，但未说明他们怎么失败的、留了什么教训、遗物如何影响当前世界。',
+    summary: '【已由 Task 3.2 回复】四类失败路线：旧灯信光→伪安全灯；旧门信门→门灾叠室；旧梦信保存→梦腐层；旧榜信成神→位置吞人。',
     detail: `
-      <p class="section-desc">多处处提及"上一轮"的存在——梦腐层有上一轮的精神沉积，骨沉层有上一轮的失败庇护所，系统裂缝可能是上一轮造成的。但上一轮的具体故事是空白的。</p>
+      <p class="section-desc">【已由 Task 3.2·上一轮外来者遗产档案 完整回复】</p>
       <div class="truth-stack">
-        <div class="truth-layer"><span class="truth-label">已知碎片</span><div class="truth-text">1. 梦腐层有"上一轮外来者的精神沉积"（sections.js 第三章）。<br>2. 骨沉层有"失败庇护所、旧文明建筑、废弃庄园"（同上）。<br>3. "上一轮的穿越者留下了骨刻系统和流散语"（sections.js 第十四章）。<br>4. 系统出现裂缝与偏差（sections.js 第二章）。<br>5. 神胎经历过多轮筛选尝试（deep-logic.js 第七条）。</div></div>
-        <div class="truth-layer"><span class="truth-label">未解答的问题</span><div class="truth-text">① 上一轮穿越者来了多少人？存活了多久？<br>② 他们失败的根本原因是什么？（集体疯狂？内斗？被神胎吸收？）<br>③ 他们留下了哪些具体遗产？（骨刻系统之外的？）<br>④ 他们是否对神胎的临产进度产生了影响？<br>⑤ 当前的土著文明与上一轮的外来者之间是什么关系？<br>⑥ 本轮穿越者是否在重复上一轮的路线？有没有人试图避免？</div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第三章（五层结构描述中的上轮沉积）、第十四章（骨刻与流散语起源）<br>deep-logic.js — 第三条（穿越者价值）、第七条（核心边界器官）<br>phase1-expansion.js — 第六组（裂视能力设定中可能关联上轮）</div></div>
+        <div class="truth-layer"><span class="truth-label">回答来源</span><div class="truth-text">phase3-legacy.js — L1 上一轮外来者总论、L2 四大遗产文明详解、L3 遗产物品与五层分布、L4 上一轮遗产六律</div></div>
+        <div class="truth-layer"><span class="truth-label">四类失败路线</span><div class="truth-text">旧灯文明——相信光能稳定一切，忽略光也会被模仿，失败为正午错觉、旧灯回档、伪安全灯。<br>旧门文明——相信门能带文明逃离，忽略门会记人、路会变成嘴，失败为门灾、叠室遗迹、断链门廊。<br>旧梦文明——相信梦能保存文明，忽略梦保存太完整会想醒来，失败为梦腐层、不可醒梦、旧梦人格。<br>旧榜文明——相信最强者成神可拯救全体，忽略位置会吞掉人，失败为排行榜残留、候选互食机制。</div></div>
+        <div class="truth-layer"><span class="truth-label">核心教训</span><div class="truth-text">上一轮外来者不是死在黑暗里，他们死在自己最相信的答案里。每一件遗产都能救命，也都在低声劝后来者：再相信我一次。当前系统从失败中学习，但改良的是效率不是慈悲。</div></div>
       </div>
-      <div class="quote">"上一轮"就像房间里的大象——被反复提及却从未被正视。如果不定义上一轮的失败模式，就无法真正理解本轮穿越者的处境。</div>
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',
@@ -71,19 +70,19 @@ export const deepQuestions = [
   },
   {
     id: 'dq-sight-growth-curve',
-    status: 'unresolved',
+    status: 'resolved',
     priority: '中',
     category: '能力设定',
     title: '裂视能力的成长曲线与代价',
-    summary: '裂视是穿越者的核心能力，但设定中缺少其成长阶段、失败模式、使用代价和训练方法的清晰界定。',
+    summary: '【已由 Task 2.2 回复】六大代价体系（被看见、边界削薄、梦境污染、系统异常、庇护所依恋、候选靠近）和七级成长（0级裂痕残光到6级临胎裂视）。',
     detail: `
-      <p class="section-desc">裂视是穿越者独有的能力——看到边界的异常、残留和断裂痕迹。但这个能力的边界（字面意义上）非常模糊。</p>
+      <p class="section-desc">【已由 Task 2.2·裂视能力规则 完整回复】</p>
       <div class="truth-stack">
-        <div class="truth-layer"><span class="truth-label">已知事实</span><div class="truth-text">1. 裂视能看到边界异常和断裂痕迹（sections.js 第六章）。<br>2. 裂视是穿越者独有的能力（同上）。<br>3. 裂视可以用来判断灰潮时机、寻找庇护所边界漏洞等。<br>4. 部分高阶穿越者还能看到"梦痕"和"系统裂缝"。</div></div>
-        <div class="truth-layer"><span class="truth-label">未解答的问题</span><div class="truth-text">① 裂视的成长阶段是什么？从"刚觉醒只能看门缝"到"能看穿梦腐层"需要什么条件？<br>② 过度使用裂视的代价是什么？（视野永久损伤？被晦能污染？被系统标记？）<br>③ 裂视是否有失败模式？（看错了、看到了不该看的、被看到的反噬）<br>④ 裂视能否被训练？土著是否有抑制裂视的技术？<br>⑤ 裂视与其他能力（骨刻、仪式）的配合关系？<br>⑥ 系统如何记录/显示裂视能力？（是否有技能等级？）</div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第六章（生存能力）、第十二章（战斗系统）<br>phase1-expansion.js — 第六组（裂视能力深化条目）<br>deep-logic.js — 第四条（认知五个条件）</div></div>
+        <div class="truth-layer"><span class="truth-label">回答来源</span><div class="truth-text">phase2-skills.js — V1 裂视第一性定义、V2 三类可见物、V3 代价体系与成长等级、V4 裂视六律</div></div>
+        <div class="truth-layer"><span class="truth-label">六重代价</span><div class="truth-text">①被看见（越深越被反向定位）②边界削薄（名字/影子/自我不同步）③梦境污染（梦不再只是私人空间）④系统标注异常（新手保护降低）⑤庇护所依恋增强（墙体不愿主角远行）⑥候选人格靠近（神胎碎片投射诱惑）</div></div>
+        <div class="truth-layer"><span class="truth-label">七级成长</span><div class="truth-text">0级·裂痕残光（偶尔闪烁）→1级·错标识别（看见系统与现实不一致）→2级·边界线感知（看到归属线）→3级·规则注释（读取骨刻语）→4级·缝隙通行（发现隐藏门路）→5级·候选注视（看见神胎碎片倾向）→6级·临胎裂视（看见整体代谢，不可完全恢复）</div></div>
+        <div class="truth-layer"><span class="truth-label">核心定义</span><div class="truth-text">裂视不是系统赐予的能力，而是系统过滤层破裂的伤口。不是看答案，而是看裂缝。能被看见的缝，也可能正在看着你。</div></div>
       </div>
-      <div class="quote">裂视是穿越者区别于土著的核心能力，也是他们最依赖的生存工具。如果这个能力的规则不清晰，玩家（和读者）就无法理解穿越者为什么"特别"。</div>
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',

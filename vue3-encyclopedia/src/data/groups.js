@@ -48,6 +48,42 @@ export const chapterGroups = [
     ids: ['shelter', 'resources', 'cycle', 'system', 'players'],
   },
   {
+    name: '系统协议',
+    icon: '◈',
+    type: 'system',
+    ids: ['system-first-principle', 'system-four-layers', 'system-anomalies', 'system-ranking', 'system-native-conflict', 'system-levels-and-laws'],
+  },
+  {
+    name: '裂视与庇护所',
+    icon: '▣',
+    type: 'skill',
+    ids: ['sight-first-principle', 'sight-three-categories', 'sight-cost-and-levels', 'sight-laws', 'shelter-first-principle', 'shelter-three-rights', 'shelter-failure-types', 'shelter-laws'],
+  },
+  {
+    name: '晦民文明',
+    icon: '◆',
+    type: 'civilization',
+    ids: ['native-origin-and-three-ages', 'native-ethnic-groups', 'native-politics-and-attitudes', 'native-why-not-escape', 'native-laws'],
+  },
+  {
+    name: '上一轮遗产',
+    icon: '◉',
+    type: 'legacy',
+    ids: ['legacy-overview', 'legacy-four-civilizations', 'legacy-items-and-distribution', 'legacy-laws'],
+  },
+  {
+    name: '规则冲突',
+    icon: '▲',
+    type: 'conflict',
+    ids: ['conflict-foundation', 'conflict-three-evidence', 'conflict-top-ten', 'conflict-court-and-laws'],
+  },
+  {
+    name: '语言翻译',
+    icon: '◈',
+    type: 'language',
+    ids: ['language-first-principle', 'language-dangerous-words', 'language-untranslatable', 'language-laws'],
+  },
+  {
     name: '灾变与地图',
     icon: '▲',
     range: [17, 18],
