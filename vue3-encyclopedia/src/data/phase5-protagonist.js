@@ -1,0 +1,211 @@
+// 无光域·主角伦理与堕落风险（Phase 5.2）
+// 任务书 5.2 回复：他不是不会成为怪物，而是必须每天证明自己还没有把怪物的逻辑当成唯一答案
+
+export const phase5Protagonist = [
+  {
+    id: 'protagonist-first-principle',
+    num: 'P1',
+    title: '主角第一性定位',
+    sub: '他不是黑暗中的纯洁火种，而是一个看见黑暗结构之美后，仍试图不让自己的审美变成他人灾难的人',
+    summary: '主角的核心定义：他不是黑暗中的纯洁火种，而是一个看见黑暗结构之美后，仍试图不让自己的审美变成他人灾难的人。他的路线不是"保持人性不变"，而是在必然变化、必然污染、必然妥协、必然使用黑暗资源的过程中，守住"个体选择权"这条最后边界。',
+    content: `
+      <p class=\"section-desc\">《无光域》的主角不能被设计成传统"善良、强大、聪明、一路正确"的救世主。这个世界的核心主题决定了：越能理解无光域的人，越危险。</p>
+      <div class=\"quote\">主角不是无光域里最干净的人，而是那个最清楚自己已经不干净，却仍每天检查手上沾的东西有没有被他说成正义的人。</div>
+      <h3>主角不是传统救世主</h3>
+      <div class=\"card\"><div class=\"card-body\">他不是一个在无光域中逐渐明白：没有干净的资源，没有无害的安全，没有不带代价的拯救，没有完全不伤人的文明选择。他真正要面对的不是"如何不做坏事"，而是：当每一种活法都要付出代价时，哪些代价绝不能让别人替自己在不知情中支付？</div></div>
+      <h3>他不是反派，但具备反派资格</h3>
+      <div class=\"card\"><div class=\"card-body\">主角与主要反派的区别不在于能力，而在于是否承认他人的边界。他能理解这些反派为什么会那样想——所以他的堕落不是突然黑化，而是逐渐开始觉得"也许他们只是比我更诚实"。这必须成为主角长期的内心压力。</div></div>
+      <h3>核心驱动力三层次</h3>
+      <div class=\"truth-stack\">
+        <div class=\"truth-layer\"><span class=\"truth-label\">第一层·求生欲</span><div class=\"truth-text\">初期他和其他玩家一样需要水、食物、门、床、晦晶、庇护所。但他很快与普通玩家不同——普通玩家活下去是为了回到安全，主角活下去是因为他第一次看见一种足以让他想继续观看的巨大未知。他不是不怕死，他是第一次觉得：原来活着还可能见到这种东西。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">第二层·审美欲</span><div class=\"truth-text\">穿越瞬间看见"造主"后，主角的审美被永久改变。他会被晦诡生成链的精巧、庇护所从房子变成家的过程、黑潮像世界呼吸一样吞吐资源所震撼。但这也是危险源——当一个人开始欣赏怪物的结构，他就可能为了看见完整形态而迟疑半步不去阻止它。他必须为这种迟疑付过代价。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">第三层·文明欲</span><div class=\"truth-text\">中后期，主角不再满足于个人求生或研究。他意识到单人活下去没有意义，玩家若只重复旧世界竞争会被系统筛选成食物，晦民若只守旧制度会被神胎临产碾碎。于是他的欲望转向——把这些危险、残酷、有效、肮脏的机制重新编成一套文明还能承受的秩序。这就是方舟路线真正的动机：不是逃跑，不是成神，而是让文明获得不被神胎唯一解释的权利。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-three-lines',
+    num: 'P2',
+    title: '主角三条底线',
+    sub: '系统、庇护所、选择权——三道不能跨过的界线',
+    summary: '第一条：不允许自己被系统替代思考——可以使用系统，但不能让系统决定何为正确。第二条：不允许庇护所吞噬无辜者成为常规燃料——可以使用腐殖尸体晦兽，但不能让活人成为常规成长资源。第三条：不允许神胎、系统或方舟剥夺个体选择权——必须保护个体在登舟、留域、接受晦染、卖梦、借名等问题上的知情选择权。',
+    content: `
+      <p class=\"section-desc\">三条底线是主角伦理的核心骨架，每一道都有清晰的越界后果。</p>
+      <div class=\"grid-3\">
+        <div class=\"card\"><h3 class=\"card-title\">底线一：不允许自己被系统替代思考</h3><div class=\"card-body\">主角可以使用系统，但不能让系统决定何为正确。他必须始终区分：系统奖励的行为、生存有效的行为、文明可接受的行为、自己愿意负责的行为。系统提示可以作为信息，不能作为道德豁免。若越界——他会变成系统教式人物：高效、理性、强大，却把人变成系统路线上的材料。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">底线二：不允许庇护所吞噬无辜者成为常规燃料</h3><div class=\"card-body\">主角可以使用腐殖、尸体、晦兽、污染物、黑潮残余来养房。但不能让庇护所把活人、弱者、俘虏、欠债者、外来者常规化当作成长资源。若越界——他会变成饥饿教或巢穴型方舟主，仍可能拯救很多人，但他的文明会从第一天起承认"有些人可以被系统性地吃掉"。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">底线三：不允许神胎、系统或方舟剥夺个体选择权</h3><div class=\"card-body\">主角最终反对的不仅是死亡，而是"被替别人定义"。他必须保护个体在是否登舟、是否留域、是否接受晦染、是否卖梦、是否借名等问题上的最低选择权——知情、可撤回、可被见证、不被债务或宗教或系统胁迫。若越界——他会变成母巢型救世主：温柔、保护、强大，但不再相信别人有资格决定自己的命运。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-acceptable',
+    num: 'P3',
+    title: '主角可接受行为清单',
+    sub: '主角不应过于洁癖——他可以做很多灰色行为',
+    summary: '主角可以：利用怪物与尸体循环（死者关系处理完整、不主动制造无辜死亡）、利用晦诡但不喂养公共灾害（研究晦诡生成链、用低级晦诡诱导敌人）、欺骗敌人（不应伪造真名或用无辜者作诱饵）、保密（不把恐慌信息无条件公开）、做残酷选择（承认被放弃者不是"没价值"、不让特殊情况变成常规制度）。',
+    content: `
+      <p class=\"section-desc\">主角不应过于洁癖。他可以做很多灰色行为，否则无法在无光域成立。前提是：每条灰线都有明确的边界。</p>
+      <div class=\"grid-2\">
+        <div class=\"card\"><h3 class=\"card-title\">1. 可以利用怪物与尸体循环</h3><div class=\"card-body\">他可以：将晦兽尸体送入腐殖池、用骨材建墙、用死者经许可后的骨粉种骨麦、从黑潮残骸中提取资源、用恐惧残响制作陷阱、用梦渣稳定庇护所。前提：死者关系处理完整、不主动制造无辜死亡、不隐瞒资源来源、不让活人燃料化成为制度。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">2. 可以利用晦诡，但不能喂养公共灾害</h3><div class=\"card-body\">他可以：研究晦诡生成链、用低级晦诡诱导敌人、封存晦诡样本、提取规则尘、让庇护所学习抵御异常。但不能：故意让公共晦诡成熟、用无辜者测试触发条件、把高危晦诡卖给他人、为观察完整形态而延迟救援。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">3. 可以欺骗敌人</h3><div class=\"card-body\">主角可以对掠夺者、教团、系统猎手、饥饿教徒、食名者使用欺骗。但应避免：伪造他人真名、利用无辜者身份作诱饵、制造不可控频道谣言、用错误攻略骗普通玩家。他的欺骗应针对明确敌对者，而非公共现实。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">4. 可以保密</h3><div class=\"card-body\">主角不需要把所有真相公开。他可以隐藏裂视看到的部分信息、方舟关键结构、某些会造成恐慌的神胎真相、未验证的系统错栏、高危遗产地点。但保密的理由必须是防止灾害，而非操控他人选择。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">5. 可以做残酷选择</h3><div class=\"card-body\">他可以在无法两全时选择救多数人。但必须满足：承认被放弃者不是"没价值"、不把残酷选择包装成美德、事后承担责任、不让特殊情况变成常规制度、不让别人替他背负知情代价。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-unacceptable',
+    num: 'P4',
+    title: '主角绝不接受行为清单',
+    sub: '六道硬边界——跨过就不再是同一个主角',
+    summary: '绝不接受的行为：食名式替代（即使替代者更有能力也不能抹掉原主身份）、儿童初梦交易（儿童初梦、半名期真名、第一床位不可市场化）、非知情献祭（自愿牺牲必须有完整知情、可撤回窗口和见证）、永久性无名惩罚（不能接受把一个人永久从现实座位上抹掉）、方舟资格完全资产化（不能让登舟权只由财富排名技能决定）、庇护所替居民做最终人生选择（庇护所可以预警但不能决定谁永远不能离开）。',
+    content: `
+      <p class=\"section-desc\">这些是主角必须守住的硬边界。跨过任何一条，他就不再是同一个主角。</p>
+      <div class=\"grid-2\">
+        <div class=\"card danger\"><h3 class=\"card-title\">1. 不接受食名式替代</h3><div class=\"card-body\">即使替代者更有能力，也不能抹掉原主身份。他可以支持责任继承，不能支持人格替换。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">2. 不接受儿童初梦交易</h3><div class=\"card-body\">儿童初梦、半名期真名、第一床位不可市场化。这是方舟未来文明的底线之一。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">3. 不接受非知情献祭</h3><div class=\"card-body\">自愿牺牲必须有完整知情、可撤回窗口、见证、不被债务胁迫、不被宗教或系统或庇护所操控。否则就是谋杀的高级包装。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">4. 不接受永久性无名惩罚</h3><div class=\"card-body\">无名流放、剥名、榜名替代若不可逆会摧毁个体存在权。主角可以接受临时封名，但不能接受把一个人永久从现实座位上抹掉——除非已成为不可逆食名灾源且经过三证与多庭确认。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">5. 不接受方舟资格完全资产化</h3><div class=\"card-body\">不能让登舟权只由财富、排名、技能、纯净度、晦染等级、对主角忠诚度、对方舟贡献值决定。方舟需要效率但不能让效率独裁。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">6. 不接受庇护所替居民做最终人生选择</h3><div class=\"card-body\">庇护所可以预警、建议、保护。但不能决定谁永远不能离开、谁不配进门、谁该被喂给腐殖池、谁的梦应被删除。主角爱他的房子，但必须能对它说"不"。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-transgressions',
+    num: 'P5',
+    title: '主角可能越界行为',
+    sub: '他会在压力下越界——但必须付代价、反省、修正',
+    summary: '主角不是不会越界。更好的写法是：他会在压力下越界。五种可能越界行为：故意放任低级晦诡半成形（观察规则却导致队友被污染）、隐瞒裂视看到的代价（高效执行却牺牲知情权）、利用敌人名字污染反制（战术胜利却开始接触名碎片逻辑）、让庇护所吞并高危旧屋（快速升级却混入旧主残留）、用恐惧制造秩序（领地稳定却滑向个人威慑统治）。每条越界都有代价和修正方案。',
+    content: `
+      <p class=\"section-desc\">主角不是不会越界。更好的写法是：他会在压力下越界，但必须付代价、反省、修正。这样他守住底线才真正有重量。</p>
+      <div class=\"truth-stack\">
+        <div class=\"truth-layer\"><span class=\"truth-label\">1. 故意放任低级晦诡半成形</span><div class=\"truth-text\">动机：为了观察规则找到处理方法。短期收益：获得关键规则注释、提取规则尘、提高庇护所防御。代价：某个队友被污染，庇护所学到危险逻辑，主角发现自己不是单纯研究者而是事件推动者。修正：建立异常实验伦理——不用无辜者、有封存方案、有中止机制、实验记录封页、必须公开风险给参与者。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">2. 隐瞒裂视看到的代价</span><div class=\"truth-text\">动机：避免恐慌，推动必要行动。短期收益：队伍执行效率更高、避免计划失败。代价：幸存者发现自己被剥夺知情权，信任受损，主角更接近方舟极端派逻辑。修正：区分"不能公开给所有人"和"不能告诉需要承担代价的人"——承担代价者必须知情。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">3. 利用敌人的名字污染反制</span><div class=\"truth-text\">动机：对付食名者、掠夺者、强敌。短期收益：战术胜利。代价：主角开始接触名碎片逻辑，名庭不信任他，他发现名字武器一旦可用很难不继续用。修正：设立禁用清单——不对普通敌人使用身份剥夺，只在对抗食名灾源时由名庭见证使用。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">4. 让庇护所吞并高危旧屋</span><div class=\"truth-text\">动机：快速升级方舟胚胎。短期收益：获得空间、材料、活墙能力。代价：庇护所人格混入旧主残留，房屋开始隐藏某些反应，住客梦见上一任居民。修正：暂停扩张，建立庇护所人格审查，让屋医、骨纺人、归床人参与治理。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">5. 用恐惧制造秩序</span><div class=\"truth-text\">动机：混乱时期必须快速建立服从。短期收益：领地稳定，防止黑潮前崩盘。代价：居民开始信服的不是制度而是主角个人威慑，排行榜和系统称号加重，候选人格倾向上升。修正：把个人威慑转化为公开法度，限制自身特权，让混合法庭拥有反对主角的权力。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-fall-paths',
+    num: 'P6',
+    title: '主角成为反派的可能路线',
+    sub: '如果他失败，会变成什么——六条堕落镜像',
+    summary: '六条堕落路线：系统化领主路线（效率至上，人成为可优化单位）、饥饿循环路线（资源利用率极高，但某些人被默认适合进入循环）、方舟筛选路线（成功率高但抛弃了文明最需被证明有价值的部分）、母巢保护路线（极安全但居民不再拥有离开的权利）、审美沉溺路线（最伟大的规则研究者却用"太美了"原谅"太危险了"）、成神路线（最仁慈的神，但仍然是神——所有边界归于他一人）。',
+    content: `
+      <p class=\"section-desc\">这些路线应作为"如果他失败，会变成什么"的镜像。它们越真实，主角最终守住底线才越有重量。</p>
+      <div class=\"grid-3\">
+        <div class=\"card danger\"><h3 class=\"card-title\">系统化领主路线</h3><div class=\"card-body\">主角为了效率越来越依赖系统数据、任务、贡献值、榜单、权限。他建立一个高效玩家国家——所有人都有编号、岗位、风险评分、任务配额。恐怖点：他确实降低死亡率，但人逐渐成为系统路线上的可优化单位。对应反派：系统教。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">饥饿循环路线</h3><div class=\"card-body\">主角为了养房、抗潮、供养领地，逐步接受更高效的尸体与活性资源利用。庇护所极强，粮食稳定，黑潮损失下降——但某些人被默认更适合进入循环。恐怖点：他不再杀人，他只是建立了一套让人"合理死去并被使用"的制度。对应反派：饥饿教。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">方舟筛选路线</h3><div class=\"card-body\">主角意识到无法救所有人，开始严格筛选登舟者。方舟成功率上升，但方舟成为精英、强者、技能者、稳定名者的船。恐怖点：他带走了文明最有用的部分，却抛下文明最需要被证明有价值的部分。对应反派：方舟教极端派。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">母巢保护路线</h3><div class=\"card-body\">主角因失去太多人，开始允许庇护所更深介入居民生活。方舟内部极安全，居民很少死亡、背叛、失踪。恐怖点：所有危险选择都被方舟提前阻止——居民活着，但不再真正拥有离开的权利。对应反派：母巢碎片、灰蜕激进派部分逻辑。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">审美沉溺路线</h3><div class=\"card-body\">主角越来越迷恋晦诡、神胎、规则裂缝之美。他成为最伟大的规则研究者，创造出前所未有的庇护所、仪式、方舟结构。恐怖点：他开始用"太美了"来原谅"太危险了"。对应反派：裂视失控后的候选人格灾源。</div></div>
+        <div class=\"card danger\"><h3 class=\"card-title\">成神路线</h3><div class=\"card-body\">主角认为只有自己成为神胎主导才能压制其他更坏碎片。黑潮可控，系统统一，晦诡减少，文明获得秩序。恐怖点：所有自由边界都归于他的神意。他可能是最仁慈的神，但仍然是神。对应终局：成神终局。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-why-not-god',
+    num: 'P7',
+    title: '主角为什么最终拒绝成神',
+    sub: '成神不是杀死文明——成神是替文明做完所有选择',
+    summary: '主角拒绝成神不能是因为"成神邪恶"。成神路线必须有吸引力：能压制饥饿碎片、减少黑潮、统一系统、保护许多人、阻止更坏的无主神胎诞生。主角拒绝的理由更深刻：成神是替文明做完所有选择。他选择方舟不是因为方舟更安全，而是因为方舟保留了"外部性"——成神是把世界变成一个答案，方舟是让文明带着问题继续走。',
+    content: `
+      <p class=\"section-desc\">主角拒绝成神，不能是因为"成神邪恶"。成神路线必须有吸引力——否则拒绝它毫无重量。</p>
+      <div class=\"quote-center\">成神不是杀死文明。<br>成神是替文明做完所有选择。</div>
+      <h3>成神的吸引力</h3>
+      <div class=\"card\"><div class=\"card-body\">能压制饥饿碎片、能减少黑潮、能统一系统、能保护许多人、能阻止更坏的无主神胎诞生、能让晦民和玩家不再被随机收割。</div></div>
+      <h3>拒绝的理由</h3>
+      <div class=\"card danger\"><div class=\"card-body\">神可以保护人，神可以让世界稳定，神可以减少痛苦，神甚至可以很仁慈。但只要他成为那个唯一解释者——门由他定义、床由他定义、名字由他定义、梦由他定义、死亡由他定义、谁应留下谁应改变谁应被保存谁应被遗忘都由他定义——这违背他的第三条底线。他不拒绝力量，他拒绝让所有人的未来只能通过他的意志发生。他选择方舟，不是因为方舟更安全，而是因为方舟保留了"外部性"。</div></div>
+      <div class=\"quote\">成神是把世界变成一个答案。方舟是让文明带着问题继续走。</div>
+    `,
+  },
+  {
+    id: 'protagonist-ethics-relationships',
+    num: 'P8',
+    title: '主角的伦理关系',
+    sub: '与土著、庇护所和世界的多层伦理',
+    summary: '主角与土著：初期误区（认为土著迷信保守）→中期理解（土著规矩是灾后技术）→后期批判（五庭垄断安全、底层买不起正义）。真正的路线：尊重土著伤疤，但不让伤疤成为未来唯一法律。主角与庇护所：工具阶段→实验阶段→伙伴阶段→家阶段（最危险——爱会让你替房子辩解）。方舟阶段伦理升级：方舟是否有公民权？方舟能否投票？方舟人格与主角冲突时谁代表文明？',
+    content: `
+      <p class=\"section-desc\">主角不能把土著当NPC，也不能把庇护所当纯粹工具。多重伦理关系定义了他与这个世界的真实纽带。</p>
+      <h3>主角与土著的三阶段关系</h3>
+      <div class=\"truth-stack\">
+        <div class=\"truth-layer\"><span class=\"truth-label\">初期误区</span><div class=\"truth-text\">他可能像普通玩家一样认为土著：迷信、保守、说话绕、收费高、不够人道、不愿救人。这种误区必须被事件打破。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">中期理解</span><div class=\"truth-text\">他逐渐明白：土著规矩是灾后技术，沉默是一种防御，半名期保护儿童，葬制不是冷酷而是防止死者受苦，五庭虽然沉重但确实维持了文明。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">后期批判</span><div class=\"truth-text\">但主角不能完全皈依土著。他也会看见：五庭垄断安全、底层买不起正义、灰蜕者被排斥、玩家被过度防范、保守派宁愿延缓毁灭也不愿冒险改变。真正的路线：尊重土著伤疤，但不让伤疤成为未来唯一法律。</div></div>
+      </div>
+      <h3>主角与庇护所的五阶段伦理</h3>
+      <div class=\"truth-stack\">
+        <div class=\"truth-layer\"><span class=\"truth-label\">工具阶段</span><div class=\"truth-text\">他把庇护所当基地。伦理问题较少。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">实验阶段</span><div class=\"truth-text\">他开始主动测试庇护所活化。危险：房子不是无生命实验对象，住客不是房屋成长耗材，主角可能为了看见活化结果而推进风险。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">伙伴阶段</span><div class=\"truth-text\">庇护所开始回应他。伦理问题：它是否有意志？是否有拒绝权？是否能承担责任？它伤害别人时是主角的责任还是房子的责任？</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">家阶段</span><div class=\"truth-text\">主角开始爱它——这最危险。因为爱会让他替房子辩解：它只是想保护我，它不是故意吞掉那个人，它只是误会了外人。主角必须学会：爱一个家不等于允许家拥有你。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">方舟阶段</span><div class=\"truth-text\">庇护所成为文明载具。伦理升级：方舟是否有公民权？方舟是否能投票？方舟能否拒绝某人登舟？方舟人格与主角意见冲突时谁代表文明？这必须在后期成为重大政治问题。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-anchors',
+    num: 'P9',
+    title: '主角精神锚',
+    sub: '五个防止堕落的锚——以及它们也可能失效',
+    summary: '五个精神锚：造主记忆锚（见过更高层之美，双刃剑——也会追求更深之美）、自我观察锚（持续审视动机——我是在救人还是在欣赏结构）、私人称呼锚（保留不用于榜单系统的私人称呼，防止榜名压过真名）、原世界遗物锚（保留一件来自原世界从未交易的物品，证明自己曾来自另一个世界）、他人反对权锚（允许某些人拥有反对自己的权力——如果没人能阻止他，他就已接近成神路线）。',
+    content: `
+      <p class=\"section-desc\">主角必须有防止堕落的锚。但这些锚也可能失效——甚至变成新的危险。</p>
+      <div class=\"grid-2\">
+        <div class=\"card\"><h3 class=\"card-title\">1. 造主记忆锚</h3><div class=\"card-body\">他见过更高层之美，这让他不轻易被低级恐怖吞没。但它也是危险——因为他会追求更深之美。所以这个锚不是纯保护，而是双刃剑。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">2. 自我观察锚</h3><div class=\"card-body\">他必须持续审视：我为什么想这么做？我是在救人还是在欣赏结构？我是在承担代价还是让别人替我承担？我是不是开始觉得反派说得更方便？我是不是已经把人看成资源？自我观察是他与许多候选人格的区别。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">3. 私人称呼锚</h3><div class=\"card-body\">主角应保留一个不用于榜单、不用于系统、不用于名庭公证、不用于方舟职位的私人称呼。作用：防止榜名压过真名，防止方舟之主身份吞掉个人，防止系统将他完全候选化，提醒他自己不是功能。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">4. 原世界遗物锚</h3><div class=\"card-body\">他应保留一件来自原世界、从未交易、从未抵押、从未喂给庇护所的物品。意义：这是他仍然承认自己曾来自另一个世界的证据。但后期它也可能成为代价——为了方舟启动，他可能必须放弃回到原世界的执念。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">5. 他人反对权锚</h3><div class=\"card-body\">最重要的锚不是物，而是制度。主角必须允许某些人拥有反对他的权力：朋友、土著盟友、混合法庭、方舟公约派、庇护所内议会、某个敢对他说"不"的人。如果没人能阻止他，他就已经接近成神路线。</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'protagonist-growth-ethics',
+    num: 'P10',
+    title: '主角成长阶段伦理表',
+    sub: '每一阶段的核心诱惑、底线与可能越界',
+    summary: '初期（求生）→建屋阶段→接触土著→规则研究→领地阶段→方舟阶段→终局阶段。每一阶段都有不同的诱惑、底线和越界风险。',
+    content: `
+      <p class=\"section-desc\">主角的伦理挑战随成长阶段变化——每个阶段有不同的核心诱惑和主要底线。</p>
+      <div class=\"card\"><div class=\"card-body\">
+        <table style=\"width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;\">
+          <tr style=\"border-bottom:1px solid #2a2736;\"><th style=\"padding:8px;text-align:left;color:#d7b56d;\">阶段</th><th style=\"padding:8px;text-align:left;color:#d7b56d;\">核心诱惑</th><th style=\"padding:8px;text-align:left;color:#d7b56d;\">主要底线</th><th style=\"padding:8px;text-align:left;color:#d7b56d;\">可能越界</th></tr>
+          <tr style=\"border-bottom:1px solid #1e1e2a;\"><td style=\"padding:8px;\">初期求生</td><td style=\"padding:8px;\">为活命无视代价</td><td style=\"padding:8px;\">不伤害无辜者</td><td style=\"padding:8px;\">隐瞒危险</td></tr>
+          <tr style=\"border-bottom:1px solid #1e1e2a;\"><td style=\"padding:8px;\">建屋阶段</td><td style=\"padding:8px;\">把房子当实验体</td><td style=\"padding:8px;\">不让屋吃人</td><td style=\"padding:8px;\">推进活化过快</td></tr>
+          <tr style=\"border-bottom:1px solid #1e1e2a;\"><td style=\"padding:8px;\">接触土著</td><td style=\"padding:8px;\">轻视土著规矩</td><td style=\"padding:8px;\">尊重历史伤疤</td><td style=\"padding:8px;\">用系统逻辑压人</td></tr>
+          <tr style=\"border-bottom:1px solid #1e1e2a;\"><td style=\"padding:8px;\">规则研究</td><td style=\"padding:8px;\">为观察放任异常</td><td style=\"padding:8px;\">不用无辜者实验</td><td style=\"padding:8px;\">晦诡半成形</td></tr>
+          <tr style=\"border-bottom:1px solid #1e1e2a;\"><td style=\"padding:8px;\">领地阶段</td><td style=\"padding:8px;\">用恐惧建立秩序</td><td style=\"padding:8px;\">不被系统替代思考</td><td style=\"padding:8px;\">贡献值统治</td></tr>
+          <tr style=\"border-bottom:1px solid #1e1e2a;\"><td style=\"padding:8px;\">方舟阶段</td><td style=\"padding:8px;\">筛掉低价值者</td><td style=\"padding:8px;\">个体选择权</td><td style=\"padding:8px;\">精英逃生倾向</td></tr>
+          <tr><td style=\"padding:8px;\">终局阶段</td><td style=\"padding:8px;\">成神保护所有人</td><td style=\"padding:8px;\">不替文明做完所有选择</td><td style=\"padding:8px;\">接受神胎主导</td></tr>
+        </table>
+      </div></div>
+      <h3>主角最终伦理立场</h3>
+      <div class=\"quote\">文明可以改变形态。人可以与黑暗共生。死亡可以进入循环。梦和名字可以被保护、交易或封存。庇护所可以活化成方舟。但所有这些都必须保留一个最低限度：任何存在不应在不知情、不可拒绝、不可申诉的情况下，被另一个更大的结构定义成资源、器官、位置、燃料或替代品。</div>
+      <p>这就是他的方舟伦理核心。不是绝对自由，不是绝对纯洁——而是反对"不可申诉的被定义"。</p>
+    `,
+  },
+  {
+    id: 'protagonist-six-laws',
+    num: 'P11',
+    title: '主角伦理六律',
+    sub: '他不是无光域里最干净的人，而是最清楚自己已经不干净的人',
+    summary: '第一律：看见规则的人，最容易把人看成规则材料。第二律：利用黑暗不是堕落，让黑暗替你定义别人才是堕落。第三律：系统有用，但有用不是正确。第四律：家会保护你，也会拥有你。第五律：救不了所有人，不等于可以把没救的人提前算作死人。第六律：拒绝成神，不是拒绝力量，而是拒绝成为唯一答案。',
+    content: `
+      <p class=\"section-desc\">主角伦理的核心法则——世界观层面的约束，定义了主角与这个世界之间的道德张力。</p>
+      <div class=\"grid-2\">
+        <div class=\"card\"><h3 class=\"card-title\">第一律：看见规则的人，最容易把人看成规则材料</h3><div class=\"card-body\">裂视越强，越要防止自己把生命简化成边界样本。理解结构的能力不应变成将人工具化的理由。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">第二律：利用黑暗不是堕落，让黑暗替你定义别人才是堕落</h3><div class=\"card-body\">尸体、腐殖、梦渣、晦晶都可利用。但不能让人未经选择地成为这些东西。利用黑暗是一回事，让别人成为黑暗的燃料是另一回事。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">第三律：系统有用，但有用不是正确</h3><div class=\"card-body\">系统提示可以指导行动，不能替代良知与法度。有用性和正确性在无光域中是两件不同的事。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">第四律：家会保护你，也会拥有你</h3><div class=\"card-body\">庇护所越像家，主角越要允许自己和他人仍有离家的权利。爱一个家不等于允许家拥有你。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">第五律：救不了所有人，不等于可以把没救的人提前算作死人</h3><div class=\"card-body\">方舟必须选择，但选择不能变成抛弃者的去人化。被留下的人不是"本来就会死"的人——他们是文明筛选中被放弃的部分。</div></div>
+        <div class=\"card\"><h3 class=\"card-title\">第六律：拒绝成神，不是拒绝力量，而是拒绝成为唯一答案</h3><div class=\"card-body\">主角最终不是不够强才不成神，而是足够清醒——知道任何唯一答案都会开始吃掉问题本身。拒绝成神，就是拒绝让世界只被一个人解释。</div></div>
+      </div>
+    `,
+  },
+]

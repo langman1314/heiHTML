@@ -136,4 +136,16 @@ export const chapterGroups = [
       'metaphor-bed', 'metaphor-well', 'metaphor-bone', 'metaphor-ark', 'metaphor-urban-horror'
     ],
   },
+  {
+    name: '反派势力',
+    icon: '▲',
+    type: 'antagonist',
+    ids: ['antagonist-overview', 'antagonist-name-eaters', 'antagonist-system-cult', 'antagonist-hunger-cult', 'antagonist-ark-extremists', 'antagonist-rank-breakers', 'antagonist-gray-commune', 'antagonist-tide-nobles', 'antagonist-conflict-matrix', 'antagonist-six-laws'],
+  },
+  {
+    name: '主角伦理',
+    icon: '★',
+    type: 'protagonist',
+    ids: ['protagonist-first-principle', 'protagonist-three-lines', 'protagonist-acceptable', 'protagonist-unacceptable', 'protagonist-transgressions', 'protagonist-fall-paths', 'protagonist-why-not-god', 'protagonist-ethics-relationships', 'protagonist-anchors', 'protagonist-growth-ethics', 'protagonist-six-laws'],
+  },
 ]

@@ -16,6 +16,8 @@ import { frameworkDimensions } from './data/framework-dimensions.js'
 import { phase4Life } from './data/phase4-life.js'
 import { phase4Law } from './data/phase4-law.js'
 import { phase4Daily } from './data/phase4-daily.js'
+import { phase5Antagonists } from './data/phase5-antagonists.js'
+import { phase5Protagonist } from './data/phase5-protagonist.js'
 import ProgressBar from './components/ProgressBar.vue'
 import HeroBanner from './components/HeroBanner.vue'
 
@@ -39,6 +41,8 @@ frameworkDimensions.forEach(s => { sectionMap[s.id] = s })
 phase4Life.forEach(s => { sectionMap[s.id] = s })
 phase4Law.forEach(s => { sectionMap[s.id] = s })
 phase4Daily.forEach(s => { sectionMap[s.id] = s })
+phase5Antagonists.forEach(s => { sectionMap[s.id] = s })
+phase5Protagonist.forEach(s => { sectionMap[s.id] = s })
 
 const currentGroup = computed(() => chapterGroups[activeGroupIndex.value])
 const currentSection = computed(() => activeSectionId.value ? sectionMap[activeSectionId.value] : null)
