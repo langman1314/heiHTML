@@ -123,7 +123,7 @@ export const chapterGroups = [
     name: '终局设定',
     icon: '★',
     range: [44, 49],
-    ids: ['blacktide-ecology', 'system-ecology', 'candidate', 'fragment-overview', 'fragment-hunger', 'fragment-nest', 'fragment-name', 'fragment-dream', 'fragment-door', 'fragment-ark', 'fragment-conflicts', 'fragment-candidates', 'fragment-ark-duality', 'fragment-six-laws', 'endgame-overview', 'endgame-become-god', 'endgame-symbiosis', 'endgame-ark', 'endgame-break-fetus', 'endgame-collapse', 'endgame-ark-conditions', 'endgame-scenes', 'endgame-protagonist-path', 'endgame-six-laws'],
+    ids: ['blacktide-ecology', 'system-ecology', 'candidate', 'fragment-overview', 'fragment-hunger', 'fragment-nest', 'fragment-name', 'fragment-dream', 'fragment-door', 'fragment-ark', 'fragment-conflicts', 'fragment-candidates', 'fragment-ark-duality', 'fragment-six-laws', 'endgame-overview', 'endgame-become-god', 'endgame-symbiosis', 'endgame-ark', 'endgame-break-fetus', 'endgame-collapse', 'endgame-ark-conditions', 'endgame-scenes', 'endgame-protagonist-path', 'endgame-six-laws', 'endgame-debate-become-god', 'endgame-debate-symbiosis', 'endgame-debate-ark', 'endgame-debate-break-fetus', 'endgame-debate-collapse', 'endgame-ark-pregnancy', 'endgame-ark-selection', 'endgame-ark-naming-and-passage', 'endgame-ark-outer-abyss', 'endgame-debate-six-laws'],
   },
   {
     name: '影射层',
