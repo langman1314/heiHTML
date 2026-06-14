@@ -12,6 +12,12 @@ export const chapterGroups = [
     ids: ['hue-full-definition', 'material-conservation', 'boundary-conservation', 'emotion-conservation', 'hue-metabolism-cycle', 'hue-concentration', 'weird-generation-system', 'weird-types-and-response', 'weird-prevention'],
   },
   {
+    name: '设定校验标准',
+    icon: '⚖',
+    type: 'tool',
+    ids: ['cc-hue-conservation', 'cc-cognition-rules', 'cc-boundary-change', 'cc-cost', 'cc-native-handling', 'cc-system-record', 'cc-blacktide-cycle', 'cc-shelter-absorption', 'cc-economic-value', 'cc-god-fragment'],
+  },
+  {
     name: '世界根基',
     icon: '◈',
     range: [1, 5],
