@@ -25,7 +25,7 @@ export const deepQuestions = [
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',
-    notes: '与后两个回答汇聚于同一机制：神胎的心跳（黑潮）同时驱动三件事——把人吸进来、把人喂下去、把层打开又关上。',
+    notes: '与后两个回答汇聚于同一机制：神胎的心跳（黑潮）同时驱动三件事——把人吸进来、把人喂下去、把层打开又关上。现已落地为 deep-logic 第17条「黑潮三联律」。',
   },
   {
     id: 'dq-agriculture-huetide',
@@ -48,7 +48,7 @@ export const deepQuestions = [
           ④ 黑潮是否有利：是。黑潮是唯一的灌浆/成熟相，没有黑潮骨麦永为空壳。接续饥饿碎片"食潮"与危机经济。<br>
           ⑤ 穿越者承压：会大规模饿死，且这是养殖逻辑的第一道筛选闸——穿越者集中在黑潮前后被渗透进来（边界最薄），恰逢抢收最紧张期，第一周饿死者=第一批被筛者。"被养殖"≠"被喂饱"，养殖场靠饥饿控存栏。
         </div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第四章（骨麦）、第八章（黑潮周期）；新增建议写入 deep-logic.js 黑潮三联机制条</div></div>
+        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第四章（骨麦）、第八章（黑潮周期）；现已落地为 deep-logic 第17条「黑潮三联律」（本条为其第二联·潮间双相代谢的完整展开）。</div></div>
       </div>
     `,
     firstIdentified: '2026-06-14',
@@ -79,12 +79,12 @@ export const deepQuestions = [
           ⑤ 系统是否管交通：系统不主动管，但高整合人格=晦能高压点，黑潮/层门天然向其聚集（涌现，非设计）。<br>
           ⑥ 物品跨层交易：可，但深层物质跨层持有有晦染风险，定价含"减压风险溢价"。
         </div></div>
-        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第三章（五层结构）、第九/十一章（资源/市场）；新增建议写入 deep-logic.js 黑潮三联机制条</div></div>
+        <div class="truth-layer"><span class="truth-label">关联条目</span><div class="truth-text">sections.js — 第三章（五层结构）、第九/十一章（资源/市场）；现已落地为 deep-logic 第17条「黑潮三联律」（本条为其第三联·潮汐式层门的完整展开）。</div></div>
       </div>
     `,
     firstIdentified: '2026-06-14',
     lastChecked: '2026-06-14',
-    notes: '由本轮深化裁定结案；与农业条同源于"黑潮三联机制"，建议合并写入一条核心设定。',
+    notes: '由本轮深化裁定结案；与农业条同源于"黑潮三联机制"，现已合并写入 deep-logic 第17条。',
   },
   {
     id: 'dq-previous-round-failure',
