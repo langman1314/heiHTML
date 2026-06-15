@@ -9,4 +9,137 @@ export const phase2System = [
     sub: '系统不是救世主，不是游戏外挂，而是神胎的筛选神经',
     summary: '系统是神胎临产期生成的外来者接入协议——将晦能生态翻译成玩家能理解的数值、任务、面板与奖励，完成翻译、保护、诱导、采样、筛选与人格整合六项功能。',
     content: `
-      <p class="section-desc">系统的本质是：神胎为了接入外来者认知结构而生成的一套生存翻译层、行为采样器、路线诱导器与人格筛选协议。它表现本质是：神胎为了接入外来者认知结构而生成的一套生存翻译层、行为采样器、路线诱导器与人格筛选协议。它表现成"游戏系统"，不是因为无光域真的是游戏，而是因为穿越者来自高度平台化、数据化的现代文明——神胎将不可理解的晦能生态翻译成玩家能接受的形式。</p>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">翻译功能</h3><div class=\"card-body\">将晦能生态翻译为玩家能理解的数值、任务、提示、面板与奖励。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">保护功能</h3><div class=\"card-body\">在初期降低外来者死亡率，确保他们不会因完全无法理解无光域而瞬间灭绝。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">诱导功能</h3><div class=\"card-body\">通过任务、奖励、升级、排行榜，诱导玩家选择不同生存路线，暴露人格倾向。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">采样功能</h3><div class=\"card-body\">记录玩家如何面对恐惧、资源、合作、背叛、建设、死亡、异常与权力。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">筛选功能</h3><div class=\"card-body\">识别高适应、高影响、高回流、高规则接触的个体，推入候选人格池。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">人格整合功能</h3><div class=\"card-body\">将优秀个体的行为模式、情绪结构与文明观念输送给神胎作为人格材料。</div></div>\n      </div>\n      <div class=\"quote\">系统不是谎言，但永远不是完整真相。它显示的是"足以让玩家行动"的版本，而不是"足以让玩家理解世界"的版本。</div>\n      <h3>系统不是什么</h3>\n      <div class=\"grid-3\">\n        <div class=\"card\"><div class=\"card-body\"><span class=\"danger\">不是</span>游戏管理器</div></div>\n        <div class=\"card\"><div class=\"card-body\"><span class=\"danger\">不是</span>绝对公平裁判</div></div>\n        <div class=\"card\"><div class=\"card-body\"><span class=\"danger\">不是</span>神明赐福</div></div>\n        <div class=\"card\"><div class=\"card-body\"><span class=\"danger\">不是</span>单纯新手保护</div></div>\n        <div class=\"card\"><div class=\"card-body\"><span class=\"danger\">不是</span>外来文明科技</div></div>\n        <div class=\"card\"><div class=\"card-body\"><span class=\"danger\">不是</span>完全可信的真理来源</div></div>\n      </div>\n      <h3>系统的三种不完整</h3>\n      <div class=\"truth-stack\">\n        <div class=\"truth-layer\"><span class=\"truth-label\">信息不完整</span><div class=\"truth-text\">系统告诉玩家"灰土可种植骨麦"，但不告诉骨麦需要骨粉、骨粉来源影响作物梦残留、长期食用改变家庭对死亡的接受方式。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">定义不完整</span><div class=\"truth-text\">系统显示"庇护所稳定度+5"，但不说明是门、床、墙还是箱稳定了？稳定的是主人边界，还是房屋对主人的占有？</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">代价不完整</span><div class=\"truth-text\">系统说"完成异常处理，获得规则尘"，但不提示你被该类晦诡记住了，系统标注中增加了异常接触倾向。</div></div>\n      </div>\n      <div class=\"quote-center\">系统最残酷的地方不在于它撒谎，<br>而在于它用真实信息引导玩家走向可被筛选的命运。</div>\n    `,\n  },\n  {\n    id: 'system-four-layers',\n    num: 'S2',\n    title: '系统四层语言',\n    sub: '从求生到神胎，系统在四个层面上对玩家说话',\n    summary: '系统权限分为四层语言——求生语言、路线语言、筛选语言、神胎语言——每一层面向不同阶段的玩家，层层递进，从保护到诱导到暴露到人格试探。',\n    content: `\n      <div class=\"timeline\">\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">第一层：求生语言</h3><div class=\"card-sub\">面向新手玩家</div><div class=\"card-body\">显示生命状态、饥饿、口渴、体温、污染预警、庇护所基础状态、黑潮倒计时、基础资源提示、简易合成、区域频道、基础晦视与新手任务。真实作用：防止玩家在前三天无意义崩溃，让玩家相信"只要按任务做就能活下去"。隐藏代价：塑造玩家对世界的第一印象——把晦植当资源、晦兽当怪物、庇护所当基地、黑潮当天灾、土著当NPC、系统当规则。这些误解会在后期产生冲突与反噬。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">第二层：路线语言</h3><div class=\"card-sub\">面向度过初期生存的玩家</div><div class=\"card-body\">显示种植路线、狩猎路线、交易路线、驯养路线、掘潮路线、群聚路线、活屋路线、规则研究路线、职业化任务与特殊奖励。真实作用：不是帮助玩家自由发展，而是把玩家分流成不同人格样本。系统观察谁选择稳定农业、谁选择掠夺他人、谁选择研究规则、谁愿意推动庇护所活化。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">第三层：筛选语言</h3><div class=\"card-sub\">面向区域强者、榜单前列、裂视者</div><div class=\"card-body\">显示排行榜、区域影响力、命名权重、庇护所活化排名、黑潮收益率、异常处理率、系统称号、区域任务与候选相关隐藏提示。真实作用：将强者公开化、位置化、竞争化。排行榜不是奖励榜，而是猎物名单和候选名单。当一个人进入榜单——玩家会注意他，土著会评价他，晦诡会模仿他，神胎会提高采样权重。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">第四层：神胎语言</h3><div class=\"card-sub\">面向候选人格、重度晦染者、进入深层真相者</div><div class=\"card-body\">显示隐藏文字、错栏公告、未诞大厅梦境、人格趋向标记、系统自相矛盾提示、任务真实意图残片、神胎碎片干涉信息与终局路线征兆。真实作用：不再是操作提示，而是人格诱导——让候选人格开始接触神胎的真实问题：你是否愿意成为祂？</div></div></div>\n      </div>\n      <div class=\"quote\">神胎语言越多，说明玩家越接近候选池。系统提示变少，但含义变深。系统不再把玩家当普通用户，而开始把他当可能的"我"。</div>\n    `,\n  },\n  {\n    id: 'system-anomalies',\n    num: 'S3',\n    title: '系统异常分类',\n    sub: '系统异常不是故障，而是深层边界冲突或神胎碎片争夺解释权',\n    summary: '错栏公告、延迟奖励、隐藏文字、榜单残留、错误资源标记、任务反噬、死亡不同步——七类系统异常，每一类都是深层现实未被系统完整翻译时露出的裂缝。',\n    content: `\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">① 错栏公告</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>两条公告挤在同一行。<span class=\"keyword\">本质：</span>两个现实解释同时请求翻译，系统未能确定优先显示。<span class=\"keyword\">风险：</span>读懂者可能接收不属于自己的任务或候选标记。不可公开复述完整错栏。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">② 延迟奖励</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>任务完成后奖励迟迟不发。<span class=\"keyword\">本质：</span>系统仍在判断玩家行为属于哪条路线或产生了哪些边界后果。<span class=\"keyword\">风险：</span>奖励延迟期间，行为仍在被持续采样。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">③ 隐藏文字</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>只有少数人能看见的第二层提示。<span class=\"keyword\">本质：</span>神胎语言泄露——系统过滤层被打穿。<span class=\"keyword\">风险：</span>看见隐藏文字者会被深层结构反向看见。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">④ 榜单残留</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>已死亡或失踪者仍占据榜单位置。<span class=\"keyword\">本质：</span>榜单承认的是"位置"，不一定承认"人"。<span class=\"keyword\">风险：</span>食名教团可利用残留位置进行替代。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑤ 错误资源标记</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>系统将污染物标为可用资源。<span class=\"keyword\">本质：</span>系统只按表层功能标注，未显示归属与旧主污染。<span class=\"keyword\">风险：</span>玩家将高危物品带入庇护所。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑥ 任务反噬</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>任务完成后，现实开始补出任务合理存在的原因。<span class=\"keyword\">本质：</span>玩家先执行了系统目标，现实随后为了闭合因果而补证。<span class=\"keyword\">风险：</span>完成任务本身制造新的区域异常。</div></div>\n        <div class=\"card\" style=\"grid-column:1/-1\"><h3 class=\"card-title\">⑦ 死亡不同步</h3><div class=\"card-body\"><span class=\"keyword\">表现：</span>系统显示死亡，但床位仍暖、频道仍可发言。<span class=\"keyword\">本质：</span>死亡在系统层、肉体层、名字层、梦境层、庇护所层没有同时完成。<span class=\"keyword\">风险：</span>活死、错死、频道遗言、替代身份。不能只凭系统判定安葬或分配遗物。</div></div>\n      </div>\n      <div class=\"quote\">系统异常处理原则：不把系统提示当唯一真相，不公开传播错栏原文，不追逐未知奖励，不用排行榜定义人，不让频道替代现实调查。</div>\n    `,\n  },\n  {\n    id: 'system-ranking',\n    num: 'S4',\n    title: '排行榜真实作用',\n    sub: '排行榜不是荣誉，而是公共现实中的高亮位置',\n    summary: '排行榜使某人被玩家记住、系统采样、土著评估、晦诡模仿、神胎注视。名次越高，个人越不像私人个体，越像区域共识中的符号。榜首失名是排行榜极端稳定化的副作用——人被位置吞掉。',\n    content: `\n      <p class=\"section-desc\">排行榜提供的不只是名次，而是公共现实中的高亮位置。</p>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">表层：竞争激励</h3><div class=\"card-body\">促使玩家主动提升生存、建设、战斗、探索与异常处理能力。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">中层：社会重组</h3><div class=\"card-body\">榜单制造声望、投靠、围猎、交易、谣言、联盟和暗杀。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">深层：人格筛选</h3><div class=\"card-body\">榜单识别并暴露高价值个体，让强者彼此接触、竞争、吞并或合作。</div></div>\n      </div>\n      <h3>榜单类型真实含义</h3>\n      <div class=\"truth-stack\">\n        <div class=\"truth-layer\"><span class=\"truth-label\">生存榜</span><div class=\"truth-text\">不是活得久，而是衡量稳定回流能力——系统看重的是你如何把恐惧变成秩序。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">领地榜</span><div class=\"truth-text\">不是房子大，而是衡量庇护所活化与区域边界控制——你能否让空间服从你，或你是否正在被空间拥有。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">黑潮榜</span><div class=\"truth-text\">不是收益高，而是衡量危机利用能力——你能否把灾变转化为资源。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">异常处理榜</span><div class=\"truth-text\">不是解决晦诡多，而是衡量规则接触耐受度——你能否理解错误而不立刻成为错误。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">命名影响榜</span><div class=\"truth-text\">不是会起名，而是衡量局部现实解释权——你能否让他人和现实共同承认你的定义。</div></div>\n      </div>\n      <div class=\"quote\">榜首失名——当"榜首"这个位置被过多人关注时，位置本身可能比个人更稳定。玩家名字开始模糊，大众更常称其为"榜一"，门牌对其真名反应变慢。最终：人被位置吞掉。</div>\n    `,\n  },\n  {\n    id: 'system-native-conflict',\n    num: 'S5',\n    title: '系统与土著仪式的冲突',\n    sub: '系统规则与土著规则不一致，是无光域社会矛盾的重要来源',\n    summary: '系统判定交易完成不等于土著旧主断开，系统判定死亡不等于土著名梦床尸全部死亡，系统显示庇护所主人不等于门床箱墙共同承认。五大冲突——交易、死亡、房屋归属、组队、排行榜——深刻影响玩家与土著的关系。',\n    content: `\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">交易冲突</h3><div class=\"card-body\"><span class=\"keyword\">系统判定：</span>交易栏完成，物品归新主。<span class=\"keyword\">土著判定：</span>旧主未断、夜声未净、梦残留未刮，则交易未完成。<span class=\"keyword\">后果：</span>玩家购买旧物后引发旧签回归、旧主梦、物品自返。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">死亡冲突</h3><div class=\"card-body\"><span class=\"keyword\">系统判定：</span>生命值归零，玩家死亡。<span class=\"keyword\">土著判定：</span>尸体、名、梦、床、遗物、频道权限均断，才算死干净。<span class=\"keyword\">后果：</span>错死、活死、频道遗言、床位不冷、死者梦继续。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">房屋归属冲突</h3><div class=\"card-body\"><span class=\"keyword\">系统判定：</span>庇护所面板显示主人。<span class=\"keyword\">土著判定：</span>门、床、箱、灶、墙是否承认主人。<span class=\"keyword\">后果：</span>玩家以为拥有房子，实际房子只承认系统而不承认居住者。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">组队冲突</h3><div class=\"card-body\"><span class=\"keyword\">系统判定：</span>队伍成立，队友共享信息。<span class=\"keyword\">土著判定：</span>临时共属关系必须限定边界、责任、死亡处理与战利品归属。<span class=\"keyword\">后果：</span>队友死亡后责任不清，遗物污染、梦债、空位同意者出现。</div></div>\n        <div class=\"card\" style=\"grid-column:1/-1\"><h3 class=\"card-title\">排行榜冲突</h3><div class=\"card-body\"><span class=\"keyword\">系统判定：</span>榜单越高越值得奖励。<span class=\"keyword\">土著判定：</span>榜单越高越接近被神胎看见。<span class=\"keyword\">后果：</span>玩家追榜，土著避榜。玩家荣耀化榜首，土著把榜首视为灾变焦点。</div></div>\n      </div>\n      <div class=\"quote\">成熟玩家必须学会同时阅读系统与土著制度。只信系统会死。只信土著也会错过系统提示。两者冲突处，往往就是真相裂缝。</div>\n    `,\n  },\n  {\n    id: 'system-levels-and-laws',\n    num: 'S6',\n    title: '系统权限等级与六律',\n    sub: '系统不是万能外挂，每层权限都有功能与代价',\n    summary: '系统权限分为0-6共七级：基础接入→生存权限→路线权限→区域权限→异常权限→候选权限→神胎接入。系统机制六律确立了系统的底层法则——不创造规则只翻译规则，保护是为了更高价值回流，任务是诱导不是命令，排行榜是暴露不是荣耀。',\n    content: `\n      <h3>权限等级表</h3>\n      <div class=\"timeline\">\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">0级：基础接入</h3><div class=\"card-sub\">全民穿越初始</div><div class=\"card-body\">基础晦视、生命状态、区域频道、庇护所面板、简易合成、黑潮倒计时。<span class=\"danger\">风险：</span>系统依赖形成。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">1级：生存权限</h3><div class=\"card-sub\">存活3-7天完成基础任务</div><div class=\"card-body\">种植提示、简易地图、初级图鉴、交易栏、背包扩展、小黑潮任务。<span class=\"danger\">风险：</span>开始被路线分流。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">2级：路线权限</h3><div class=\"card-sub\">庇护所2-3级，稳定生产或战斗</div><div class=\"card-body\">路线任务、职业倾向、土著声望、庇护所模块解锁、晦兽/晦植图鉴扩展。<span class=\"danger\">风险：</span>行为被固定采样。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">3级：区域权限</h3><div class=\"card-sub\">进入区域榜单、抵御大黑潮</div><div class=\"card-body\">区域影响力、公共任务、联盟功能、领地权限、排行榜详细项、黑潮收益统计。<span class=\"danger\">风险：</span>被公共现实高亮。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">4级：异常权限</h3><div class=\"card-sub\">多次处理晦诡、裂视成长</div><div class=\"card-body\">异常标注、规则尘识别、隐藏任务、错栏阅读概率上升。<span class=\"danger\">风险：</span>被异常反向识别。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">5级：候选权限</h3><div class=\"card-sub\">高排名、高活化庇护所</div><div class=\"card-body\">隐藏文字、未诞大厅梦境、候选人格互相感知、神胎碎片倾向提示、终局路线线索。<span class=\"danger\">风险：</span>系统不再只是保护，开始主动诱导人格选择。</div></div></div>\n        <div class=\"timeline-item\"><div class=\"card\"><h3 class=\"card-title\">6级：神胎接入</h3><div class=\"card-sub\">进入胎海层或终局阶段</div><div class=\"card-body\">系统语言崩解，面板转化为象征、梦、骨刻、门影。玩家可接触神胎意识碎片，开放成神/留域/出走/破胎等路线。<span class=\"danger\">风险：</span>自我边界与神胎边界开始重叠。</div></div></div>\n      </div>\n      <h3>系统机制六律</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">第一律</h3><div class=\"card-body\">系统不创造规则，只翻译规则。系统不是世界法则本身，它只是把晦能生态翻译成玩家能理解、能行动、能竞争的形式。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第二律</h3><div class=\"card-body\">系统保护玩家，是为了让玩家产生更高价值回流。保护不是慈悲，而是养殖技术——活得越久，建设越多，关系越复杂，回流越丰厚。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第三律</h3><div class=\"card-body\">任务是诱导，不是命令。系统不会强迫玩家做什么，它只设计奖励，让玩家自愿暴露自己的选择倾向。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第四律</h3><div class=\"card-body\">排行榜不是荣耀，是暴露。被排名意味着被公共现实承认。越高的位置，越容易被神胎、玩家、土著、晦诡和教团共同注视。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第五律</h3><div class=\"card-body\">系统记录只是一证。在无光域，真相至少需要系统记录、物理痕迹、边界承认三者校验。单信系统，是玩家文明早期最大的死亡原因之一。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第六律</h3><div class=\"card-body\">隐藏文字不是福利，是深层正在看你。能看见更多，不代表更安全。每多读懂一层系统，就少一层被系统保护的无知。</div></div>\n      </div>\n      <div class=\"quote-center\">系统不是神赐的救命绳，<br>而是神胎伸进玩家认知里的舌头。</div>\n    `,\n  },\n]\n"}
+      <p class="section-desc">系统的本质是：神胎为了接入外来者认知结构而生成的一套生存翻译层、行为采样器、路线诱导器与人格筛选协议。它表现成"游戏系统"，不是因为无光域真的是游戏，而是因为穿越者来自高度平台化、数据化的现代文明——神胎将不可理解的晦能生态翻译成玩家能接受的形式。</p>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">翻译功能</h3><div class="card-body">将晦能生态翻译为玩家能理解的数值、任务、提示、面板与奖励。</div></div>
+        <div class="card"><h3 class="card-title">保护功能</h3><div class="card-body">在初期降低外来者死亡率，确保他们不会因完全无法理解无光域而瞬间灭绝。</div></div>
+        <div class="card"><h3 class="card-title">诱导功能</h3><div class="card-body">通过任务、奖励、升级、排行榜，诱导玩家选择不同生存路线，暴露人格倾向。</div></div>
+        <div class="card"><h3 class="card-title">采样功能</h3><div class="card-body">记录玩家如何面对恐惧、资源、合作、背叛、建设、死亡、异常与权力。</div></div>
+        <div class="card"><h3 class="card-title">筛选功能</h3><div class="card-body">识别高适应、高影响、高回流、高规则接触的个体，推入候选人格池。</div></div>
+        <div class="card"><h3 class="card-title">人格整合功能</h3><div class="card-body">将优秀个体的行为模式、情绪结构与文明观念输送给神胎作为人格材料。</div></div>
+      </div>
+      <div class="quote">系统不是谎言，但永远不是完整真相。它显示的是"足以让玩家行动"的版本，而不是"足以让玩家理解世界"的版本。</div>
+      <h3>系统不是什么</h3>
+      <div class="grid-3">
+        <div class="card"><div class="card-body"><span class="danger">不是</span>游戏管理器</div></div>
+        <div class="card"><div class="card-body"><span class="danger">不是</span>绝对公平裁判</div></div>
+        <div class="card"><div class="card-body"><span class="danger">不是</span>神明赐福</div></div>
+        <div class="card"><div class="card-body"><span class="danger">不是</span>单纯新手保护</div></div>
+        <div class="card"><div class="card-body"><span class="danger">不是</span>外来文明科技</div></div>
+        <div class="card"><div class="card-body"><span class="danger">不是</span>完全可信的真理来源</div></div>
+      </div>
+      <h3>系统的三种不完整</h3>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">信息不完整</span><div class="truth-text">系统告诉玩家"灰土可种植骨麦"，但不告诉骨麦需要骨粉、骨粉来源影响作物梦残留、长期食用改变家庭对死亡的接受方式。</div></div>
+        <div class="truth-layer"><span class="truth-label">定义不完整</span><div class="truth-text">系统显示"庇护所稳定度+5"，但不说明是门、床、墙还是箱稳定了？稳定的是主人边界，还是房屋对主人的占有？</div></div>
+        <div class="truth-layer"><span class="truth-label">代价不完整</span><div class="truth-text">系统说"完成异常处理，获得规则尘"，但不提示你被该类晦诡记住了，系统标注中增加了异常接触倾向。</div></div>
+      </div>
+      <div class="quote-center">系统最残酷的地方不在于它撒谎，<br>而在于它用真实信息引导玩家走向可被筛选的命运。</div>
+    `,
+  },
+  {
+    id: 'system-four-layers',
+    num: 'S2',
+    title: '系统四层语言',
+    sub: '从求生到神胎，系统在四个层面上对玩家说话',
+    summary: '系统权限分为四层语言——求生语言、路线语言、筛选语言、神胎语言——每一层面向不同阶段的玩家，层层递进，从保护到诱导到暴露到人格试探。',
+    content: `
+      <div class="timeline">
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第一层：求生语言</h3><div class="card-sub">面向新手玩家</div><div class="card-body">显示生命状态、饥饿、口渴、体温、污染预警、庇护所基础状态、黑潮倒计时、基础资源提示、简易合成、区域频道、基础晦视与新手任务。真实作用：防止玩家在前三天无意义崩溃，让玩家相信"只要按任务做就能活下去"。隐藏代价：塑造玩家对世界的第一印象——把晦植当资源、晦兽当怪物、庇护所当基地、黑潮当天灾、土著当NPC、系统当规则。这些误解会在后期产生冲突与反噬。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第二层：路线语言</h3><div class="card-sub">面向度过初期生存的玩家</div><div class="card-body">显示种植路线、狩猎路线、交易路线、驯养路线、掘潮路线、群聚路线、活屋路线、规则研究路线、职业化任务与特殊奖励。真实作用：不是帮助玩家自由发展，而是把玩家分流成不同人格样本。系统观察谁选择稳定农业、谁选择掠夺他人、谁选择研究规则、谁愿意推动庇护所活化。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第三层：筛选语言</h3><div class="card-sub">面向区域强者、榜单前列、裂视者</div><div class="card-body">显示排行榜、区域影响力、命名权重、庇护所活化排名、黑潮收益率、异常处理率、系统称号、区域任务与候选相关隐藏提示。真实作用：将强者公开化、位置化、竞争化。排行榜不是奖励榜，而是猎物名单和候选名单。当一个人进入榜单——玩家会注意他，土著会评价他，晦诡会模仿他，神胎会提高采样权重。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第四层：神胎语言</h3><div class="card-sub">面向候选人格、重度晦染者、进入深层真相者</div><div class="card-body">显示隐藏文字、错栏公告、未诞大厅梦境、人格趋向标记、系统自相矛盾提示、任务真实意图残片、神胎碎片干涉信息与终局路线征兆。真实作用：不再是操作提示，而是人格诱导——让候选人格开始接触神胎的真实问题：你是否愿意成为祂？</div></div></div>
+      </div>
+      <div class="quote">神胎语言越多，说明玩家越接近候选池。系统提示变少，但含义变深。系统不再把玩家当普通用户，而开始把他当可能的"我"。</div>
+    `,
+  },
+  {
+    id: 'system-anomalies',
+    num: 'S3',
+    title: '系统异常分类',
+    sub: '系统异常不是故障，而是深层边界冲突或神胎碎片争夺解释权',
+    summary: '错栏公告、延迟奖励、隐藏文字、榜单残留、错误资源标记、任务反噬、死亡不同步——七类系统异常，每一类都是深层现实未被系统完整翻译时露出的裂缝。',
+    content: `
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">① 错栏公告</h3><div class="card-body"><span class="keyword">表现：</span>两条公告挤在同一行。<span class="keyword">本质：</span>两个现实解释同时请求翻译，系统未能确定优先显示。<span class="keyword">风险：</span>读懂者可能接收不属于自己的任务或候选标记。不可公开复述完整错栏。</div></div>
+        <div class="card"><h3 class="card-title">② 延迟奖励</h3><div class="card-body"><span class="keyword">表现：</span>任务完成后奖励迟迟不发。<span class="keyword">本质：</span>系统仍在判断玩家行为属于哪条路线或产生了哪些边界后果。<span class="keyword">风险：</span>奖励延迟期间，行为仍在被持续采样。</div></div>
+        <div class="card"><h3 class="card-title">③ 隐藏文字</h3><div class="card-body"><span class="keyword">表现：</span>只有少数人能看见的第二层提示。<span class="keyword">本质：</span>神胎语言泄露——系统过滤层被打穿。<span class="keyword">风险：</span>看见隐藏文字者会被深层结构反向看见。</div></div>
+        <div class="card"><h3 class="card-title">④ 榜单残留</h3><div class="card-body"><span class="keyword">表现：</span>已死亡或失踪者仍占据榜单位置。<span class="keyword">本质：</span>榜单承认的是"位置"，不一定承认"人"。<span class="keyword">风险：</span>食名教团可利用残留位置进行替代。</div></div>
+        <div class="card"><h3 class="card-title">⑤ 错误资源标记</h3><div class="card-body"><span class="keyword">表现：</span>系统将污染物标为可用资源。<span class="keyword">本质：</span>系统只按表层功能标注，未显示归属与旧主污染。<span class="keyword">风险：</span>玩家将高危物品带入庇护所。</div></div>
+        <div class="card"><h3 class="card-title">⑥ 任务反噬</h3><div class="card-body"><span class="keyword">表现：</span>任务完成后，现实开始补出任务合理存在的原因。<span class="keyword">本质：</span>玩家先执行了系统目标，现实随后为了闭合因果而补证。<span class="keyword">风险：</span>完成任务本身制造新的区域异常。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">⑦ 死亡不同步</h3><div class="card-body"><span class="keyword">表现：</span>系统显示死亡，但床位仍暖、频道仍可发言。<span class="keyword">本质：</span>死亡在系统层、肉体层、名字层、梦境层、庇护所层没有同时完成。<span class="keyword">风险：</span>活死、错死、频道遗言、替代身份。不能只凭系统判定安葬或分配遗物。</div></div>
+      </div>
+      <div class="quote">系统异常处理原则：不把系统提示当唯一真相，不公开传播错栏原文，不追逐未知奖励，不用排行榜定义人，不让频道替代现实调查。</div>
+    `,
+  },
+  {
+    id: 'system-ranking',
+    num: 'S4',
+    title: '排行榜真实作用',
+    sub: '排行榜不是荣誉，而是公共现实中的高亮位置',
+    summary: '排行榜使某人被玩家记住、系统采样、土著评估、晦诡模仿、神胎注视。名次越高，个人越不像私人个体，越像区域共识中的符号。榜首失名是排行榜极端稳定化的副作用——人被位置吞掉。',
+    content: `
+      <p class="section-desc">排行榜提供的不只是名次，而是公共现实中的高亮位置。</p>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">表层：竞争激励</h3><div class="card-body">促使玩家主动提升生存、建设、战斗、探索与异常处理能力。</div></div>
+        <div class="card"><h3 class="card-title">中层：社会重组</h3><div class="card-body">榜单制造声望、投靠、围猎、交易、谣言、联盟和暗杀。</div></div>
+        <div class="card"><h3 class="card-title">深层：人格筛选</h3><div class="card-body">榜单识别并暴露高价值个体，让强者彼此接触、竞争、吞并或合作。</div></div>
+      </div>
+      <h3>榜单类型真实含义</h3>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">生存榜</span><div class="truth-text">不是活得久，而是衡量稳定回流能力——系统看重的是你如何把恐惧变成秩序。</div></div>
+        <div class="truth-layer"><span class="truth-label">领地榜</span><div class="truth-text">不是房子大，而是衡量庇护所活化与区域边界控制——你能否让空间服从你，或你是否正在被空间拥有。</div></div>
+        <div class="truth-layer"><span class="truth-label">黑潮榜</span><div class="truth-text">不是收益高，而是衡量危机利用能力——你能否把灾变转化为资源。</div></div>
+        <div class="truth-layer"><span class="truth-label">异常处理榜</span><div class="truth-text">不是解决晦诡多，而是衡量规则接触耐受度——你能否理解错误而不立刻成为错误。</div></div>
+        <div class="truth-layer"><span class="truth-label">命名影响榜</span><div class="truth-text">不是会起名，而是衡量局部现实解释权——你能否让他人和现实共同承认你的定义。</div></div>
+      </div>
+      <div class="quote">榜首失名——当"榜首"这个位置被过多人关注时，位置本身可能比个人更稳定。玩家名字开始模糊，大众更常称其为"榜一"，门牌对其真名反应变慢。最终：人被位置吞掉。</div>
+    `,
+  },
+  {
+    id: 'system-native-conflict',
+    num: 'S5',
+    title: '系统与土著仪式的冲突',
+    sub: '系统规则与土著规则不一致，是无光域社会矛盾的重要来源',
+    summary: '系统判定交易完成不等于土著旧主断开，系统判定死亡不等于土著名梦床尸全部死亡，系统显示庇护所主人不等于门床箱墙共同承认。五大冲突——交易、死亡、房屋归属、组队、排行榜——深刻影响玩家与土著的关系。',
+    content: `
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">交易冲突</h3><div class="card-body"><span class="keyword">系统判定：</span>交易栏完成，物品归新主。<span class="keyword">土著判定：</span>旧主未断、夜声未净、梦残留未刮，则交易未完成。<span class="keyword">后果：</span>玩家购买旧物后引发旧签回归、旧主梦、物品自返。</div></div>
+        <div class="card"><h3 class="card-title">死亡冲突</h3><div class="card-body"><span class="keyword">系统判定：</span>生命值归零，玩家死亡。<span class="keyword">土著判定：</span>尸体、名、梦、床、遗物、频道权限均断，才算死干净。<span class="keyword">后果：</span>错死、活死、频道遗言、床位不冷、死者梦继续。</div></div>
+        <div class="card"><h3 class="card-title">房屋归属冲突</h3><div class="card-body"><span class="keyword">系统判定：</span>庇护所面板显示主人。<span class="keyword">土著判定：</span>门、床、箱、灶、墙是否承认主人。<span class="keyword">后果：</span>玩家以为拥有房子，实际房子只承认系统而不承认居住者。</div></div>
+        <div class="card"><h3 class="card-title">组队冲突</h3><div class="card-body"><span class="keyword">系统判定：</span>队伍成立，队友共享信息。<span class="keyword">土著判定：</span>临时共属关系必须限定边界、责任、死亡处理与战利品归属。<span class="keyword">后果：</span>队友死亡后责任不清，遗物污染、梦债、空位同意者出现。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">排行榜冲突</h3><div class="card-body"><span class="keyword">系统判定：</span>榜单越高越值得奖励。<span class="keyword">土著判定：</span>榜单越高越接近被神胎看见。<span class="keyword">后果：</span>玩家追榜，土著避榜。玩家荣耀化榜首，土著把榜首视为灾变焦点。</div></div>
+      </div>
+      <div class="quote">成熟玩家必须学会阅读系统与土著制度。只信系统会死。只信土著也会错过系统提示。两者冲突处，往往就是真相裂缝。</div>
+    `,
+  },
+  {
+    id: 'system-levels-and-laws',
+    num: 'S6',
+    title: '系统权限等级与六律',
+    sub: '系统不是万能外挂，每层权限都有功能与代价',
+    summary: '系统权限分为0-6共七级：基础接入→生存权限→路线权限→区域权限→异常权限→候选权限→神胎接入。系统机制六律确立了系统的底层法则——不创造规则只翻译规则，保护是为了更高价值回流，任务是诱导不是命令，排行榜是暴露不是荣耀。',
+    content: `
+      <h3>权限等级表</h3>
+      <div class="timeline">
+        <div class="timeline-item"><div class="card"><h3 class="card-title">0级：基础接入</h3><div class="card-sub">全民穿越初始</div><div class="card-body">基础晦视、生命状态、区域频道、庇护所面板、简易合成、黑潮倒计时。<span class="danger">风险：</span>系统依赖形成。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">1级：生存权限</h3><div class="card-sub">存活3-7天完成基础任务</div><div class="card-body">种植提示、简易地图、初级图鉴、交易栏、背包扩展、小黑潮任务。<span class="danger">风险：</span>开始被路线分流。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">2级：路线权限</h3><div class="card-sub">庇护所2-3级，稳定生产或战斗</div><div class="card-body">路线任务、职业倾向、土著声望、庇护所模块解锁、晦兽/晦植图鉴扩展。<span class="danger">风险：</span>行为被固定采样。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">3级：区域权限</h3><div class="card-sub">进入区域榜单、抵御大黑潮</div><div class="card-body">区域影响力、公共任务、联盟功能、领地权限、排行榜详细项、黑潮收益统计。<span class="danger">风险：</span>被公共现实高亮。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">4级：异常权限</h3><div class="card-sub">多次处理晦诡、裂视成长</div><div class="card-body">异常标注、规则尘识别、隐藏任务、错栏阅读概率上升。<span class="danger">风险：</span>被异常反向识别。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">5级：候选权限</h3><div class="card-sub">高排名、高活化庇护所</div><div class="card-body">隐藏文字、未诞大厅梦境、候选人格互相感知、神胎碎片倾向提示、终局路线线索。<span class="danger">风险：</span>系统不再只是保护，开始主动诱导人格选择。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">6级：神胎接入</h3><div class="card-sub">进入胎海层或终局阶段</div><div class="card-body">系统语言崩解，面板转化为象征、梦、骨刻、门影。玩家可接触神胎意识碎片，开放成神/留域/出走/破胎等路线。<span class="danger">风险：</span>自我边界与神胎边界开始重叠。</div></div></div>
+      </div>
+      <h3>系统机制六律</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">第一律</h3><div class="card-body">系统不创造规则，只翻译规则。系统不是世界法则本身，它只是把晦能生态翻译成玩家能理解、能行动、能竞争的形式。</div></div>
+        <div class="card"><h3 class="card-title">第二律</h3><div class="card-body">系统保护玩家，是为了让玩家产生更高价值回流。保护不是慈悲，而是养殖技术——活得越久，建设越多，关系越复杂，回流越丰厚。</div></div>
+        <div class="card"><h3 class="card-title">第三律</h3><div class="card-body">任务是诱导，不是命令。系统不会强迫玩家做什么，它只设计奖励，让玩家自愿暴露自己的选择倾向。</div></div>
+        <div class="card"><h3 class="card-title">第四律</h3><div class="card-body">排行榜不是荣耀，是暴露。被排名意味着被公共现实承认。越高的位置，越容易被神胎、玩家、土著、晦诡和教团共同注视。</div></div>
+        <div class="card"><h3 class="card-title">第五律</h3><div class="card-body">系统记录只是一证。在无光域，真相至少需要系统记录、物理痕迹、边界承认三者校验。单信系统，是玩家文明早期最大的死亡原因之一。</div></div>
+        <div class="card"><h3 class="card-title">第六律</h3><div class="card-body">隐藏文字不是福利，是深层正在看你。能看见更多，不代表更安全。每多读懂一层系统，就少一层被系统保护的无知。</div></div>
+      </div>
+      <div class="quote-center">系统不是神赐的救命绳，<br>而是神胎伸进玩家认知里的舌头。</div>
+    `,
+  },
+]
