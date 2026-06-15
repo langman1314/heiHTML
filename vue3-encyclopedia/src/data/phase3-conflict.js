@@ -45,4 +45,47 @@ export const phase3Conflict = [
     summary: '交易纠纷（系统交易成功但货物回旧主身边）、死亡纠纷（系统判死但死者仍在频道发言）、庇护所产权纠纷（面板主人与房屋承认不一致）、组队纠纷、排行榜纠纷、频道纠纷、图鉴纠纷、床位纠纷、潮后资源纠纷、任务伦理纠纷——每类都有深层意义。',
     content: `
       <div class="grid-2">
-        <div class="card"><h3 class="card-title">① 交易纠纷</h3><div class="card-body">系统交易成功，货物却回旧主身边。真相：交易庇护所产权纠纷（面板主人与房屋承认不一致）、组队纠纷、排行榜纠纷、频道纠纷、图鉴纠纷、床位纠纷、潮后资源纠纷、任务伦理纠纷——每类都有深层意义。',\n    content: `\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">① 交易纠纷</h3><div class=\"card-body\">系统交易成功，货物却回旧主身边。真相：交易不是"谁拿着"，而是"现实承认谁能叫它回来"。处理：查旧主关系是否断开，必要时火净或名净。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">② 死亡纠纷</h3><div class=\"card-body\">系统判死，死者仍在频道发言。真相：死不是一个瞬间，而是一套关系逐步关闭。处理：禁止回复死者原名、封存频道、查床位温度。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">③ 庇护所产权</h3><div class=\"card-body\">系统显示自己是主人，但门不顺、床不回温、箱不认主。真相：房子不是商品，它会记住谁真正住过。处理：门床箱墙四证确认。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">④ 组队纠纷</h3><div class=\"card-body\">队内战利品分配引发死者遗物污染。真相：合作不是一起打怪，而是约定谁负责把彼此死干净。处理：组队前签临时队契。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑤ 排行榜纠纷</h3><div class=\"card-body\">榜首荣耀还是公共污染？真相：被所有人看见不是荣耀，而是把自己挂在世界的舌头上。处理：高排名者定期名净。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑥ 频道纠纷</h3><div class=\"card-body\">玩家在频道求助，土著要求禁言。真相：信息自由在无光域不是天然正义——传播也可能是喂食。处理：建立频道净言法。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑦ 图鉴纠纷</h3><div class=\"card-body\">玩家记录异常，土著要求封页。真相：知识不是中立的——被写下的东西会学习如何继续被写。处理：只记边界不写人格化名称。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑧ 床位纠纷</h3><div class=\"card-body\">空床可否出租？真相：床不是家具，是现实替睡着证明"醒来后还是你"的证人。处理：查旧睡者状态、散旧温、刮旧梦。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑨ 潮后资源</h3><div class=\"card-body\">潮后物资谁有权拾取？真相：灾后不是没有主人，而是主人可能已经无法用普通方式说话。处理：潮后拾荒登记、听夜声。</div></div>\n        <div class=\"card\" style=\"grid-column:1/-1\"><h3 class=\"card-title\">⑩ 任务伦理</h3><div class=\"card-body\">系统奖励是否代表行为合理？真相：系统想知道你怎么选，它不负责判断你选得是否还像个人。处理：高危任务需领地备案。</div></div>\n      </div>\n      <div class=\"quote\">在无光域，法律不是判断谁对谁错，而是判断一件事到底有没有结束。</div>\n    `,\n  },\n  {\n    id: 'conflict-court-and-laws',\n    num: 'R4',\n    title: '混合法庭与冲突六律',\n    sub: '玩家记录者、土著五庭、边界见证者共同组成的纠纷处理机构',\n    summary: '混合法庭由玩家记录席、土著五庭席（门/名/眠/骨/井）和边界见证席共同组成。遵循先稳边界再分对错、系统记录不能单独定案、高危物默认隔离等原则。冲突六律构成了玩家—土著共存的底层法则。',\n    content: `\n      <h3>混合法庭组成</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">玩家记录席</h3><div class=\"card-body\">系统记录、频道记录、交易日志、任务日志、排行榜变化、面板截图或系统拓印。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">土著五庭席</h3><div class=\"card-body\">门庭（门/庇护所/入侵）、名庭（名字/身份/食名）、眠庭（床/睡眠/替睡）、骨庭（死亡/尸体/葬制）、井庭（水权/井声/回声污染），外加箱庭（仓储/交易/归属）。</div></div>\n        <div class=\"card\" style=\"grid-column:1/-1\"><h3 class=\"card-title\">边界见证席</h3><div class=\"card-body\">静听者、归床人、誊名师、箱契师、骨匠、梦医、屋医，必要时裂视者。他们不一定判案，而是判断边界是否稳定。</div></div>\n      </div>\n      <h3>混合法庭流程</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><div class=\"card-body\"><strong>①止传：</strong>案件涉及异常/死者发言/身份替代，先禁止频道扩散。<strong>②封物：</strong>涉事物品、床位、梦囊先封存。<strong>③取三证：</strong>系统记录、物理痕迹、边界承认。</div></div>\n        <div class=\"card\"><div class=\"card-body\"><strong>④判定：</strong>判断问题属于哪一层冲突（系统/物理/名字/梦境/床位/庇护所/归属）。<strong>⑤裁定：</strong>优先保护公共边界——先防止现实继续长歪。<strong>⑥净化：</strong>断旧主、名净、梦净、骨净、火净等。<strong>⑦注销：</strong>公开注销错误记录防止继续流通。</div></div>\n      </div>\n      <h3>玩家—土著冲突六律</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">第一律</h3><div class=\"card-body\">系统显示完成，不代表现实闭合。真正完成必须看旧主、名、梦、门、床、箱是否承认。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第二律</h3><div class=\"card-body\">土著规矩不是迷信，而是灾后工程。每一道繁琐流程都是为了防止某种曾经发生过的边界事故再次发生。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第三律</h3><div class=\"card-body\">记录可以证明事实，也可以制造事实。系统日志、频道截图、图鉴都不是纯粹旁观——它们会参与现实成形。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第四律</h3><div class=\"card-body\">死亡、交易、居住、合作都不是瞬间事件。它们都是关系转换过程。关系未断净，事件就没有真正结束。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第五律</h3><div class=\"card-body\">真相至少需要三证。只信一证，就是把自己交给某一层现实吞掉。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第六律</h3><div class=\"card-body\">新文明必须发明第三法。玩家系统法太薄，土著边界法太重。方舟必须让效率、关系、个人选择同时被承认。</div></div>\n      </div>\n    `,\n  },\n]\n"}
+        <div class="card"><h3 class="card-title">① 交易纠纷</h3><div class="card-body">系统交易成功，货物却回旧主身边。真相：交易不是"谁拿着"，而是"现实承认谁能叫它回来"。处理：查旧主关系是否断开，必要时火净或名净。</div></div>
+        <div class="card"><h3 class="card-title">② 死亡纠纷</h3><div class="card-body">系统判死，死者仍在频道发言。真相：死不是一个瞬间，而是一套关系逐步关闭。处理：禁止回复死者原名、封存频道、查床位温度。</div></div>
+        <div class="card"><h3 class="card-title">③ 庇护所产权</h3><div class="card-body">系统显示自己是主人，但门不顺、床不回温、箱不认主。真相：房子不是商品，它会记住谁真正住过。处理：门床箱墙四证确认。</div></div>
+        <div class="card"><h3 class="card-title">④ 组队纠纷</h3><div class="card-body">队内战利品分配引发死者遗物污染。真相：合作不是一起打怪，而是约定谁负责把彼此死干净。处理：组队前签临时队契。</div></div>
+        <div class="card"><h3 class="card-title">⑤ 排行榜纠纷</h3><div class="card-body">榜首荣耀还是公共污染？真相：被所有人看见不是荣耀，而是把自己挂在世界的舌头上。处理：高排名者定期名净。</div></div>
+        <div class="card"><h3 class="card-title">⑥ 频道纠纷</h3><div class="card-body">玩家在频道求助，土著要求禁言。真相：信息自由在无光域不是天然正义——传播也可能是喂食。处理：建立频道净言法。</div></div>
+        <div class="card"><h3 class="card-title">⑦ 图鉴纠纷</h3><div class="card-body">玩家记录异常，土著要求封页。真相：知识不是中立的——被写下的东西会学习如何继续被写。处理：只记边界不写人格化名称。</div></div>
+        <div class="card"><h3 class="card-title">⑧ 床位纠纷</h3><div class="card-body">空床可否出租？真相：床不是家具，是现实替睡着证明"醒来后还是你"的证人。处理：查旧睡者状态、散旧温、刮旧梦。</div></div>
+        <div class="card"><h3 class="card-title">⑨ 潮后资源</h3><div class="card-body">潮后物资谁有权拾取？真相：灾后不是没有主人，而是主人可能已经无法用普通方式说话。处理：潮后拾荒登记、听夜声。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">⑩ 任务伦理</h3><div class="card-body">系统奖励是否代表行为合理？真相：系统想知道你怎么选，它不负责判断你选得是否还像个人。处理：高危任务需领地备案。</div></div>
+      </div>
+      <div class="quote">在无光域，法律不是判断谁对谁错，而是判断一件事到底有没有结束。</div>
+    `,
+  },
+  {
+    id: 'conflict-court-and-laws',
+    num: 'R4',
+    title: '混合法庭与冲突六律',
+    sub: '玩家记录者、土著五庭、边界见证者共同组成的纠纷处理机构',
+    summary: '混合法庭由玩家记录席、土著五庭席（门/名/眠/骨/井）和边界见证席共同组成。遵循先稳边界再分对错、系统记录不能单独定案、高危物默认隔离等原则。冲突六律构成了玩家—土著共存的底层法则。',
+    content: `
+      <h3>混合法庭组成</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">玩家记录席</h3><div class="card-body">系统记录、频道记录、交易日志、任务日志、排行榜变化、面板截图或系统拓印。</div></div>
+        <div class="card"><h3 class="card-title">土著五庭席</h3><div class="card-body">门庭（门/庇护所/入侵）、名庭（名字/身份/食名）、眠庭（床/睡眠/替睡）、骨庭（死亡/尸体/葬制）、井庭（水权/井声/回声污染），外加箱庭（仓储/交易/归属）。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">边界见证席</h3><div class="card-body">静听者、归床人、誊名师、箱契师、骨匠、梦医、屋医，必要时裂视者。他们不一定判案，而是判断边界是否稳定。</div></div>
+      </div>
+      <h3>混合法庭流程</h3>
+      <div class="grid-2">
+        <div class="card"><div class="card-body"><strong>①止传：</strong>案件涉及异常/死者发言/身份替代，先禁止频道扩散。<strong>②封物：</strong>涉事物品、床位、梦囊先封存。<strong>③取三证：</strong>系统记录、物理痕迹、边界承认。</div></div>
+        <div class="card"><div class="card-body"><strong>④判定：</strong>判断问题属于哪一层冲突（系统/物理/名字/梦境/床位/庇护所/归属）。<strong>⑤裁定：</strong>优先保护公共边界——先防止现实继续长歪。<strong>⑥净化：</strong>断旧主、名净、梦净、骨净、火净等。<strong>⑦注销：</strong>公开注销错误记录防止继续流通。</div></div>
+      </div>
+      <h3>玩家—土著冲突六律</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">第一律</h3><div class="card-body">系统显示完成，不代表现实闭合。真正完成必须看旧主、名、梦、门、床、箱是否承认。</div></div>
+        <div class="card"><h3 class="card-title">第二律</h3><div class="card-body">土著规矩不是迷信，而是灾后工程。每一道繁琐流程都是为了防止某种曾经发生过的边界事故再次发生。</div></div>
+        <div class="card"><h3 class="card-title">第三律</h3><div class="card-body">记录可以证明事实，也可以制造事实。系统日志、频道截图、图鉴都不是纯粹旁观——它们会参与现实成形。</div></div>
+        <div class="card"><h3 class="card-title">第四律</h3><div class="card-body">死亡、交易、居住、合作都不是瞬间事件。它们都是关系转换过程。关系未断净，事件就没有真正结束。</div></div>
+        <div class="card"><h3 class="card-title">第五律</h3><div class="card-body">真相至少需要三证。只信一证，就是把自己交给某一层现实吞掉。</div></div>
+        <div class="card"><h3 class="card-title">第六律</h3><div class="card-body">新文明必须发明第三法。玩家系统法太薄，土著边界法太重。方舟必须让效率、关系、个人选择同时被承认。</div></div>
+      </div>
+    `,
+  },
+]
