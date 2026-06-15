@@ -15,4 +15,85 @@ export const phase3Legacy = [
         <div class="card"><h3 class="card-title">旧灯文明</h3><div class="card-body"><span class="keyword">相信：</span>光能稳定一切。<span class="keyword">忽略：</span>光也会被模仿。<span class="keyword">失败：</span>正午错觉、旧灯回档、伪安全灯。他们让黑暗学会了伪装安全。</div></div>
         <div class="card"><h3 class="card-title">旧门文明</h3><div class="card-body"><span class="keyword">相信：</span>门能带文明逃离。<span class="keyword">忽略：</span>门会记人，路会变成嘴。<span class="keyword">失败：</span>门灾、叠室遗迹、断链门廊。他们把自己困在房间套房间的结构中。</div></div>
         <div class="card"><h3 class="card-title">旧梦文明</h3><div class="card-body"><span class="keyword">相信：</span>梦能保存文明。<span class="keyword">忽略：</span>梦保存太完整会想醒来。<span class="keyword">失败：</span>梦腐层、不可醒梦、旧梦人格。他们制造了一片不愿承认自己已经结束的梦中坟场。</div></div>
-        <div class="card"><h3 class="card-title">旧榜文明</h3><div class="card-body"><span class="keyword">相信：</span>最强者成神可拯救全体。<span class="keyword">忽略：</span>位置会吞掉人，人格会互食。<span class="keyword">失败：</span>排行榜残留、候选互食机制。他们最接近成神，但成神前先lass=\"keyword\">相信：</span>最强者成神可拯救全体。<span class=\"keyword\">忽略：</span>位置会吞掉人，人格会互食。<span class=\"keyword\">失败：</span>排行榜残留、候选互食机制。他们最接近成神，但成神前先失去了"谁在成神"。</div></div>\n      </div>\n      <div class=\"quote\">上一轮外来者不是死在黑暗里，他们死在自己最相信的答案里。他们留下的每一件遗产都能救命，也都在低声劝后来者：再相信我一次。</div>\n    `,\n  },\n  {\n    id: 'legacy-four-civilizations',\n    num: 'L2',\n    title: '四大遗产文明详解',\n    sub: '旧灯、旧门、旧梦、旧榜——四种答案，四种失败',\n    summary: '旧灯文明试图用光替代太阳，最终让黑暗学会了伪装安全。旧门文明试图用门逃走，最终让路变成了记人的怪物。旧梦文明试图把文明存进梦里，最终梦开始梦见现实。旧榜文明试图选出最强者成神，最终位置比人更先活了下来。',\n    content: `\n      <h3>旧灯文明</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">正确性</h3><div class=\"card-body\">光确实能稳定边界、降低恐惧、减少低级晦兽靠近。可见性本身是一种秩序。他们发明了旧灯塔、骨灯阵列、灯纹路标与旧灯天幕。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">三个错误</h3><div class=\"card-body\">①把光等同于安全（无光域学会伪装成光捕食）；②让所有聚落依赖同一套灯网（统一秩序=统一脆弱点）；③过度公开安全信号（异常可通过模仿灯纹获得信任）。</div></div>\n      </div>\n      <h3>旧门文明</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">正确性</h3><div class=\"card-body\">空间不是固定的，路由重复关系构成，门是内外边界的高能节点。他们发现了出走必须理解门而非单纯建造墙。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">三个错误</h3><div class=\"card-body\">①把门当交通工具（门首先不是路而是内外判断器）；②追求通行效率忽视归属断开（门记住通行者）；③试图通过"初门"彻底逃离（初门可能是入口器官而非出口）。</div></div>\n      </div>\n      <h3>旧梦文明</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">正确性</h3><div class=\"card-body\">梦不是虚假，可保存情绪与人格残响，可绕开部分物理灾害。记忆是文明延续的核心。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">三个错误</h3><div class=\"card-body\">①把保存等同于延续（被保存的梦不会自然更新）；②保存死者太完整（梦中城市逐渐不愿承认自己已死）；③让活人迁入梦中避难（梦获得现实感，开始向现实索取醒来的资格）。</div></div>\n      </div>\n      <h3>旧榜文明</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">正确性</h3><div class=\"card-body\">神胎需要主导人格，个体影响力会被系统采样，成神路线可能终结黑潮失控。他们准确意识到无主神胎的危险。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">四个错误</h3><div class=\"card-body\">①把价值变成排名（人为了榜单行动而非为了文明）；②让位置压过名字（榜首失名、替代者可通过位置成为"更像榜首的人"）；③鼓励候选互食（正中神胎下怀）；④忽视普通人（文明变成候选人格的饲料）。</div></div>\n      </div>\n      <div class=\"quote\">你以为你正在开创新路，其实你只是重新踩到上一批人没来得及写完墓志铭的地方。</div>\n    `,\n  },\n  {\n    id: 'legacy-items-and-distribution',\n    num: 'L3',\n    title: '遗产物品与五层分布',\n    sub: '上一轮遗产分布于五层胎腔，支撑探索与真相揭露',\n    summary: '八件核心遗产物品——旧灯残页、断链门牌、旧梦囊、旧榜残名、熄光骨灯、归零门栓、梦中校铃、空榜骨板——分布在灰醒层到胎海层的五层结构中，每层揭示不同真相阶段。',\n    content: `\n      <h3>八件核心遗产物品</h3>\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">① 旧灯残页</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧灯文明文献。<span class=\"keyword\">用途：</span>解读旧灯天幕与灯潮。<span class=\"keyword\">风险：</span>阅读时文字可能继续写下去，残页会试图证明"光仍然可行"。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">② 断链门牌</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧门文明门路崩溃残件。<span class=\"keyword\">用途：</span>识别断链门廊入口。<span class=\"keyword\">风险：</span>携带者容易在归途中多走一段路。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">③ 旧梦囊</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧梦文明梦库碎片。<span class=\"keyword\">用途：</span>提取高价值梦渣与上一轮历史。<span class=\"keyword\">风险：</span>梦囊里的梦可能已经知道自己被保存。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">④ 旧榜残名</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧榜文明排行榜残留。<span class=\"keyword\">用途：</span>研究排行榜污染与名位碎片。<span class=\"keyword\">风险：</span>读出残名者可能被旧榜位置短暂标记。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑤ 熄光骨灯</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧灯文明核心灯具。<span class=\"keyword\">用途：</span>可稳定低级晦诡。<span class=\"keyword\">风险：</span>点燃后不一定照亮现在，也可能照出上一轮正午。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑥ 归零门栓</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧门文明逃逸工程。<span class=\"keyword\">用途：</span>让一扇门忘记部分通行记录。<span class=\"keyword\">风险：</span>门忘记通行者，也可能忘记它本该通向哪里。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑦ 梦中校铃</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧梦文明梦中学校。<span class=\"keyword\">用途：</span>唤醒被困浅层旧梦的意识。<span class=\"keyword\">风险：</span>铃声也会唤醒本该继续睡着的梦中教师。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">⑧ 空榜骨板</h3><div class=\"card-body\"><span class=\"keyword\">来源：</span>旧榜文明候选大厅。<span class=\"keyword\">用途：</span>暂时隐藏个人榜单位置。<span class=\"keyword\">风险：</span>榜单位置被隐藏不代表消失——它可能寻找临时替身。</div></div>\n      </div>\n      <h3>五层分布</h3>\n      <div class=\"truth-stack\">\n        <div class=\"truth-layer\"><span class=\"truth-label\">灰醒层</span><div class=\"truth-text\">旧灯残页碎片、旧安全屋骨灯、损坏灯纹牌——让玩家意识到"有人来过"。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">骨沉层</span><div class=\"truth-text\">旧灯堆肥场、活墙庄园遗迹、废弃旧榜大厅——让玩家意识到"他们建设过，并失败过"。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">梦腐层</span><div class=\"truth-text\">回忆沼、共梦坟场、梦中学校残影、不肯醒来的旧城——让玩家意识到"他们也曾试图保存文明"。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">门脉层</span><div class=\"truth-text\">断链门廊、叠室遗迹、空白公告厅、系统前身残页——让玩家意识到"系统不是第一次运行"。</div></div>\n        <div class=\"truth-layer\"><span class=\"truth-label\">胎海层</span><div class=\"truth-text\">未诞大厅旧候选影、旧榜首空位、旧灯核心熄灭物——让主角面对终局问题：他们失败是因为方向错了，还是因为任何方向都会被神胎消化？</div></div>\n      </div>\n    `,\n  },\n  {\n    id: 'legacy-laws',\n    num: 'L4',\n    title: '上一轮遗产六律',\n    sub: '真正继承上一轮，不是复原他们，而是知道何时停下',\n    summary: '六条遗产法则：上一轮是当前轮的预演、每种遗产都是一半答案和一半尸体、失败的文明会变成技术与制度、系统从失败中学习但不是为救人、最危险的遗产是仍然有用的遗产、真正继承上一轮是知道何时停下。',\n    content: `\n      <div class=\"grid-2\">\n        <div class=\"card\"><h3 class=\"card-title\">第一律：上一轮不是传说，是当前轮的预演</h3><div class=\"card-body\">他们走过玩家正在走的路，只是走得更早，也摔得更深。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第二律：每一种遗产，都是一半答案和一半尸体</h3><div class=\"card-body\">旧灯能照明、旧门能通行、旧梦能保存、旧榜能筛选。但它们也分别带来伪安全、门灾、梦腐和位置吞人。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第三律：失败的文明不会彻底死去</h3><div class=\"card-body\">它会变成遗迹、技术、禁忌、土著制度、系统功能、晦诡谱系和神胎人格残响。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第四律：系统从失败中学习，但学习目的不是救人</h3><div class=\"card-body\">当前系统更温和、更清晰，是因为上一轮粗糙筛选损耗太大。它改良的是效率，不是慈悲。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第五律：最危险的遗产，是仍然有用的遗产</h3><div class=\"card-body\">无用之物会被遗忘。只有那些能救命、能升级、能照路、能逃离、能保存记忆的东西，才会诱导后来者重复失败。</div></div>\n        <div class=\"card\"><h3 class=\"card-title\">第六律：真正继承上一轮，不是复原他们，而是知道何时停下</h3><div class=\"card-body\">旧灯要有限度，旧门要受审查，旧梦要允许遗忘，旧榜不能决定一切。继承文明，不是继承它的执念。</div></div>\n      </div>\n      <div class=\"quote-center\">点灯的人让黑暗学会伪装安全，<br>开门的人让路开始记住行人，<br>存梦的人让梦不肯继续做梦，<br>立榜的人让位置吞掉了名字。</div>\n    `,\n  },\n]\n"}
+        <div class="card"><h3 class="card-title">旧榜文明</h3><div class="card-body"><span class="keyword">相信：</span>最强者成神可拯救全体。<span class="keyword">忽略：</span>位置会吞掉人，人格会互食。<span class="keyword">失败：</span>排行榜残留、候选互食机制。他们最接近成神，但成神前先失去了"谁在成神"。</div></div>
+      </div>
+      <div class="quote">上一轮外来者不是死在黑暗里，他们死在自己最相信的答案里。他们留下的每一件遗产都能救命，也都在低声劝后来者：再相信我一次。</div>
+    `,
+  },
+  {
+    id: 'legacy-four-civilizations',
+    num: 'L2',
+    title: '四大遗产文明详解',
+    sub: '旧灯、旧门、旧梦、旧榜——四种答案，四种失败',
+    summary: '旧灯文明试图用光替代太阳，最终让黑暗学会了伪装安全。旧门文明试图用门逃走，最终让路变成了记人的怪物。旧梦文明试图把文明存进梦里，最终梦开始梦见现实。旧榜文明试图选出最强者成神，最终位置比人更先活了下来。',
+    content: `
+      <h3>旧灯文明</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">正确性</h3><div class="card-body">光确实能稳定边界、降低恐惧、减少低级晦兽靠近。可见性本身是一种秩序。他们发明了旧灯塔、骨灯阵列、灯纹路标与旧灯天幕。</div></div>
+        <div class="card"><h3 class="card-title">三个错误</h3><div class="card-body">①把光等同于安全（无光域学会伪装成光捕食）；②让所有聚落依赖同一套灯网（统一秩序=统一脆弱点）；③过度公开安全信号（异常可通过模仿灯纹获得信任）。</div></div>
+      </div>
+      <h3>旧门文明</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">正确性</h3><div class="card-body">空间不是固定的，路由重复关系构成，门是内外边界的高能节点。他们发现了出走必须理解门而非单纯建造墙。</div></div>
+        <div class="card"><h3 class="card-title">三个错误</h3><div class="card-body">①把门当交通工具（门首先不是路而是内外判断器）；②追求通行效率忽视归属断开（门记住通行者）；③试图通过"初门"彻底逃离（初门可能是入口器官而非出口）。</div></div>
+      </div>
+      <h3>旧梦文明</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">正确性</h3><div class="card-body">梦不是虚假，可保存情绪与人格残响，可绕开部分物理灾害。记忆是文明延续的核心。</div></div>
+        <div class="card"><h3 class="card-title">三个错误</h3><div class="card-body">①把保存等同于延续（被保存的梦不会自然更新）；②保存死者太完整（梦中城市逐渐不愿承认自己已死）；③让活人迁入梦中避难（梦获得现实感，开始向现实索取醒来的资格）。</div></div>
+      </div>
+      <h3>旧榜文明</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">正确性</h3><div class="card-body">神胎需要主导人格，个体影响力会被系统采样，成神路线可能终结黑潮失控。他们准确意识到无主神胎的危险。</div></div>
+        <div class="card"><h3 class="card-title">四个错误</h3><div class="card-body">①把价值变成排名（人为了榜单行动而非为了文明）；②让位置压过名字（榜首失名、替代者可通过位置成为"更像榜首的人"）；③鼓励候选互食（正中神胎下怀）；④忽视普通人（文明变成候选人格的饲料）。</div></div>
+      </div>
+      <div class="quote">你以为你正在开创新路，其实你只是重新踩到上一批人没来得及写完墓志铭的地方。</div>
+    `,
+  },
+  {
+    id: 'legacy-items-and-distribution',
+    num: 'L3',
+    title: '遗产物品与五层分布',
+    sub: '上一轮遗产分布于五层胎腔，支撑探索与真相揭露',
+    summary: '八件核心遗产物品——旧灯残页、断链门牌、旧梦囊、旧榜残名、熄光骨灯、归零门栓、梦中校铃、空榜骨板——分布在灰醒层到胎海层的五层结构中，每层揭示不同真相阶段。',
+    content: `
+      <h3>八件核心遗产物品</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">① 旧灯残页</h3><div class="card-body"><span class="keyword">来源：</span>旧灯文明文献。<span class="keyword">用途：</span>解读旧灯天幕与灯潮。<span class="keyword">风险：</span>阅读时文字可能继续写下去，残页会试图证明"光仍然可行"。</div></div>
+        <div class="card"><h3 class="card-title">② 断链门牌</h3><div class="card-body"><span class="keyword">来源：</span>旧门文明门路崩溃残件。<span class="keyword">用途：</span>识别断链门廊入口。<span class="keyword">风险：</span>携带者容易在归途中多走一段路。</div></div>
+        <div class="card"><h3 class="card-title">③ 旧梦囊</h3><div class="card-body"><span class="keyword">来源：</span>旧梦文明梦库碎片。<span class="keyword">用途：</span>提取高价值梦渣与上一轮历史。<span class="keyword">风险：</span>梦囊里的梦可能已经知道自己被保存。</div></div>
+        <div class="card"><h3 class="card-title">④ 旧榜残名</h3><div class="card-body"><span class="keyword">来源：</span>旧榜文明排行榜残留。<span class="keyword">用途：</span>研究排行榜污染与名位碎片。<span class="keyword">风险：</span>读出残名者可能被旧榜位置短暂标记。</div></div>
+        <div class="card"><h3 class="card-title">⑤ 熄光骨灯</h3><div class="card-body"><span class="keyword">来源：</span>旧灯文明核心灯具。<span class="keyword">用途：</span>可稳定低级晦诡。<span class="keyword">风险：</span>点燃后不一定照亮现在，也可能照出上一轮正午。</div></div>
+        <div class="card"><h3 class="card-title">⑥ 归零门栓</h3><div class="card-body"><span class="keyword">来源：</span>旧门文明逃逸工程。<span class="keyword">用途：</span>让一扇门忘记部分通行记录。<span class="keyword">风险：</span>门忘记通行者，也可能忘记它本该通向哪里。</div></div>
+        <div class="card"><h3 class="card-title">⑦ 梦中校铃</h3><div class="card-body"><span class="keyword">来源：</span>旧梦文明梦中学校。<span class="keyword">用途：</span>唤醒被困浅层旧梦的意识。<span class="keyword">风险：</span>铃声也会唤醒本该继续睡着的梦中教师。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">⑧ 空榜骨板</h3><div class="card-body"><span class="keyword">来源：</span>旧榜文明候选大厅。<span class="keyword">用途：</span>暂时隐藏个人榜单位置。<span class="keyword">风险：</span>榜单位置被隐藏不代表消失——它可能寻找临时替身。</div></div>
+      </div>
+      <h3>五层分布</h3>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">灰醒层</span><div class="truth-text">旧灯残页碎片、旧安全屋骨灯、损坏灯纹牌——让玩家意识到"有人来过"。</div></div>
+        <div class="truth-layer"><span class="truth-label">骨沉层</span><div class="truth-text">旧灯堆肥场、活墙庄园遗迹、废弃旧榜大厅——让玩家意识到"他们建设过，并失败过"。</div></div>
+        <div class="truth-layer"><span class="truth-label">梦腐层</span><div class="truth-text">回忆沼、共梦坟场、梦中学校残影、不肯醒来的旧城——让玩家意识到"他们也曾试图保存文明"。</div></div>
+        <div class="truth-layer"><span class="truth-label">门脉层</span><div class="truth-text">断链门廊、叠室遗迹、空白公告厅、系统前身残页——让玩家意识到"系统不是第一次运行"。</div></div>
+        <div class="truth-layer"><span class="truth-label">胎海层</span><div class="truth-text">未诞大厅旧候选影、旧榜首空位、旧灯核心熄灭物——让主角面对终局问题：他们失败是因为方向错了，还是因为任何方向都会被神胎消化？</div></div>
+      </div>
+    `,
+  },
+  {
+    id: 'legacy-laws',
+    num: 'L4',
+    title: '上一轮遗产六律',
+    sub: '真正继承上一轮，不是复原他们，而是知道何时停下',
+    summary: '六条遗产法则：上一轮是当前轮的预演、每种遗产都是一半答案和一半尸体、失败的文明会变成技术与制度、系统从失败中学习但不是为救人、最危险的遗产是仍然有用的遗产、真正继承上一轮是知道何时停下。',
+    content: `
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">第一律：上一轮不是传说，是当前轮的预演</h3><div class="card-body">他们走过玩家正在走的路，只是走得更早，也摔得更深。</div></div>
+        <div class="card"><h3 class="card-title">第二律：每一种遗产，都是一半答案和一半尸体</h3><div class="card-body">旧灯能照明、旧门能通行、旧梦能保存、旧榜能筛选。但它们也分别带来伪安全、门灾、梦腐和位置吞人。</div></div>
+        <div class="card"><h3 class="card-title">第三律：失败的文明不会彻底死去</h3><div class="card-body">它会变成遗迹、技术、禁忌、土著制度、系统功能、晦诡谱系和神胎人格残响。</div></div>
+        <div class="card"><h3 class="card-title">第四律：系统从失败中学习，但学习目的不是救人</h3><div class="card-body">当前系统更温和、更清晰，是因为上一轮粗糙筛选损耗太大。它改良的是效率，不是慈悲。</div></div>
+        <div class="card"><h3 class="card-title">第五律：最危险的遗产，是仍然有用的遗产</h3><div class="card-body">无用之物会被遗忘。只有那些能救命、能升级、能照路、能逃离、能保存记忆的东西，才会诱导后来者重复失败。</div></div>
+        <div class="card"><h3 class="card-title">第六律：真正继承上一轮，不是复原他们，而是知道何时停下</h3><div class="card-body">旧灯要有限度，旧门要受审查，旧梦要允许遗忘，旧榜不能决定一切。继承文明，不是继承它的执念。</div></div>
+      </div>
+      <div class="quote-center">点灯的人让黑暗学会伪装安全，<br>开门的人让路开始记住行人，<br>存梦的人让梦不肯继续做梦，<br>立榜的人让位置吞掉了名字。</div>
+    `,
+  },
+]
