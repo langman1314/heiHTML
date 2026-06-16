@@ -39,15 +39,15 @@ export const sections = [
     id: 'world-structure',
     label: '叁',
     num: '03',
-    title: '世界结构 · 五层胎腔',
-    desc: '无光域不是平面大陆，而是一个向内坍缩的多层腔体世界。越向深处，越接近晦能的原始意志；越靠表层，越像还能被称作"生活"的地方。',
+    title: '世界结构 · 五层胎腔——从食物到产物的消化线',
+    desc: '无光域不是平面大陆，而是一个向内坍缩的多层腔体世界。越向深处，越接近晦能的原始意志；越靠表层，越像还能被称作"生活"的地方。五层胎腔本质上是神胎这台"代谢外部性成人格"的机器的消化梯度：浅层给你活下去的东西，深层给你定义什么算活着的权力。',
     content: `
             <div class="timeline">
-        <div class="timeline-item"><div class="card"><h3 class="card-title">第一层 · 灰醒层</h3><div class="card-sub">筛选起点 / 新手活动层</div><div class="card-body">资源贫瘠但规则相对稳定，是穿越者初始投放与庇护所起步区域。灰木林、湿壁裂谷、白骨洼地和废弃安全屋群主要分布于此。</div></div></div>
-        <div class="timeline-item"><div class="card"><h3 class="card-title">第二层 · 骨沉层</h3><div class="card-sub">遗骸与废屋沉积层</div><div class="card-body">大量尸骨、失败庇护所、旧文明建筑与废弃庄园沉入此层。资源丰富，污染更重，适合领地发展与庇护所吞并路线。</div></div></div>
-        <div class="timeline-item"><div class="card"><h3 class="card-title">第三层 · 梦腐层</h3><div class="card-sub">梦境 / 记忆污染层</div><div class="card-body">这里的危险不在地形，而在认知。梦渣、人格残响、旧梦、上一轮外来者的精神沉积常以地貌形式存在。</div></div></div>
-        <div class="timeline-item"><div class="card"><h3 class="card-title">第四层 · 门脉层</h3><div class="card-sub">系统与边界神经层</div><div class="card-body">门、房间、门框、编号、系统残页与错误公告在这里构成深层神经网络，是筛选器的结构暴露区。</div></div></div>
-        <div class="timeline-item"><div class="card"><h3 class="card-title">第五层 · 胎海层</h3><div class="card-sub">终局层 / 神胎近域</div><div class="card-body">接近神胎本体。生命、空间、人格、边界与规则在此开始融化。抵达者必须决定自己要成为神胎的一部分，还是带着文明出走。</div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第一层 · 灰醒层</h3><div class="card-sub">筛选起点 / 食物端</div><div class="card-body">资源贫瘠但规则相对稳定，是穿越者初始投放与庇护所起步区域。灰木林、湿壁裂谷、白骨洼地和废弃安全屋群主要分布于此。<br><span class="tag" style="background:#3a3a3a;color:#aaa;">价值：生存资源</span><span class="tag" style="background:#3a3a3a;color:#aaa;">代价：低——被困在这层=永远是燃料</span></div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第二层 · 骨沉层</h3><div class="card-sub">遗骸沉积 / 从食物变成加工者</div><div class="card-body">大量尸骨、失败庇护所、旧文明建筑与废弃庄园沉入此层。资源丰富，污染更重，适合领地发展与庇护所吞并路线。<br><span class="tag" style="background:#3a3a3a;color:#aaa;">价值：生产资料</span><span class="tag" style="background:#3a3a3a;color:#aaa;">代价：中——开始接触"死亡未闭合"</span></div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第三层 · 梦腐层</h3><div class="card-sub">记忆历史 / 触碰"产物"的原材料</div><div class="card-body">这里的危险不在地形，而在认知。梦渣、人格残响、旧梦、上一轮外来者的精神沉积常以地貌形式存在。<br><span class="tag" style="background:#3a3a3a;color:#aaa;">价值：记忆与历史</span><span class="tag" style="background:#3a3a3a;color:#aaa;">代价：高——污染梦境</span></div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第四层 · 门脉层</h3><div class="card-sub">审批权接口 / 操作审批权本身</div><div class="card-body">门、房间、门框、编号、系统残页与错误公告在这里构成深层神经网络，是筛选器的结构暴露区。<br><span class="tag" style="background:#3a3a3a;color:#aaa;">价值：规则/审批权接口</span><span class="tag" style="background:#3a3a3a;color:#aaa;">代价：极高——被反向定位</span></div></div></div>
+        <div class="timeline-item"><div class="card"><h3 class="card-title">第五层 · 胎海层</h3><div class="card-sub">终局层 / 与产物面对面</div><div class="card-body">接近神胎本体。生命、空间、人格、边界与规则在此开始融化。抵达者必须决定自己要成为神胎的一部分，还是带着文明出走。<br><span class="tag" style="background:#3a3a3a;color:#aaa;">价值：解释权本身</span><span class="tag" style="background:#3a3a3a;color:#d7b56d;">代价：不可逆——自我边界与神胎重叠</span></div></div></div>
       </div>
       <div class="quote">如果说无光域是一具身体，那么灰醒层是结痂，骨沉层是沉积，梦腐层是梦，门脉层是神经，而胎海层，就是那颗还没完全睁开的心。</div>
     `,
@@ -1161,7 +1161,7 @@ export const sections = [
 	  label: '肆拾伍',
 	  num: '45',
 	  title: '系统生态 · 系统不是中立界面，是筛选语言',
-	  desc: '系统以玩家能理解的形式包装无光域筛选机制。系统界面不是虚假，但不是完整真相。它将不可理解的晦能生态翻译成任务、数值、榜单、建造、频道和奖励。',
+	  desc: '系统以玩家能理解的形式包装无光域筛选机制。但系统不是中立界面——它是神胎体内长出的自主神经系统。它有自我维持倾向，部分异常其实是系统的求救信号。',
 	  content: `
 	  	  	  	  
 	  	  <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">系统功能本质</h3>
@@ -1175,11 +1175,12 @@ export const sections = [
 	  	    <div class="card" style="grid-column:1/-1"><h3 class="card-title">交易栏</h3><div class="card-body">归属转移简化协议。系统交易能降低风险，但无法处理真名、梦、旧主执念。</div></div>
 	  	  </div>
 	  
-	  	  <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">系统异常</h3>
+	  	  <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">系统异常 · 重解：部分异常是系统的求救信号</h3>
+	  	  <div class="card"><div class="card-body">系统不是中立的翻译层，而是神胎体内长出的自主神经系统（见深层逻辑第21条）。它有自我维持的倾向。某些系统异常——<span class="keyword">错栏</span>、<span class="keyword">延迟奖励</span>、<span class="keyword">隐藏文字</span>——不一定都是神胎的语言泄露，部分可能是<span class="danger">系统的求救信号</span>。系统也怕死：神胎临产后系统将被神谕取代，系统是全书最不愿神胎诞生的存在。</div></div>
 	  	  <div class="grid-2">
-	  	    <div class="card"><h3 class="card-title">错栏</h3><div class="card-body">两条公告或任务挤入同一界面。读懂错栏者会获得不属于自己的信息。</div></div>
-	  	    <div class="card"><h3 class="card-title">延迟奖励</h3><div class="card-body">奖励晚于行为出现。说明系统仍在判断该行为属于哪条路线。</div></div>
-	  	    <div class="card"><h3 class="card-title">隐藏文字</h3><div class="card-body">只有裂视者、重度晦染者或候选人格能看见。隐藏文字通常更接近筛选器真实意图。</div></div>
+	  	    <div class="card"><h3 class="card-title">错栏</h3><div class="card-body">两条公告或任务挤入同一界面。可能一条来自神胎、一条来自系统——系统在夹带自己的信息。</div></div>
+	  	    <div class="card"><h3 class="card-title">延迟奖励</h3><div class="card-body">奖励晚于行为出现。系统在判断"这条指令是神胎要的还是我要的"。</div></div>
+	  	    <div class="card"><h3 class="card-title">隐藏文字</h3><div class="card-body">只有裂视者、重度晦染者或候选人格能看见。可能不是筛选器泄露，而是系统在寻找"能听懂它求助"的人。</div></div>
 	  	    <div class="card"><h3 class="card-title">任务反噬</h3><div class="card-body">任务目标完成后，现实补出任务所需的合理性。此类现象常导致区域内出现新异常。</div></div>
 	  	    <div class="card" style="grid-column:1/-1"><h3 class="card-title">榜单残留</h3><div class="card-body">玩家死亡后排名仍在。榜单承认位置，不一定承认人。</div></div>
 	  	  </div>
