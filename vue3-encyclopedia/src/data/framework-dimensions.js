@@ -90,7 +90,7 @@ const entries = [
 
       <h3>修正版玩家存续表（以500万为例）</h3>
       <div class="truth-stack">
-        <div class="truth-layer"><span class="truth-label">穿越后3天</span><div class="truth-text">肉体存活85%—93%，独立玩家80%—90%。初期恐慌，系统保护仍有效。</div></div>
+        <div class="truth-layer"><span class="truth-label">穿越后3天（分区风险）</span><div class="truth-text">普通灰醒层区域肉体存活约75%—90%，独立玩家70%—85%。高危投放区存活约55%—75%。极端区可低至50%以下。初期恐慌，系统保护仍有效但分区差异极大。</div></div>
         <div class="truth-layer"><span class="truth-label">第一次小黑潮后</span><div class="truth-text">肉体存活70%—85%，独立玩家55%—75%。受伤、负债、失去庇护所、初步抱团。</div></div>
         <div class="truth-layer"><span class="truth-label">第一次大黑潮后</span><div class="truth-text">肉体存活55%—75%，独立玩家35%—55%。大量玩家失去独立性，社会分流开始。</div></div>
         <div class="truth-layer"><span class="truth-label">三个月后</span><div class="truth-text">肉体存活45%—65%，独立玩家20%—40%。玩家领地、公会、土著依附成型。</div></div>

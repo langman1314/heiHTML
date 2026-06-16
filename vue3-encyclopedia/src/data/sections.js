@@ -99,7 +99,17 @@ export const sections = [
         <div class="card"><h3 class="card-title">边界类</h3><div class="card-body"><span class="tag tag-rule">门槛苔</span><span class="tag tag-rule">守床草</span><span class="tag tag-rule">界钉花</span><span class="tag tag-rule">名刺苔</span><span class="tag tag-rule">誓根</span><span class="tag tag-rule">门睫草</span><span class="tag tag-rule">归箱草</span><span class="tag tag-rule">埋名花</span><span class="tag tag-rule">返床菇</span><span class="tag tag-rule">褪名苔</span></div></div>
         <div class="card"><h3 class="card-title">污染/寄生类</h3><div class="card-body"><span class="tag tag-rule">噬影藤</span><span class="tag tag-rule">手指芽</span><span class="tag tag-rule">哭种</span><span class="tag tag-rule">忘返树</span><span class="tag tag-rule">伪灯花</span><span class="tag tag-rule">腐脐花</span><span class="tag tag-rule">血灰藓</span><span class="tag tag-rule">潮后芽</span><span class="tag tag-rule">驮壳菌</span></div></div>
       </div>
-    
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">农业分级——晦植的潮间适应</h3>
+      <p class="section-desc" style="margin-bottom:18px;">无光域的农业不以"喜阴喜阳"划分，而以作物对晦能浓度的耐受度与利用方式划分。种植时点必须锁死在晦相历上，这是世代相传的生存智慧。</p>
+      <div class="grid-4">
+        <div class="card"><h3 class="card-title">避潮作物</h3><div class="card-body">只在静晦期种植与收获，尽量避开黑潮影响。<span class="tag tag-food">静浆果</span><span class="tag tag-rule">守床草</span><span class="tag tag-rule">名刺苔</span>属于此类。安全但产量低，适合小型庇护所补充食源。</div></div>
+        <div class="card"><h3 class="card-title">小潮作物</h3><div class="card-body">适应小黑潮波动，能在轻微晦能洪泛中正常生长。<span class="tag tag-food">灰苔</span><span class="tag tag-food">盲薯</span><span class="tag tag-food">腔豆</span>属于此类。产量中等，是聚落日常主食来源。</div></div>
+        <div class="card"><h3 class="card-title">大潮作物</h3><div class="card-body">必须利用大黑潮灌浆或成熟，静晦期反而低效甚至不生长。<span class="tag tag-food">骨麦</span><span class="tag tag-food">夜脂果</span><span class="tag tag-mental">眠菇</span>属于此类。产量高但窗口紧，抢收失败意味着整个潮岁绝收。</div></div>
+        <div class="card"><h3 class="card-title">深层农业</h3><div class="card-body">在骨沉层及以下种植，晦能浓度远超地表。<span class="tag tag-build">井绳藤</span><span class="tag tag-mental">旧梦藻</span>在深层能产出更高价值材料，但种植者必须直面深层污染和层间往返风险。</div></div>
+      </div>
+      <div class="card" style="margin-top:18px;"><h3 class="card-title">骨麦完整生长周期</h3><div class="card-body"><span class="keyword">21晦日</span> 静晦生长期（根系缠骨、茎秆生长，不可食）→ <span class="keyword">7晦日</span> 黑潮潮化灌浆期（吸收洪泛晦能凝成淀粉，茎秆骨化）→ <span class="keyword">2晦日</span> 封收期（黑潮末尾窗口，必须完成收割，过时茎秆过熟炸穗）＝ <span class="keyword">30晦日</span> 完整大黑潮周期。这解释了为何骨麦是主粮却永远不够吃——它一年只熟12次，且每一次收成窗口不足48晦时。</div></div>
+
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">晦植明细</h3>
       <div class="grid-2">
         <div class="entry"><div class="entry-title">灰苔</div><p><span class="label">分类：</span>基础食用晦植</p><p>灰绿色薄苔，贴在潮湿墙角生长。只要有湿气与腐殖就能存活。可烘成苔饼，长期食用会轻微幻听。</p></div>
@@ -432,7 +442,27 @@ export const sections = [
         <div class="card" style="border-left:3px solid #6a5e4a"><h3 class="card-title">小黑潮 · 每七天</h3><div class="card-body"><ul><li>怪物活动增强</li><li>作物异变率上升</li><li>门外模仿声增多</li><li>频道出现已死者发言</li><li>潮后资源短时爆发</li></ul></div></div>
         <div class="card" style="border-left:3px solid #a8874f"><h3 class="card-title">大黑潮 · 每三十天</h3><div class="card-body"><ul><li>区域地形重组</li><li>安全屋相对位置改变</li><li>土著遗迹浮现</li><li>玩家势力接壤</li><li>系统开放新权限或新榜单</li></ul></div></div>
       </div>
-    
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">黑潮节律时间结构</h3>
+      <div class="grid-4">
+        <div class="card"><h3 class="card-title">7晦日</h3><div class="card-body">小黑潮周期，近似"周"。局部换气、低级异常显形、基础农业刺激。</div></div>
+        <div class="card"><h3 class="card-title">30晦日</h3><div class="card-body">大黑潮周期，近似"月"。区域重排、资源刷新、势力洗牌、候选筛选。</div></div>
+        <div class="card"><h3 class="card-title">90晦日</h3><div class="card-body">胎季。晦能相位的完整循环，深层次层门规律可预测。</div></div>
+        <div class="card"><h3 class="card-title">360晦日（1潮岁）</h3><div class="card-body">无光域的"年"，土著历法的基本时间锚。上一轮外来者距今约120-180潮岁。</div></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">八种特殊黑潮</h3>
+      <div class="grid-3">
+        <div class="card"><h3 class="card-title">食潮</h3><div class="card-body">饥饿碎片主导。黑潮期间消化活动异常活跃，回收速度翻倍。晦兽更饥饿，玩家受伤后恢复更慢——世界在加速吃人。</div></div>
+        <div class="card"><h3 class="card-title">梦潮</h3><div class="card-body">梦腐碎片主导。全体进入半睡半醒状态，梦与现实的边界模糊。梦腐层上浮，不可醒梦增多。集体性噩梦传染。</div></div>
+        <div class="card"><h3 class="card-title">门潮</h3><div class="card-body">门脉碎片主导。门路临时新增、消失或错位。大量陌生门出现又消失，敲门者类异常爆发——世界在重新分配空间与去向。</div></div>
+        <div class="card"><h3 class="card-title">名潮</h3><div class="card-body">名位碎片主导。排行榜异常活跃，频道出现不存在的人名，食名活动频繁。名字变重——真名被反复提及可能产生物理压力。</div></div>
+        <div class="card"><h3 class="card-title">静潮</h3><div class="card-body">极罕见的反常黑潮——晦能突然沉寂，异常全部收缩。看似安全，但这是神胎在储备能量准备大爆发。静潮越长，后续越恐怖。</div></div>
+        <div class="card"><h3 class="card-title">巢潮</h3><div class="card-body">母巢碎片主导。庇护所活化加速，家感变强，归路更稳。但庇护所开始"舍不得"住客离开——内属权深度加深。</div></div>
+        <div class="card"><h3 class="card-title">舟潮</h3><div class="card-body">方舟碎片主导。方舟路线相关事件触发概率大增，方舟图纸、材料、旧门遗迹共鸣。世界似乎"允许"出走——但也可能是神胎在收集想走的人的名单。</div></div>
+        <div class="card"><h3 class="card-title">胎潮</h3><div class="card-body">临产前兆。多层同时紊乱，神胎碎片争相浮现。所有规则同时松动又同时收紧——世界在练习呼吸。胎潮出现后，穿越窗口即将关闭。</div></div>
+      </div>
+
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">区域级事件</h3>
       <div class="grid-3">
         <div class="card"><h3 class="card-title">门缝季</h3><div class="card-body">所有门缝都"稍微宽了一点点"，敲门者类异常大幅活跃。</div></div>
