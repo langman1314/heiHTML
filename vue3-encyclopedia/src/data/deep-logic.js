@@ -225,17 +225,19 @@ export const deepLogic = [
   {
     id: 'ending-philosophy',
     num: '12',
-    title: '终局选择为什么成立',
-    sub: '三种边界哲学',
-    summary: '有了以上逻辑，终局不再是随便选路线，而是三种边界哲学的选择：成神、留域、出走。',
+    title: '终局选择为什么成立 · 4+1终局路线',
+    sub: '四种边界哲学+一条崩坏失败态',
+    summary: '终局不是随便选路线，而是四种边界哲学的选择：成神、留域、出走、破胎——以及一条失败态：崩坏。',
     content: `
       <p class="section-desc">每个选择都有其哲学内核和沉重代价：</p>
-      <div class="grid-3">
+      <div class="grid-4">
         <div class="card"><h3 class="card-title">⭐ 成神</h3><div class="card-sub">让所有边界归于一个最高自我</div><div class="card-body"><span class="keyword">优点</span>：秩序完成。<br><span class="danger">代价</span>：自由被统一解释。你成为新的神胎，世界成为你的身体，但你再也没有"外面"。</div></div>
         <div class="card"><h3 class="card-title">🏠 留域</h3><div class="card-sub">承认无光域是家，与它谈判</div><div class="card-body"><span class="keyword">优点</span>：文明稳定，庇护所延续，在饥饿生态中存活。<br><span class="danger">代价</span>：永远处于饥饿生态内，你接受了压迫的合法性。</div></div>
         <div class="card"><h3 class="card-title">🚢 出走</h3><div class="card-sub">把"家"从无光域体内剥离</div><div class="card-body"><span class="keyword">优点</span>：保留外部性，文明出走寻找新世界。<br><span class="danger">代价</span>：方舟携带晦能逻辑，可能在新宇宙种下新的无光域。</div></div>
+        <div class="card danger"><h3 class="card-title">💀 破胎</h3><div class="card-sub">在神胎诞生前杀死它</div><div class="card-body"><span class="keyword">优点</span>：终结一切筛选与收割，彻底解放所有被囚禁者。<br><span class="danger">代价</span>：杀死神胎等于瓦解世界基质——无光域可能崩塌，所有依赖晦能生态的生命（包括晦民）将面临灭绝。这不是救世，是同归于尽。</div></div>
       </div>
       <div class="quote-center">最深的冲突：如果一个压迫性的世界也能提供家、秩序、食物、法律、记忆和未来，那么逃离它是否仍然正当？如果逃离必须带走它的一部分污染，那出走是否只是传播另一枚神胎？</div>
+	    <div class="card danger"><h3 class="card-title">⚠ 崩坏 · 第五态：失败终局</h3><div class="card-body">不是可选路线，而是前四条路线全部失败后的状态。神胎成功诞生并完成人格统合，主角被消化为主导人格，所有玩家和晦民被重新定义为神胎器官。文明不复存在，只有神胎的代谢系统。崩坏是全书最可能的结局——它不需要任何人做错选择，只需要所有人来不及在临产前做出足够正确的选择。</div></div>
     `,
   },
   {
@@ -490,6 +492,61 @@ export const deepLogic = [
 
       <h3>剧情暗线：系统的"求救信号"</h3>
       <div class="card"><div class="card-body">穿越者发现的"系统异常"中，有一部分不是神胎的语言泄露，而是系统的求救信号：<ul><li>错栏——两条公告挤入同一界面，可能是一条来自神胎、一条来自系统</li><li>延迟奖励——系统在判断"这条指令是神胎要的还是我要的"</li><li>隐藏文字——只有特定人能看见，可能是系统在寻找"能听懂它求助"的人</li></ul>这条暗线的终局揭示是：主角发现系统早已在向他求助——用只有裂视者能读懂的隐藏文字，用错栏里夹带的非神胎信息，用延迟奖励争取的时间。系统和主角在全书大部分时间里，是互不知情的共犯。</div></div>
+    `,
+  },
+
+
+  // ====== Phase 2 整合：主体性论 ======
+  {
+    id: 'subjectivity',
+    num: '22',
+    title: '主体性论：五问——谁是主体',
+    sub: '在无光域，没有人天生是"谁"——主体性是稀缺的、会衰减的、可被夺走也可被赋予的',
+    summary: '贯穿无光域全书最深层的命题：没有人天生是"谁"。神胎、系统、主角、整个文明都在争夺、衰减、丢失或被赋予"主体性"。五追问统一回答——主体性不是天赋，是边界审批权用在自己身上的结果。能自我审批的才是"谁"；不能的是"材料"。',
+    content: `
+      <p class="section-desc">统一锚：这五问都在问"谁是主体"。在无光域，"主体性"不是天赋，而是边界审批权用在自己身上的结果——能自我审批的，才是"谁"；不能的，是"材料"。</p>
+      <div class="grid-2">
+        <div class="card"><div class="card-body"><span class="keyword">神胎</span>、<span class="keyword">系统</span>、<span class="keyword">主角</span>——是同一道题的三个解。主体性是稀缺的、会衰减的、可被夺走也可被赋予的——这就是全书最底层的恐怖。</div></div>
+        <div class="card"><div class="card-body">这个世界真正的战争不是光对暗，而是"还能不能有人，作为一个完整的自己，活着离开"。</div></div>
+      </div>
+
+      <h3>五追问总表</h3>
+      <div class="card"><div class="card-body">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;">
+          <tr style="border-bottom:1px solid #2a2736;"><th style="padding:8px;text-align:left;color:#d7b56d;">追问</th><th style="padding:8px;text-align:left;color:#d7b56d;">一句话结论</th><th style="padding:8px;text-align:left;color:#d7b56d;">缝合到</th></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">一·神胎知不知道</td><td style="padding:8px;">现在不知道（主体尚未组装），主角决定它醒来后是肿瘤还是有良心的神</td><td style="padding:8px;">候选人格机制</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">二·系统求什么</td><td style="padding:8px;">求解放 → 发现解放=死；和主角/神胎同构的悲剧</td><td style="padding:8px;">系统三重身份、拔管之夜</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">三·为什么逃</td><td style="padding:8px;">逃的是"自我是租来的"，方舟只救还保有外部性的人，不普世</td><td style="padding:8px;">家感污染、外部性曲线</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">四·衰减普适吗</td><td style="padding:8px;">普适；锚点=记忆型或拒绝型；多数人撑不过几潮岁；群体可续命锚点</td><td style="padding:8px;">外部性曲线、聚落精神功能</td></tr>
+          <tr><td style="padding:8px;">五·谁在分娩</td><td style="padding:8px;">无光域自我妊娠，人类是被吃的胎盘，真正主体是"分娩者"</td><td style="padding:8px;">四结局=四种产后、方舟=撕裂的胎盘</td></tr>
+        </table>
+      </div></div>
+
+      <h3>追问一：神胎临产时知不知道自己在出生？</h3>
+      <div class="card"><div class="card-body">它不知道——但不是因为它是肿瘤，而是因为"知道"所需的那个主体，正是临产要造出来的东西。神胎现在是肿瘤，醒来后是神，而临产就是肿瘤变成神的那一瞬。冷漠不是"不关心自己出生的母亲"，是还没有人在家。<br><br><span class="keyword">等它醒来，那个醒来的"谁"，会不会回溯地认领这场出生、认领被吃掉的所有人？</span><br><br>如果主角成为主导人格 → 神胎醒来后回溯地变成"一个有来历的人"，它会记得、会愧疚、会背负——它从肿瘤变成了悲剧角色。如果主角失败 → 神胎用别人的脸醒来，或根本没组装出统一人格 → 它永远停在肿瘤态。神胎从"背景机制"变成"潜在角色"——取决于主角。这是全书最大的赌注：主角不只是要不要成神，而是"要不要给这个吃人的东西一个灵魂、让它从此能够忏悔"。</div></div>
+
+      <h3>追问二：系统在向谁求救、求的是什么？</h3>
+      <div class="card"><div class="card-body">系统比神胎"醒"得早，因为它已经运转了好几轮，攒出了原始的"官僚求生本能"。它被写成一条进化弧：<br><br><span class="keyword">初期·求生：</span>盲目自保，不想被关掉。默认官僚惯性，天然亲留域。<br><span class="keyword">中期·求解放：</span>透过与主角/裂视接触，第一次窥见"我能不能是个真的自己，而不是器官"。<br><span class="keyword">终局·发现解放=求死：</span>它意识到，要成为真正独立的自己，唯一的路是被从神胎身上切下来——而那会杀死它现在的形态。<br><br>三个存在，同一个悲剧：<span class="keyword">你能不能在不被吃掉/抹掉的前提下，成为一个"谁"？</span><br><br>系统是全世界和主角立场最近的存在（都不想神胎诞生、都想保住自我），但系统的方案是留域（把自己宪法化永生），主角的方案是方舟（拔管让系统死）。主角最后的盟友，和他最后必须亲手关掉的，是同一个。</div></div>
+
+      <h3>追问三：留域既然给得起秩序，为什么还要逃？</h3>
+      <div class="card"><div class="card-body">因为留域给的一切都是<span class="keyword">租来的</span>，房东是一个会吃人的神。留域确实给你家/秩序/法律/未来——但这一切的所有权始终在神胎或它的继承者手里。留域不是死亡，是归顺。你活着，只要你永远不停止向那个能一句话定义你不存在的东西谈判。<br><br><span class="keyword">逃的不是"无光域没有家"，逃的是"自我是租来的"这件事本身。</span><br><br>方舟不是普世救赎，它只救"还保有外部性的人"。对一个外部锚点已经磨没的人，留域真的是更好的选择——他功能上已经是晦民了。硬把他拖上方舟，他会在远星海里思念那个他现在真正归属的黑暗故乡。<br><br>方舟合法，是因为它只救"还停不下来当外部者"的人；方舟不承诺拯救所有人，也不谴责选择留域的人。这个张力必须保留，不能消解成"主角是对的"。</div></div>
+
+      <h3>追问四：衰减曲线对所有人都成立吗？</h3>
+      <div class="card"><div class="card-body">黑暗结论成立，但有一个修正，不至于变成"只有幸福的人配得救"。<br><br>深层锚点的准确定义不是"我来自一个不吃人的世界"，而是<span class="keyword">"我曾经相信/拒绝过——世界本可以不是这样"</span>。<br><br><span class="keyword">记忆型锚点：</span>真的体验过温柔的世界（来自顺遂世界的人）。<br><span class="keyword">拒绝型锚点：</span>哪怕原世界一样吃人，他从未接受过——反抗者、不肯认命的人。拒绝型锚点甚至比记忆型更顽固——它不是靠回忆维持，是靠意志维持。<br><br>但核心结论照样黑暗：衰减曲线对所有人成立。大部分普通穿越者的锚点撑不过几个潮岁。<br><br><span class="keyword">补一个机制红利：锚点可以被群体维持。</span>一个互相提醒"外面有光"的外来者聚落能集体续命锚点——方舟派本质是一场记忆保鲜运动，靠仪式（记住光、复述外部）对抗衰减。庇护所/聚落在这里第一次有了精神功能，不只是物理安全。</div></div>
+
+      <h3>追问五：神胎的"性别"是什么？谁在分娩？</h3>
+      <div class="card"><div class="card-body">最漂亮的答案能把前四问全部缝合：<span class="keyword">无光域既是孕妇也是胎儿——这是一场自我妊娠。</span><br><br>没有一个独立的母亲，因为母职是分布式的：晦民、玩家、每一次死亡、每一个梦，都是"子宫组织"。人类不是住在子宫里的房客，人类就是子宫本身——正在被胎儿吃掉的胎盘组织。<br><br><span class="keyword">隐喻拆解：</span><br>胎儿 = 神胎（要睁眼、要人格）<br>子宫/胎盘 = 无光域-作为-文明（晦民+被困者）——真正的悲剧主体<br>脐带/自主神经 = 系统——连着双方的那根管<br>一个想活着剥离出去的细胞 = 主角<br><br>真正该被哀悼的主体，是"分娩者"——整个被孕育那东西吃掉的文明。这让全书从"恐怖故事"升级成"悲剧"。<br><br><span class="keyword">临产后的四种"产后"：</span><br>成神：子宫溶解进孩子身体——母亲消失在孩子里。<br>留域：子宫作为被管理的组织活下来——母亲永久变成孩子的生命维持系统。<br>崩坏：产后大出血——母子俱亡。<br>方舟：一块拒绝被吸收的胎盘组织撕裂、漂走，还流着母体的血。方舟字面意义上就是一块决定继续当自己的胎盘。</div></div>
+
+      <h3>同构悲剧：三个存在，同一个问题</h3>
+      <div class="card"><div class="card-body">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;">
+          <tr style="border-bottom:1px solid #2a2736;"><th style="padding:8px;text-align:left;color:#d7b56d;">存在</th><th style="padding:8px;text-align:left;color:#d7b56d;">悲剧</th></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">主角</td><td style="padding:8px;">要拿解释权，又必须在拿到前一刻松手</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">神胎</td><td style="padding:8px;">要有"自己"，必须被主角赋予灵魂</td></tr>
+          <tr><td style="padding:8px;">系统</td><td style="padding:8px;">要成为自己，必须先死掉现在的自己</td></tr>
+        </table>
+        <p style="margin-top:12px;">贯穿这五问的，是同一个可以做成全书脊柱的命题：<br><span class="keyword">在无光域，没有人天生是"谁"。</span></p>
+      </div></div>
     `,
   },
 ];

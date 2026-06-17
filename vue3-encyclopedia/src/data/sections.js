@@ -1203,6 +1203,40 @@ export const sections = [
 	  `,
 	},
 	{
+	  id: 'beast-hierarchy',
+	  label: '肆拾柒',
+	  num: '47',
+	  title: '晦兽威胁体系 · 晦染刻度同步的战斗生态',
+	  desc: '晦兽威胁分级0-7与晦染主脊刻度对齐，每一级代表不同的边界消融程度与战斗策略需求。',
+	  content: `
+	    <p class="section-desc">晦兽不是传统怪物——它们的威胁等级直接对应晦染刻度。1-2级威胁可用物理手段压制，3-4级需要边界干预，5-6级必须借助规则理解或庇护所活化协同，7级已是接近神胎碎片层面的存在。</p>
+	    <div class="grid-3">
+	      <div class="card"><h3 class="card-title">0-1级 · 浅染兽</h3><div class="card-body">普通物理对抗有效。威胁来自数量而非个体强度。晦兽基本遵循生态行为。</div></div>
+	      <div class="card"><h3 class="card-title">2-3级 · 入染兽</h3><div class="card-body">物理手段效果下降，需要专属对抗资源。开始表现出边界意识——能识别安全区域、能跟踪名字、能模仿求救信号。</div></div>
+	      <div class="card"><h3 class="card-title">4-5级 · 蚀染兽</h3><div class="card-body">对抗必须结合庇护所支持或规则理解。晦兽的行为开始超出单纯捕食——它们可能在收集名字、标记床、腐蚀门、污染梦。</div></div>
+	      <div class="card"><h3 class="card-title">6级 · 候染凶兽</h3><div class="card-body">接近神胎碎片的生物载体。其存在本身就是区域级异常。对抗需要多人协同与深层规则武器。</div></div>
+	      <div class="card" style="grid-column:1/-1"><h3 class="card-title">7级 · 临染灾相</h3><div class="card-body">神胎临产期的极端产物。几乎不可被击杀——只能被转移、封存或通过终局路线处理。遇到7级晦兽意味着该区域的终局已开始。</div></div>
+	    </div>
+	    <div class="quote">晦兽威胁分级与晦染刻度对齐，不是因为设计方便，而是因为它们共享同一套边界消融度量衡。</div>
+	  `,
+	},
+	{
+	  id: 'combat-advancement',
+	  label: '肆拾捌',
+	  num: '48',
+	  title: '战斗晋升体系 · 每一次胜利都是被神胎更深入地采样',
+	  desc: '战斗在无光域中不只是击败敌人——它是两套边界定义之间的冲突裁决。胜利者不仅赢得战利品，还赢得更大的神胎采样权重。',
+	  content: `
+	    <p class="section-desc">战斗的本质是边界裁决：两套边界定义在晦能介入下碰撞，以认知稳定度×共识人数×情绪强度×时间的公式决定哪套定义覆盖另一套。五次战斗约等于一次境界跃迁，越级战斗加速跃迁但风险极高。</p>
+	    <div class="grid-2">
+	      <div class="card"><h3 class="card-title">五种战法流派</h3><div class="card-body"><span class="keyword">独断流：</span>靠个人边界稳定度取胜，晦染增速最快。<span class="keyword">共识流：</span>靠队友共识取胜，晦染扩散但单点增速慢。<span class="keyword">情绪流：</span>靠极端情绪瞬间压过对方。<span class="keyword">持久流：</span>靠时间因子碾压。<span class="keyword">浓度流：</span>靠晦能浓度差压制。</div></div>
+	      <div class="card"><h3 class="card-title">拱顶石定理</h3><div class="card-body">赢一场=爬一阶晦染=离被神胎吞掉更近一步。战斗和晋升是同一台机器。因此真正的高手不是最能打的人，而是能在赢的同时控制自己被采样速度的人。</div></div>
+	      <div class="card" style="grid-column:1/-1"><h3 class="card-title">退染三种</h3><div class="card-body"><span class="keyword">嫁染：</span>将晦染转嫁给边界高度重叠者（伴侣、血亲、共享庇护所者），代价是对方承受你的污染。<span class="keyword">封染：</span>用仪式冻结晦染等级，土著正统做法，代价是自我发展停滞。<span class="keyword">散染：</span>将晦染稀释到庇护所中，房屋分担你的污染，代价是庇护所加速活化、可能提前长出不受控的人格。</div></div>
+	    </div>
+	    <div class="quote">战斗的本质不是谁的血条先归零，而是谁的边界定义在晦能面前更稳定。</div>
+	  `,
+	},
+	{
 	  label: '肆拾玖',
 	  num: '49',
 	  title: '核心世界观补充句',

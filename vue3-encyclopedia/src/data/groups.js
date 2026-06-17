@@ -3,7 +3,7 @@ export const chapterGroups = [
     name: '深层逻辑',
     icon: '⚙',
     type: 'deep',
-    ids: ['first-principle', 'hue-definition', 'transporter-value', 'myth-resonance', 'cognition-conditions', 'weird-mechanism', 'core-danger', 'system-position', 'shelter-life', 'concept-pollution', 'personality-necessity', 'ending-philosophy', 'three-mirrors-redefined', 'hard-rules'],
+    ids: ['first-principle', 'hue-definition', 'transporter-value', 'myth-resonance', 'cognition-conditions', 'weird-mechanism', 'core-danger', 'system-position', 'shelter-life', 'concept-pollution', 'personality-necessity', 'ending-philosophy', 'three-mirrors-redefined', 'hard-rules', 'subjectivity'],
   },
   {
     name: '晦能深化',
@@ -33,7 +33,7 @@ export const chapterGroups = [
     name: '生态图鉴',
     icon: '◇',
     range: [6, 8],
-    ids: ['plants', 'beasts', 'weirds'],
+    ids: ['plants', 'beasts', 'weirds', 'beast-foundation', 'beast-tier-0', 'beast-tier-1', 'beast-tier-2', 'beast-tier-3', 'beast-tier-4', 'beast-tier-5', 'beast-tier-6', 'beast-tier-7', 'beast-quick-reference', 'deduction-overview', 'deduction-battlefield', 'deduction-rounds', 'deduction-settlement', 'deduction-leverage-guide', 'deduction-hooks'],
   },
   {
     name: '文明与势力',
@@ -140,7 +140,7 @@ export const chapterGroups = [
     name: '反派势力',
     icon: '▲',
     type: 'antagonist',
-    ids: ['antagonist-overview', 'antagonist-name-eaters', 'antagonist-system-cult', 'antagonist-hunger-cult', 'antagonist-ark-extremists', 'antagonist-rank-breakers', 'antagonist-gray-commune', 'antagonist-tide-nobles', 'antagonist-conflict-matrix', 'antagonist-six-laws'],
+    ids: ['antagonist-overview', 'antagonist-name-eaters', 'antagonist-system-cult', 'antagonist-hunger-cult', 'antagonist-ark-extremists', 'antagonist-rank-breakers', 'antagonist-gray-commune', 'antagonist-tide-nobles', 'antagonist-conflict-matrix', 'antagonist-six-laws', 'antagonist-redemption-society', 'antagonist-redemption-engine', 'antagonist-redemption-slaves', 'antagonist-redemption-brand', 'antagonist-redemption-mirror-war', 'antagonist-redemption-structure', 'antagonist-redemption-philosophy', 'antagonist-redemption-firewall'],
   },
   {
     name: '主角伦理',

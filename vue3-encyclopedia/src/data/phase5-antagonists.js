@@ -11,7 +11,7 @@ export const phase5Antagonists = [
     content: `
       <p class=\"section-desc\">无光域的反派不能只是邪教、怪物、掠夺者、系统走狗或疯子。这个世界的核心恐怖来自"生存逻辑本身会变质"，所以主要敌对势力都必须拥有一部分正确性。</p>
       <div class=\"quote\">每个反派都代表一种可成立的生存答案。<br>他们错在把答案绝对化，并要求所有人为这个答案付出边界、名字、梦、自由或生命。</div>
-      <h3>七大反派阵营总谱系</h3>
+      <h3>七大冲突源阵营总谱系</h3>
       <div class=\"grid-3\">
         <div class=\"card\"><h3 class=\"card-title\">食名教团</h3><div class=\"card-body\">身份应该流向更适合的人。</div></div>
         <div class=\"card\"><h3 class=\"card-title\">系统教</h3><div class=\"card-body\">服从系统，是玩家活下去的最大理性。</div></div>
@@ -155,7 +155,7 @@ export const phase5Antagonists = [
   {
     id: 'antagonist-gray-commune',
     num: 'A6',
-    title: '灰蜕公社激进派',
+    title: '灰蜕公社激进派 · 情境性对立，非永久反派',
     sub: '他们说人类性不是底线，只是上一种环境留下的旧壳',
     summary: '灰蜕公社整体并不一定是反派，需分为温和派与激进派。温和派主张接纳晦染者，反对把半归域者当怪物。激进派则认为抵抗晦染是偏见——无光域不是污染源而是新的自然，变得不像人不代表堕落而是进化。他们反对人类中心主义和纯净晦民中心主义。危险在于：他们会美化边界丧失、劝人放弃名字梦床私域、把不再像人浪漫化，最终否定个体选择权。',
     content: `
@@ -211,7 +211,7 @@ export const phase5Antagonists = [
     sub: '七方势力的恩怨网络——敌人、盟友与核心矛盾',
     summary: '各阵营之间的冲突关系矩阵。食名教团 vs 名庭与主角；系统教 vs 土著五庭与破榜者；饥饿教 vs 骨庭保守派与主角；方舟教极端派 vs 留域派与主角伦理派；破榜者 vs 系统教与食名教团；灰蜕激进派 vs 纯净派与系统教；潮贵族 vs 破债会与主角改革派。',
     content: `
-      <p class=\"section-desc\">七大阵营之间的冲突关系——没有绝对的敌人，只有重叠的矛盾。</p>
+      <p class=\"section-desc\">七大冲突源之间的冲突关系——没有绝对的敌人，只有重叠的矛盾。</p>
       <div class=\"card\"><div class=\"card-body\">
         <table style=\"width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;\">
           <tr style=\"border-bottom:1px solid #2a2736;\"><th style=\"padding:8px;text-align:left;color:#d7b56d;\">势力</th><th style=\"padding:8px;text-align:left;color:#d7b56d;\">主要敌人</th><th style=\"padding:8px;text-align:left;color:#d7b56d;\">可能合作对象</th><th style=\"padding:8px;text-align:left;color:#d7b56d;\">核心矛盾</th></tr>
@@ -251,4 +251,167 @@ export const phase5Antagonists = [
       </div>
     `,
   },
-]
+  // ====== A10：赎籍会 ======
+  {
+    id: 'antagonist-redemption-society',
+    num: 'A10-1',
+    title: '赎籍会第一性：做账本减法的赖账生意',
+    sub: '不欠债的人不该在这里。但谁到了无光域不欠债？',
+    summary: '赎籍会不相信晦染能被治愈。他们认为晦染是债务——是神胎的采样权重，是你欠这个世界的债。赎籍会的生意不是"退染"，而是"把债从你的名上挪走，放到另一个名上"。嫁染实操链：找替身→借采样窗→倒债→结清。',
+    content: `
+      <p class="section-desc">赎籍会不相信晦染能被治愈。他们认为晦染不是病，是债务——是你欠神胎的"被采样权重"。真正的生意不是退染，是把债从你的名下挪走，放到另一个名下。</p>
+      <div class="quote">晦染不是病，是债务。赎籍会不会治病——他们只在账本上改名字。</div>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">不做的事</h3><div class="card-body">不治病、不净化、不退染、不降阶。不承诺你的晦染减少，只承诺"账本上那个数字不再是你的名字"。</div></div>
+        <div class="card"><h3 class="card-title">做的事</h3><div class="card-body">找替身→借采样窗→倒债→结清。把高晦染者的债务索引，通过边界操作转嫁到另一个实体（染奴）身上。</div></div>
+      </div>
+      <div class="card danger"><div class="card-body"><span class="keyword">定义关键：</span>赎籍会做的事，在土著法律里叫"伪造边界记录"。在食名教团的教义里叫"偷名字"。在系统眼里叫"交易记录异常"。但在客户眼里，它叫"能多活一个潮岁"。</div></div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-engine',
+    num: 'A10-2',
+    title: '经济引擎：嫁染实操链',
+    sub: '选一个快要被神胎吃掉的人，让另一个人替他——这就是全部生意',
+    summary: '完整的嫁染实际操作链：选客户（高晦染、榜单高位、临染边缘）→ 物色替身（染奴）→ 通过骨刻/床签/名条建立覆盖边界 → 借黑潮窗/名庭空窗期实施转移 → 结算。残酷汇率：不是1:1转染，而是转嫁方留下"烙底"（嫁痕），接收方承担放大倍率的晦染。',
+    content: `
+      <p class="section-desc">嫁染不是"把晦染砍一半分给两个人"——嫁染是把一个人的债务索引整个挪到另一个人身上，但挪动本身会留下痕迹。</p>
+      <h3>实操四步链</h3>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">第一步·找替身</span><div class="truth-text">通过染奴池（债奴/掳口/养渗者/记忆屋遗民），筛选与客户"边界特征"高度重叠的人——相近的骨相、相近的名字音节、相近的床型、相近的居住时长。重叠度越高，嫁染越不容易被现实拒绝。</div></div>
+        <div class="truth-layer"><span class="truth-label">第二步·借采样窗</span><div class="truth-text">等黑潮峰或名庭空窗期——现实承认阈值最低的时刻。这个窗口期极短，错过就等下一轮。</div></div>
+        <div class="truth-layer"><span class="truth-label">第三步·倒债</span><div class="truth-text">通过骨刻伪造边界记录，通过床签建立假归属，通过名条替换索引。把"谁是那个高晦染者"的定义，从客户身上剥离到染奴身上。这一步必须在窗口期内完成。</div></div>
+        <div class="truth-layer"><span class="truth-label">第四步·结算</span><div class="truth-text">结清——客户晦染等级不变，但世界认为那个等级对应的是另一个人。结算后留下烙底（嫁痕），是永远无法消除的索引残影，后续会被嫁痕猎人追踪。</div></div>
+      </div>
+      <h3>残酷汇率</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">接收方的放大倍率</h3><div class="card-body">染奴接收到的晦染不是原封不动转移——转移过程本身增加"搬运摩擦"，染奴承受的晦染 ≈ 客户原晦染 × 1.3~1.7倍。因为转移是对现实的一次强行改写，改写成本由接收方承担。</div></div>
+        <div class="card"><h3 class="card-title">转嫁方的嫁痕（烙底）</h3><div class="card-body">晦染可以转移，但"被转移过"这件事本身成为一条新索引。嫁痕 = 你曾经欠债但你逃了。这条记录在名庭/系统底层永久保留，嫁痕猎人可据此追踪。客户虽然活下来了，但带着一条永远洗不掉的标记。</div></div>
+      </div>
+      <div class="quote">嫁染不是治病，是逃债。逃债会留下案底——嫁痕就是那个案底，被刻在世界的底层，比任何骨刻都深。</div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-slaves',
+    num: 'A10-3',
+    title: '染奴制度：替罪者的生产与再生产',
+    sub: '赎籍会最大的成本不是技术，是活人',
+    summary: '染奴是赎籍会经济链条中最关键也最消耗的资源。四类来源：债奴（欠潮债者以身为偿）、掳口（从灰色地带捕捉的失踪者）、养渗者（专门喂养到特定骨相/名音的活人）、记忆屋遗民（被食名教团替代后无处可去的人）。染奴一旦完成嫁染，会被现实标记为"那个高晦染者"——从此再也无法摆脱。',
+    content: `
+      <p class="section-desc">染奴是赎籍会经济链条中最关键也最消耗的资源——不是技术缺，是活人缺。每一次成功的嫁染，都消耗一个被现实永久标记为"高晦染者"的人。</p>
+      <h3>染奴四来源</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">债奴</h3><div class="card-body"><span class="keyword">来源：</span>欠潮债/名债/床债无力偿还者。<br><span class="keyword">状态：</span>最"合法"的染奴来源。潮贵族的债务链条下游。赎籍会从潮贵族手中批量购买债契，债主转为染奴。<br><span class="keyword">占比：</span>约40%。</div></div>
+        <div class="card"><h3 class="card-title">掳口</h3><div class="card-body"><span class="keyword">来源：</span>灰色地带失踪者。<br><span class="keyword">状态：</span>最黑的部分。聚落边缘、低活化庇护所、黑潮后的废墟——这些地方少一个人没人追究。赎籍会与掘潮队、拾荒团、灰色商队有长期的"人口分流"合作。<br><span class="keyword">占比：</span>约30%。</div></div>
+        <div class="card"><h3 class="card-title">养渗者</h3><div class="card-body"><span class="keyword">来源：</span>赎籍会自己养的活人——专门喂养到特定需求：骨相接近某个客户、名音接近某个榜单高位者、能模仿特定人的床习惯。<br><span class="keyword">状态：</span>成本最高但匹配成功率最高。养一个合格的养渗者需要数月到数年。<br><span class="keyword">占比：</span>约20%。</div></div>
+        <div class="card"><h3 class="card-title">记忆屋遗民</h3><div class="card-body"><span class="keyword">来源：</span>被食名教团替代后无处可去的人。<br><span class="keyword">状态：</span>最讽刺的来源——食名教团制造"失名者"，赎籍会把这些失名者回收为染奴。两个敌对势力在同一个链条上共生。<br><span class="keyword">占比：</span>约10%。</div></div>
+      </div>
+      <div class="quote">赎籍会最大的成本不是骨刻技术，不是床签材料，不是那个够窄的黑潮窗——是活人。每一次减法，都需要一个活人来承担那个被减掉的部分。</div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-brand',
+    num: 'A10-4',
+    title: '嫁痕与嫁痕猎人：逃债的案底可以被追踪',
+    sub: '嫁染不是完美的犯罪——它会留下索引癌',
+    summary: '嫁痕是嫁染操作在系统底层和名庭档案中留下的永久索引残影——一种"边界癌变"的记录。嫁痕猎人是专门训练来读取这些残影的人，分官面（受名庭/法庭雇佣）和暗面（卖给食名教团或潮贵族）两条线。嫁痕猎人是一个完全由赎籍会的存在催生出来的职业。',
+    content: `
+      <p class="section-desc">嫁痕是嫁染操作留下的永久索引残影。每一次成功的嫁染，都在系统底层留下一条"这里发生过一次身份替换"的记录。</p>
+      <h3>嫁痕的生态位置</h3>
+      <div class="card"><div class="card-body"><span class="keyword">嫁痕的本质：</span>一次边界改写留下的不可逆沉积。嫁染没有消灭债务，只是把债务挪了位置——挪动本身在底层留下了一条新索引。<br><span class="keyword">嫁痕的内容：</span>被替换者的原始身份片段 + 替换操作的时间/地点/媒介 + 操作者的晦染残影。<br><span class="keyword">嫁痕的位置：</span>名庭深度档案、系统交易记录异常层、骨刻残留边缘。<br><span class="keyword">嫁痕能否消除：</span>理论上不能——它是底层沉积，清除它等于清除一段现实历史，在无光域中几乎不可能。<br><span class="keyword">嫁痕的寿命：</span>随黑潮脉冲衰减但不消失。每一次黑潮会冲刷底层沉积，但嫁痕像"界碑"一样留下比普通沉积更硬的残余。</div></div>
+      <h3>嫁痕猎人</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">官面嫁痕猎人</h3><div class="card-body">受名庭/法庭/系统管理部门雇佣。职责：追踪非法嫁染操作、恢复被篡改的索引、为名庭提供"某人是否被替换"的鉴定。合法、有序、流程化。但官面猎人受限于制度和资源，往往只能追踪最明显的嫁痕。</div></div>
+        <div class="card"><h3 class="card-title">暗面嫁痕猎人</h3><div class="card-body">独立或受雇于食名教团/潮贵族/破榜者。职责：追踪嫁痕来寻找"可以被替换或被收割的人"——嫁痕意味着这个人曾经逃过一次债，现在他更脆弱、更易被再次操作。暗面猎人把嫁痕卖给食名教团（告诉他"这个人名上有缝"）或卖给潮贵族（告诉"这个人的抵押品有案底"）。</div></div>
+      </div>
+      <div class="quote">每一笔嫁染，都在世界的存档里刻下了一条不可删除的记录。嫁痕猎人就是读这些记录的人——他们不判断对错，他们只追踪痕迹。赎籍会制造了需求，嫁痕猎人满足了需求。没有赎籍会，就没有嫁痕猎人。</div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-mirror-war',
+    num: 'A10-5',
+    title: '镜像战争：赎籍会 vs 食名教团',
+    sub: '他们争的不是地盘，是同一个名字的索引权',
+    summary: '赎籍会和食名教团看似完全不同——一个做减法，一个做加法。但在底层逻辑上，它们是同一个操作的镜像：赎籍会找替身把名上的债卸掉，食名教团找替身把名本身拿走。两者争夺的是同一条名条的"索引锚点"归属。',
+    content: `
+      <p class="section-desc">赎籍会与食名教团在底层逻辑上是同一个操作的镜像——两者都在操作"名"与"债"的对应关系，只是方向相反。</p>
+      <div class="card"><div class="card-body">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;">
+          <tr style="border-bottom:1px solid #2a2736;"><th style="padding:8px;text-align:left;color:#d7b56d;">维度</th><th style="padding:8px;text-align:left;color:#d7b56d;">赎籍会</th><th style="padding:8px;text-align:left;color:#d7b56d;">食名教团</th></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">操作方向</td><td style="padding:8px;">减法——债从名上卸掉</td><td style="padding:8px;">加法——名本身被拿走</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">目标</td><td style="padding:8px;">保住名、丢掉债</td><td style="padding:8px;">保住债（名=位置）、拿到名</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">对替身的态度</td><td style="padding:8px;">替身=染奴，用完即弃</td><td style="padding:8px;">替身=圣名者，继承身份</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">底层工具</td><td style="padding:8px;">骨刻/床签/伪名条</td><td style="padding:8px;">借名/代位/归来式</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">最大风险</td><td style="padding:8px;">嫁痕暴露 + 染奴反噬</td><td style="padding:8px;">客户沉默（拒绝承认）</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">对客户的承诺</td><td style="padding:8px;">你活下来，但留案底</td><td style="padding:8px;">你被替代，但你的位置有人继承</td></tr>
+          <tr><td style="padding:8px;">对系统的关系</td><td style="padding:8px;">伪记录对抗系统</td><td style="padding:8px;">利用系统记录漏洞</td></tr>
+        </table>
+      </div></div>
+      <h3>名册争夺战（C线）中的镜像关系</h3>
+      <div class="card"><div class="card-body">在C线推演中，赎籍会与食名教团争夺「灰三十七」这一条名条——赎籍会要把债从名上卸掉（嫁给染奴替三十七），食名教团要把名本身接管（由圣名者「另一个灰三十七」继承）。两支势力在同一张名册上做相反的运算。谁先完成操作，谁就锁定了这条名的归属——另一方的操作将因为"名已不属于原主"而自动失效。</div></div>
+      <div class="quote">赎籍会和食名教团不是两种敌人，是同一条裂缝的两面。一个说"你的债可以换成别人来背"，一个说"你的名字可以换成别人来活"。把这两句话放在一起，你就得到了无光域最核心的恐怖：你和你欠的债、你和你占的名，从来就不是锁定的。</div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-structure',
+    num: 'A10-6',
+    title: '内部结构：无总坛、低共识、高流动',
+    sub: '没有大本营才是最安全的大本营',
+    summary: '赎籍会没有总坛，没有总部建筑，没有公开领袖。组织以"账房"为最小运作单位，每个账房独立运作、自付盈亏。账房之间通过名庭灰账、潮贵族债契、嫁痕猎人中转站发生联系，不通过上级指令。这使赎籍会极难被一锅端。',
+    content: `
+      <p class="section-desc">赎籍会没有总坛——不是因为胆小，而是因为"一个做身份替换生意的组织，不该有一个可以被定位的总部"。</p>
+      <h3>组织原则</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">无总坛</h3><div class="card-body">赎籍会没有总部建筑，没有公开领袖，没有固定集会。组织以"账房"为最小运作单位，每个账房独立运作、自付盈亏。账房之间的联系通过名庭灰账、潮贵族债契、嫁痕猎人中转站，不通过上级指令。</div></div>
+        <div class="card"><h3 class="card-title">低共识</h3><div class="card-body">没有统一教义，没有标准流程。不同账房的实操手法差异极大，部分账房只做债奴转染，部分专注养渗者培育。低共识的好处是：一个账房被端，其他账房继续运转，信息泄露有限。</div></div>
+        <div class="card"><h3 class="card-title">高流动</h3><div class="card-body">赎籍师频繁更换庇护所、更换名号、更换记账方式。染奴被频繁转移。一个成熟的账房可能每隔数月废弃当前据点，转移到新的灰醒层区域。</div></div>
+        <div class="card"><h3 class="card-title">无阶层晋升</h3><div class="card-body">没有"升职"——只有"分账大"和"分账小"的区别。一个赎籍师可以带一个养渗人另起炉灶，和原账房形成合作而非竞争关系。这种结构让赎籍会有极强的抗打击能力，也有极强的扩张惰性——它不会主动吞并其他势力，但也极难被根除。</div></div>
+      </div>
+      <h3>内部角色分级</h3>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">账房</span><div class="truth-text">最小经营单位。拥有骨刻资源、床签材料、名庭关系网、染奴池。一个账房通常由1-2名赎籍师主导。</div></div>
+        <div class="truth-layer"><span class="truth-label">赎籍师</span><div class="truth-text">核心操作者。掌握嫁染实操技术——骨刻伪造、床签嫁接、名条替换、窗口选择。每个赎籍师的风格差异极大。</div></div>
+        <div class="truth-layer"><span class="truth-label">养渗人</span><div class="truth-text">负责培育染奴——喂养、训练、调整骨相与名音。养渗人往往曾是染奴本身或出身灰蜕公社。</div></div>
+        <div class="truth-layer"><span class="truth-label">追奴/催债</span><div class="truth-text">负责染奴押运、逃跑回收、催缴欠债。最外层的武装力量。</div></div>
+      </div>
+      <div class="quote">赎籍会没有总坛，没有教主，没有圣典。它的"总部"是每个账房里那张堆满名条和骨刻工具的桌子。端掉一个账房，另一张桌子会在别处重新摆起来。</div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-philosophy',
+    num: 'A10-7',
+    title: '哲学内核：赎籍会是神胎的反讽镜像',
+    sub: '神胎吃人，赎籍会帮人逃吃——但逃吃的人最终变得更适合被吃',
+    summary: '赎籍会的存在对神胎来说既是损失也是收益：损失是它帮猎物逃掉了一次收割，收益是它帮神胎完成了筛选——染奴替代高晦染者后被神胎吃掉，逃脱的客户带着嫁痕变得更容易被追踪、更容易被第二次收割。赎籍会的本质不是反神胎势力，而是神胎免疫系统里一个延迟回收的环节。',
+    content: `
+      <p class="section-desc">赎籍会不是神胎的敌人，而是神胎免疫系统的寄生环节——它在帮部分猎物逃跑的同时，把这些猎物标记得更清楚，方便神胎在下一轮精准回收。</p>
+      <div class="card danger"><div class="card-body"><span class="keyword">核心反讽：</span>赎籍会帮人"逃吃"——但逃吃的人最终变得更适合被吃。因为嫁痕让他们在系统底层被标记，下一次黑潮来时，他们是优先被定位的目标。赎籍会延长了客户的寿命，但降低了客户最终逃脱的可能性。</div></div>
+      <h3>三层讽刺</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">第一层：赎籍会需要神胎存在</h3><div class="card-body">没有晦染就没有债务，没有债务就没有生意。赎籍会不反对神胎——它反对的是"债务不能被转移"。神胎是赎籍会的上游生态。赎籍会的理想世界不是神胎消失，而是神胎继续吃人但允许逃票。</div></div>
+        <div class="card"><h3 class="card-title">第二层：赎籍会是食名教团的镜像互补</h3><div class="card-body">食名教团创造"失名者"，赎籍会回收失名者为染奴。赎籍会创造"嫁痕者"，嫁痕猎人追踪嫁痕卖给食名教团。两个敌对势力互相创造原料。它们打得很厉害，但它们的生态链是嵌套的。</div></div>
+        <div class="card" style="grid-column:1/-1"><h3 class="card-title">第三层：赎籍会替神胎完成了筛选</h3><div class="card-body">神胎需要的是"最有营养的人格"。赎籍会筛选出什么样的客户能付得起嫁染费用——往往是最有资源、最有能力、榜单最高的穿越者。这些人的"营养密度"最高。赎籍会帮他们逃掉一次，但逃掉之后他们带着嫁痕变得更可追踪、更脆弱、下一次更容易被收割。赎籍会实际上是神胎的延迟回收系统——让猎物多长一段时间、多攒一些"营养"，再定向回收。真正逃掉的（彻底离开无光域的），不是赎籍会的客户。</div></div>
+      </div>
+      <div class="quote">赎籍会不是反神胎的势力。它是神胎免疫系统里一个延迟回收的环节——帮猎物多活一季，再精准标记回收。赎籍会最大的谎言不是它的伪证，而是它告诉客户"你逃掉了"。</div>
+    `,
+  },
+  {
+    id: 'antagonist-redemption-firewall',
+    num: 'A10-8',
+    title: '防火墙自检：赎籍会与反派六律',
+    sub: '它能通过"每个反派都说出一部分真相"这道检验吗？',
+    summary: '赎籍会是否符合无光域反派六律的检验。第一律：确实说出一部分真相——"晦染是债务"在无光域的运作逻辑下成立。第二律：代表一种生存策略——替罪。第三律：绝对化——不是替罪可被允许，而是"一切都可以被替"。第四律：很有用——它确实能让人活下来。第五律：主角不能靠否认战胜它——主角必须回答"如果一个人的债务必须有人背，凭什么不能转移给更该背的人"。第六律：终局不是消灭——赎籍会的逻辑不会消失，方舟也一样面临"谁的债谁背"的问题。',
+    content: `
+      <p class="section-desc">赎籍会是否符合反派六律的检验——如果有一条不满足，这个势力就是失败的。</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">第一律：反派必须说出一部分真相</span><div class="truth-text">通过。在无光域中，晦染确实可以理解为债务——是神胎的采样权重。而且"债务可以被转移给别人背"确实是某些现实经济体系（债务继承、资产划转）的基本操作。赎籍会抓住了一条真实的经济逻辑。</div></div>
+        <div class="truth-layer"><span class="truth-label">第二律：每个反派都代表一种生存策略</span><div class="truth-text">通过。替罪——把一个人的不幸转移给另一个人来承受。这套逻辑在任何有资源稀缺的社会中都存在。赎籍会让生存变得不公平，但它确实让有些人活了下来。</div></div>
+        <div class="truth-layer"><span class="truth-label">第三律：反派的罪不是错误，而是绝对化</span><div class="truth-text">通过。赎籍会的绝对化不是"替罪可以被允许"，而是"一切都可以被替"。当一条名条上的债可以被替换，接下来就是名字、身份、梦、床——最终没有什么不可替换。赎籍会的危险不在于它做假账，而在于它教人相信"任何东西都可以从你身上剥离"。</div></div>
+        <div class="truth-layer"><span class="truth-label">第四律：反派越有用，越危险</span><div class="truth-text">通过。赎籍会真的能让人活下去。一个临染边缘的高晦染者，如果没有赎籍会，下一轮黑潮大概率被收割。赎籍会给了一条活路——有代价、有嫁痕、有染奴替他死，但确实是一条活路。</div></div>
+        <div class="truth-layer"><span class="truth-label">第五律：主角不能靠否认战胜他们</span><div class="truth-text">通过。主角无法简单地说"替罪是错的"。因为方舟本身就是一个大型的"谁上船谁留下"的筛选——本质上也在决定谁值得被救。赎籍会会质问主角：你说替罪不对，但你的方舟床位有限，那谁替你留在无光域等死？主角必须回答"替罪和筛选不是同一件事"，而且必须拿出一个不是"假装公平"的方案。</div></div>
+        <div class="truth-layer"><span class="truth-label">第六律：终局不是消灭所有反派</span><div class="truth-text">通过。赎籍会的逻辑不会因为方舟出走或神胎分娩而消失。"能不能把一些东西转给别人扛"是人类在任何环境中都会面对的问题。方舟内部一样会出现"谁的生存资源可以转给更需要的人"的争论。赎籍会代表的替罪逻辑是文明永远需要面对的问题，不是在终局被一刀砍死的怪物。</div></div>
+      </div>
+      <div class="quote">赎籍会不是这本书里最可恶的势力。它甚至不是最危险的。但它是最难反驳的——因为它做的事，方舟也在做：决定谁活下去，谁替别人死。</div>
+    `,
+  },
+];
