@@ -241,4 +241,42 @@ export const deepQuestions = [
     lastChecked: '2026-06-14',
     notes: '',
   },
+  {
+    id: 'dq-outer-abyss-cosmology',
+    status: 'resolved',
+    priority: '高',
+    category: '外渊与宇宙结构',
+    title: '外渊嵌套结构——残响层/碎壳层/空巢层/渊隙层/远星海',
+    summary: '【已由 D2 外渊嵌套宇宙学(deep-logic #24) 回复】外渊不是均匀虚空，而是五层嵌套的消化残骸堆积区：残响层(神胎消化废气/回声带/最活跃) → 碎壳层(上一轮失败文明遗骸/旧灯旧门旧梦旧榜残骸/未完成意图仍在代谢) → 空巢层(更古老神胎失败空壳/已死透但有结构启示) → 渊隙层(向远星海的破碎过渡/晦能稀释/离域症发作/戒断层) → 远星海(是否真实存在无定论/方舟派的希望天花板/可能不存在)。外渊双叉深化：入侵污染不是偶然，而是外渊本身就是旧残骸沉积场——任何离开者必然携带历代失败者的回声。',
+    detail: `
+      <p class="section-desc">【已由 deep-logic #24 外渊嵌套宇宙学 完整落地】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">核心定位</span><div class="truth-text">外渊不是"无光域外面"，而是"无光域胎膜外层的消化副产品堆积区"——代谢系统无法吸收、无法排出、无法再消化的残余物沉积空间。</div></div>
+        <div class="truth-layer"><span class="truth-label">五层嵌套结构</span><div class="truth-text">①残响层(紧贴胎膜/消化废气排放区/无主残响可补全人格) → ②碎壳层(上一轮四大失败文明遗骸堆积/未完成意图仍在代谢) → ③空巢层(更古老神胎失败后的空壳/已死透但提供出走路线启示) → ④渊隙层(晦能稀释/离域症发作/"断奶"层/系统几乎不可用) → ⑤远星海(希望天花板/可能不存在)</div></div>
+        <div class="truth-layer"><span class="truth-label">叙事意义</span><div class="truth-text">出走不是"离开"而是"穿过历代失败者的墓园"。空巢层证明无光域不是唯一的消化系统——外渊是别的消化系统的前厅。出走的伦理权重改变：从一个消化系统跳进另一个的残骸堆积区。</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-17',
+    notes: '已完成 deep-logic.js #24 的完整编写。',
+  },
+  {
+    id: 'dq-dead-political-status',
+    status: 'resolved',
+    priority: '高',
+    category: '存在与伦理',
+    title: '死者群体地位——梦存/名存/骨存',
+    summary: '【已由 D2 死者群体地位(deep-logic #25) 回复】在无光域死亡不是存在的终结而是存在形式的切换。死者通过三种方式继续"存在"：梦存(梦腐层人格残留/有结构无自我/可被梦葬安息)、名存(名册上未删的名字/可被食名教团调用身份/无法说"不")、骨存(骨骸中沉积记忆碎片/骨刻语起源/裂视可读)。死者是无政治声音但可被动员的群体。核心伦理：活人凭什么替不能说"不"的人做决定？',
+    detail: `
+      <p class="section-desc">【已由 deep-logic #25 死者群体地位 完整落地】</p>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">三种存在形式</span><div class="truth-text">①梦存——梦腐层人格残留，像被消化一半的蛋白质片段，有结构有反应但无完整自我意识。壳眠裔的梦葬技术让其"安息"而非"游荡"。②名存——名册上未删的名字，食名教团可调用死者身份做决定签契约。脱册制的底层逻辑就是防止死后名字被利用。③骨存——骨骸中沉积的记忆碎片，最古老的骨刻是死者骨骸在正确边界位置(门槛/床底/井壁/墙基)自然形成的纹路，无自我但可被裂视读取。</div></div>
+        <div class="truth-layer"><span class="truth-label">为什么不算"不存在"</span><div class="truth-text">边界逻辑：存在由边界集合定义，死后部分边界仍维持(名册社会边界、梦境自我边界、骨骸记忆边界)。代谢逻辑：死者是被"消化到一半"的物质，保留死者边界对神胎代谢系统有功能价值(名字是社会索引位，梦境是情绪沉积场)。</div></div>
+        <div class="truth-layer"><span class="truth-label">伦理问题</span><div class="truth-text">死者无声音——被代言、被征用、被解释，无法说"不"。梦腐碎片可大规模激活梦存人格，食名教团可通过名册用死者名义行动。土著制度(梦葬/缄封葬/骨葬)的核心目的不是"安息"而是"防止边界残留被神胎重新激活"。核心伦理：你凭什么替一个不能说"不"的人做决定？活人替死者做的每一个决定都是活人自己的选择，不是死者的。</div></div>
+      </div>
+    `,
+    firstIdentified: '2026-06-14',
+    lastChecked: '2026-06-17',
+    notes: '已完成 deep-logic.js #25 的完整编写。',
+  },
 ]

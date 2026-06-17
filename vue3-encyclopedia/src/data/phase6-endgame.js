@@ -388,92 +388,62 @@ export const phase6Endgame = [
   {
     id: 'endgame-break-fetus',
     num: 'E5',
-    title: '破胎终局 · 杀死怪物，也可能杀死住在怪物体内的世界',
-    sub: '终止神胎诞生，但无光域生态基础可能随之崩溃',
-    summary: '破胎终局是通过摧毁神胎核心、终止临产过程，使神胎无法诞生。这不是普通击杀——因为神胎就是无光域晦能生态的中心，破胎意味着强行切断世界的代谢源头。收益：终止神胎诞生、系统崩解、黑潮根源削弱、反派神胎派失去信仰基础。代价：无光域生态可能崩溃（晦植枯死、骨麦歉收、晦兽失控、井脉干涸、庇护所活化衰退）、晦民文明可能同毁、大量死者无法安置、外部未必存在、道德反噬。',
+    title: '破胎终局 · 你们都在设计更好的笼子',
+    sub: '停循环 ≠ 炸世界。终止神胎代谢，同时接受幸存者将活在一片垂死的废墟上',
+    summary: '破胎不是"杀死神胎"，而是"终止神胎代谢"——让无光域的晦能循环停止，而非暴力摧毁。收益：彻底终结筛选/吃人/黑潮系统、神胎无法诞生。代价：生态崩溃、晦民文明同毁。但真正的伦理问题是——破胎是所有路线中最"干净"也最"不负责任"的选择：你不是在建设更好的未来，你只是拒绝继续参与这场养殖。锚句："你们都在设计更好的笼子。"',
     content: `
       <p class="section-desc">
-        破胎终局是通过摧毁神胎核心、终止临产过程，使神胎无法诞生。这不是普通击杀——因为神胎就是无光域晦能生态的中心，破胎意味着强行切断世界的代谢源头。
+        破胎不是"杀死神胎"。杀死意味着确认神胎是"一个可以被杀死的生命"——但这个判断本身已经预设了神胎有意图、有生命权、可以被谋杀。破胎应当是：<span class="keyword">终止神胎代谢</span>。
       </p>
-      <h3>路线定义</h3>
+      <div class="quote">"你们都在设计更好的笼子。"<br>——破胎者留给其他三条路线的遗言</div>
+      <h3>路线定义：停循环，非炸世界</h3>
       <div class="card">
         <div class="card-body">
-          <p>在神胎临产的最后阶段，集中所有可用的火力、晦能技术、系统权限和庇护所力量，摧毁神胎的核心结构。目标是让神胎在诞生前死亡——但"杀死一个尚未完全出生的世界"的后果远超战术胜利。</p>
+          <p>破胎的核心不是暴力摧毁神胎核心，而是：<strong>切断神胎代谢所依赖的晦能循环</strong>。具体方式可能包括：</p>
+          <ul style="list-style:none;padding-left:0;">
+            <li>🔻 关闭黑潮周期（中断神胎的进食/排泄/重排）</li>
+            <li>🔻 解除死者向晦能的回流（终止名册→晦能的转化）</li>
+            <li>🔻 停止系统翻译（剥离神胎的认知接入层）</li>
+            <li>🔻 让神胎"窒息"于自己的代谢废物中</li>
+          </ul>
+          <p style="margin-top:12px;">结果是：神胎不会"死亡"——因为它从未真正活过。它只是停止发育、停止代谢、停止生长为一个统一意识。它变成一具永远不会诞生的、仍在微微搏动的胎体化石。</p>
         </div>
       </div>
-      <h3>支持者</h3>
+      <h3>破胎者画像</h3>
       <div class="grid-2">
-        <div class="card">
-          <div class="card-title">破胎极端派</div>
-          <div class="card-body">认为神胎是一切问题的根源，只有彻底摧毁才能让无光域"恢复"正常</div>
-        </div>
-        <div class="card">
-          <div class="card-title">玩家复仇者</div>
-          <div class="card-body">在无光域失去队友或重要资源的玩家，视神胎为终极敌人</div>
-        </div>
-        <div class="card">
-          <div class="card-title">旧门逃亡失败者残响</div>
-          <div class="card-body">曾试图通过旧门逃离但失败的人格残响，将愤怒指向神胎</div>
-        </div>
-        <div class="card">
-          <div class="card-title">反系统组织</div>
-          <div class="card-body">认为神胎是玩家系统的终极形态，摧毁神胎就是摧毁系统控制</div>
-        </div>
-        <div class="card">
-          <div class="card-title">饥饿教受害者</div>
-          <div class="card-body">被饥饿碎片直接伤害的人群，要求彻底消灭饥饿的源头</div>
-        </div>
+        <div class="card"><h3 class="card-title">不是复仇者，是喊停的人</h3><div class="card-body">破胎者不认为"杀死神胎"是正义的执行。他们只是再也无法参与这场持续了不知多少代的循环。他们不恨神胎（神胎没有意图），他们恨的是"所有人都在为如何在笼子里住得更舒服而争论"。</div></div>
+        <div class="card"><h3 class="card-title">不是失败者，是拒绝者</h3><div class="card-body">破胎者不是无力建设新世界的人。恰恰相反，他们往往是最有能力建设的人——但他们在某个时刻意识到：无论建设得多好，只要还在无光域内，一切建设都是在为神胎的临产做准备。于是他们选择停止。</div></div>
+        <div class="card"><h3 class="card-title">是其他三条路线的良心注解</h3><div class="card-body">破胎者不拥有独立的"哲学篇章"。他们的存在意义是让其他三条路线的支持者无法完全安心于自己的选择。成神者知道有人在说"你在设计更好的笼子"。留域者知道有人在说"你舍不得的不是家，是习惯被吃"。出走者知道有人在说"你带走的希望是用没上船的人垫起来的"。</div></div>
       </div>
       <h3>收益</h3>
       <div class="grid-2">
-        <div class="card">
-          <div class="card-title">终止神胎诞生</div>
-          <div class="card-body">世界不会获得一个统一的神明意识</div>
-        </div>
-        <div class="card">
-          <div class="card-title">系统崩解</div>
-          <div class="card-body">玩家系统失去神级后端，不再能够强制干预文明进程</div>
-        </div>
-        <div class="card">
-          <div class="card-title">黑潮根源削弱</div>
-          <div class="card-body">黑潮的核心驱动源被切断，爆发频率可能降低</div>
-        </div>
-        <div class="card">
-          <div class="card-title">反派信仰基础瓦解</div>
-          <div class="card-body">崇拜神胎的派系失去信仰对象</div>
-        </div>
+        <div class="card"><h3 class="card-title">彻底终结筛选</h3><div class="card-body">神胎不再采样、筛选、整合人格——再无候选池，再无"被选中的命运"。</div></div>
+        <div class="card"><h3 class="card-title">系统崩解</h3><div class="card-body">玩家系统失去晦能后端支持，不再能干预现实——玩家第一次真正"自由"（也第一次真正孤立）。</div></div>
+        <div class="card"><h3 class="card-title">黑潮停止</h3><div class="card-body">不再有周期性吞噬/排泄/重排——但也意味着晦能循环终止，世界进入代谢停滞。</div></div>
+        <div class="card"><h3 class="card-title">吃人机制终止</h3><div class="card-body">无光域不再"需要"穿越者的恐惧和死亡作为燃料。但已有的死者无法被安置。</div></div>
       </div>
       <h3>代价</h3>
       <div class="grid-2">
-        <div class="card danger">
-          <div class="card-title">生态崩溃</div>
-          <div class="card-body">晦植枯死、骨麦歉收、晦兽失控、井脉干涸、庇护所活化衰退——整个无光域的晦能生态链以神胎为代谢核心，破胎意味着切断所有生命的能量来源</div>
-        </div>
-        <div class="card danger">
-          <div class="card-title">晦民文明同毁</div>
-          <div class="card-body">晦民的经济、农业、葬制、法律、建筑都建立在晦能生态之上，生态崩溃意味着文明基础瓦解</div>
-        </div>
-        <div class="card danger">
-          <div class="card-title">死者无法安置</div>
-          <div class="card-body">名册系统和死者分流依赖神胎的代谢结构，破胎后大量未安置死者可能回流现实</div>
-        </div>
-        <div class="card danger">
-          <div class="card-title">外部未必存在</div>
-          <div class="card-body">破胎后的人将生活在一个垂死的世界中，而外部世界未必比无光域更适合生存</div>
-        </div>
-        <div class="card danger">
-          <div class="card-title">道德反噬</div>
-          <div class="card-body">亲手杀死一个尚未完全出生的世界——即使它吃人——这种暴力本身会腐蚀执行者的人格</div>
-        </div>
+        <div class="card danger"><h3 class="card-title">生态慢性死亡</h3><div class="card-body">晦植枯死、骨麦歉收、晦兽失控、井脉干涸、庇护所活化衰退——不是爆炸，是缓慢窒息。幸存者将活在一个持续衰败的世界中。</div></div>
+        <div class="card danger"><h3 class="card-title">晦民文明毁灭</h3><div class="card-body">晦民的经济、农业、葬制、法律、建筑都建立在晦能生态之上。代谢停止意味着文明基础瓦解——没有替代方案。</div></div>
+        <div class="card danger"><h3 class="card-title">死者回流</h3><div class="card-body">名册系统和死者分流依赖神胎代谢。破胎后大量未安置死者可能回流现实——"死者从梦中走出来"不是比喻。</div></div>
+        <div class="card danger"><h3 class="card-title">外部未必存在</h3><div class="card-body">无光域外是否有一个宜居世界——破胎者不知道，也不假装知道。他们选择停止不是因为找到了更好的去处，而是因为无法继续。</div></div>
+        <div class="card danger"><h3 class="card-title">幸存者的质问</h3><div class="card-body">"你终止了吃人的循环，可你让我们吃什么？"这是破胎路线永远无法回答的问题。破胎者没有权利替所有人选择死亡——即使那不是立即的死亡，而是缓慢的衰败。</div></div>
       </div>
       <h3>伦理问题</h3>
       <div class="card">
         <div class="card-body">
-          <p>如果一个世界本身建立在吃人之上，摧毁它是否正义？破胎路线的伦理核心是：即使一个世界是"恶"的，生活在这个世界中的大多数人是无辜的。摧毁世界的暴力不会只落在"恶"上，也会落在每一个依赖这个世界生存的普通人身上。</p>
+          <p>破胎的伦理核心不是"杀死一个尚未出生的世界是否正义"，而是：</p>
+          <p><strong>一个人有没有权利替所有人选择停止？</strong></p>
+          <p>破胎者会说：我没有替你们选择停止。我只是选择不再参与。如果循环因此停止——那是循环本身太脆弱，不是我的责任。</p>
+          <p>反对者会说：你明知无光域的一切都依赖这个循环。你的"不参与"不是个人选择，是对整个生态系统宣判死刑。你没问过骨麦、没问过井、没问过那些还在做梦的孩子。</p>
+          <p><span class="keyword">这道题的可怕之处在于：两边都对。</span></p>
         </div>
       </div>
       <h3>主角的态度</h3>
-      <p>主角通常不选择破胎，不是因为不忍心，而是因为破胎没有回答真正的问题。杀死神胎只是消灭了症状，但没有为幸存者提供新的生存基础。破胎是终局的否定形式——它告诉世界"你不该成为什么"，却没有告诉世界"你可以成为什么"。</p>
+      <p>主角理解破胎者。在裂视的某些深度，他甚至同意他们。但他最终不会选择破胎——不是不忍心，而是因为破胎的伦理负担是他无法替他者承担的。破胎者的价值在于：当主角在建设方舟、谈判留域协议、或抵抗成神诱惑时，破胎者始终站在他视野边缘，低声重复那句无法被反驳的话：</p>
+      <div class="quote-center">"你们都在设计更好的笼子。"</div>
+      <p style="margin-top:12px;">主角的成熟不在于证明破胎者是错的，而在于承认那句话是真的——但仍然选择继续建设。</p>
     `
   },
 

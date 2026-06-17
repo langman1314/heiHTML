@@ -200,55 +200,63 @@ export const phase6EndgameDebate = [
     id: 'endgame-debate-break-fetus',
     num: 'E14',
     title: '破胎终局 · 反对者补完 · 你举起的刀，落下时分不清神和孩子',
-    sub: '对所有碎片的否定，但连带杀死母巢、门脉、梦腐所维系的一切',
-    summary: '破胎终局的反对者不是为神胎辩护，而是为生活在神胎体内的普通人辩护。他们承认神胎吃人，但指出：杀死症状很爽，可幸存者要住在你制造的废墟里——他们没吃过人。破胎的动机中永远混杂着对吃人世界的恨和对无辜者的悲悯。纯粹的正义在破胎中不存在。',
+    sub: '破胎不是杀死神胎而是停循环——但停循环的伦理负担比杀死更重',
+    summary: '破胎的反对者不是为神胎辩护，而是为生活在神胎体内的普通人辩护。他们承认神胎吃人，但指出：杀死症状很爽，可幸存者要住在你制造的废墟里——他们没吃过人。破胎的真正问题不是\"能不能杀\"，而是\"你有没有权利替所有人选择停止\"。破胎者是其他所有路线的良心注解——\"你们都在设计更好的笼子\"不是破胎者的哲学，而是对每条路线的终局拷问。',
     content: `
-      <p class="section-desc">
+      <p class=\"section-desc\">
         破胎终局的反对者不是为神胎辩护，而是为生活在神胎体内的普通人辩护。他们承认神胎吃人，但指出：杀死症状很爽，可幸存者要住在你制造的废墟里——他们没有吃过人。
       </p>
+      <div class=\"quote\">\"你们都在设计更好的笼子。\"<br>——破胎者留给其他三条路线的遗言</div>
       <h3>对应碎片</h3>
-      <div class="card">
-        <div class="card-body">
-          对所有碎片的否定——尤其针对饥饿碎片的复仇，但连带杀死<span class="keyword">母巢</span>、<span class="keyword">门脉</span>、<span class="keyword">梦腐</span>所维系的一切。破胎的利刃分不清"该杀"和"不该杀"。
+      <div class=\"card\">
+        <div class=\"card-body\">
+          对所有碎片的否定——尤其针对饥饿碎片的复仇，但连带杀死<span class=\"keyword\">母巢</span>、<span class=\"keyword\">门脉</span>、<span class=\"keyword\">梦腐</span>所维系的一切。破胎的利刃分不清\"该杀\"和\"不该杀\"。<br><br>
+          更准确地说：破胎不是\"杀死\"神胎——神胎不是一个可以被杀死的生命。破胎是<span class=\"keyword\">终止代谢</span>。但终止代谢意味着世界缓慢窒息，而非瞬间爆炸。这比\"杀死\"更残忍：幸存者将看着自己的世界一天天死去。
         </div>
       </div>
       <h3>可被反驳的伦理质问</h3>
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">正方 · 复仇者</div>
-          <div class="card-body">
-            <p>"它吃了我女儿。你跟我谈'生态依赖'？依赖一个吃人的东西活着，本身就是耻辱。"</p>
-            <p style="margin-top: 0.5rem; color: var(--text-dim);">——在无光域失去一切的人，他们的愤怒真实到无法被道理安抚</p>
+      <div class=\"grid-2\">
+        <div class=\"card\">
+          <div class=\"card-title\">正方 · 破胎者</div>
+          <div class=\"card-body\">
+            <p>\"你们都在设计更好的笼子。成神是在设计一个温柔的暴君，留域是在设计一个被驯化的饥饿，方舟是在设计一个逃往他处的播种机。我不设计笼子。我选择停止。\"</p>
+            <p style=\"margin-top: 0.5rem; color: var(--text-dim);\">——拒绝再参与这场循环的人。他们的正确之处在于：三条路线确实都在笼子内解决问题。</p>
           </div>
         </div>
-        <div class="card danger">
-          <div class="card-title">反方 · 主角</div>
-          <div class="card-body">
-            <p>"我懂你的恨。但你举起的刀，落下时分不清神和孩子。杀死症状很爽，可幸存者要住在你制造的废墟里——他们没吃过人。"</p>
+        <div class=\"card danger\">
+          <div class=\"card-title\">反方 · 主角</div>
+          <div class=\"card-body\">
+            <p>\"你说得对，我们都在设计笼子。但你的'停止'——不是你在停止，是你在替所有人停止。骨麦没同意停止，井没同意停止，那些还在做梦的孩子没同意停止。你一个人，凭什么替整个生态系统按下暂停键？\"</p>
           </div>
         </div>
+      </div>
+      <h3>深化：停循环的三层伦理难题</h3>
+      <div class=\"truth-stack\">
+        <div class=\"truth-layer\"><span class=\"truth-label\">第一层 · 替他人选择死亡</span><div class=\"truth-text\">破胎者的个人选择是个人的——但破胎不是一个只影响个人的行为。当晦能循环停止，依赖循环的一切都会缓慢死去。破胎者可以接受自己的死亡，但不能替骨麦农、井脉技师和他们的孩子接受死亡。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">第二层 · 破胎之后无建设</span><div class=\"truth-text\">成神有神国，留域有协议，方舟有船。破胎之后有什么？废墟。破胎者不是建设者，而是喊停者。但喊停之后，幸存者面对的不是自由，是无支持系统的死亡。</div></div>
+        <div class=\"truth-layer\"><span class=\"truth-label\">第三层 · 破胎者不需要被反驳</span><div class=\"truth-text\">这是最棘手的一层：破胎者说的\"你们都在设计更好的笼子\"——这句话是无法被反驳的。因为它是真的。三条路线确实都是在笼子内部解决问题。破胎者不拥有错误的答案，他们拥有的是一个无法被实践的真理。而一个无法被实践的真理，对于必须活下去的人来说，等于没有用。</div></div>
       </div>
       <h3>反对者阵营</h3>
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-title">大多数晦民</div>
-          <div class="card-body">他们的生存完全依赖晦能生态链，破胎等于毁灭他们的整个世界</div>
+      <div class=\"grid-2\">
+        <div class=\"card\">
+          <div class=\"card-title\">大多数晦民</div>
+          <div class=\"card-body\">他们的生存完全依赖晦能生态链，破胎等于毁灭他们的整个世界</div>
         </div>
-        <div class="card">
-          <div class="card-title">留域派</div>
-          <div class="card-body">选择与神胎共生的人，无法接受毁灭性的解决方案</div>
+        <div class=\"card\">
+          <div class=\"card-title\">留域派</div>
+          <div class=\"card-body\">选择与神胎共生的人，无法接受毁灭性的解决方案</div>
         </div>
-        <div class="card">
-          <div class="card-title">方舟派</div>
-          <div class="card-body">认为破胎是"最懒惰的终局"——杀死世界比建设新世界容易得多</div>
+        <div class=\"card\">
+          <div class=\"card-title\">方舟派</div>
+          <div class=\"card-body\">认为破胎是\"最懒惰的终局\"——停止世界比建设新世界容易得多</div>
         </div>
-        <div class="card">
-          <div class="card-title">生态依赖者</div>
-          <div class="card-body">骨麦农、井脉技师、晦能工匠——他们的生计与神胎的代谢不可分割</div>
+        <div class=\"card\">
+          <div class=\"card-title\">生态依赖者</div>
+          <div class=\"card-body\">骨麦农、井脉技师、晦能工匠——他们的生计与神胎的代谢不可分割</div>
         </div>
       </div>
-      <div class="quote">
-        "杀死症状很爽，可幸存者要住在你制造的废墟里——他们没吃过人。"
+      <div class=\"quote\">
+        \"破胎者正确的不是答案，而是提问。他让其他所有人在庆祝胜利时，能听见一句他们无法反驳的话——'你们都在设计更好的笼子。'\"
       </div>
     `
   },
