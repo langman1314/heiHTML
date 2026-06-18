@@ -648,4 +648,106 @@ export const deepLogic = [
       <div class="quote-center">在无光域，最容易被遗忘的伦理问题就是——<br>你凭什么替一个不能说"不"的人做决定？<br>活人替死者做的每一个决定，都是活人自己的选择，不是死者的。</div>
     `,
   },
+  {
+    id: 'plant-axiom',
+    num: '26',
+    title: '晦植公理系统：奇异度公式 D = C × A',
+    sub: '一阶公式统一解释诡异度分层、谱系分化、驯化边界、分类判据和认知光谱',
+    summary: '一株晦植的奇异度 D 不是层的绝对函数，而是两个量的乘积：D = 浓度 C × 载体亲和 A。这一公式将浓度（五层胎腔）、载体类型（门/床/名/碗/梦/镜/声/共识）、谱系律、驯化可逆性、分类判据、认知敏感度光谱全部统一到同一个可推演框架中。配套三条公理（谱系律/正交律/回流律）和两个工具（晦敏度0-4光谱/四步自动归类决策树）。',
+    content: `
+      <h3>核心公式</h3>
+      <div class="card"><div class="card-body" style="text-align:center;font-size:20px;font-family:monospace;color:#d7b56d;padding:20px;">
+        D = C × A
+      </div></div>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">C · 浓度因子</h3><div class="card-body">所在层的晦能浓度。既有设定：灰醒低（C≈1）→ 骨沉中（C≈2-3）→ 梦腐/门脉高（C≈4-5）→ 胎海过饱和（C≈6-7）。承接 phase1 第6条"浓度越高，认知越容易成形"。</div></div>
+        <div class="card"><h3 class="card-title">A · 载体亲和系数</h3><div class="card-body">该植物的"原型"是走物质代谢通道（腐殖/水/矿/纤维→A≈0），还是贴边界载体（门/床/名/碗/梦/镜/声/共识→A>0）。A>0 赋予植物对认知的响应能力。</div></div>
+      </div>
+      <div class="quote">一株植物越靠近门床名碗，它就越"诡"——不是因为层深，是因为它的原型与人类社会的边界定义绑在一起。灰醒的应声铃花比骨沉的骨纹藤更诡，因为铃花亲和声和名字（A>0），藤只亲和纤维（A≈0）。</div>
+
+      <h3>公理一 · 谱系律：跨层移植只改 C，不改 A</h3>
+      <div class="grid-2">
+        <div class="card"><h3 class="card-title">A>0 谱系（旧梦藻系/应声系）</h3><div class="card-body">下行移植 C↑ → D↑，诡属性线性强化。上行移植 C↓ → D↓，诡属性休眠/回归务实。这才是"越深越诡"的精确边界——只在有边界亲和力的谱系内成立。</div></div>
+        <div class="card"><h3 class="card-title">A≈0 谱系（粮/水/材/燃系）</h3><div class="card-body">下行移植只会变得更极端地务实（更毒、更难种、更高产），永远不诡。饱潮草在胎海最深处的过饱和区也只是自燃——不接话、不被共识改变。她是 A=0 在最高 C 下的活证明。</div></div>
+      </div>
+      <div class="card"><div class="card-body"><strong>驯化即压制，而非根除：</strong>上行移植+持续净化可使 C 跌破"认知成形阈值"→诡属性休眠。但边界守恒不允许 A 消失（phase1 功能残留原则），A 仍在，只断了燃料。一旦重回高浓度区或遇黑潮 C 骤升，诡属性瞬间返祖。驯化诡植物与晦染退染遵循同一条守恒律——每一株驯化的诡植物都是定时炸弹。</div></div>
+
+      <h3>公理二 · 正交律：农业级与层系是正交矩阵</h3>
+      <div class="card"><div class="card-body">五层胎腔测量浓度轴 C（晦能多浓/纵深），农业四级测量可控性轴（人能否稳定耕种/威胁烈度）。两套尺子正交而非对应，构成矩阵而非映射。</div></div>
+      <div class="card"><div class="card-body"><strong>关键修正——深层级补三个正交亚型：</strong>现有四级只测量黑潮烈度，无法描述梦腐层和门脉层的威胁（不是潮，是梦相和空间相）。建议在"深层级"下增设：</div></div>
+      <div class="grid-3">
+        <div class="card"><h3 class="card-title">潮深（骨沉深部）</h3><div class="card-body">威胁 = 黑潮烈度。典型作物：深层墨菌、久储果、壳米母穗。</div></div>
+        <div class="card"><h3 class="card-title">梦深（梦腐层）</h3><div class="card-body">威胁 = 梦相溢出。典型作物：眠渊菇、清醒蓟、记水稻。</div></div>
+        <div class="card"><h3 class="card-title">门深（门脉/胎海近域）</h3><div class="card-body">威胁 = 空间重组。典型作物：归途豆、锚壳藤、规尘蓬。</div></div>
+      </div>
+      <div class="card"><div class="card-body"><strong>层间级变实例——同一作物在不同层的农业级：</strong><ul style="margin:0;padding-left:18px;"><li>双季骨麦：灰醒=避潮 → 骨沉=小潮 → 骨沉深部=近大潮。一株作物的农业级随层迁移而变化。</li><li>油籽藤：灰醒=避潮，移骨沉则 C↑ 需防护=小潮。</li><li>解染苗（049）：只在门脉=门深级存在，无法上移——药效依赖高 C，移到灰醒即失效。这解释了退染耗材为何稀缺低效：有效性被绑死在最危险的层。</li></ul></div></div>
+
+      <h3>公理三 · 回流律：食物网不是金字塔，是环</h3>
+      <div class="card"><div class="card-body">晦植为生产者的食物网不是底→顶的金字塔，而是 phase1 代谢六阶段的生态版闭环。能量层层上行，在胎海被神胎吸收=回流，经黑潮重排再下放回灰醒。</div></div>
+      <div class="card"><div class="card-body"><pre style="color:#c8c4b8;font-size:12px;line-height:1.6;">
+灰醒生产者(灰苔/灰穗稷/孢风草)
+   ↓ 喂
+0级孢族→食草/食腐晦兽
+   ↓ 死亡/捕食
+腐殖池 ←─────────────┐
+   ↓ 骨粉                │ 闭环
+骨麦→[骨沉材料循环]      │
+腐殖蕨→腐殖池→骨麦→骨纹藤(死废屋)→新建筑→新死亡→腐殖蕨
+   ↓ 晦兽尸→晦晶→能源支链
+[梦腐:梦能转移链]
+接梦藻/共梦莲产"梦能" → 被壳眠裔/梦医/梦掘人采食 → 被梦腐型晦诡吞噬
+[门脉:规则尘经济]
+规尘蓬→规则尘→门路贸易
+   ↓
+[胎海:神胎吸收 = 回流口]
+第一株/未诞花/缄名莲 = 环的接缝
+   ↓ 黑潮重排, 下放
+回到灰醒生产者</pre></div></div>
+      <div class="quote">胎海层的植物不是"顶端捕食者"，而是回流口。过饱和区中植物不再被吃，而是直接充当神胎代谢的器官，把整环上行能量卷回神胎。每株植物都是这个大环上某一段的功能器官——位置由代谢职能决定。</div>
+
+      <h3>工具一 · 晦敏度 0-4 光谱（对齐晦诡 0-7 级）</h3>
+      <div class="card"><div class="card-body">诡植物是晦诡的苗圃，其危险程度由它能催化到第几级晦诡决定。晦敏度不另立新尺，直接挂既有晦诡 0-7 级体系：</div></div>
+      <div class="card"><div class="card-body">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;">
+          <tr style="border-bottom:1px solid #2a2736;"><th style="padding:8px;text-align:left;color:#d7b56d;">晦敏度</th><th style="padding:8px;text-align:left;color:#d7b56d;">A 测试结果</th><th style="padding:8px;text-align:left;color:#d7b56d;">对齐晦诡级</th><th style="padding:8px;text-align:left;color:#d7b56d;">典型种</th></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">0 务实</td><td style="padding:8px;">移走观察者行为不变</td><td style="padding:8px;">不催化（诡0级以下）</td><td style="padding:8px;">灰穗稷、三噎豆、测路苔、守夜花</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">1 被动反映</td><td style="padding:8px;">被动显示已存在的边界状态，不诱导</td><td style="padding:8px;">≈晦诡1级"显示器"</td><td style="padding:8px;">名根草、数瓣豆、旧姓木</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">2 主动交互</td><td style="padding:8px;">接话/反弹/补证，主动诱导补全</td><td style="padding:8px;">晦诡2-3级催化剂</td><td style="padding:8px;">应声铃花、回声蕨、晚归果</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">3 共识驱动</td><td style="padding:8px;">行为由"共识人数×情绪"定义</td><td style="padding:8px;">晦诡4-5级活体</td><td style="padding:8px;">共识菌、满座菌</td></tr>
+          <tr><td style="padding:8px;">4 收敛标本</td><td style="padding:8px;">逼近/操弄收敛律本身</td><td style="padding:8px;">晦诡6-7级的稳定标本态</td><td style="padding:8px;">未诞花、第一株、缄名莲</td></tr>
+        </table>
+      </div></div>
+      <div class="card"><div class="card-body"><strong>关键区别：</strong>晦敏4级虽对齐晦诡6-7级，但它们是稳定标本而非失控病灶——未诞花把成形无限延后、缄名莲把名字封存而非索引，主动不爆发。这正是它们珍贵的原因：是被驯住的神胎级现象。</div></div>
+
+      <h3>工具二 · 新植物自动归类决策树</h3>
+      <div class="card"><div class="card-body"><pre style="color:#c8c4b8;font-size:12px;line-height:1.6;">
+新植物 →
+① 移走所有观察者，行为变吗？
+   否 → 晦敏0（务实），完。标 粮/水/材/药/燃/纤。
+   是 → ② 依赖哪种认知行为？
+         （看/说/算/信/呼名）→ 定边界载体（门/床/名/碗/梦/镜/声/共识）
+       → ③ 依赖程度？
+             被动显示 → 晦敏1
+             主动接话/补证 → 晦敏2
+             共识定义 → 晦敏3
+             操弄收敛律 → 晦敏4
+④ 实际危险度 = 晦敏级 × 所在层浓度 C
+   (同一晦敏级，在胎海比在灰醒危险一个数量级)</pre></div></div>
+      <div class="quote">任何新种，走完这四步即自动定级、定载体、定危险度，无需逐个发明解释。</div>
+
+      <h3>现有分类微调清单（据公理复查）</h3>
+      <div class="card"><div class="card-body">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;color:#c8c4b8;">
+          <tr style="border-bottom:1px solid #2a2736;"><th style="padding:8px;text-align:left;color:#d7b56d;">编号</th><th style="padding:8px;text-align:left;color:#d7b56d;">现标</th><th style="padding:8px;text-align:left;color:#d7b56d;">建议</th><th style="padding:8px;text-align:left;color:#d7b56d;">理由</th></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">096 候胎兰</td><td style="padding:8px;">诡轻</td><td style="padding:8px;">诡轻（已补特性，成立）</td><td style="padding:8px;">补"被越多人盯蕾越多"后 A>0 成立，诡轻名副其实</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">080 验主花</td><td style="padding:8px;">诡轻</td><td style="padding:8px;">→务实（物理传感器）</td><td style="padding:8px;">移走人照样对"未断主晦能"反应，A≈0</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">075 拟食莓</td><td style="padding:8px;">诡·系统</td><td style="padding:8px;">→毒·务实</td><td style="padding:8px;">植物本身真有毒 A≈0；诡的是系统翻译，不是植物本身</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">076 满格藤</td><td style="padding:8px;">诡·系统</td><td style="padding:8px;">维持诡</td><td style="padding:8px;">主动制造虚假系统提示 A>0，真·系统型</td></tr>
+          <tr style="border-bottom:1px solid #1e1e2a;"><td style="padding:8px;">070 测路苔</td><td style="padding:8px;">务实</td><td style="padding:8px;">维持务实</td><td style="padding:8px;">A 测试通过</td></tr>
+          <tr><td style="padding:8px;">090 守夜花</td><td style="padding:8px;">务实</td><td style="padding:8px;">维持务实</td><td style="padding:8px;">物理时钟 A≈0</td></tr>
+        </table>
+      </div></div>
+      <div class="quote-center">三公理 + 一公式 + 两工具 = 晦植不再需要逐个解释，<br>每株新植物按规则归位。<br>这是设定从"列表"升级为"系统"的收敛点。</div>
+    `,
+  },
 ];

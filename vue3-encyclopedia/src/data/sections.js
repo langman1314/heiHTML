@@ -106,8 +106,13 @@ export const sections = [
         <div class="card"><h3 class="card-title">避潮作物</h3><div class="card-body">只在静晦期种植与收获，尽量避开黑潮影响。<span class="tag tag-food">静浆果</span><span class="tag tag-rule">守床草</span><span class="tag tag-rule">名刺苔</span>属于此类。安全但产量低，适合小型庇护所补充食源。</div></div>
         <div class="card"><h3 class="card-title">小潮作物</h3><div class="card-body">适应小黑潮波动，能在轻微晦能洪泛中正常生长。<span class="tag tag-food">灰苔</span><span class="tag tag-food">盲薯</span><span class="tag tag-food">腔豆</span><span class="tag tag-food">灰穗稷</span>属于此类。产量中等，是聚落日常主食来源。</div></div>
         <div class="card"><h3 class="card-title">大潮作物</h3><div class="card-body">必须利用大黑潮灌浆或成熟，静晦期反而低效甚至不生长。<span class="tag tag-food">骨麦</span><span class="tag tag-food">双季骨麦</span><span class="tag tag-food">夜脂果</span><span class="tag tag-mental">眠菇</span>属于此类。产量高但窗口紧，抢收失败意味着整个潮岁绝收。</div></div>
-        <div class="card"><h3 class="card-title">深层农业</h3><div class="card-body">在骨沉层及以下种植，晦能浓度远超地表。<span class="tag tag-build">井绳藤</span><span class="tag tag-mental">旧梦藻</span><span class="tag tag-food">深层墨菌</span>在深层能产出更高价值材料，但种植者必须直面深层污染和层间往返风险。</div></div>
+        <div class="card"><h3 class="card-title">潮深亚型</h3><div class="card-body">必须利用黑潮洪泛灌浆的深层作物，种植窗口与大黑潮锁死。<span class="tag tag-food">双季骨麦</span><span class="tag tag-food">潮后稗</span><span class="tag tag-food">骨麦</span>属于此类。收成窗口极短，抢收失败即绝收，但单产高于任何地表谷物。</div></div>
       </div>
+      <div class="grid-2" style="margin-top:18px;">
+        <div class="card"><h3 class="card-title">梦深亚型</h3><div class="card-body">利用梦腐层认知/梦境资源生长的深层作物。<span class="tag tag-mental">眠渊菇</span><span class="tag tag-mental">记水稻</span><span class="tag tag-mental">清醒蓟</span>等属于此类。种植者须具备梦层适应力，否则耕作本身即为污染源——在梦腐层种田等于每天跟自己的梦境打交道。</div></div>
+        <div class="card"><h3 class="card-title">门深亚型</h3><div class="card-body">利用门脉层规则/审批权资源的深层作物。<span class="tag tag-build">测路苔</span><span class="tag tag-build">规尘蓬</span><span class="tag tag-food">深层墨菌</span>等属于此类。种植者须掌握层间往返与门态校准技术，门潮期间必须停止一切耕作。</div></div>
+      </div>
+      <div class="card" style="margin-top:18px;"><h3 class="card-title">胎海层·不可栽培（采集/标本）</h3><div class="card-body">胎海是食物网回流口，非生产层。本层不存在"种植"，只存在一次性采集与标本登记。<span class="tag" style="background:#3a3a3a;color:#d7b56d;">核心警示</span> 任何试图"养殖"胎海产出的行为，本质是在喂养神胎——稳定的人工栽培环境=给神胎递上的标准来料，违背收敛律。<br><span class="tag" style="background:#3a3a3a;color:#d7b56d;">采集律</span> ①一次性原则，采后不可复种 ②产出多为触媒/标本而非口粮 ③登记入讯庭，不入箱庭（不可储产） ④每份标本须注明采集者与采集时相</div></div>
       <div class="card" style="margin-top:18px;"><h3 class="card-title">骨麦完整生长周期</h3><div class="card-body"><span class="keyword">21晦日</span> 静晦生长期（根系缠骨、茎秆生长，不可食）→ <span class="keyword">7晦日</span> 黑潮潮化灌浆期（吸收洪泛晦能凝成淀粉，茎秆骨化）→ <span class="keyword">2晦日</span> 封收期（黑潮末尾窗口，必须完成收割，过时茎秆过熟炸穗）＝ <span class="keyword">30晦日</span> 完整大黑潮周期。这解释了为何骨麦是主粮却永远不够吃——它一年只熟12次，且每一次收成窗口不足48晦时。</div></div>
 
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">一、粮食类</h3>
@@ -149,7 +154,7 @@ export const sections = [
         <div class="entry"><div class="entry-title">052 骨盐蓬（药/粮·骨沉）</div><p><span class="label">分类：</span>矿盐来源</p><p>既有"骨盐藻"的陆生姊妹种立档：茎秆析出可食矿盐，清创补盐两用。深层缺盐聚落的盐源，务实补全。</p></div>
         <div class="entry"><div class="entry-title">068 清醒蓟（药·梦腐）</div><p><span class="label">分类：</span>安全绳</p><p>嚼之短暂拉回现实感，梦掘人下层前必嚼。梦腐层的"安全绳"——配镇梦花一压一提，构成梦层作业的基本药对。过量致失眠，医嘱限量。</p></div>
         <div class="entry"><div class="entry-title">074 噤胎藓（药·胎海）</div><p><span class="label">分类：</span>边界稳定剂</p><p>极稀，贴神胎器官层生长，可短暂稳住个体边界（防"你还能不能被称为你"）。候选人格终试场的唯一续命物，一人一生只够采一次。</p></div>
-        <div class="entry"><div class="entry-title">080 验主花（药/诡轻·骨沉）</div><p><span class="label">分类：</span>归属鉴定</p><p>凑近未断主的旧物即蔫。箱契师鉴货必备——"这东西还知道上一个主人"有了植物判据。务实偏功能，本身无害。</p></div>
+        <div class="entry"><div class="entry-title">080 验主花（药·骨沉）</div><p><span class="label">分类：</span>归属鉴定</p><p>凑近未断主的旧物即蔫。箱契师鉴货必备——"这东西还知道上一个主人"有了植物判据。务实偏功能，本身无害。</p></div>
         <div class="entry"><div class="entry-title">084 静浆母藤（药·灰醒）</div><p><span class="label">分类：</span>安神辅料</p><p>既有"静浆果"母本，浆液安神，静净仪式辅料。立档补全。</p></div>
         <div class="entry"><div class="entry-title">088 暖石苔（燃/药·灰醒）</div><p><span class="label">分类：</span>御寒/药热</p><p>贴热石蓄温，夜间缓释，穷人无灯取暖物。软甲苔保暖、暖石苔产暖，御寒一对。</p></div>
         <div class="entry"><div class="entry-title">089 净尸藓（药/葬·骨沉）</div><p><span class="label">分类：</span>葬制配套</p><p>覆于待葬尸体减缓"死亡关系恶化"。骨庭葬制配套，缩短缺死→清死的污染窗口。务实接葬制。</p></div>
@@ -243,10 +248,10 @@ export const sections = [
         <div class="entry"><div class="entry-title">055 蚀界藓（饲/材·门脉）</div><p><span class="label">分类：</span>晦兽食源/骨材软化</p><p>4级蚀界晦兽的食源藓，也分泌弱酸软化骨材便于加工。骨匠与深层猎手共需。生在层界裂隙，采集高危。</p></div>
         <div class="entry"><div class="entry-title">056 孢风草（生态·灰醒）</div><p><span class="label">分类：</span>生态底座</p><p>不堪用，但它是0级孢族晦兽的寄主，生态链底座。农人留一角田任其生长以"喂住"底层晦兽，免其饿极上行染脑。一种务实的生态留白智慧。</p></div>
         <div class="entry"><div class="entry-title">073 饱潮草（生态·胎海）</div><p><span class="label">分类：</span>胎海不可常住注脚</p><p>唯一能在过饱和区存活的草，但吸晦能至饱即自燃，故胎海层无法连片成田、无法支撑聚落——这株草本身就是"胎海为何不能常住"的生态注脚。不可栽培。</p></div>
-        <div class="entry"><div class="entry-title">075 拟食莓（诡/毒·灰醒|系统）</div><p><span class="label">分类：</span>系统翻译缺陷</p><p>系统初期翻译为"可食浆果"，实则只对系统面板显示可食，土著一眼知毒。玩家初期高频死因之一——接"安全化翻译"缺陷的植物实证。裂视者能看穿，新玩家不能。</p></div>
+        <div class="entry"><div class="entry-title">075 拟食莓（毒·灰醒）</div><p><span class="label">分类：</span>系统翻译缺陷</p><p>系统初期翻译为"可食浆果"，实则只对系统面板显示可食，土著一眼知毒。玩家初期高频死因之一——接"安全化翻译"缺陷的植物实证。裂视者能看穿，新玩家不能。</p></div>
         <div class="entry"><div class="entry-title">076 满格藤（诡·灰醒|系统）</div><p><span class="label">分类：</span>系统型诡苗圃</p><p>触碰刷新一条虚假"安全区"系统提示。效率派玩家最易中招：信面板不信门床。系统型晦诡苗圃，印证"系统是筛选语言不是真相"。</p></div>
         <div class="entry"><div class="entry-title">081 固土根（生态·灰醒）</div><p><span class="label">分类：</span>基建植物</p><p>固灰土田防黑潮冲蚀，农田边必种。无用却必需的"基建植物"。</p></div>
-        <div class="entry"><div class="entry-title">096 候胎兰（诡轻·胎海近域|综合）</div><p><span class="label">分类：</span>临产预警</p><p>临产期才现蕾，蕾数被晦民用来估"产期将至"。候胎纪命名关联种——世界越黑，它蕾越多，呼应"黑=孕周读数"。预警植物，不可催花。</p></div>
+        <div class="entry"><div class="entry-title">096 候胎兰（诡轻·胎海近域|综合）</div><p><span class="label">分类：</span>临产预警</p><p>临产期才现蕾，蕾数被晦民用来估"产期将至"。被越多人盯着估产，它蕾就开得越多——这株植物会因"被观察"而改变生理行为，是诡异度公式 D=C×A 的活标本。候胎纪命名关联种——世界越黑，它蕾越多，呼应"黑=孕周读数"。预警植物，不可催花。</p></div>
         <div class="entry"><div class="entry-title">100 第一株（诡·胎海|综合）</div><p><span class="label">分类：</span>起源隐喻</p><p>传说神胎"第一次边界自读"凝成的植物——晦民将其奉为本族起源的隐喻。无人确证它真实存在，所有"找到第一株"的记载最终都指向找寻者自己的名字。它既是图鉴的终点，也是世界的起点：一株证明"里外"诞生的草。收敛律与起源论的双重活标本。</p></div>
       </div>
 

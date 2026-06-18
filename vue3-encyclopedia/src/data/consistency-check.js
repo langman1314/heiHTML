@@ -178,11 +178,33 @@ export const consistencyCheck = [
       <div class="grid-2">
         <div class="card"><h3 class="card-title">🧩 碎片采纳</h3><div class="card-body">这个设定是否与某个碎片的倾向契合？碎片是否会因此获得优势？</div></div>
         <div class="card"><h3 class="card-title">🎯 人格筛选</h3><div class="card-body">是否影响候选人格的筛选方向？是否增加了某类人格被选中的概率？</div></div>
-        <div class="card"><h3 class="card-title">🚪 路线权重</h3><div class="card-body">是否让成神/留域/出走三条路线的某一条变得更可行或更不可行？</div></div>
+        <div class="card"><h3 class="card-title">🚪 路线权重</h3><div class="card-body">是否让成神/留域/出走/破胎四条主动路线的某一条变得更可行或更不可行？是否在推动崩坏这条失败默认态？</div></div>
         <div class="card"><h3 class="card-title">🌡️ 临产进度</h3><div class="card-body">是否加速或推迟了神胎的临产？是否影响了黑潮的强度或频率？</div></div>
       </div>
       <div class="quote-center">如果你创造的设定"神胎碎片完全不会感兴趣"——<br>要么它太小，要么它太干净，要么它根本不属于无光域。<br>记住：连抵抗本身，也可能成为神胎的营养。</div>
       <div class="banner"><p>第十条是所有检查中最危险的一条。<br>因为它意味着：你的设定越成功、越有趣、越有价值，它就越可能被神胎吃掉。<br>这不是设定的失败——这是无光域的真相。</p></div>
+    `,
+  },
+  {
+    id: 'cc-fragment-origin',
+    num: '11',
+    title: '碎片来源是否可追溯？',
+    sub: '任何碎片必须能追溯到一次文明级收敛',
+    summary: '无光域没有凭空出现的概念。每一个"碎片"——无论是神胎碎片、认知碎片、规则碎片还是遗迹——都必须能追溯到某一次具体的文明级失败收敛。碎片不是自然生成物，而是历代失败轮回的收敛遗骸。',
+    content: `
+      <p class="section-desc">碎片不是"随机散落在地图上的道具"。每一次文明级失败——无论是上一轮四文明的崩溃、更早轮的灭绝，还是局部的聚落级消亡——都会在无光域中留下收敛遗骸。这些遗骸就是"碎片"的真实来源。</p>
+      <div class="grid-3">
+        <div class="card"><h3 class="card-title">🧩 神胎碎片</h3><div class="card-body">神胎尚未统一时的不同倾向残片，来自上一轮失败后未完全消化的边界尝试。每一个碎片都是"未出生的神的一次失败人格实验"。</div></div>
+        <div class="card"><h3 class="card-title">📜 认知碎片</h3><div class="card-body">被土著制度封印、但未能完全消化的危险认知。这些认知曾达到闭合级，但因某种原因被中断——它们还"活着"，只是被压住了。</div></div>
+        <div class="card"><h3 class="card-title">🏚️ 遗迹碎片</h3><div class="card-body">旧文明的技术、旧灯、旧门、旧梦的残留。时间深度锚（120-180潮岁）使它们刚好够古老到神话化，又够年轻到仍是活性遗产。</div></div>
+      </div>
+      <div class="truth-stack">
+        <div class="truth-layer"><span class="truth-label">追溯要求</span><div class="truth-text">每一个碎片设定必须明确回答：它来自哪一次文明级收敛？是哪一轮失败留下的遗骸？它的原主文明是什么形态？它经历了怎样的消化过程才变成今天的"碎片"形式？</div></div>
+        <div class="truth-layer"><span class="truth-label">禁止凭空出现</span><div class="truth-text">"从晦能中自然凝结"不是有效的碎片起源。晦能只能重组已有边界，不能凭空创造新碎片。如果一个碎片找不到文明级失败作为母亲，它要么是神胎还没消化的旧轮残响，要么就是设定漏洞。</div></div>
+        <div class="truth-layer"><span class="truth-label">碎片的时间层级</span><div class="truth-text">不同深度的碎片对应不同的历史层级：灰醒层的碎片通常来自较近的失败（几潮岁内）；骨沉层的碎片来自上一轮（120-180潮岁）；梦腐层和门脉层的碎片来自更古老的失败轮次，有些可能追溯到无光域开始自我代谢的初期。</div></div>
+      </div>
+      <div class="quote">如果一个设定的碎片"从晦能中自然凝结而成"——说明设计者绕过了碎片必须来自文明级失败这个规则。在无光域中，没有无母的碎片。</div>
+      <div class="quote-center">碎片不是地图上随机刷新的道具。<br>每一片碎片，都是一次文明死亡的墓碑。</div>
     `,
   },
 ]
