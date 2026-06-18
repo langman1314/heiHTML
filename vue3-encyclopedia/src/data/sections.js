@@ -102,6 +102,7 @@ export const sections = [
 
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">农业分级——晦植的潮间适应</h3>
       <p class="section-desc" style="margin-bottom:18px;">无光域的农业不以"喜阴喜阳"划分，而以作物对晦能浓度的耐受度与利用方式划分。种植时点必须锁死在晦相历上，这是世代相传的生存智慧。</p>
+      <div class="card" style="margin-bottom:18px;"><h3 class="card-title">开放数·三闸门</h3><div class="card-body">“一百种”是<strong>迄今观测数</strong>，非总上限。新种只从三道闸门进入：① <span class="keyword">褪诡突变</span>——现有诡植物因环境剧变（层迁移/潮紊乱/大面积沉默）A值跌回零，退回务实谱系并可能产生新变种；② <span class="keyword">渊隙种</span>——外渊残响层/碎壳层随异常黑潮沉降进入无光域的可采集个体，不可预测；③ <span class="keyword">新发掘存</span>——已存在但未被记录的传统土著种（如某深谷聚落世代自用的地方种）。三闸门之外，不存在"凭空设计新植物"。</div></div>
       <div class="grid-4">
         <div class="card"><h3 class="card-title">避潮作物</h3><div class="card-body">只在静晦期种植与收获，尽量避开黑潮影响。<span class="tag tag-food">静浆果</span><span class="tag tag-rule">守床草</span><span class="tag tag-rule">名刺苔</span>属于此类。安全但产量低，适合小型庇护所补充食源。</div></div>
         <div class="card"><h3 class="card-title">小潮作物</h3><div class="card-body">适应小黑潮波动，能在轻微晦能洪泛中正常生长。<span class="tag tag-food">灰苔</span><span class="tag tag-food">盲薯</span><span class="tag tag-food">腔豆</span><span class="tag tag-food">灰穗稷</span>属于此类。产量中等，是聚落日常主食来源。</div></div>
@@ -112,7 +113,34 @@ export const sections = [
         <div class="card"><h3 class="card-title">梦深亚型</h3><div class="card-body">利用梦腐层认知/梦境资源生长的深层作物。<span class="tag tag-mental">眠渊菇</span><span class="tag tag-mental">记水稻</span><span class="tag tag-mental">清醒蓟</span>等属于此类。种植者须具备梦层适应力，否则耕作本身即为污染源——在梦腐层种田等于每天跟自己的梦境打交道。</div></div>
         <div class="card"><h3 class="card-title">门深亚型</h3><div class="card-body">利用门脉层规则/审批权资源的深层作物。<span class="tag tag-build">测路苔</span><span class="tag tag-build">规尘蓬</span><span class="tag tag-food">深层墨菌</span>等属于此类。种植者须掌握层间往返与门态校准技术，门潮期间必须停止一切耕作。</div></div>
       </div>
-      <div class="card" style="margin-top:18px;"><h3 class="card-title">胎海层·不可栽培（采集/标本）</h3><div class="card-body">胎海是食物网回流口，非生产层。本层不存在"种植"，只存在一次性采集与标本登记。<span class="tag" style="background:#3a3a3a;color:#d7b56d;">核心警示</span> 任何试图"养殖"胎海产出的行为，本质是在喂养神胎——稳定的人工栽培环境=给神胎递上的标准来料，违背收敛律。<br><span class="tag" style="background:#3a3a3a;color:#d7b56d;">采集律</span> ①一次性原则，采后不可复种 ②产出多为触媒/标本而非口粮 ③登记入讯庭，不入箱庭（不可储产） ④每份标本须注明采集者与采集时相</div></div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">触发级——诡植物触发频率对照表</h4>
+      <p class="section-desc" style="margin-bottom:18px;">适用于 A>0（诡植物）的可控性独立分级。移走所有观察者——它照长归潮级，不照长归触发级。触发级与潮级正交可比。</p>
+      <div class="grid-4">
+        <div class="card"><h3 class="card-title">常触级</h3><div class="card-body">触发条件普遍存在于日常行为中（开门/上床/呼名/共食），无需特殊环境即可频繁触发。<span class="tag tag-rule">替睡棉</span><span class="tag tag-rule">等床藤</span><span class="tag tag-rule">名根草</span><span class="tag tag-rule">晚归果</span>属于此类。高频率但低烈度，是居民需日常注意的\"边界习惯\"。</div></div>
+        <div class="card"><h3 class="card-title">稀触级</h3><div class="card-body">触发需要特定条件组合（新移居/归属转移/长途往返），不是每个人每天都会遇到。<span class="tag tag-rule">认主蔓</span><span class="tag tag-rule">认亲藤</span>属于此类。频率低但一旦触发往往涉及深层归属问题，需仪式处理。</div></div>
+        <div class="card"><h3 class="card-title">聚触级</h3><div class="card-body">触发依赖多人共识或集体行为，单人无法独立触发。<span class="tag tag-rule">旧姓木</span><span class="tag tag-rule">满座菌</span>属于此类。危险度与\textbf{共识人数×情绪强度}正相关，是传述型晦诡的植物苗床。</div></div>
+        <div class="card"><h3 class="card-title">危触级</h3><div class="card-body">触发即意味着世界级边界事件（临产/层坍缩/神胎苏醒），不是日常触发而是预警信号。<span class="tag tag-rule">候胎兰</span>属于此类。不可催花、不可栽培。一旦触发，整层警戒升级。</div></div>
+      </div>
+      <div class="card" style="margin-top:12px;"><div class="card-body"><span class="keyword">A测试判据</span>——移走所有观察者：照长不误=务实植物，归潮级；停长/变行为=诡植物，归触发级。这是所有植物分类的第一道闸门，由公理系统 D=C×A 的 A≈0 判据直接派生。</div></div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">生态关系：强边图谱</h4>
+      <p class="section-desc" style="margin-bottom:18px;">晦植之间不是孤立标签，而是通过四种关系形成功能网络，每一条关系都对应一种具体的物质、认知或晦能代谢路径。</p>
+      <div class="card"><div class="card-body" style="font-size:13px;color:#c8c4b8;line-height:1.8;">
+        ▸ <span class="keyword">时序</span>（某后生某）——旧姓木→缄名莲：旧名沉积层足够厚才能孕育封名载体。守床草→等床藤：床位归属被长期确认后，藤才可能萌发。<br>
+        ▸ <span class="keyword">竞争</span>（互相抑制）——规尘蓬←→共梦莲：规则尘床与梦境作物争同一套认知资源。守夜花←→伪灯花：真实计时对虚假安全的边界压制。<br>
+        ▸ <span class="keyword">腐生</span>（尸体/腐殖→新植物）——饱潮草→噤胎藓：饱潮草自燃后留下的灰烬层是噤胎藓唯一的萌发基床。骨麦←→灰苔母株：骨粉肥与腐殖肥两条腐生支路。<br>
+        ▸ <span class="keyword">寄生</span>（直接利用另一株的功能残留作载体）——满格藤寄生旧系统型植物残骸：在废弃的系统型植物茎秆上萌发，借用其\"系统接口\"。共识菌借满座菌旧菌圈：共识残留未散尽的旧菌圈上更易定植。
+      </div></div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">劳动归属通则</h4>
+      <div class="grid-3">
+        <div class="card"><h3 class="card-title">采集·无人登记</h3><div class="card-body">野生采集物除非被誊名师当场登记入册，否则\"谁采的、何时采的\"会迅速模糊，数日后可能出现\"记得采过但找不到\"的情况。登记不只是管理，是防止归属消散的边界固定。</div></div>
+        <div class="card"><h3 class="card-title">栽培·地契</h3><div class="card-body">田在谁的名下、种子来自哪座登记仓、第一株是否由垦荒者亲手种下——这些连成一根不可断裂的归属链。无地契栽培=无人认领的作物，会被系统视为\"无主产出\"重新分配。</div></div>
+        <div class="card"><h3 class="card-title">加工·印痕</h3><div class="card-body">骨匠打钉留骨匠痕、誊名师登记留名印、箱契师封箱留契纹。每一道加工工序都是\"谁对此物行使了处置权\"的边界标记。无印痕的加工品身份轻，易被食名、调用和替换。</div></div>
+      </div>
+
+      <div class="card" style="margin-top:18px;"><h3 class="card-title">胎海层·不可栽培（采集/标本）——有限存量·终局刻度</h3><div class="card-body">胎海是食物网回流口，非生产层。本层不存在\"种植\"，只存在一次性采集与标本登记。胎海作物=历代收敛遗骸的活体残存——每一株都是从前几轮文明崩溃后弥留至今的，采一株少一株，不存在\"神胎持续生产\"。<span class="tag" style="background:#3a3a3a;color:#d7b56d;">核心警示</span> 任何试图\"养殖\"胎海产出的行为，本质是在喂养神胎——稳定的人工栽培环境=给神胎递上的标准来料，违背收敛律。<br><span class="tag" style="background:#3a3a3a;color:#d7b56d;">采集律</span> ①一次性原则，采后不可复种 ②产出多为触媒/标本而非口粮 ③登记入讯庭，不入箱庭（不可储产） ④每份标本须注明采集者与采集时相<br><span class="tag" style="background:#3a3a3a;color:#d7b56d;">终局刻度</span> 胎海种的灭绝速度是神胎临产的计数器——当最后一株第一株被采尽，或最后一朵未诞花枯死，神胎便不再需要保留\"未出生\"的边界样本，产程推入不可逆。</div></div>
       <div class="card" style="margin-top:18px;"><h3 class="card-title">骨麦完整生长周期</h3><div class="card-body"><span class="keyword">21晦日</span> 静晦生长期（根系缠骨、茎秆生长，不可食）→ <span class="keyword">7晦日</span> 黑潮潮化灌浆期（吸收洪泛晦能凝成淀粉，茎秆骨化）→ <span class="keyword">2晦日</span> 封收期（黑潮末尾窗口，必须完成收割，过时茎秆过熟炸穗）＝ <span class="keyword">30晦日</span> 完整大黑潮周期。这解释了为何骨麦是主粮却永远不够吃——它一年只熟12次，且每一次收成窗口不足48晦时。</div></div>
 
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">一、粮食类</h3>
@@ -252,7 +280,7 @@ export const sections = [
         <div class="entry"><div class="entry-title">076 满格藤（诡·灰醒|系统）</div><p><span class="label">分类：</span>系统型诡苗圃</p><p>触碰刷新一条虚假"安全区"系统提示。效率派玩家最易中招：信面板不信门床。系统型晦诡苗圃，印证"系统是筛选语言不是真相"。</p></div>
         <div class="entry"><div class="entry-title">081 固土根（生态·灰醒）</div><p><span class="label">分类：</span>基建植物</p><p>固灰土田防黑潮冲蚀，农田边必种。无用却必需的"基建植物"。</p></div>
         <div class="entry"><div class="entry-title">096 候胎兰（诡轻·胎海近域|综合）</div><p><span class="label">分类：</span>临产预警</p><p>临产期才现蕾，蕾数被晦民用来估"产期将至"。被越多人盯着估产，它蕾就开得越多——这株植物会因"被观察"而改变生理行为，是诡异度公式 D=C×A 的活标本。候胎纪命名关联种——世界越黑，它蕾越多，呼应"黑=孕周读数"。预警植物，不可催花。</p></div>
-        <div class="entry"><div class="entry-title">100 第一株（诡·胎海|综合）</div><p><span class="label">分类：</span>起源隐喻</p><p>传说神胎"第一次边界自读"凝成的植物——晦民将其奉为本族起源的隐喻。无人确证它真实存在，所有"找到第一株"的记载最终都指向找寻者自己的名字。它既是图鉴的终点，也是世界的起点：一株证明"里外"诞生的草。收敛律与起源论的双重活标本。</p></div>
+        <div class="entry"><div class="entry-title">100 第一株（诡·胎海|综合）</div><p><span class="label">分类：</span>环之接口</p><p>它不是"上一轮最后一株"——那是扁平化的误读。第一株是<strong>环之接口</strong>：整张图鉴环状结构的闭合点，也是环外之物进入环内的唯一裂隙。传说神胎"第一次边界自读"凝成了它；但所有"找到第一株"的记载最终都指向找寻者自己的名字。你找到的不是起源，而是自己已被写入环中。它既证明"里外"的诞生，也封住一个逻辑漏洞——若它只是上一轮的末株，则收敛律崩溃，回流律也会断在胎海外。它是悖论的合法锚点，不是答案。</p></div>
       </div>
 
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">旧存晦植（保留参考）</h3>
