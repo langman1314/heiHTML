@@ -1,0 +1,31 @@
+{
+  "project_name": "黑箱世界观长篇小说",
+  "language": "zh-CN",
+  "genre": "长篇网文 / 玄幻 / 科幻 / 悬疑 / 群像",
+  "target_reader": "喜欢强设定、强伏笔、世界观深挖的读者",
+  "default_model": "deepseek-v3.2",
+  "chapter_word_count": {
+    "min": 2500,
+    "target": 3500,
+    "max": 5000
+  },
+  "writing_mode": "设定严格一致，优先保证连续性，再保证爽点和文风",
+  "context_priority": [
+    "continuity-log",
+    "current character state",
+    "foreshadowing",
+    "previous chapter summary",
+    "current arc outline",
+    "world rules",
+    "power limitations",
+    "writing style"
+  ],
+  "forbidden": [
+    "不得随意修改已建立设定",
+    "不得提前揭露隐藏真相",
+    "不得让角色知道其不该知道的信息",
+    "不得让主角突然获得未铺垫能力",
+    "不得出现前后矛盾的时间线",
+    "不得使用与作品基调冲突的网络口水话"
+  ]
+}
