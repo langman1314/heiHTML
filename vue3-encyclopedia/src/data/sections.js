@@ -92,42 +92,220 @@ export const sections = [
     desc: '晦植不是普通意义上的植物。它们是无光域在地表与庇护所内部长出的器官，负责喂养、修补、记录、引诱、静默与固定边界。',
     content: `
             <div class="grid-3">
-        <div class="card"><h3 class="card-title">粮食类</h3><div class="card-body"><span class="tag tag-food">灰苔</span><span class="tag tag-food">骨麦</span><span class="tag tag-food">盲薯</span><span class="tag tag-food">夜脂果</span><span class="tag tag-food">腔豆</span><span class="tag tag-food">壳米穗</span><span class="tag tag-food">静浆果</span><span class="tag tag-food">盲果藤</span><span class="tag tag-food">骨盐藻</span></div></div>
-        <div class="card"><h3 class="card-title">药性类</h3><div class="card-body"><span class="tag tag-mental">止语草</span><span class="tag tag-mental">缝息苔</span><span class="tag tag-mental">冷梦花</span><span class="tag tag-mental">烬舌叶</span><span class="tag tag-mental">返脉根</span><span class="tag tag-mental">褪痛菌</span><span class="tag tag-mental">灰肺苔</span><span class="tag tag-mental">静针果</span><span class="tag tag-mental">灰喉苔</span></div></div>
-        <div class="card"><h3 class="card-title">建材类</h3><div class="card-body"><span class="tag tag-build">灰木</span><span class="tag tag-build">骨藤</span><span class="tag tag-build">静皮树</span><span class="tag tag-build">壳苔</span><span class="tag tag-build">脊柱竹</span><span class="tag tag-build">裂膜草</span><span class="tag tag-build">井绳藤</span><span class="tag tag-build">倒根树</span><span class="tag tag-build">骨帘藤</span><span class="tag tag-build">胃灯果</span><span class="tag tag-build">血温藤</span></div></div>
-        <div class="card"><h3 class="card-title">精神类</h3><div class="card-body"><span class="tag tag-mental">眠菇</span><span class="tag tag-mental">门纹眠菇</span><span class="tag tag-mental">孵梦眠菇</span><span class="tag tag-mental">回声蕨</span><span class="tag tag-mental">哀铃果</span><span class="tag tag-mental">旧梦藻</span><span class="tag tag-mental">食刻菇</span><span class="tag tag-mental">井眠藻</span><span class="tag tag-mental">哭铃草</span><span class="tag tag-mental">壁听花</span><span class="tag tag-mental">雾喉花</span></div></div>
-        <div class="card"><h3 class="card-title">边界类</h3><div class="card-body"><span class="tag tag-rule">门槛苔</span><span class="tag tag-rule">守床草</span><span class="tag tag-rule">界钉花</span><span class="tag tag-rule">名刺苔</span><span class="tag tag-rule">誓根</span><span class="tag tag-rule">门睫草</span><span class="tag tag-rule">归箱草</span><span class="tag tag-rule">埋名花</span><span class="tag tag-rule">返床菇</span><span class="tag tag-rule">褪名苔</span></div></div>
-        <div class="card"><h3 class="card-title">污染/寄生类</h3><div class="card-body"><span class="tag tag-rule">噬影藤</span><span class="tag tag-rule">手指芽</span><span class="tag tag-rule">哭种</span><span class="tag tag-rule">忘返树</span><span class="tag tag-rule">伪灯花</span><span class="tag tag-rule">腐脐花</span><span class="tag tag-rule">血灰藓</span><span class="tag tag-rule">潮后芽</span><span class="tag tag-rule">驮壳菌</span></div></div>
+        <div class="card"><h3 class="card-title">粮食类</h3><div class="card-body"><span class="tag tag-food">灰苔</span><span class="tag tag-food">骨麦</span><span class="tag tag-food">灰穗稷</span><span class="tag tag-food">深盲芋</span><span class="tag tag-food">三噎豆</span><span class="tag tag-food">黑乳蓟</span><span class="tag tag-food">双季骨麦</span><span class="tag tag-food">灰甜薯</span><span class="tag tag-food">腔豆</span><span class="tag tag-food">潮后稗</span><span class="tag tag-food">深层墨菌</span><span class="tag tag-food">眠渊菇</span><span class="tag tag-food">记水稻</span><span class="tag tag-food">归途豆</span><span class="tag tag-food">灰苔母株</span><span class="tag tag-food">久储果</span><span class="tag tag-food">黑乳脂果</span><span class="tag tag-food">壳米穗</span><span class="tag tag-food">灰醒苔</span></div></div>
+        <div class="card"><h3 class="card-title">药性类</h3><div class="card-body"><span class="tag tag-mental">净舌藓</span><span class="tag tag-mental">续骨菌</span><span class="tag tag-mental">醒神苔</span><span class="tag tag-mental">封伤膏果</span><span class="tag tag-mental">镇梦花</span><span class="tag tag-mental">解染苗</span><span class="tag tag-mental">止血晶草</span><span class="tag tag-mental">醒喉根</span><span class="tag tag-mental">骨盐蓬</span><span class="tag tag-mental">清醒蓟</span><span class="tag tag-mental">噤胎藓</span><span class="tag tag-mental">验主花</span><span class="tag tag-mental">静浆果</span><span class="tag tag-mental">暖石苔</span><span class="tag tag-mental">净尸藓</span><span class="tag tag-mental">守夜花</span><span class="tag tag-mental">归位草</span></div></div>
+        <div class="card"><h3 class="card-title">建材类</h3><div class="card-body"><span class="tag tag-build">骨纹藤</span><span class="tag tag-build">墙生苔</span><span class="tag tag-build">规尘蓬</span><span class="tag tag-build">叠甲竹</span><span class="tag tag-build">锈藤</span><span class="tag tag-build">软甲苔</span><span class="tag tag-build">测路苔</span><span class="tag tag-build">锚壳藤</span><span class="tag tag-build">商路标蓬</span><span class="tag tag-build">腐殖蕨</span><span class="tag tag-build">防潮藤</span><span class="tag tag-build">闭门藤</span><span class="tag tag-build">骨灯花</span><span class="tag tag-build">硬壳麻</span><span class="tag tag-build">经纬麻</span><span class="tag tag-build">灯髓蕈</span><span class="tag tag-build">油籽藤</span><span class="tag tag-build">灯芯荻</span></div></div>
+        <div class="card"><h3 class="card-title">精神类</h3><div class="card-body"><span class="tag tag-mental">借影葵</span><span class="tag tag-mental">镜瓣花</span><span class="tag tag-mental">啼晦兰</span><span class="tag tag-mental">接梦藻</span><span class="tag tag-mental">问名蒲</span><span class="tag tag-mental">满座菌</span><span class="tag tag-mental">续言竹</span><span class="tag tag-mental">招魂稻</span><span class="tag tag-mental">旧誓藤</span><span class="tag tag-mental">未诞花</span><span class="tag tag-mental">共梦莲</span></div></div>
+        <div class="card"><h3 class="card-title">边界类</h3><div class="card-body"><span class="tag tag-rule">应声铃花</span><span class="tag tag-rule">数瓣豆</span><span class="tag tag-rule">名根草</span><span class="tag tag-rule">噎名菇</span><span class="tag tag-rule">复踏苔</span><span class="tag tag-rule">等床藤</span><span class="tag tag-rule">认主蔓</span><span class="tag tag-rule">空碗瓜</span><span class="tag tag-rule">旧姓木</span><span class="tag tag-rule">替睡棉</span><span class="tag tag-rule">共识菌</span><span class="tag tag-rule">噤喉藤</span><span class="tag tag-rule">回声蕨</span><span class="tag tag-rule">缄名莲</span><span class="tag tag-rule">晚归果</span><span class="tag tag-rule">替名兰</span><span class="tag tag-rule">缺位藕</span><span class="tag tag-rule">照童黑水芋</span><span class="tag tag-rule">认亲藤</span><span class="tag tag-rule">榜根草</span></div></div>
+        <div class="card"><h3 class="card-title">污染/寄生类</h3><div class="card-body"><span class="tag tag-rule">蚀界藓</span><span class="tag tag-rule">孢风草</span><span class="tag tag-rule">饱潮草</span><span class="tag tag-rule">拟食莓</span><span class="tag tag-rule">满格藤</span><span class="tag tag-rule">固土根</span><span class="tag tag-rule">候胎兰</span><span class="tag tag-rule">第一株</span></div></div>
       </div>
 
       <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">农业分级——晦植的潮间适应</h3>
       <p class="section-desc" style="margin-bottom:18px;">无光域的农业不以"喜阴喜阳"划分，而以作物对晦能浓度的耐受度与利用方式划分。种植时点必须锁死在晦相历上，这是世代相传的生存智慧。</p>
       <div class="grid-4">
         <div class="card"><h3 class="card-title">避潮作物</h3><div class="card-body">只在静晦期种植与收获，尽量避开黑潮影响。<span class="tag tag-food">静浆果</span><span class="tag tag-rule">守床草</span><span class="tag tag-rule">名刺苔</span>属于此类。安全但产量低，适合小型庇护所补充食源。</div></div>
-        <div class="card"><h3 class="card-title">小潮作物</h3><div class="card-body">适应小黑潮波动，能在轻微晦能洪泛中正常生长。<span class="tag tag-food">灰苔</span><span class="tag tag-food">盲薯</span><span class="tag tag-food">腔豆</span>属于此类。产量中等，是聚落日常主食来源。</div></div>
-        <div class="card"><h3 class="card-title">大潮作物</h3><div class="card-body">必须利用大黑潮灌浆或成熟，静晦期反而低效甚至不生长。<span class="tag tag-food">骨麦</span><span class="tag tag-food">夜脂果</span><span class="tag tag-mental">眠菇</span>属于此类。产量高但窗口紧，抢收失败意味着整个潮岁绝收。</div></div>
-        <div class="card"><h3 class="card-title">深层农业</h3><div class="card-body">在骨沉层及以下种植，晦能浓度远超地表。<span class="tag tag-build">井绳藤</span><span class="tag tag-mental">旧梦藻</span>在深层能产出更高价值材料，但种植者必须直面深层污染和层间往返风险。</div></div>
+        <div class="card"><h3 class="card-title">小潮作物</h3><div class="card-body">适应小黑潮波动，能在轻微晦能洪泛中正常生长。<span class="tag tag-food">灰苔</span><span class="tag tag-food">盲薯</span><span class="tag tag-food">腔豆</span><span class="tag tag-food">灰穗稷</span>属于此类。产量中等，是聚落日常主食来源。</div></div>
+        <div class="card"><h3 class="card-title">大潮作物</h3><div class="card-body">必须利用大黑潮灌浆或成熟，静晦期反而低效甚至不生长。<span class="tag tag-food">骨麦</span><span class="tag tag-food">双季骨麦</span><span class="tag tag-food">夜脂果</span><span class="tag tag-mental">眠菇</span>属于此类。产量高但窗口紧，抢收失败意味着整个潮岁绝收。</div></div>
+        <div class="card"><h3 class="card-title">深层农业</h3><div class="card-body">在骨沉层及以下种植，晦能浓度远超地表。<span class="tag tag-build">井绳藤</span><span class="tag tag-mental">旧梦藻</span><span class="tag tag-food">深层墨菌</span>在深层能产出更高价值材料，但种植者必须直面深层污染和层间往返风险。</div></div>
       </div>
       <div class="card" style="margin-top:18px;"><h3 class="card-title">骨麦完整生长周期</h3><div class="card-body"><span class="keyword">21晦日</span> 静晦生长期（根系缠骨、茎秆生长，不可食）→ <span class="keyword">7晦日</span> 黑潮潮化灌浆期（吸收洪泛晦能凝成淀粉，茎秆骨化）→ <span class="keyword">2晦日</span> 封收期（黑潮末尾窗口，必须完成收割，过时茎秆过熟炸穗）＝ <span class="keyword">30晦日</span> 完整大黑潮周期。这解释了为何骨麦是主粮却永远不够吃——它一年只熟12次，且每一次收成窗口不足48晦时。</div></div>
 
-      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">晦植明细</h3>
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">一、粮食类</h3>
       <div class="grid-2">
-        <div class="entry"><div class="entry-title">灰苔</div><p><span class="label">分类：</span>基础食用晦植</p><p>灰绿色薄苔，贴在潮湿墙角生长。只要有湿气与腐殖就能存活。可烘成苔饼，长期食用会轻微幻听。</p></div>
-        <div class="entry"><div class="entry-title">骨麦</div><p><span class="label">分类：</span>主粮作物</p><p>根系缠绕白骨而生，骨越完整生长越快。具有<span class="keyword">潮间双相代谢</span>：静潮期21天进行结构生长（不可食），黑潮期3-7天进行灌浆骨化（可收割）。"骨麦"之名源于此——骨不是在比喻，而是在黑潮中真实完成的茎秆骨化。丰收集于黑潮末尾窗口，晦民依黑潮历法而非天数耕作，这是世代相传的生存智慧。</p></div>
-        <div class="entry"><div class="entry-title">门纹眠菇</div><p><span class="label">分类：</span>精神晦植</p><p>菌盖上有天然门形裂纹，多生长在旧门遗迹附近。用于门类规则研究。食用后梦见"门后站位"。</p></div>
-        <div class="entry"><div class="entry-title">孵梦眠菇</div><p><span class="label">分类：</span>精神晦植</p><p>菌伞像未睁开的眼皮。能把未完成梦境继续做下去，产出高纯度梦渣。梦里人物会逐渐记住你。</p></div>
-        <div class="entry"><div class="entry-title">灰肺苔</div><p><span class="label">分类：</span>药性晦植</p><p>灰白薄苔贴在墙面，潮湿时会微微起伏像在呼吸。过滤孢子与腐臭，缓解轻度呼吸污染。贴满卧室后住户会梦见替房子呼吸。</p></div>
-        <div class="entry"><div class="entry-title">灰喉苔</div><p><span class="label">分类：</span>声音处理植物</p><p>像湿润细褶薄肉，贴在井壁与管道内侧。能把流经的声音磨钝，用于静音通道。待太久人会懒得解释自己。</p></div>
-        <div class="entry"><div class="entry-title">静针果</div><p><span class="label">分类：</span>药性/工具辅助</p><p>果核坚硬如细针，可做缝合钉。果肉有轻微麻醉效果。服用后不易分辨是伤势变轻还是身体懒得提醒你。</p></div>
+        <div class="entry"><div class="entry-title">001 灰穗稷（粮·灰醒）</div><p><span class="label">分类：</span>主粮</p><p>灰土田主粮，穗灰白下垂，耐低光。靠腐殖土生长，不依赖骨粉，故被视为"干净粮"，价高于骨麦。无边界风险——晦民给新生儿煮的第一口饭多用它。</p></div>
+        <div class="entry"><div class="entry-title">002 深盲芋（粮·骨沉）</div><p><span class="label">分类：</span>主粮</p><p>盲薯的深层近亲，块茎埋骨堆下两尺，淀粉足。须削去贴骨的一面（"骨面"），否则带尸源残响。低风险，削皮即安全。</p></div>
+        <div class="entry"><div class="entry-title">003 三噎豆（粮·灰醒）</div><p><span class="label">分类：</span>储备粮</p><p>一荚三粒，粒粒噎喉，须就净化水吞。储备粮之王——晒干可存三个晦相周期不坏，黑潮前抢购物。务实无诡。</p></div>
+        <div class="entry"><div class="entry-title">034 黑乳蓟（粮/饲·灰醒）</div><p><span class="label">分类：</span>口粮/饲料</p><p>茎汁如黑乳，即"黑乳制品"的植物源。人畜两用，壳眠牛主饲料。耐踏耐割，小聚落篱边随处可种，务实口粮。</p></div>
+        <div class="entry"><div class="entry-title">035 双季骨麦（粮·骨沉）</div><p><span class="label">分类：</span>主粮变种</p><p>骨麦的双相栽培变种——承接潮间双相代谢：骨麦期（静相）结实21天，黑潮期灌浆爆产。它把"农业为何能扛黑潮"落到一株作物上：不是躲黑潮，而是吃黑潮。第一季若用死者骨粉播种，仍须循旧规不外售。</p></div>
+        <div class="entry"><div class="entry-title">036 灰甜薯（粮·灰醒）</div><p><span class="label">分类：</span>辅食</p><p>盲薯之外的甜口块茎，糖分高，孩子辅食与节日骨麦饼的甜料。来源洁净（腐殖土直生，不贴骨），无诡。补足既有食谱缺糖的空位。</p></div>
+        <div class="entry"><div class="entry-title">037 腔豆蔓（粮/纤·骨沉）</div><p><span class="label">分类：</span>经济作物</p><p>既有"腔豆"的母株正式立档：豆供食，蔓搓粗纤维。一种作物撑起灰醒—骨沉过渡带的口粮与绳料，务实经济作物。</p></div>
+        <div class="entry"><div class="entry-title">038 潮后稗（粮·骨沉）</div><p><span class="label">分类：</span>抢生粮</p><p>只在黑潮退去的沉积层抢生，七日速熟，潮拾人的"捡命粮"。产量看天，但它让"潮后第一周饿不死"有了来源。须誊名师在场采收——稗田常混入潮水带来的旧物。</p></div>
+        <div class="entry"><div class="entry-title">039 深层墨菌（粮/药·门脉）</div><p><span class="label">分类：</span>深层主食</p><p>门脉层据点主食菌，墨黑富营养，不需光。常住者"不是缺粮是缺清醒"，墨菌正好顶饿不占梦。培于规则尘床上，务实。</p></div>
+        <div class="entry"><div class="entry-title">067 眠渊菇（粮·梦腐）</div><p><span class="label">分类：</span>梦层主食</p><p>梦腐层据点主粮菌，食之不引梦、只顶饿，壳眠裔世代口粮。"缺的不是粮是清醒"，眠渊菇正是为此选育——零梦负担。务实。</p></div>
+        <div class="entry"><div class="entry-title">069 记水稻（粮/药·梦腐）</div><p><span class="label">分类：</span>救济粮</p><p>稻粒含微量梦渣，煮粥可温和补"低梦症"患者的梦。梦资阶层平价救济粮，与梦工厂的暴利梦囊形成对照。来源：梦腐层净化梦渣灌溉，务实偏功能。</p></div>
+        <div class="entry"><div class="entry-title">071 归途豆（粮·门脉）</div><p><span class="label">分类：</span>行军粮</p><p>唯一能在门脉层长途携带不变质的干豆，旧门逃亡派的行军粮。豆硬需久煮，但它让"层间长途不饿死"成立。无诡。</p></div>
+        <div class="entry"><div class="entry-title">077 灰苔母株（粮·灰醒）</div><p><span class="label">分类：</span>基础食用晦植</p><p>既有"灰苔"的母本立档：玩家初期第一口安全食物的来源种，采集无门槛、无诡。新手投放区遍生，它是大多数穿越者活过第一天的原因。</p></div>
+        <div class="entry"><div class="entry-title">079 久储果（粮·骨沉）</div><p><span class="label">分类：</span>商队干粮</p><p>蜡皮裹肉，跨区贸易不腐三个周期，商队硬通货干粮。与三噎豆（短保灰醒）分工：一个守家，一个走商。</p></div>
+        <div class="entry"><div class="entry-title">082 黑乳脂果（粮/燃·灰醒）</div><p><span class="label">分类：</span>油料/口粮</p><p>既有"夜脂果"的近亲，脂厚可食可点灯。补全灯油谱与油水谱的廉价款。</p></div>
+        <div class="entry"><div class="entry-title">083 壳米母穗（粮·骨沉）</div><p><span class="label">分类：</span>耐储主粮</p><p>既有"壳米穗"母本立档，骨沉层耐储主粮之一。务实补全。</p></div>
+        <div class="entry"><div class="entry-title">094 灰醒苔（粮/生态·灰醒）</div><p><span class="label">分类：</span>生态基座</p><p>灰醒层命名来源种之一，结痂式覆盖裸岩使生命"站住脚"。生态基石，务实。</p></div>
+      </div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">饲料</h4>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">053 饲腐草（饲·骨沉）</div><p><span class="label">分类：</span>晦兽饲料</p><p>专饲晦兽栏的低阶食腐晦兽，割之即长。晦兽贸易城镇的草料田作物。务实养殖配套。</p></div>
+        <div class="entry"><div class="entry-title">054 引声蓬（饲·骨沉）</div><p><span class="label">分类：</span>活诱饵</p><p>散发低频振动，诱晦兽入栏不入村——既有"晦兽栏"的活诱饵。猎手与牧户两用。轻微边界性：村内禁种，免把追声晦兽引向人。</p></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">二、药性类</h3>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">010 续骨菌（药·骨沉）</div><p><span class="label">分类：</span>接骨促愈</p><p>接骨促愈，骨匠常备。培于洁净骨材上。若错培在未断主的骨上，长出的菌会让伤口"记得"原主的旧伤位置——故续骨菌必须验骨源。</p></div>
+        <div class="entry"><div class="entry-title">011 醒神苔（药·灰醒）</div><p><span class="label">分类：</span>提神</p><p>嚼之提神驱困，守夜人三件套之一。过量则数日无梦——长期滥用滑向"低梦症"，医嘱限量。</p></div>
+        <div class="entry"><div class="entry-title">012 封伤膏果（药·灰醒）</div><p><span class="label">分类：</span>外伤药</p><p>果肉捣敷止血生肌，即缝息苔的平价替代。家家常备，无诡。补足了既有药用谱里"廉价外伤药"的空位。</p></div>
+        <div class="entry"><div class="entry-title">048 镇梦花（药·骨沉）</div><p><span class="label">分类：</span>安神</p><p>干花入枕，压制轻度梦腐、安睡不串梦。梦医给替睡受害者的恢复方。过量则梦境全无，同样滑向低梦症，医嘱限量。</p></div>
+        <div class="entry"><div class="entry-title">049 解染苗（药·门脉）</div><p><span class="label">分类：</span>退染</p><p>嚼食可暂缓晦染上行半档，退染黑市/赎籍会的核心耗材——一株解染苗只压半档、只撑数日，且采它须深入门脉层高浓度区，死亡率极高。低效正是守恒律的必然，不是设定偷懒。</p></div>
+        <div class="entry"><div class="entry-title">050 止血晶草（药·灰醒）</div><p><span class="label">分类：</span>战场急救</p><p>茎含凝血晶粒，撒伤口速止血。缝息苔/封伤膏果之外的第三种止血物，战地与潮后急救摊主力。务实。</p></div>
+        <div class="entry"><div class="entry-title">051 醒喉根（药·骨沉）</div><p><span class="label">分类：</span>解毒</p><p>解噎、催吐误食污染物，三噎豆噎住时的解药。家庭药箱常配。无诡，纯实用。</p></div>
+        <div class="entry"><div class="entry-title">052 骨盐蓬（药/粮·骨沉）</div><p><span class="label">分类：</span>矿盐来源</p><p>既有"骨盐藻"的陆生姊妹种立档：茎秆析出可食矿盐，清创补盐两用。深层缺盐聚落的盐源，务实补全。</p></div>
+        <div class="entry"><div class="entry-title">068 清醒蓟（药·梦腐）</div><p><span class="label">分类：</span>安全绳</p><p>嚼之短暂拉回现实感，梦掘人下层前必嚼。梦腐层的"安全绳"——配镇梦花一压一提，构成梦层作业的基本药对。过量致失眠，医嘱限量。</p></div>
+        <div class="entry"><div class="entry-title">074 噤胎藓（药·胎海）</div><p><span class="label">分类：</span>边界稳定剂</p><p>极稀，贴神胎器官层生长，可短暂稳住个体边界（防"你还能不能被称为你"）。候选人格终试场的唯一续命物，一人一生只够采一次。</p></div>
+        <div class="entry"><div class="entry-title">080 验主花（药/诡轻·骨沉）</div><p><span class="label">分类：</span>归属鉴定</p><p>凑近未断主的旧物即蔫。箱契师鉴货必备——"这东西还知道上一个主人"有了植物判据。务实偏功能，本身无害。</p></div>
+        <div class="entry"><div class="entry-title">084 静浆母藤（药·灰醒）</div><p><span class="label">分类：</span>安神辅料</p><p>既有"静浆果"母本，浆液安神，静净仪式辅料。立档补全。</p></div>
+        <div class="entry"><div class="entry-title">088 暖石苔（燃/药·灰醒）</div><p><span class="label">分类：</span>御寒/药热</p><p>贴热石蓄温，夜间缓释，穷人无灯取暖物。软甲苔保暖、暖石苔产暖，御寒一对。</p></div>
+        <div class="entry"><div class="entry-title">089 净尸藓（药/葬·骨沉）</div><p><span class="label">分类：</span>葬制配套</p><p>覆于待葬尸体减缓"死亡关系恶化"。骨庭葬制配套，缩短缺死→清死的污染窗口。务实接葬制。</p></div>
+        <div class="entry"><div class="entry-title">090 守夜花（药·灰醒）</div><p><span class="label">分类：</span>计时/防伪</p><p>夜开昼合，花开即"仍是深夜"的可信标记——破"正午错觉/伪安全灯"的活时钟。守夜人信花不信灯。</p></div>
+        <div class="entry"><div class="entry-title">098 归位草（药/仪·灰醒）</div><p><span class="label">分类：</span>仪式植物</p><p>归位仪式所用，束草置物上宣告"各在其位"。"归位"不可直译概念的实物载体，务实接日常六律。</p></div>
+      </div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">净水净化</h4>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">004 滤喉草（水·灰醒）</div><p><span class="label">分类：</span>活吸管</p><p>中空草茎，插入浊水自渗出清水，日产半碗。井喉民随身携带的"活吸管"。茎枯即弃，不可复用——复用会反吐污染。</p></div>
+        <div class="entry"><div class="entry-title">005 净舌藓（水/药·骨沉）</div><p><span class="label">分类：</span>名污净化</p><p>贴附凝水石生长，能再降一档污染度。灰井修会专培，是名净/梦净之外唯一能压"名源污染"初期的植物，极贵。</p></div>
+        <div class="entry"><div class="entry-title">006 咽水竹（水·门脉）</div><p><span class="label">分类：</span>蓄水器</p><p>竹节蓄净水，一节一咽量。门脉层测绘者命脉物。诡轻：断节时若听见"咕咚"回声而非自己倒水的声，该节水不可饮——它咽过别的东西。</p></div>
+        <div class="entry"><div class="entry-title">040 涌泉根（水·骨沉）</div><p><span class="label">分类：</span>活水库</p><p>粗根贮水如囊，旱季砍根取水。大型城邦水网的备用水源。无诡，纯务实——一片涌泉根林等于一座活水库。</p></div>
+        <div class="entry"><div class="entry-title">041 澄潭萍（水·灰醒）</div><p><span class="label">分类：</span>前置滤层</p><p>浮萍覆水面，过滤悬浊、压制蚊蝇。庇护所水凝器的天然前置滤层。死萍沉底成肥，就地回流。</p></div>
+        <div class="entry"><div class="entry-title">042 苦根柳（水/药·骨沉）</div><p><span class="label">分类：</span>固岸防污</p><p>根系深扎净化黑潮灰露，柳皮入药退热。井庭常沿水路栽植固岸防污。一柳两功，稳水又稳人。</p></div>
+        <div class="entry"><div class="entry-title">087 引水葛（水·骨沉）</div><p><span class="label">分类：</span>活管道</p><p>引深层井水上行，大型城邦水网的活管道。涌泉根贮水、引水葛输水，一贮一输成网。</p></div>
+        <div class="entry"><div class="entry-title">099 缄潮藤（材/水·骨沉）</div><p><span class="label">分类：</span>堵露材</p><p>封堵黑潮灰露渗入水井，潮后净化配套。苦根柳净露、缄潮藤堵露，守水一对。</p></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">三、建材类</h3>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">007 骨纹藤（材·骨沉）</div><p><span class="label">分类：</span>结构材</p><p>木质化藤，纹理似骨缝，韧胜灰木，房梁首选。来源：缠死废屋骨架腐熟而成，功能残留=保留"支撑"性，但也保留"框住内外"的旧门性，做门框需先骨净。</p></div>
+        <div class="entry"><div class="entry-title">009 墙生苔（材·骨沉）</div><p><span class="label">分类：</span>自补墙材</p><p>自补墙缝的活苔，庇护所外墙常养。双刃：养得过密会加速庇护所活化（母巢倾向），屋医定期刮薄，防巢穴化。</p></div>
+        <div class="entry"><div class="entry-title">015 规尘蓬（材/燃·门脉）</div><p><span class="label">分类：</span>规则尘作物</p><p>蓬球破裂喷出可收集的规则尘，门脉层经济作物。高浓度晦能区疯长。采集须戴静皮罩——吸入会短暂"忘记自己站在哪扇门的哪一侧"。</p></div>
+        <div class="entry"><div class="entry-title">043 叠甲竹（材·骨沉）</div><p><span class="label">分类：</span>轻型建材</p><p>竹壁层叠如甲，劈片即建材，轻而挡晦兽爪。骨墙不足的城镇用作内墙隔断。速生务实。</p></div>
+        <div class="entry"><div class="entry-title">044 锈藤（材/燃·骨沉）</div><p><span class="label">分类：</span>扎篱/引火</p><p>老化藤茎硬如铁丝，可扎篱、可引火。废屋群里疯长，就地取材典型——拆一座废屋的锈藤够围半圈新篱。</p></div>
+        <div class="entry"><div class="entry-title">045 软甲苔（材/药·灰醒）</div><p><span class="label">分类：</span>保暖/敷创</p><p>厚绒苔，塞墙缝保暖、敷创口防风。穷人家过冬的"活棉被"。务实廉价，灰醒层冬季必备。</p></div>
+        <div class="entry"><div class="entry-title">070 测路苔（材/药·门脉）</div><p><span class="label">分类：</span>门态警报</p><p>贴生稳定门框才活，苔死即门将变（饱门/旧门）——门脉测绘者的活体警报。不可食，但一株活苔胜过十句攻略。务实预警植物。</p></div>
+        <div class="entry"><div class="entry-title">072 锚壳藤（材·门脉）</div><p><span class="label">分类：</span>抗潮锚材</p><p>藤须钉入岩缝极牢，据点搭建抗门潮的锚定材。门潮死亡率40–80%的层里，锚壳藤是据点不被"重组"卷走的物理抓手。务实。</p></div>
+        <div class="entry"><div class="entry-title">078 商路标蓬（材·骨沉）</div><p><span class="label">分类：</span>风险标尺</p><p>蓬絮遇晦兽气味变色，商队沿途插蓬识险。骨灯商队风险评估的活工具。务实。</p></div>
+        <div class="entry"><div class="entry-title">085 腐殖蕨（生态/材·骨沉）</div><p><span class="label">分类：</span>循环加速</p><p>加速腐殖池分解，腐殖产业核心配套植物。它让"骨麦—腐殖—尸体"循环转得动。过密则池"活化"吸活物，需控量。</p></div>
+        <div class="entry"><div class="entry-title">086 防潮藤（材·骨沉）</div><p><span class="label">分类：</span>静皮帘骨架</p><p>织成静皮帘的植物增强层，阻传述污染。静皮帘不只动物皮，藤是其骨架。务实接边界防灾。</p></div>
+        <div class="entry"><div class="entry-title">095 闭门藤（材·骨沉）</div><p><span class="label">分类：</span>封门计时</p><p>黑潮前自然收紧覆门加固，"封门节"由观此藤定时。接闭门纪文化意象，务实偏民俗。</p></div>
+        <div class="entry"><div class="entry-title">097 骨灯花（燃/材·骨沉）</div><p><span class="label">分类：</span>灯罩</p><p>干花壳即天然灯罩，配灯髓蕈油、灯芯荻成全套骨灯。灯具三件套（芯/油/罩）至此补齐。务实。</p></div>
+      </div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">纤维</h4>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">008 硬壳麻（纤·灰醒）</div><p><span class="label">分类：</span>绳缆料</p><p>茎皮搓绳，守门人的门绳主料。绳结记数稳定、不易自解。务实——一捆好麻是穷人家黑潮前的硬通货。</p></div>
+        <div class="entry"><div class="entry-title">046 经纬麻（纤·灰醒）</div><p><span class="label">分类：</span>布料素胚</p><p>长纤维织布缝衣，失名布的素胚原料。誊名师的封名布、骨庭的失名布覆面布，素胚皆出此麻。务实但接葬制。</p></div>
+      </div>
+
+      <h4 style="color:#b89e5a;margin:28px 0 14px;font-weight:400;letter-spacing:2px;">燃料</h4>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">013 灯髓蕈（燃·骨沉）</div><p><span class="label">分类：</span>灯油源</p><p>菌柄含油，晒干即骨灯燃料，亮而稳。夜脂果之外的主力灯油源，商队大宗货。燃尽的灰是合格腐殖肥，就地回流。</p></div>
+        <div class="entry"><div class="entry-title">014 油籽藤（燃/粮·灰醒）</div><p><span class="label">分类：</span>自给油料</p><p>籽榨灯油，饼可食。一藤两用，稳屋者自给的经济作物。务实，撑起灰醒层小聚落的灯火与油水。</p></div>
+        <div class="entry"><div class="entry-title">047 灯芯荻（纤/燃·灰醒）</div><p><span class="label">分类：</span>灯芯</p><p>荻髓搓灯芯，配灯髓蕈油即成整盏骨灯。补全"灯"产业链的最后一环——有油还得有芯。市集常见捆售。</p></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">四、精神类</h3>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">018 借影葵（诡·骨沉|梦）</div><p><span class="label">分类：</span>寻梦信标</p><p>花盘不朝光，朝向全聚落"被遗忘最久的方向"——通常是某座没人再提的废屋。梦掘人靠它找旧梦囊。久立花田者，会开始梦见那个方向的人。</p></div>
+        <div class="entry"><div class="entry-title">023 镜瓣花（诡·梦腐|镜）</div><p><span class="label">分类：</span>自我认知干扰</p><p>花心如水镜，映出看花人"不在场的那一面"：背后、侧脸、或某个本该在场却缺席的人。爱照镜瓣花的人，渐渐分不清镜里哪个自己更该被承认。</p></div>
+        <div class="entry"><div class="entry-title">024 啼晦兰（诡·梦腐|声）</div><p><span class="label">分类：</span>梦层信标</p><p>仅在啼晦期开放，花喉振动出"极远处有人哭"的声。梦腐层信标植物。规矩：听见兰啼不可循声、不可应答、不可替它补"谁在哭"——补了，哭声第二夜就到你门外。</p></div>
+        <div class="entry"><div class="entry-title">025 接梦藻（诡·梦腐|梦）</div><p><span class="label">分类：</span>续梦温床</p><p>旧梦藻的危险变种：把睡者没做完的梦接着长出来，泡进梦囊可"续梦"。但续出的后半段不归原梦者所有——它按晦能的逻辑续，常续成原主不愿醒来的样子。不可醒梦的温床。</p></div>
+        <div class="entry"><div class="entry-title">057 问名蒲（诡·灰醒|名）</div><p><span class="label">分类：</span>认静课教具</p><p>风过蒲穗，沙沙声里夹一句"你是谁"。半名期孩子绝不可独自经过蒲塘——会下意识答出乳名，被穗"记下"。家长教的认静课实景考场。身份型。</p></div>
+        <div class="entry"><div class="entry-title">058 满座菌（诡·骨沉|共识）</div><p><span class="label">分类：</span>舆情温度计</p><p>菌圈大小，取决于多少人相信这片地"闹过事"。法庭用它丈量一桩传闻的共识强度：菌圈越大，传述型晦诡越接近成形。静言社的"舆情温度计"，直接演示认知成形统一公式。</p></div>
+        <div class="entry"><div class="entry-title">063 续言竹（诡·门脉|声）</div><p><span class="label">分类：</span>心念检视</p><p>砍断时的脆响，会补完砍竹人心里没说出口的下半句。门脉测绘者用来自检"是否起了不该有的念"；但被补出的话一旦成声，就等于对世界提交了一次解释。沉默者免疫。</p></div>
+        <div class="entry"><div class="entry-title">064 招魂稻（诡·梦腐|梦）</div><p><span class="label">分类：</span>寻尸定向</p><p>稻芒倒伏方向，指向最近一个"死得不干净"的死者所在。骨庭循稻找未安置的尸；但久居稻田者会被那死者当成"来接的人"，入梦相邀。梦净可解。</p></div>
+        <div class="entry"><div class="entry-title">065 旧誓藤（诡·胎海近域|共识/名）</div><p><span class="label">分类：</span>背誓复读</p><p>缠绕处会复述当年在此立过、后来背弃的誓言——接旧榜文明"誓根反应"。胎海近域信标，也是候选人格的试炼：听见自己背弃的誓而不应，方算稳住边界。</p></div>
+        <div class="entry"><div class="entry-title">066 未诞花（诡·胎海|综合）</div><p><span class="label">分类：</span>收敛律活标本</p><p>神胎近域，花苞永不开放，却年年结一粒空种；种下再生一株永不开放的花。它是"未出生"本身的植物显形——收敛律的活标本：它把"成形"无限延后，以此永不被收割。主角线意象物，与033缄名莲同列胎海双珍。</p></div>
+        <div class="entry"><div class="entry-title">092 共梦莲（诡·梦腐|梦）</div><p><span class="label">分类：</span>集体梦境</p><p>数人同寝其侧则入同一个梦，旧梦文明"让活人迁入梦中避难"的遗种。眠渊议会激进派想扩种，梦医视为不可醒梦温床——梦获现实感后会向现实"索取醒来资格"。</p></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">五、边界类</h3>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">016 应声铃花（诡·灰醒|声）</div><p><span class="label">分类：</span>传述型教具</p><p>铃状花，被呼名时才开，开时会"接"上一句没说完的话。孩子认静课的活教具——老师指着它说：你看，你一应它就开了。传述型温床，聚落禁止在花前提问。</p></div>
+        <div class="entry"><div class="entry-title">017 数瓣豆（诡·灰醒|碗）</div><p><span class="label">分类：</span>计量型</p><p>豆荚瓣数，恒等于采摘者家中碗数。本是清点神器；危险在"采到一荚多一瓣"时——它在告诉你，你家今晚会多一只碗。归位日严禁采摘，免预言成真。</p></div>
+        <div class="entry"><div class="entry-title">019 名根草（诡·骨沉|名）</div><p><span class="label">分类：</span>身份追溯</p><p>拔起时，根须在土上拼出曾在此地踩死它的人的名字。誊名师用来核对失踪名册；但若拼出活人的名，那人"名轻"已重，须立即名净。</p></div>
+        <div class="entry"><div class="entry-title">020 噎名菇（诡·梦腐|名）</div><p><span class="label">分类：</span>名遮蔽剂</p><p>食后半刻忘记自己的名字——食名教团的入门"圣餐"，也是赎籍会给逃名者的短效遮蔽剂。频繁食用者真名永久变轻，易被替代。</p></div>
+        <div class="entry"><div class="entry-title">021 复踏苔（诡·灰醒|声）</div><p><span class="label">分类：</span>脚步声复现</p><p>白天踩过它的脚步，夜里原样重演——脚步声、节奏、人数都对。静听者用它复盘夜间入侵；但它分不清生者死者的脚，会把白天某个"已不在的人"的步子一起放出来。</p></div>
+        <div class="entry"><div class="entry-title">022 等床藤（诡·骨沉|床）</div><p><span class="label">分类：</span>空床申请</p><p>只在"不等之床"（已封、宣告不等的空床）上萌发，藤蔓压出睡过的人形凹陷，把空床"补"成有主之床。归床人最恨它——它在替空床申请一个住户。</p></div>
+        <div class="entry"><div class="entry-title">026 认主蔓（诡·骨沉|门/归属）</div><p><span class="label">分类：</span>旧主演示</p><p>缠上谁就认谁作"旧主"，强行移栽会昼夜回爬原处，爬不动就枯。庇护所活墙残片的伴生种。它演示了"旧主未断"的最直观形态——断它，要行归箱礼般的断契仪式，不能硬拔。</p></div>
+        <div class="entry"><div class="entry-title">027 空碗瓜（诡·灰醒|碗）</div><p><span class="label">分类：</span>计量型</p><p>藤上结的瓜，永远比开过的花多一个。那"多出的一个"无花自结，摘下空心。共食前若端上空碗瓜，等于给桌上多列一位食客——农人收瓜必当场点花对果，多出的就地沤肥，不入仓。</p></div>
+        <div class="entry"><div class="entry-title">028 旧姓木（诡·骨沉|名）</div><p><span class="label">分类：</span>死名册</p><p>树皮缓慢浮出此地历代死者的旧名，一层覆一层。骨庭用作天然死名册，封名骨的原料树。忌在树下直呼任何名字——浮出的旧名会"接"走这个称呼。</p></div>
+        <div class="entry"><div class="entry-title">029 替睡棉（诡·骨沉|床）</div><p><span class="label">分类：</span>替睡者源头</p><p>絮入床垫，人未眠而"被恢复"——醒来体力满，记忆缺一段。穷人黑潮前抢用以省睡眠时间；代价是被替走的那段睡眠里，有东西替你睡过、也替你被承认了一次。替睡者现象的植物源头。</p></div>
+        <div class="entry"><div class="entry-title">030 共识菌（诡·门脉|共识）</div><p><span class="label">分类：</span>认知成形活教材</p><p>多人都说它有毒，它才真的有毒；无人提及，则无害。无光域最纯粹的"认知成形"标本——它的毒性直接由共识人数×情绪强度决定，是裂视者训练与法庭异常教学的活教材。单独一人永远测不出它毒不毒。</p></div>
+        <div class="entry"><div class="entry-title">031 噤喉藤（诡/药·门脉|声）</div><p><span class="label">分类：</span>名沉默剂</p><p>浆液涂喉，使人当晚说不出任何名字（只能说"门内暂呼"）。静言社与守夜人用于高危夜的自保；赎籍会也用它让逃名者过名庭盘查。滥用致永久"名轻"。</p></div>
+        <div class="entry"><div class="entry-title">032 回声蕨（诡·门脉|声/门）</div><p><span class="label">分类：</span>问句反弹</p><p>生在叠室遗迹、断链门廊口，叶片把问句反弹成肯定句：你问"有人吗"，它答"有人"。门脉层第一杀手植物——它专把探路者的试探，补成"门内已有承认"。绝不可对蕨发问。</p></div>
+        <div class="entry"><div class="entry-title">033 缄名莲（诡/药·胎海|名）</div><p><span class="label">分类：</span>自愿无名</p><p>胎海层近域唯一可采的花，花瓣可封存一个名字使其"眠下"，永不被晦能索引。主角线关键物：穿胎膜"以名作通行费"时，缄名莲是把名字安全交出、而非被神胎夺走的器物——它让"自愿的无名"成为可能，区别于被食名的"被剥夺的无名"。极稀，一株一生只封一名。</p></div>
+        <div class="entry"><div class="entry-title">059 晚归果（诡·骨沉|门）</div><p><span class="label">分类：</span>敲门校准</p><p>黄昏自落，落地声似有人叩门三下。守门人靠它校准"真敲门"与"果落"；但连续多夜叩三下后，某夜会变成四下——那一下不是果。敲门者温床。</p></div>
+        <div class="entry"><div class="entry-title">060 替名兰（诡·梦腐|名）</div><p><span class="label">分类：</span>名让渡</p><p>移栽后拒认新土，除非有人把自己的名字"让"给它——让名者三日内极易被食名。食名教团秘培，赎籍会列为禁种。</p></div>
+        <div class="entry"><div class="entry-title">061 缺位藕（诡·灰醒|碗）</div><p><span class="label">分类：</span>计量型</p><p>塘藕挖出，节数总比该有的少一节，缺的那节在谁家碗柜里、谁家今夜就会空一个座。归位日塘边停采。与027空碗瓜互为"多/缺"一对。</p></div>
+        <div class="entry"><div class="entry-title">062 照童黑水芋（诡·门脉|镜/井）</div><p><span class="label">分类：</span>水质鉴定</p><p>叶心积黑水如镜，接"黑水照童"井庭罪名：水中映出的孩子，是这口水路上溺过的那个。井庭据它判水源是否"还只是井"。绝不可让孩子俯身看芋。</p></div>
+        <div class="entry"><div class="entry-title">091 认亲藤（诡·骨沉|门/名）</div><p><span class="label">分类：</span>声线模仿</p><p>缠门即模仿门内人最思念者的声线唤门。敲门者的植物帮凶——接"失踪者归来"熟人声不等于熟人。规矩：不应藤声，只重复门框边界词。</p></div>
+        <div class="entry"><div class="entry-title">093 榜根草（诡·胎海近域|共识/名）</div><p><span class="label">分类：</span>旧榜活化石</p><p>根须按附近生命的"排行榜残名"排布深浅，旧榜文明"位置吞名"的活化石。读出残名者被旧榜位置短暂标记。空榜骨板可暂隐。与065旧誓藤同列旧轮遗种。</p></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">六、污染/寄生类</h3>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">055 蚀界藓（饲/材·门脉）</div><p><span class="label">分类：</span>晦兽食源/骨材软化</p><p>4级蚀界晦兽的食源藓，也分泌弱酸软化骨材便于加工。骨匠与深层猎手共需。生在层界裂隙，采集高危。</p></div>
+        <div class="entry"><div class="entry-title">056 孢风草（生态·灰醒）</div><p><span class="label">分类：</span>生态底座</p><p>不堪用，但它是0级孢族晦兽的寄主，生态链底座。农人留一角田任其生长以"喂住"底层晦兽，免其饿极上行染脑。一种务实的生态留白智慧。</p></div>
+        <div class="entry"><div class="entry-title">073 饱潮草（生态·胎海）</div><p><span class="label">分类：</span>胎海不可常住注脚</p><p>唯一能在过饱和区存活的草，但吸晦能至饱即自燃，故胎海层无法连片成田、无法支撑聚落——这株草本身就是"胎海为何不能常住"的生态注脚。不可栽培。</p></div>
+        <div class="entry"><div class="entry-title">075 拟食莓（诡/毒·灰醒|系统）</div><p><span class="label">分类：</span>系统翻译缺陷</p><p>系统初期翻译为"可食浆果"，实则只对系统面板显示可食，土著一眼知毒。玩家初期高频死因之一——接"安全化翻译"缺陷的植物实证。裂视者能看穿，新玩家不能。</p></div>
+        <div class="entry"><div class="entry-title">076 满格藤（诡·灰醒|系统）</div><p><span class="label">分类：</span>系统型诡苗圃</p><p>触碰刷新一条虚假"安全区"系统提示。效率派玩家最易中招：信面板不信门床。系统型晦诡苗圃，印证"系统是筛选语言不是真相"。</p></div>
+        <div class="entry"><div class="entry-title">081 固土根（生态·灰醒）</div><p><span class="label">分类：</span>基建植物</p><p>固灰土田防黑潮冲蚀，农田边必种。无用却必需的"基建植物"。</p></div>
+        <div class="entry"><div class="entry-title">096 候胎兰（诡轻·胎海近域|综合）</div><p><span class="label">分类：</span>临产预警</p><p>临产期才现蕾，蕾数被晦民用来估"产期将至"。候胎纪命名关联种——世界越黑，它蕾越多，呼应"黑=孕周读数"。预警植物，不可催花。</p></div>
+        <div class="entry"><div class="entry-title">100 第一株（诡·胎海|综合）</div><p><span class="label">分类：</span>起源隐喻</p><p>传说神胎"第一次边界自读"凝成的植物——晦民将其奉为本族起源的隐喻。无人确证它真实存在，所有"找到第一株"的记载最终都指向找寻者自己的名字。它既是图鉴的终点，也是世界的起点：一株证明"里外"诞生的草。收敛律与起源论的双重活标本。</p></div>
+      </div>
+
+      <h3 style="color:#d7b56d;margin:40px 0 18px;font-weight:400;letter-spacing:2px;">旧存晦植（保留参考）</h3>
+      <div class="grid-2">
+        <div class="entry"><div class="entry-title">灰苔（既有）</div><p><span class="label">分类：</span>基础食用晦植</p><p>灰绿色薄苔，贴在潮湿墙角生长。只要有湿气与腐殖就能存活。可烘成苔饼，长期食用会轻微幻听。</p></div>
+        <div class="entry"><div class="entry-title">骨麦（既有）</div><p><span class="label">分类：</span>主粮作物</p><p>根系缠绕白骨而生，骨越完整生长越快。具有潮间双相代谢：静潮期21天进行结构生长（不可食），黑潮期3-7天进行灌浆骨化（可收割）。"骨麦"之名源于此——骨不是在比喻，而是在黑潮中真实完成的茎秆骨化。</p></div>
+        <div class="entry"><div class="entry-title">盲薯</div><p><span class="label">分类：</span>基础食用块茎</p><p>盲薯是深层盲芋的地表近亲，产量稳定，耐储，灰醒层聚落日常主食之一。</p></div>
+        <div class="entry"><div class="entry-title">夜脂果</div><p><span class="label">分类：</span>油料/照明</p><p>果肉富含油脂，是灯髓蕈之外的主要灯油来源。黑乳脂果为其近亲变种。</p></div>
+        <div class="entry"><div class="entry-title">盲果藤</div><p><span class="label">分类：</span>边缘口粮</p><p>灰醒层野生藤果，口感酸涩，但饥荒时救急可用。采集无门槛。</p></div>
+        <div class="entry"><div class="entry-title">缝息苔</div><p><span class="label">分类：</span>外伤缝合</p><p>薄韧苔膜，贴伤口可促进愈合。封伤膏果的进阶替代品，较贵。</p></div>
+        <div class="entry"><div class="entry-title">冷梦花</div><p><span class="label">分类：</span>安神</p><p>低温环境生长，花香镇静。镇梦花的野生近亲，效力较温和。</p></div>
+        <div class="entry"><div class="entry-title">烬舌叶</div><p><span class="label">分类：</span>消炎祛污</p><p>叶片灼烧后敷用，清创消炎。骨盐蓬的补充，偏外用药。</p></div>
+        <div class="entry"><div class="entry-title">返脉根</div><p><span class="label">分类：</span>复苏</p><p>榨汁饮下，可暂时恢复脉象。醒喉根的强效版本，但副作用明显。</p></div>
+        <div class="entry"><div class="entry-title">褪痛菌</div><p><span class="label">分类：</span>镇痛</p><p>菌伞研磨外敷可麻痹局部痛觉。止血晶草的搭配用药。</p></div>
+        <div class="entry"><div class="entry-title">灰肺苔</div><p><span class="label">分类：</span>空气过滤</p><p>灰白薄苔贴在墙面，潮湿时会微微起伏像在呼吸。过滤孢子与腐臭，缓解轻度呼吸污染。贴满卧室后住户会梦见替房子呼吸。</p></div>
+        <div class="entry"><div class="entry-title">灰喉苔</div><p><span class="label">分类：</span>声音钝化</p><p>像湿润细褶薄肉，贴在井壁与管道内侧。能把流经的声音磨钝，用于静音通道。待太久人会懒得解释自己。</p></div>
+        <div class="entry"><div class="entry-title">静针果</div><p><span class="label">分类：</span>缝合/麻醉</p><p>果核坚硬如细针，可做缝合钉。果肉有轻微麻醉效果。服用后不易分辨是伤势变轻还是身体懒得提醒你。</p></div>
         <div class="entry"><div class="entry-title">胃灯果</div><p><span class="label">分类：</span>灯具植物</p><p>半透明偏黄中空果壳，晒干后可做天然灯罩，柔化晦晶灯刺激性。灯光过稳时吸引灯腹虫和追灯异常。</p></div>
         <div class="entry"><div class="entry-title">食刻菇</div><p><span class="label">分类：</span>遗迹附生菌</p><p>菌盖表面短暂浮现刻文。承载短暂刻文，辅助裂视读取规则注释。有些文字不是留下的，而是正在写给你。</p></div>
-        <div class="entry"><div class="entry-title">门睫草</div><p><span class="label">分类：</span>边界晦植</p><p>从门缝整齐长出像一层睫毛。预警门外异常晦能流。若草尖全部朝内，说明庇护所内部更危险。</p></div>
+        <div class="entry"><div class="entry-title">门睫草</div><p><span class="label">分类：</span>边界预警</p><p>从门缝整齐长出像一层睫毛。预警门外异常晦能流。若草尖全部朝内，说明庇护所内部更危险。</p></div>
         <div class="entry"><div class="entry-title">誓根</div><p><span class="label">分类：</span>契约植物</p><p>根系像细小手指彼此绞缠。只会在立誓、结盟、婚约、血契地发芽。违约过多地会长成绞索一样的扭结。</p></div>
         <div class="entry"><div class="entry-title">褪名苔</div><p><span class="label">分类：</span>失名植物</p><p>像被磨薄的旧纸屑，贴在刻字表面蔓延。缓慢磨掉门牌、墓碑上的名字。若出现在家门口，说明有人尝试让这里不再属于你。</p></div>
         <div class="entry"><div class="entry-title">血温藤</div><p><span class="label">分类：</span>寄生植物</p><p>暗红偏灰，触感像温热湿绳。可做保温绳。离体后仍会主动往体温更高的地方爬。</p></div>
-        <div class="entry"><div class="entry-title">驮壳菌</div><p><span class="label">分类：</span>共生运输植物</p><p>扁平厚菌贴附于背井龟、壳眠牛背部，帮助固定货物。生长过久后会把货物也算作壳体的一部分。</p></div>
-        <div class="entry"><div class="entry-title">雾喉花</div><p><span class="label">分类：</span>战术植物</p><p>花腔鼓胀含着一口吐不尽的雾。捏破释放短时遮蔽雾可用于撤离和伏击。雾里藏得住你，也藏得住更早等在里面东西。</p></div>
+        <div class="entry"><div class="entry-title">驮壳菌</div><p><span class="label">分类：</span>共生运输</p><p>扁平厚菌贴附于背井龟、壳眠牛背部，帮助固定货物。生长过久后会把货物也算作壳体的一部分。</p></div>
         <div class="entry"><div class="entry-title">骨帘藤</div><p><span class="label">分类：</span>边界建材</p><p>中空藤蔓节部坚硬，垂落像成串骨帘。编成门帘可减弱敲门者和模仿音。长期浸在高活化环境里会自己学会"开合"。</p></div>
+        <div class="entry"><div class="entry-title">雾喉花</div><p><span class="label">分类：</span>战术植物</p><p>花腔鼓胀含着一口吐不尽的雾。捏破释放短时遮蔽雾可用于撤离和伏击。雾里藏得住你，也藏得住更早等在里面东西。</p></div>
+        <div class="entry"><div class="entry-title">眠菇</div><p><span class="label">分类：</span>安眠菌</p><p>灰醒层到骨沉层广泛分布的可食用菌。有轻微助眠效果，是眠渊菇的地表近亲，效力较温和。</p></div>
+        <div class="entry"><div class="entry-title">门纹眠菇</div><p><span class="label">分类：</span>门类规则</p><p>菌盖上有天然门形裂纹，多生长在旧门遗迹附近。用于门类规则研究。食用后梦见"门后站位"。</p></div>
+        <div class="entry"><div class="entry-title">孵梦眠菇</div><p><span class="label">分类：</span>梦境孵化</p><p>菌伞像未睁开的眼皮。能把未完成梦境继续做下去，产出高纯度梦渣。梦里人物会逐渐记住你。</p></div>
+        <div class="entry"><div class="entry-title">旧梦藻</div><p><span class="label">分类：</span>梦保存</p><p>接梦藻的原始种，能力较弱，但更安全。梦腐层居民常用的梦保存介质。</p></div>
+        <div class="entry"><div class="entry-title">哀铃果</div><p><span class="label">分类：</span>情绪传导</p><p>果壳中空，摇晃发出低频呜咽。用于仪式中的哀悼环节，也能吸引特定晦兽。</p></div>
+        <div class="entry"><div class="entry-title">井眠藻</div><p><span class="label">分类：</span>井梦传导</p><p>贴井壁生长，可在水脉中传播微弱梦境。井喉民的"井梦通信"基础材料。</p></div>
+        <div class="entry"><div class="entry-title">哭铃草</div><p><span class="label">分类：</span>声信标</p><p>花铃遇情绪波动会发出哭声般低响。啼晦兰的地表同类，效力较弱。</p></div>
+        <div class="entry"><div class="entry-title">壁听花</div><p><span class="label">分类：</span>隔墙感知</p><p>贴墙生长，花心朝向声音来源。长期佩戴会不自觉监听周围。</p></div>
+        <div class="entry"><div class="entry-title">门槛苔</div><p><span class="label">分类：</span>入门确认</p><p>门槛内侧自然生长，确认门内外分界。若苔在门槛外侧长出新芽，说明门的方向感开始混淆。</p></div>
+        <div class="entry"><div class="entry-title">守床草</div><p><span class="label">分类：</span>床位归属</p><p>床脚周围生长，草尖朝床心表示"此床位有人"。等床藤是它的诡变版本。</p></div>
+        <div class="entry"><div class="entry-title">界钉花</div><p><span class="label">分类：</span>边界固定</p><p>花朵木质化如钉，固定边界线。归位仪式常用花材。</p></div>
+        <div class="entry"><div class="entry-title">名刺苔</div><p><span class="label">分类：</span>名重测量</p><p>触感越粗糙，表示此地名重越高。誊名师用它做初步名重判断。</p></div>
+        <div class="entry"><div class="entry-title">归箱草</div><p><span class="label">分类：</span>归属确认</p><p>放入箱柜可确认物品归属。归位仪式的核心植物之一。</p></div>
+        <div class="entry"><div class="entry-title">埋名花</div><p><span class="label">分类：</span>名封印</p><p>花瓣包裹旧名签埋入土中，使被封存的各不再被晦能索引。缄名莲的功能弱化版。</p></div>
+        <div class="entry"><div class="entry-title">返床菇</div><p><span class="label">分类：</span>床位找回</p><p>在床位不明处萌发，菌褶指向该床位原本所在方向。与等床藤同属"床位指向"植物群。</p></div>
+        <div class="entry"><div class="entry-title">噬影藤</div><p><span class="label">分类：</span>影寄生</p><p>藤蔓缠上后会缓慢蚕食宿主的影子。影子变淡者会被世界记忆减轻。</p></div>
+        <div class="entry"><div class="entry-title">手指芽</div><p><span class="label">分类：</span>拟态寄生</p><p>芽端像弯曲手指，埋在腐殖层中会模仿人骨形状。掘出者常误认为尸骨。</p></div>
+        <div class="entry"><div class="entry-title">哭种</div><p><span class="label">分类：</span>情绪沉积</p><p>种子被洒在悲伤过的地方，会生长出哭声残留。旧梦文明的情绪保存实验遗种。</p></div>
+        <div class="entry"><div class="entry-title">忘返树</div><p><span class="label">分类：</span>定向迷失</p><p>树冠朝向会扭曲附近的方向感。靠近者容易找不到回头路。伪灯花的伴生植物。</p></div>
+        <div class="entry"><div class="entry-title">伪灯花</div><p><span class="label">分类：</span>假光诱导</p><p>发出类似庇护所灯光的荧光，将迷途者引向危险区域。旧灯文明"伪安全灯"的植物后裔。</p></div>
+        <div class="entry"><div class="entry-title">腐脐花</div><p><span class="label">分类：</span>腐殖寄生</p><p>花心如脐，从腐殖中吸收养分。过熟时会将附近活物误判为腐殖进行吸收。</p></div>
+        <div class="entry"><div class="entry-title">血灰藓</div><p><span class="label">分类：</span>血污染指示</p><p>吸血迹后变红，是骨庭验尸的场所标记植物。与净尸藓功能互补。</p></div>
+        <div class="entry"><div class="entry-title">潮后芽</div><p><span class="label">分类：</span>黑潮抢生</p><p>潮后稗的同类短生种，黑潮后迅速萌发又迅速腐烂。填补生态空窗。</p></div>
+        <div class="entry"><div class="entry-title">止语草</div><p><span class="label">分类：</span>沉默促进</p><p>含服可使人在一段时间内不愿说话。缄面族常用，噤喉藤的温和替代品。</p></div>
+        <div class="entry"><div class="entry-title">灰木</div><p><span class="label">分类：</span>通用建材</p><p>灰醒层最广泛的建材木料。骨纹藤的平价替代，强度不如但易加工。</p></div>
+        <div class="entry"><div class="entry-title">骨藤</div><p><span class="label">分类：</span>结构材</p><p>骨纹藤的近亲，茎秆含骨化纤维，但纹理不如骨纹藤规整。</p></div>
+        <div class="entry"><div class="entry-title">静皮树</div><p><span class="label">分类：</span>静音材</p><p>树皮可剥制静皮帘，防潮藤为其骨架增强层。</p></div>
+        <div class="entry"><div class="entry-title">壳苔</div><p><span class="label">分类：</span>表面覆盖</p><p>紧贴岩石或骨墙生长，形成硬壳保护层。墙生苔的同类不同种。</p></div>
+        <div class="entry"><div class="entry-title">脊柱竹</div><p><span class="label">分类：</span>建材</p><p>竹节状似脊柱，中空轻便。叠甲竹的同类，较细轻。</p></div>
+        <div class="entry"><div class="entry-title">裂膜草</div><p><span class="label">分类：</span>隔层材</p><p>薄韧草膜用于分层隔断，规尘蓬的副产品加工方式之一。</p></div>
+        <div class="entry"><div class="entry-title">井绳藤</div><p><span class="label">分类：</span>井绳</p><p>柔韧藤条用于井绳编制，引水葛的浅层近亲。</p></div>
+        <div class="entry"><div class="entry-title">倒根树</div><p><span class="label">分类：</span>深层材</p><p>根系朝上生长，树冠朝下，骨沉层特有林木。锚壳藤的宿主树。</p></div>
       </div>
     `,
   },
